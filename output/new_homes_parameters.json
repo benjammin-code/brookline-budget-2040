@@ -1,0 +1,62 @@
+{
+  "pace_homes_per_year": 104.7,
+  "pace_years": [
+    2016,
+    2025
+  ],
+  "assisted_living_homes_in_pace_years": 151.0,
+  "mix": {
+    "age_restricted": 0.204,
+    "apartments": 0.5129,
+    "small_multifamily": 0.1173,
+    "conversions": 0.0429,
+    "houses": 0.123
+  },
+  "forecast_mix": {
+    "apartments": 0.8139,
+    "small_multifamily": 0.1861
+  },
+  "value_per_net_home_fy2026": {
+    "age_restricted": 73000.0,
+    "apartments": 521000.0,
+    "assisted_living": 490000.0,
+    "conversions": 1598000.0,
+    "houses": 3857000.0,
+    "small_multifamily": 864000.0
+  },
+  "value_sample": {
+    "age_restricted": {
+      "projects": 2,
+      "homes": 116
+    },
+    "apartments": {
+      "projects": 3,
+      "homes": 334
+    },
+    "assisted_living": {
+      "projects": 1,
+      "homes": 151
+    },
+    "conversions": {
+      "projects": 36,
+      "homes": 50
+    },
+    "houses": {
+      "projects": 73,
+      "homes": 116
+    },
+    "small_multifamily": {
+      "projects": 6,
+      "homes": 46
+    }
+  },
+  "blended_value_per_net_home_fy2026": 585000.0,
+  "students_per_home_blended": 0.2442,
+  "students_per_home_other": 0.2442,
+  "homes_permitted_2010_2024": 1251.0,
+  "homes_by_period": {
+    "2008-2015": 40.6,
+    "2016-2025": 104.7,
+    "2008-2025": 76.2
+  }
+}

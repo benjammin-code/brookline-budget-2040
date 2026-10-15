@@ -1,0 +1,307 @@
+fiscal_year,receipt_type_id,receipt_description,estimate,actual
+2017,1,Motor Vehicle Excise,5500000.0,6211079.0
+2017,2,Other Excise,0.0,0.0
+2017,3,A.Meals,1045500.0,1149091.0
+2017,4,B.Room,1593000.0,1755279.0
+2017,5,C.Other,0.0,0.0
+2017,6,D.Cannabis,0.0,0.0
+2017,7,Penalties And Interest On Taxes And Excises,500250.0,634396.0
+2017,8,Payments In Lieu Of Taxes,890000.0,1407085.0
+2017,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2017,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2017,11,Charges For Services - Water,0.0,0.0
+2017,12,Charges For Services - Sewer,0.0,0.0
+2017,13,Charges For Services - Hospital,0.0,0.0
+2017,14,Charges For Services - Solid Waste Fees,2650000.0,2671258.0
+2017,15,Other Charges For Services,0.0,0.0
+2017,16,Fees,0.0,0.0
+2017,17,A.Cannabis Impact Fee,0.0,0.0
+2017,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2017,19,Rentals,0.0,0.0
+2017,20,Departmental Revenue - Schools,0.0,0.0
+2017,21,Departmental Revenue - Libraries,0.0,0.0
+2017,22,Departmental Revenue - Cemeteries,0.0,0.0
+2017,23,Departmental Revenue - Recreation,375900.0,375900.0
+2017,24,Other Departmental Revenue,2421250.0,2945013.0
+2017,25,Licenses And Permits,3348475.0,5769843.0
+2017,26,A.Building Permits,0.0,0.0
+2017,27,B.Other Licenses And Permits,0.0,0.0
+2017,28,Special Assessments,0.0,0.0
+2017,29,Fines And Forfeits,4227000.0,3946159.0
+2017,30,Investment Income,225000.0,302106.0
+2017,31,Medicaid Reimbursement,430794.0,699591.0
+2017,32,Miscellaneous Recurring,1005429.0,1124612.0
+2017,33,Miscellaneous Non-Recurring,0.0,22334.0
+2017,34,C.Other Fees,0.0,0.0
+2018,1,Motor Vehicle Excise,5610000.0,6544129.0
+2018,2,Other Excise,0.0,0.0
+2018,3,A.Meals,1066410.0,1200334.0
+2018,4,B.Room,1739500.0,2110505.0
+2018,5,C.Other,0.0,0.0
+2018,6,D.Cannabis,0.0,0.0
+2018,7,Penalties And Interest On Taxes And Excises,500250.0,646605.0
+2018,8,Payments In Lieu Of Taxes,916800.0,1090649.0
+2018,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2018,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2018,11,Charges For Services - Water,0.0,0.0
+2018,12,Charges For Services - Sewer,0.0,0.0
+2018,13,Charges For Services - Hospital,0.0,0.0
+2018,14,Charges For Services - Solid Waste Fees,2800000.0,3029367.0
+2018,15,Other Charges For Services,0.0,8439511.0
+2018,16,Fees,0.0,0.0
+2018,17,A.Cannabis Impact Fee,0.0,0.0
+2018,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2018,19,Rentals,0.0,0.0
+2018,20,Departmental Revenue - Schools,0.0,0.0
+2018,21,Departmental Revenue - Libraries,0.0,0.0
+2018,22,Departmental Revenue - Cemeteries,0.0,0.0
+2018,23,Departmental Revenue - Recreation,379730.0,459730.0
+2018,24,Other Departmental Revenue,7753290.0,0.0
+2018,25,Licenses And Permits,3448475.0,7570203.0
+2018,26,A.Building Permits,0.0,0.0
+2018,27,B.Other Licenses And Permits,0.0,0.0
+2018,28,Special Assessments,0.0,0.0
+2018,29,Fines And Forfeits,4107000.0,3471240.0
+2018,30,Investment Income,230625.0,620634.0
+2018,31,Medicaid Reimbursement,446148.0,824635.0
+2018,32,Miscellaneous Recurring,838152.0,674985.0
+2018,33,Miscellaneous Non-Recurring,0.0,13905.0
+2018,34,C.Other Fees,0.0,0.0
+2019,1,Motor Vehicle Excise,6022200.0,6556747.0
+2019,2,Other Excise,0.0,0.0
+2019,3,A.Meals,1066410.0,1249434.0
+2019,4,B.Room,1906000.0,2420413.0
+2019,5,C.Other,0.0,0.0
+2019,6,D.Cannabis,0.0,214020.0
+2019,7,Penalties And Interest On Taxes And Excises,512806.0,783811.0
+2019,8,Payments In Lieu Of Taxes,983636.0,1029485.0
+2019,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2019,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2019,11,Charges For Services - Water,0.0,0.0
+2019,12,Charges For Services - Sewer,0.0,0.0
+2019,13,Charges For Services - Hospital,0.0,0.0
+2019,14,Charges For Services - Solid Waste Fees,2800000.0,3052408.0
+2019,15,Other Charges For Services,7758290.0,0.0
+2019,16,Fees,0.0,0.0
+2019,17,A.Cannabis Impact Fee,0.0,0.0
+2019,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2019,19,Rentals,0.0,0.0
+2019,20,Departmental Revenue - Schools,0.0,0.0
+2019,21,Departmental Revenue - Libraries,0.0,0.0
+2019,22,Departmental Revenue - Cemeteries,0.0,0.0
+2019,23,Departmental Revenue - Recreation,351549.0,351549.0
+2019,24,Other Departmental Revenue,0.0,8893490.0
+2019,25,Licenses And Permits,3468475.0,5708077.0
+2019,26,A.Building Permits,0.0,0.0
+2019,27,B.Other Licenses And Permits,0.0,0.0
+2019,28,Special Assessments,0.0,0.0
+2019,29,Fines And Forfeits,3592000.0,3413309.0
+2019,30,Investment Income,436391.0,1317178.0
+2019,31,Medicaid Reimbursement,509509.0,831359.0
+2019,32,Miscellaneous Recurring,647870.0,444618.0
+2019,33,Miscellaneous Non-Recurring,0.0,48928.0
+2019,34,C.Other Fees,0.0,0.0
+2020,1,Motor Vehicle Excise,6142644.0,6277980.0
+2020,2,Other Excise,0.0,0.0
+2020,3,A.Meals,1087738.0,1147600.0
+2020,4,B.Room,1994120.0,2285895.0
+2020,5,C.Other,0.0,0.0
+2020,6,D.Cannabis,378452.0,1841197.0
+2020,7,Penalties And Interest On Taxes And Excises,525676.0,572313.0
+2020,8,Payments In Lieu Of Taxes,1010509.0,1590248.0
+2020,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2020,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2020,11,Charges For Services - Water,0.0,0.0
+2020,12,Charges For Services - Sewer,0.0,0.0
+2020,13,Charges For Services - Hospital,0.0,0.0
+2020,14,Charges For Services - Solid Waste Fees,2850000.0,3026916.0
+2020,15,Other Charges For Services,0.0,0.0
+2020,16,Fees,0.0,0.0
+2020,17,A.Cannabis Impact Fee,0.0,0.0
+2020,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2020,19,Rentals,0.0,0.0
+2020,20,Departmental Revenue - Schools,0.0,0.0
+2020,21,Departmental Revenue - Libraries,0.0,0.0
+2020,22,Departmental Revenue - Cemeteries,0.0,0.0
+2020,23,Departmental Revenue - Recreation,471027.0,471028.0
+2020,24,Other Departmental Revenue,8711657.0,8765616.0
+2020,25,Licenses And Permits,3498725.0,6891425.0
+2020,26,A.Building Permits,0.0,0.0
+2020,27,B.Other Licenses And Permits,0.0,0.0
+2020,28,Special Assessments,0.0,0.0
+2020,29,Fines And Forfeits,3392000.0,2497771.0
+2020,30,Investment Income,447300.0,1153616.0
+2020,31,Medicaid Reimbursement,634496.0,347195.0
+2020,32,Miscellaneous Recurring,446871.0,450744.0
+2020,33,Miscellaneous Non-Recurring,0.0,10875.0
+2020,34,C.Other Fees,0.0,0.0
+2021,1,Motor Vehicle Excise,5952222.0,6040964.0
+2021,2,Other Excise,0.0,0.0
+2021,3,A.Meals,554747.0,897551.0
+2021,4,B.Room,442001.0,613630.0
+2021,5,C.Other,0.0,0.0
+2021,6,D.Cannabis,675000.0,1028333.0
+2021,7,Penalties And Interest On Taxes And Excises,538868.0,746532.0
+2021,8,Payments In Lieu Of Taxes,789970.0,2023502.0
+2021,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2021,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2021,11,Charges For Services - Water,0.0,0.0
+2021,12,Charges For Services - Sewer,0.0,0.0
+2021,13,Charges For Services - Hospital,0.0,0.0
+2021,14,Charges For Services - Solid Waste Fees,3224327.0,3392884.0
+2021,15,Other Charges For Services,0.0,0.0
+2021,16,Fees,0.0,0.0
+2021,17,A.Cannabis Impact Fee,0.0,0.0
+2021,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2021,19,Rentals,0.0,0.0
+2021,20,Departmental Revenue - Schools,0.0,0.0
+2021,21,Departmental Revenue - Libraries,0.0,0.0
+2021,22,Departmental Revenue - Cemeteries,0.0,0.0
+2021,23,Departmental Revenue - Recreation,545788.0,395523.0
+2021,24,Other Departmental Revenue,6034818.0,7077727.0
+2021,25,Licenses And Permits,3673308.0,5755710.0
+2021,26,A.Building Permits,0.0,0.0
+2021,27,B.Other Licenses And Permits,0.0,0.0
+2021,28,Special Assessments,0.0,0.0
+2021,29,Fines And Forfeits,1562000.0,2011220.0
+2021,30,Investment Income,208645.0,-75367.0
+2021,31,Medicaid Reimbursement,300000.0,478200.0
+2021,32,Miscellaneous Recurring,407527.0,336880.0
+2021,33,Miscellaneous Non-Recurring,0.0,20484.0
+2021,34,C.Other Fees,0.0,0.0
+2022,1,Motor Vehicle Excise,5871266.0,6275101.0
+2022,2,Other Excise,0.0,0.0
+2022,3,A.Meals,800000.0,1367712.0
+2022,4,B.Room,950000.0,2054538.0
+2022,5,C.Other,0.0,0.0
+2022,6,D.Cannabis,975000.0,1010240.0
+2022,7,Penalties And Interest On Taxes And Excises,413793.0,4169575.0
+2022,8,Payments In Lieu Of Taxes,1795200.0,1971639.0
+2022,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2022,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2022,11,Charges For Services - Water,0.0,0.0
+2022,12,Charges For Services - Sewer,0.0,0.0
+2022,13,Charges For Services - Hospital,0.0,0.0
+2022,14,Charges For Services - Solid Waste Fees,3574327.0,3767067.0
+2022,15,Other Charges For Services,0.0,0.0
+2022,16,Fees,0.0,0.0
+2022,17,A.Cannabis Impact Fee,0.0,0.0
+2022,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2022,19,Rentals,0.0,0.0
+2022,20,Departmental Revenue - Schools,0.0,0.0
+2022,21,Departmental Revenue - Libraries,0.0,0.0
+2022,22,Departmental Revenue - Cemeteries,0.0,0.0
+2022,23,Departmental Revenue - Recreation,545788.0,545788.0
+2022,24,Other Departmental Revenue,4810811.0,6773826.0
+2022,25,Licenses And Permits,3623308.0,9647053.0
+2022,26,A.Building Permits,0.0,0.0
+2022,27,B.Other Licenses And Permits,0.0,0.0
+2022,28,Special Assessments,0.0,0.0
+2022,29,Fines And Forfeits,1862000.0,2201068.0
+2022,30,Investment Income,352459.0,-3926671.0
+2022,31,Medicaid Reimbursement,306000.0,693570.0
+2022,32,Miscellaneous Recurring,317222.0,321038.0
+2022,33,Miscellaneous Non-Recurring,0.0,127155.0
+2022,34,C.Other Fees,0.0,0.0
+2023,1,Motor Vehicle Excise,5988692.0,6490395.0
+2023,2,Other Excise,0.0,0.0
+2023,3,A.Meals,1100000.0,1526944.0
+2023,4,B.Room,1700000.0,3174084.0
+2023,5,C.Other,0.0,0.0
+2023,6,D.Cannabis,814686.0,619715.0
+2023,7,Penalties And Interest On Taxes And Excises,512807.0,847455.0
+2023,8,Payments In Lieu Of Taxes,1831103.0,2000260.0
+2023,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2023,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2023,11,Charges For Services - Water,0.0,0.0
+2023,12,Charges For Services - Sewer,0.0,0.0
+2023,13,Charges For Services - Hospital,0.0,0.0
+2023,14,Charges For Services - Solid Waste Fees,3609327.0,3767876.0
+2023,15,Other Charges For Services,0.0,0.0
+2023,16,Fees,0.0,0.0
+2023,17,A.Cannabis Impact Fee,0.0,0.0
+2023,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2023,19,Rentals,0.0,0.0
+2023,20,Departmental Revenue - Schools,0.0,0.0
+2023,21,Departmental Revenue - Libraries,0.0,0.0
+2023,22,Departmental Revenue - Cemeteries,0.0,0.0
+2023,23,Departmental Revenue - Recreation,460000.0,460000.0
+2023,24,Other Departmental Revenue,5994929.0,7182974.0
+2023,25,Licenses And Permits,0.0,0.0
+2023,26,A.Building Permits,2619300.0,5604768.0
+2023,27,B.Other Licenses And Permits,1504450.0,2995413.0
+2023,28,Special Assessments,0.0,0.0
+2023,29,Fines And Forfeits,2212000.0,2368490.0
+2023,30,Investment Income,361270.0,2694642.0
+2023,31,Medicaid Reimbursement,500000.0,715125.0
+2023,32,Miscellaneous Recurring,317222.0,303988.0
+2023,33,Miscellaneous Non-Recurring,0.0,455906.0
+2023,34,C.Other Fees,0.0,0.0
+2024,1,Motor Vehicle Excise,6200000.0,7256595.0
+2024,2,Other Excise,0.0,0.0
+2024,3,A.Meals,1200000.0,1779235.0
+2024,4,B.Room,2000000.0,3884015.0
+2024,5,C.Other,0.0,0.0
+2024,6,D.Cannabis,500000.0,386574.0
+2024,7,Penalties And Interest On Taxes And Excises,525677.0,900799.0
+2024,8,Payments In Lieu Of Taxes,1893044.0,1988057.0
+2024,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2024,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2024,11,Charges For Services - Water,0.0,0.0
+2024,12,Charges For Services - Sewer,0.0,0.0
+2024,13,Charges For Services - Hospital,0.0,0.0
+2024,14,Charges For Services - Solid Waste Fees,4203009.0,4097726.0
+2024,15,Other Charges For Services,0.0,0.0
+2024,16,Fees,0.0,0.0
+2024,17,A.Cannabis Impact Fee,0.0,0.0
+2024,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2024,19,Rentals,0.0,0.0
+2024,20,Departmental Revenue - Schools,0.0,0.0
+2024,21,Departmental Revenue - Libraries,0.0,0.0
+2024,22,Departmental Revenue - Cemeteries,0.0,0.0
+2024,23,Departmental Revenue - Recreation,460811.0,460811.0
+2024,24,Other Departmental Revenue,5934713.0,7351512.0
+2024,25,Licenses And Permits,0.0,0.0
+2024,26,A.Building Permits,2650903.0,4322503.0
+2024,27,B.Other Licenses And Permits,1504450.0,3225803.0
+2024,28,Special Assessments,0.0,0.0
+2024,29,Fines And Forfeits,2212000.0,2824642.0
+2024,30,Investment Income,370302.0,6005886.0
+2024,31,Medicaid Reimbursement,510000.0,558968.0
+2024,32,Miscellaneous Recurring,324660.0,121366.0
+2024,33,Miscellaneous Non-Recurring,0.0,27464.0
+2024,34,C.Other Fees,0.0,0.0
+2025,1,Motor Vehicle Excise,6300000.0,7621033.0
+2025,2,Other Excise,0.0,0.0
+2025,3,A.Meals,1400000.0,1768323.0
+2025,4,B.Room,2900000.0,4124526.0
+2025,5,C.Other,0.0,0.0
+2025,6,D.Cannabis,300000.0,254510.0
+2025,7,Penalties And Interest On Taxes And Excises,538868.0,1004185.0
+2025,8,Payments In Lieu Of Taxes,1894904.0,0.0
+2025,9,A.Solar Payment In Lieu Of Taxes,0.0,0.0
+2025,10,B.All Other Payment In Lieu Of Taxes,0.0,0.0
+2025,11,Charges For Services - Water,0.0,0.0
+2025,12,Charges For Services - Sewer,0.0,0.0
+2025,13,Charges For Services - Hospital,0.0,0.0
+2025,14,Charges For Services - Solid Waste Fees,4203009.0,4265933.0
+2025,15,Other Charges For Services,0.0,0.0
+2025,16,Fees,0.0,0.0
+2025,17,A.Cannabis Impact Fee,0.0,0.0
+2025,18,B.Community Impact Fee Short Term Rentals,0.0,0.0
+2025,19,Rentals,0.0,0.0
+2025,20,Departmental Revenue - Schools,0.0,0.0
+2025,21,Departmental Revenue - Libraries,0.0,0.0
+2025,22,Departmental Revenue - Cemeteries,0.0,0.0
+2025,23,Departmental Revenue - Recreation,0.0,0.0
+2025,24,Other Departmental Revenue,6998097.0,9298066.0
+2025,25,Licenses And Permits,0.0,0.0
+2025,26,A.Building Permits,2732822.0,4439224.0
+2025,27,B.Other Licenses And Permits,1823617.0,2587752.0
+2025,28,Special Assessments,0.0,0.0
+2025,29,Fines And Forfeits,2418000.0,2534109.0
+2025,30,Investment Income,790593.0,5146469.0
+2025,31,Medicaid Reimbursement,630000.0,661826.0
+2025,32,Miscellaneous Recurring,121000.0,141526.0
+2025,33,Miscellaneous Non-Recurring,0.0,550696.0
+2025,34,C.Other Fees,0.0,0.0

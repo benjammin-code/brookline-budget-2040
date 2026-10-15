@@ -1,0 +1,24 @@
+fiscal_year,police_related_calls,self_initiated_police_calls,fire_total_responses,medical_emergencies,housing_units_est,fire_responses_per_1000_units,medical_per_1000_units,police_calls_per_1000_units,source,flag
+2003,56957,,6583,3360,25389,259.3,132.3,2243.4,FY2006 plan,
+2004,62684,,7128,3370,25540,279.1,131.9,2454.3,FY2006 plan,
+2005,63481,,7250,3675,25692,282.2,143.0,2470.9,FY2008 plan,
+2006,66445,,7687,4007,25843,297.5,155.1,2571.1,FY2008 plan,
+2007,71721,,7701,4001,25994,296.3,153.9,2759.1,FY2010 plan,
+2008,65671,,7246,3465,26145,277.1,132.5,2511.8,FY2010 plan,
+2009,66817,,7485,4105,26297,284.6,156.1,2540.9,FY2012 plan,
+2010,64772,,7567,4132,26448,286.1,156.2,2449.0,FY2012 plan,fire duplicate: same values shown as FY2012 in FY2014/FY2015 plans
+2011,68937,,8463,5117,26599,318.2,192.4,2591.7,FY2014 plan,
+2012,69318,,7567,4132,26751,282.9,154.5,2591.3,"FY2014, FY2015 plans",fire duplicate: same values shown as FY2010 in FY2012 plan; police confirmed
+2013,75596,,7347,3681,26902,273.1,136.8,2810.1,"FY2015, FY2016 plans",confirmed
+2014,75525,20907,7191,3737,27053,265.8,138.1,2791.7,"FY2016, FY2017 plans",fire confirmed
+2015,75525,25204,7780,3969,27204,286.0,145.9,2776.2,"FY2017, FY2018 plans","police duplicate: 75,525 also shown as FY2014; fire confirmed"
+2016,72708,25463,7685,3838,27356,280.9,140.3,2657.9,"FY2018, FY2019 plans",confirmed
+2017,72012,25319,8053,4550,27507,292.8,165.4,2617.9,"FY2019, FY2020 plans",confirmed
+2018,67117,26657,8298,4530,27658,300.0,163.8,2426.6,FY2020 plan,
+2019,68505,26657,8523,3954,27810,306.5,142.2,2463.3,"OpenGov FY2022 budget (Fire, Police); police repeated in FY2024, FY2025","police self-initiated equals FY2018's 26,657, likely carried over"
+2020,59611,30622,7980,3859,27961,285.4,138.0,2131.9,FY2023 plan; OpenGov FY2022 budget,fire total from OpenGov FY2022
+2021,52978,23541,7862,3797,28112,279.7,135.1,1884.5,"FY2023, FY2026 plans; OpenGov FY2024 budget","fire total as reported (components sum to 7,787)"
+2022,56167,22524,9089,4227,28264,321.6,149.6,1987.3,"FY2026 plan; OpenGov FY2024, FY2025 budgets","fire total as reported (components sum to 9,027); the FY2025 OpenGov table repeats FY2021's 7,862 here, not used"
+2023,50000,26000,9358,4579,28415,329.3,161.1,1759.6,"FY2026, FY2027 plans; OpenGov FY2025 budget","police figures are round numbers (50,000 and 26,000) labelled actual; fire confirmed"
+2024,52529,19871,9976,4739,28566,349.2,165.9,1838.9,"FY2026, FY2027 plans",confirmed
+2025,55619,26197,10491,5060,28718,365.3,176.2,1936.8,FY2027 plan,

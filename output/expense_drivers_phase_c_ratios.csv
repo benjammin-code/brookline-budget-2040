@@ -1,0 +1,8 @@
+window,quantity,delta_fte,homes,homes_source,fte_per_home,spend_per_fte,implied_dollars_per_home,rkg_per_unit,ratio_to_rkg,note
+FY2011-2020,town general-fund FTE,14.71,940,implied from new growth,0.01565,102319,1601,1371.0,1.168,UPPER BOUND: all headcount change attributed to growth
+FY2011-2025,town general-fund FTE,48.9,1638,implied from new growth,0.02985,117277,3501,1371.0,2.554,UPPER BOUND: all headcount change attributed to growth
+FY2021-2025,town general-fund FTE,15.68,581,implied from new growth,0.02697,117277,3163,1371.0,2.307,UPPER BOUND: all headcount change attributed to growth
+FY2022-2024,town general-fund FTE,6.04,499,Planning count,0.0121,111432,1349,1371.0,0.984,UPPER BOUND: all headcount change attributed to growth
+FY2011-2020,school staff FTE,396.1,1150,change in enrollment,0.34443,,,,,"enrollment change, not homes; staff per added student"
+FY2011-2025,school staff FTE,267.1,396,change in enrollment,0.67449,,,,,"enrollment change, not homes; staff per added student"
+FY2021-2025,school staff FTE,-98.8,132,change in enrollment,-0.74848,,,,,"enrollment change, not homes; staff per added student"

@@ -1,0 +1,504 @@
+year,source,age_group,population,is_projection,grouping
+2000,Census 2000 SF1 P12,total,57107,False,total
+2000,Census 2000 SF1 P12,0-4,2639,False,five_year
+2000,Census 2000 SF1 P12,5-9,2531,False,five_year
+2000,Census 2000 SF1 P12,10-14,2702,False,five_year
+2000,Census 2000 SF1 P12,15-19,2706,False,five_year
+2000,Census 2000 SF1 P12,20-24,5605,False,five_year
+2000,Census 2000 SF1 P12,25-29,7373,False,five_year
+2000,Census 2000 SF1 P12,30-34,5480,False,five_year
+2000,Census 2000 SF1 P12,35-39,4541,False,five_year
+2000,Census 2000 SF1 P12,40-44,3888,False,five_year
+2000,Census 2000 SF1 P12,45-49,3847,False,five_year
+2000,Census 2000 SF1 P12,50-54,3923,False,five_year
+2000,Census 2000 SF1 P12,55-59,2819,False,five_year
+2000,Census 2000 SF1 P12,60-64,1945,False,five_year
+2000,Census 2000 SF1 P12,65-69,1698,False,five_year
+2000,Census 2000 SF1 P12,70-74,1602,False,five_year
+2000,Census 2000 SF1 P12,75-79,1391,False,five_year
+2000,Census 2000 SF1 P12,80-84,1082,False,five_year
+2000,Census 2000 SF1 P12,85+,1335,False,five_year
+2000,Census 2000 SF1 P12,under 5,2639,False,summary
+2000,Census 2000 SF1 P12,5-17,6864,False,summary
+2000,Census 2000 SF1 P12,18-24,6680,False,summary
+2000,Census 2000 SF1 P12,5-14,5233,False,summary
+2000,Census 2000 SF1 P12,5-19,7939,False,summary
+2000,Census 2000 SF1 P12,25-44,21282,False,summary
+2000,Census 2000 SF1 P12,45-64,12534,False,summary
+2000,Census 2000 SF1 P12,65-74,3300,False,summary
+2000,Census 2000 SF1 P12,75-84,2473,False,summary
+2000,Census 2000 SF1 P12,85+,1335,False,summary
+2000,Census 2000 SF1 P12,65+,7108,False,summary
+2000,Census 2000 SF1 P12,75+,3808,False,summary
+2010,Census 2010 SF1 P12,total,58732,False,total
+2010,Census 2010 SF1 P12,0-4,3209,False,five_year
+2010,Census 2010 SF1 P12,5-9,3031,False,five_year
+2010,Census 2010 SF1 P12,10-14,2606,False,five_year
+2010,Census 2010 SF1 P12,15-19,2817,False,five_year
+2010,Census 2010 SF1 P12,20-24,6618,False,five_year
+2010,Census 2010 SF1 P12,25-29,6949,False,five_year
+2010,Census 2010 SF1 P12,30-34,5079,False,five_year
+2010,Census 2010 SF1 P12,35-39,4201,False,five_year
+2010,Census 2010 SF1 P12,40-44,3495,False,five_year
+2010,Census 2010 SF1 P12,45-49,3325,False,five_year
+2010,Census 2010 SF1 P12,50-54,3220,False,five_year
+2010,Census 2010 SF1 P12,55-59,3366,False,five_year
+2010,Census 2010 SF1 P12,60-64,3322,False,five_year
+2010,Census 2010 SF1 P12,65-69,2259,False,five_year
+2010,Census 2010 SF1 P12,70-74,1587,False,five_year
+2010,Census 2010 SF1 P12,75-79,1239,False,five_year
+2010,Census 2010 SF1 P12,80-84,1087,False,five_year
+2010,Census 2010 SF1 P12,85+,1322,False,five_year
+2010,Census 2010 SF1 P12,under 5,3209,False,summary
+2010,Census 2010 SF1 P12,5-17,7199,False,summary
+2010,Census 2010 SF1 P12,18-24,7873,False,summary
+2010,Census 2010 SF1 P12,5-14,5637,False,summary
+2010,Census 2010 SF1 P12,5-19,8454,False,summary
+2010,Census 2010 SF1 P12,25-44,19724,False,summary
+2010,Census 2010 SF1 P12,45-64,13233,False,summary
+2010,Census 2010 SF1 P12,65-74,3846,False,summary
+2010,Census 2010 SF1 P12,75-84,2326,False,summary
+2010,Census 2010 SF1 P12,85+,1322,False,summary
+2010,Census 2010 SF1 P12,65+,7494,False,summary
+2010,Census 2010 SF1 P12,75+,3648,False,summary
+2020,Census 2020 DHC P12,total,63191,False,total
+2020,Census 2020 DHC P12,0-4,3063,False,five_year
+2020,Census 2020 DHC P12,5-9,3428,False,five_year
+2020,Census 2020 DHC P12,10-14,3626,False,five_year
+2020,Census 2020 DHC P12,15-19,3338,False,five_year
+2020,Census 2020 DHC P12,20-24,5945,False,five_year
+2020,Census 2020 DHC P12,25-29,6871,False,five_year
+2020,Census 2020 DHC P12,30-34,5377,False,five_year
+2020,Census 2020 DHC P12,35-39,4350,False,five_year
+2020,Census 2020 DHC P12,40-44,3867,False,five_year
+2020,Census 2020 DHC P12,45-49,3760,False,five_year
+2020,Census 2020 DHC P12,50-54,3260,False,five_year
+2020,Census 2020 DHC P12,55-59,3084,False,five_year
+2020,Census 2020 DHC P12,60-64,2993,False,five_year
+2020,Census 2020 DHC P12,65-69,2940,False,five_year
+2020,Census 2020 DHC P12,70-74,2822,False,five_year
+2020,Census 2020 DHC P12,75-79,1861,False,five_year
+2020,Census 2020 DHC P12,80-84,1253,False,five_year
+2020,Census 2020 DHC P12,85+,1353,False,five_year
+2020,Census 2020 DHC P12,under 5,3063,False,summary
+2020,Census 2020 DHC P12,5-17,9159,False,summary
+2020,Census 2020 DHC P12,18-24,7178,False,summary
+2020,Census 2020 DHC P12,5-14,7054,False,summary
+2020,Census 2020 DHC P12,5-19,10392,False,summary
+2020,Census 2020 DHC P12,25-44,20465,False,summary
+2020,Census 2020 DHC P12,45-64,13097,False,summary
+2020,Census 2020 DHC P12,65-74,5762,False,summary
+2020,Census 2020 DHC P12,75-84,3114,False,summary
+2020,Census 2020 DHC P12,85+,1353,False,summary
+2020,Census 2020 DHC P12,65+,10229,False,summary
+2020,Census 2020 DHC P12,75+,4467,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),total,59180,False,total
+2019,ACS 5-year 2015-2019 B01001 (estimate),0-4,2880,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),5-9,3317,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),10-14,3287,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),15-19,3093,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),20-24,6258,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),25-29,7064,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),30-34,4708,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),35-39,3767,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),40-44,3342,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),45-49,3257,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),50-54,3211,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),55-59,2673,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),60-64,2863,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),65-69,2865,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),70-74,2479,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),75-79,1663,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),80-84,1275,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),85+,1178,False,five_year
+2019,ACS 5-year 2015-2019 B01001 (estimate),under 5,2880,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),5-17,8155,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),18-24,7800,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),5-14,6604,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),5-19,9697,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),25-44,18881,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),45-64,12004,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),65-74,5344,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),75-84,2938,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),85+,1178,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),65+,9460,False,summary
+2019,ACS 5-year 2015-2019 B01001 (estimate),75+,4116,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),total,63266,False,total
+2024,ACS 5-year 2020-2024 B01001 (estimate),0-4,2916,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),5-9,3227,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),10-14,3761,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),15-19,2956,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),20-24,6730,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),25-29,6890,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),30-34,5001,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),35-39,4716,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),40-44,3381,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),45-49,4226,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),50-54,2892,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),55-59,3223,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),60-64,3361,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),65-69,2807,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),70-74,2518,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),75-79,1985,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),80-84,1465,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),85+,1211,False,five_year
+2024,ACS 5-year 2020-2024 B01001 (estimate),under 5,2916,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),5-17,8916,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),18-24,7758,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),5-14,6988,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),5-19,9944,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),25-44,19988,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),45-64,13702,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),65-74,5325,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),75-84,3450,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),85+,1211,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),65+,9986,False,summary
+2024,ACS 5-year 2020-2024 B01001 (estimate),75+,4661,False,summary
+2025,UMDI V2024 projection,total,63082,True,total
+2025,UMDI V2024 projection,0-4,2407,True,five_year
+2025,UMDI V2024 projection,5-9,3122,True,five_year
+2025,UMDI V2024 projection,10-14,3571,True,five_year
+2025,UMDI V2024 projection,15-19,3610,True,five_year
+2025,UMDI V2024 projection,20-24,6215,True,five_year
+2025,UMDI V2024 projection,25-29,6062,True,five_year
+2025,UMDI V2024 projection,30-34,4967,True,five_year
+2025,UMDI V2024 projection,35-39,4358,True,five_year
+2025,UMDI V2024 projection,40-44,3939,True,five_year
+2025,UMDI V2024 projection,45-49,4035,True,five_year
+2025,UMDI V2024 projection,50-54,3668,True,five_year
+2025,UMDI V2024 projection,55-59,3152,True,five_year
+2025,UMDI V2024 projection,60-64,2808,True,five_year
+2025,UMDI V2024 projection,65-69,2624,True,five_year
+2025,UMDI V2024 projection,70-74,2811,True,five_year
+2025,UMDI V2024 projection,75-79,2450,True,five_year
+2025,UMDI V2024 projection,80-84,1692,True,five_year
+2025,UMDI V2024 projection,85+,1591,True,five_year
+2025,UMDI V2024 projection,under 5,2407,True,summary
+2025,UMDI V2024 projection,5-14,6693,True,summary
+2025,UMDI V2024 projection,5-19,10303,True,summary
+2025,UMDI V2024 projection,25-44,19326,True,summary
+2025,UMDI V2024 projection,45-64,13663,True,summary
+2025,UMDI V2024 projection,65-74,5435,True,summary
+2025,UMDI V2024 projection,75-84,4142,True,summary
+2025,UMDI V2024 projection,85+,1591,True,summary
+2025,UMDI V2024 projection,65+,11168,True,summary
+2025,UMDI V2024 projection,75+,5733,True,summary
+2030,UMDI V2024 projection,total,63508,True,total
+2030,UMDI V2024 projection,0-4,2484,True,five_year
+2030,UMDI V2024 projection,5-9,2449,True,five_year
+2030,UMDI V2024 projection,10-14,3273,True,five_year
+2030,UMDI V2024 projection,15-19,3593,True,five_year
+2030,UMDI V2024 projection,20-24,6874,True,five_year
+2030,UMDI V2024 projection,25-29,6758,True,five_year
+2030,UMDI V2024 projection,30-34,4349,True,five_year
+2030,UMDI V2024 projection,35-39,4007,True,five_year
+2030,UMDI V2024 projection,40-44,3900,True,five_year
+2030,UMDI V2024 projection,45-49,4109,True,five_year
+2030,UMDI V2024 projection,50-54,3967,True,five_year
+2030,UMDI V2024 projection,55-59,3568,True,five_year
+2030,UMDI V2024 projection,60-64,2860,True,five_year
+2030,UMDI V2024 projection,65-69,2426,True,five_year
+2030,UMDI V2024 projection,70-74,2494,True,five_year
+2030,UMDI V2024 projection,75-79,2422,True,five_year
+2030,UMDI V2024 projection,80-84,2168,True,five_year
+2030,UMDI V2024 projection,85+,1807,True,five_year
+2030,UMDI V2024 projection,under 5,2484,True,summary
+2030,UMDI V2024 projection,5-14,5722,True,summary
+2030,UMDI V2024 projection,5-19,9315,True,summary
+2030,UMDI V2024 projection,25-44,19014,True,summary
+2030,UMDI V2024 projection,45-64,14504,True,summary
+2030,UMDI V2024 projection,65-74,4920,True,summary
+2030,UMDI V2024 projection,75-84,4590,True,summary
+2030,UMDI V2024 projection,85+,1807,True,summary
+2030,UMDI V2024 projection,65+,11317,True,summary
+2030,UMDI V2024 projection,75+,6397,True,summary
+2035,UMDI V2024 projection,total,63854,True,total
+2035,UMDI V2024 projection,0-4,2451,True,five_year
+2035,UMDI V2024 projection,5-9,2505,True,five_year
+2035,UMDI V2024 projection,10-14,2571,True,five_year
+2035,UMDI V2024 projection,15-19,3349,True,five_year
+2035,UMDI V2024 projection,20-24,6895,True,five_year
+2035,UMDI V2024 projection,25-29,7658,True,five_year
+2035,UMDI V2024 projection,30-34,5009,True,five_year
+2035,UMDI V2024 projection,35-39,3403,True,five_year
+2035,UMDI V2024 projection,40-44,3597,True,five_year
+2035,UMDI V2024 projection,45-49,4053,True,five_year
+2035,UMDI V2024 projection,50-54,4016,True,five_year
+2035,UMDI V2024 projection,55-59,3857,True,five_year
+2035,UMDI V2024 projection,60-64,3252,True,five_year
+2035,UMDI V2024 projection,65-69,2478,True,five_year
+2035,UMDI V2024 projection,70-74,2303,True,five_year
+2035,UMDI V2024 projection,75-79,2141,True,five_year
+2035,UMDI V2024 projection,80-84,2151,True,five_year
+2035,UMDI V2024 projection,85+,2165,True,five_year
+2035,UMDI V2024 projection,under 5,2451,True,summary
+2035,UMDI V2024 projection,5-14,5076,True,summary
+2035,UMDI V2024 projection,5-19,8425,True,summary
+2035,UMDI V2024 projection,25-44,19667,True,summary
+2035,UMDI V2024 projection,45-64,15178,True,summary
+2035,UMDI V2024 projection,65-74,4781,True,summary
+2035,UMDI V2024 projection,75-84,4292,True,summary
+2035,UMDI V2024 projection,85+,2165,True,summary
+2035,UMDI V2024 projection,65+,11238,True,summary
+2035,UMDI V2024 projection,75+,6457,True,summary
+2040,UMDI V2024 projection,total,64167,True,total
+2040,UMDI V2024 projection,0-4,2770,True,five_year
+2040,UMDI V2024 projection,5-9,2459,True,five_year
+2040,UMDI V2024 projection,10-14,2627,True,five_year
+2040,UMDI V2024 projection,15-19,2650,True,five_year
+2040,UMDI V2024 projection,20-24,6626,True,five_year
+2040,UMDI V2024 projection,25-29,7664,True,five_year
+2040,UMDI V2024 projection,30-34,5875,True,five_year
+2040,UMDI V2024 projection,35-39,3975,True,five_year
+2040,UMDI V2024 projection,40-44,2981,True,five_year
+2040,UMDI V2024 projection,45-49,3733,True,five_year
+2040,UMDI V2024 projection,50-54,3938,True,five_year
+2040,UMDI V2024 projection,55-59,3894,True,five_year
+2040,UMDI V2024 projection,60-64,3527,True,five_year
+2040,UMDI V2024 projection,65-69,2833,True,five_year
+2040,UMDI V2024 projection,70-74,2348,True,five_year
+2040,UMDI V2024 projection,75-79,1969,True,five_year
+2040,UMDI V2024 projection,80-84,1896,True,five_year
+2040,UMDI V2024 projection,85+,2402,True,five_year
+2040,UMDI V2024 projection,under 5,2770,True,summary
+2040,UMDI V2024 projection,5-14,5086,True,summary
+2040,UMDI V2024 projection,5-19,7736,True,summary
+2040,UMDI V2024 projection,25-44,20495,True,summary
+2040,UMDI V2024 projection,45-64,15092,True,summary
+2040,UMDI V2024 projection,65-74,5181,True,summary
+2040,UMDI V2024 projection,75-84,3865,True,summary
+2040,UMDI V2024 projection,85+,2402,True,summary
+2040,UMDI V2024 projection,65+,11448,True,summary
+2040,UMDI V2024 projection,75+,6267,True,summary
+2045,UMDI V2024 projection,total,64272,True,total
+2045,UMDI V2024 projection,0-4,3029,True,five_year
+2045,UMDI V2024 projection,5-9,2794,True,five_year
+2045,UMDI V2024 projection,10-14,2584,True,five_year
+2045,UMDI V2024 projection,15-19,2720,True,five_year
+2045,UMDI V2024 projection,20-24,5455,True,five_year
+2045,UMDI V2024 projection,25-29,7447,True,five_year
+2045,UMDI V2024 projection,30-34,5960,True,five_year
+2045,UMDI V2024 projection,35-39,4757,True,five_year
+2045,UMDI V2024 projection,40-44,3488,True,five_year
+2045,UMDI V2024 projection,45-49,3086,True,five_year
+2045,UMDI V2024 projection,50-54,3636,True,five_year
+2045,UMDI V2024 projection,55-59,3809,True,five_year
+2045,UMDI V2024 projection,60-64,3544,True,five_year
+2045,UMDI V2024 projection,65-69,3074,True,five_year
+2045,UMDI V2024 projection,70-74,2687,True,five_year
+2045,UMDI V2024 projection,75-79,2012,True,five_year
+2045,UMDI V2024 projection,80-84,1742,True,five_year
+2045,UMDI V2024 projection,85+,2448,True,five_year
+2045,UMDI V2024 projection,under 5,3029,True,summary
+2045,UMDI V2024 projection,5-14,5378,True,summary
+2045,UMDI V2024 projection,5-19,8098,True,summary
+2045,UMDI V2024 projection,25-44,21652,True,summary
+2045,UMDI V2024 projection,45-64,14075,True,summary
+2045,UMDI V2024 projection,65-74,5761,True,summary
+2045,UMDI V2024 projection,75-84,3754,True,summary
+2045,UMDI V2024 projection,85+,2448,True,summary
+2045,UMDI V2024 projection,65+,11963,True,summary
+2045,UMDI V2024 projection,75+,6202,True,summary
+2050,UMDI V2024 projection,total,64473,True,total
+2050,UMDI V2024 projection,0-4,2941,True,five_year
+2050,UMDI V2024 projection,5-9,3074,True,five_year
+2050,UMDI V2024 projection,10-14,2944,True,five_year
+2050,UMDI V2024 projection,15-19,2689,True,five_year
+2050,UMDI V2024 projection,20-24,5611,True,five_year
+2050,UMDI V2024 projection,25-29,6246,True,five_year
+2050,UMDI V2024 projection,30-34,5789,True,five_year
+2050,UMDI V2024 projection,35-39,4883,True,five_year
+2050,UMDI V2024 projection,40-44,4231,True,five_year
+2050,UMDI V2024 projection,45-49,3619,True,five_year
+2050,UMDI V2024 projection,50-54,3004,True,five_year
+2050,UMDI V2024 projection,55-59,3514,True,five_year
+2050,UMDI V2024 projection,60-64,3447,True,five_year
+2050,UMDI V2024 projection,65-69,3078,True,five_year
+2050,UMDI V2024 projection,70-74,2928,True,five_year
+2050,UMDI V2024 projection,75-79,2309,True,five_year
+2050,UMDI V2024 projection,80-84,1774,True,five_year
+2050,UMDI V2024 projection,85+,2392,True,five_year
+2050,UMDI V2024 projection,under 5,2941,True,summary
+2050,UMDI V2024 projection,5-14,6018,True,summary
+2050,UMDI V2024 projection,5-19,8707,True,summary
+2050,UMDI V2024 projection,25-44,21149,True,summary
+2050,UMDI V2024 projection,45-64,13584,True,summary
+2050,UMDI V2024 projection,65-74,6006,True,summary
+2050,UMDI V2024 projection,75-84,4083,True,summary
+2050,UMDI V2024 projection,85+,2392,True,summary
+2050,UMDI V2024 projection,65+,12481,True,summary
+2050,UMDI V2024 projection,75+,6475,True,summary
+2015,UMDI-DOT V2018 projection,total,61856,True,total
+2015,UMDI-DOT V2018 projection,0-4,3374,True,five_year
+2015,UMDI-DOT V2018 projection,5-9,3430,True,five_year
+2015,UMDI-DOT V2018 projection,10-14,3065,True,five_year
+2015,UMDI-DOT V2018 projection,15-19,2900,True,five_year
+2015,UMDI-DOT V2018 projection,20-24,6894,True,five_year
+2015,UMDI-DOT V2018 projection,25-29,7324,True,five_year
+2015,UMDI-DOT V2018 projection,30-34,5341,True,five_year
+2015,UMDI-DOT V2018 projection,35-39,4563,True,five_year
+2015,UMDI-DOT V2018 projection,40-44,3672,True,five_year
+2015,UMDI-DOT V2018 projection,45-49,3168,True,five_year
+2015,UMDI-DOT V2018 projection,50-54,2982,True,five_year
+2015,UMDI-DOT V2018 projection,55-59,2899,True,five_year
+2015,UMDI-DOT V2018 projection,60-64,3275,True,five_year
+2015,UMDI-DOT V2018 projection,65-69,3081,True,five_year
+2015,UMDI-DOT V2018 projection,70-74,2100,True,five_year
+2015,UMDI-DOT V2018 projection,75-79,1388,True,five_year
+2015,UMDI-DOT V2018 projection,80-84,1014,True,five_year
+2015,UMDI-DOT V2018 projection,85+,1386,True,five_year
+2015,UMDI-DOT V2018 projection,under 5,3374,True,summary
+2015,UMDI-DOT V2018 projection,5-14,6495,True,summary
+2015,UMDI-DOT V2018 projection,5-19,9395,True,summary
+2015,UMDI-DOT V2018 projection,25-44,20900,True,summary
+2015,UMDI-DOT V2018 projection,45-64,12324,True,summary
+2015,UMDI-DOT V2018 projection,65-74,5181,True,summary
+2015,UMDI-DOT V2018 projection,75-84,2402,True,summary
+2015,UMDI-DOT V2018 projection,85+,1386,True,summary
+2015,UMDI-DOT V2018 projection,65+,8969,True,summary
+2015,UMDI-DOT V2018 projection,75+,3788,True,summary
+2020,UMDI-DOT V2018 projection,total,65693,True,total
+2020,UMDI-DOT V2018 projection,0-4,3197,True,five_year
+2020,UMDI-DOT V2018 projection,5-9,3689,True,five_year
+2020,UMDI-DOT V2018 projection,10-14,3756,True,five_year
+2020,UMDI-DOT V2018 projection,15-19,3175,True,five_year
+2020,UMDI-DOT V2018 projection,20-24,6612,True,five_year
+2020,UMDI-DOT V2018 projection,25-29,7673,True,five_year
+2020,UMDI-DOT V2018 projection,30-34,5306,True,five_year
+2020,UMDI-DOT V2018 projection,35-39,5130,True,five_year
+2020,UMDI-DOT V2018 projection,40-44,4220,True,five_year
+2020,UMDI-DOT V2018 projection,45-49,3581,True,five_year
+2020,UMDI-DOT V2018 projection,50-54,3029,True,five_year
+2020,UMDI-DOT V2018 projection,55-59,2826,True,five_year
+2020,UMDI-DOT V2018 projection,60-64,2854,True,five_year
+2020,UMDI-DOT V2018 projection,65-69,3140,True,five_year
+2020,UMDI-DOT V2018 projection,70-74,2897,True,five_year
+2020,UMDI-DOT V2018 projection,75-79,1909,True,five_year
+2020,UMDI-DOT V2018 projection,80-84,1204,True,five_year
+2020,UMDI-DOT V2018 projection,85+,1495,True,five_year
+2020,UMDI-DOT V2018 projection,under 5,3197,True,summary
+2020,UMDI-DOT V2018 projection,5-14,7445,True,summary
+2020,UMDI-DOT V2018 projection,5-19,10620,True,summary
+2020,UMDI-DOT V2018 projection,25-44,22329,True,summary
+2020,UMDI-DOT V2018 projection,45-64,12290,True,summary
+2020,UMDI-DOT V2018 projection,65-74,6037,True,summary
+2020,UMDI-DOT V2018 projection,75-84,3113,True,summary
+2020,UMDI-DOT V2018 projection,85+,1495,True,summary
+2020,UMDI-DOT V2018 projection,65+,10645,True,summary
+2020,UMDI-DOT V2018 projection,75+,4608,True,summary
+2025,UMDI-DOT V2018 projection,total,69873,True,total
+2025,UMDI-DOT V2018 projection,0-4,3432,True,five_year
+2025,UMDI-DOT V2018 projection,5-9,3497,True,five_year
+2025,UMDI-DOT V2018 projection,10-14,4045,True,five_year
+2025,UMDI-DOT V2018 projection,15-19,3889,True,five_year
+2025,UMDI-DOT V2018 projection,20-24,7472,True,five_year
+2025,UMDI-DOT V2018 projection,25-29,7253,True,five_year
+2025,UMDI-DOT V2018 projection,30-34,5926,True,five_year
+2025,UMDI-DOT V2018 projection,35-39,5149,True,five_year
+2025,UMDI-DOT V2018 projection,40-44,4574,True,five_year
+2025,UMDI-DOT V2018 projection,45-49,4050,True,five_year
+2025,UMDI-DOT V2018 projection,50-54,3384,True,five_year
+2025,UMDI-DOT V2018 projection,55-59,2850,True,five_year
+2025,UMDI-DOT V2018 projection,60-64,2766,True,five_year
+2025,UMDI-DOT V2018 projection,65-69,2737,True,five_year
+2025,UMDI-DOT V2018 projection,70-74,2951,True,five_year
+2025,UMDI-DOT V2018 projection,75-79,2605,True,five_year
+2025,UMDI-DOT V2018 projection,80-84,1648,True,five_year
+2025,UMDI-DOT V2018 projection,85+,1645,True,five_year
+2025,UMDI-DOT V2018 projection,under 5,3432,True,summary
+2025,UMDI-DOT V2018 projection,5-14,7542,True,summary
+2025,UMDI-DOT V2018 projection,5-19,11431,True,summary
+2025,UMDI-DOT V2018 projection,25-44,22902,True,summary
+2025,UMDI-DOT V2018 projection,45-64,13050,True,summary
+2025,UMDI-DOT V2018 projection,65-74,5688,True,summary
+2025,UMDI-DOT V2018 projection,75-84,4253,True,summary
+2025,UMDI-DOT V2018 projection,85+,1645,True,summary
+2025,UMDI-DOT V2018 projection,65+,11586,True,summary
+2025,UMDI-DOT V2018 projection,75+,5898,True,summary
+2030,UMDI-DOT V2018 projection,total,74241,True,total
+2030,UMDI-DOT V2018 projection,0-4,3510,True,five_year
+2030,UMDI-DOT V2018 projection,5-9,3728,True,five_year
+2030,UMDI-DOT V2018 projection,10-14,3846,True,five_year
+2030,UMDI-DOT V2018 projection,15-19,3931,True,five_year
+2030,UMDI-DOT V2018 projection,20-24,8795,True,five_year
+2030,UMDI-DOT V2018 projection,25-29,8401,True,five_year
+2030,UMDI-DOT V2018 projection,30-34,5466,True,five_year
+2030,UMDI-DOT V2018 projection,35-39,5854,True,five_year
+2030,UMDI-DOT V2018 projection,40-44,4589,True,five_year
+2030,UMDI-DOT V2018 projection,45-49,4309,True,five_year
+2030,UMDI-DOT V2018 projection,50-54,3787,True,five_year
+2030,UMDI-DOT V2018 projection,55-59,3156,True,five_year
+2030,UMDI-DOT V2018 projection,60-64,2772,True,five_year
+2030,UMDI-DOT V2018 projection,65-69,2647,True,five_year
+2030,UMDI-DOT V2018 projection,70-74,2566,True,five_year
+2030,UMDI-DOT V2018 projection,75-79,2640,True,five_year
+2030,UMDI-DOT V2018 projection,80-84,2235,True,five_year
+2030,UMDI-DOT V2018 projection,85+,2009,True,five_year
+2030,UMDI-DOT V2018 projection,under 5,3510,True,summary
+2030,UMDI-DOT V2018 projection,5-14,7574,True,summary
+2030,UMDI-DOT V2018 projection,5-19,11505,True,summary
+2030,UMDI-DOT V2018 projection,25-44,24310,True,summary
+2030,UMDI-DOT V2018 projection,45-64,14024,True,summary
+2030,UMDI-DOT V2018 projection,65-74,5213,True,summary
+2030,UMDI-DOT V2018 projection,75-84,4875,True,summary
+2030,UMDI-DOT V2018 projection,85+,2009,True,summary
+2030,UMDI-DOT V2018 projection,65+,12097,True,summary
+2030,UMDI-DOT V2018 projection,75+,6884,True,summary
+2035,UMDI-DOT V2018 projection,total,77121,True,total
+2035,UMDI-DOT V2018 projection,0-4,3666,True,five_year
+2035,UMDI-DOT V2018 projection,5-9,3804,True,five_year
+2035,UMDI-DOT V2018 projection,10-14,4082,True,five_year
+2035,UMDI-DOT V2018 projection,15-19,3722,True,five_year
+2035,UMDI-DOT V2018 projection,20-24,8312,True,five_year
+2035,UMDI-DOT V2018 projection,25-29,9500,True,five_year
+2035,UMDI-DOT V2018 projection,30-34,6344,True,five_year
+2035,UMDI-DOT V2018 projection,35-39,5352,True,five_year
+2035,UMDI-DOT V2018 projection,40-44,5240,True,five_year
+2035,UMDI-DOT V2018 projection,45-49,4334,True,five_year
+2035,UMDI-DOT V2018 projection,50-54,3963,True,five_year
+2035,UMDI-DOT V2018 projection,55-59,3493,True,five_year
+2035,UMDI-DOT V2018 projection,60-64,3055,True,five_year
+2035,UMDI-DOT V2018 projection,65-69,2646,True,five_year
+2035,UMDI-DOT V2018 projection,70-74,2471,True,five_year
+2035,UMDI-DOT V2018 projection,75-79,2296,True,five_year
+2035,UMDI-DOT V2018 projection,80-84,2267,True,five_year
+2035,UMDI-DOT V2018 projection,85+,2574,True,five_year
+2035,UMDI-DOT V2018 projection,under 5,3666,True,summary
+2035,UMDI-DOT V2018 projection,5-14,7886,True,summary
+2035,UMDI-DOT V2018 projection,5-19,11608,True,summary
+2035,UMDI-DOT V2018 projection,25-44,26436,True,summary
+2035,UMDI-DOT V2018 projection,45-64,14845,True,summary
+2035,UMDI-DOT V2018 projection,65-74,5117,True,summary
+2035,UMDI-DOT V2018 projection,75-84,4563,True,summary
+2035,UMDI-DOT V2018 projection,85+,2574,True,summary
+2035,UMDI-DOT V2018 projection,65+,12254,True,summary
+2035,UMDI-DOT V2018 projection,75+,7137,True,summary
+2040,UMDI-DOT V2018 projection,total,79442,True,total
+2040,UMDI-DOT V2018 projection,0-4,3896,True,five_year
+2040,UMDI-DOT V2018 projection,5-9,3977,True,five_year
+2040,UMDI-DOT V2018 projection,10-14,4158,True,five_year
+2040,UMDI-DOT V2018 projection,15-19,3988,True,five_year
+2040,UMDI-DOT V2018 projection,20-24,7864,True,five_year
+2040,UMDI-DOT V2018 projection,25-29,9019,True,five_year
+2040,UMDI-DOT V2018 projection,30-34,7134,True,five_year
+2040,UMDI-DOT V2018 projection,35-39,6232,True,five_year
+2040,UMDI-DOT V2018 projection,40-44,4776,True,five_year
+2040,UMDI-DOT V2018 projection,45-49,4952,True,five_year
+2040,UMDI-DOT V2018 projection,50-54,3987,True,five_year
+2040,UMDI-DOT V2018 projection,55-59,3622,True,five_year
+2040,UMDI-DOT V2018 projection,60-64,3369,True,five_year
+2040,UMDI-DOT V2018 projection,65-69,2906,True,five_year
+2040,UMDI-DOT V2018 projection,70-74,2463,True,five_year
+2040,UMDI-DOT V2018 projection,75-79,2210,True,five_year
+2040,UMDI-DOT V2018 projection,80-84,1973,True,five_year
+2040,UMDI-DOT V2018 projection,85+,2916,True,five_year
+2040,UMDI-DOT V2018 projection,under 5,3896,True,summary
+2040,UMDI-DOT V2018 projection,5-14,8135,True,summary
+2040,UMDI-DOT V2018 projection,5-19,12123,True,summary
+2040,UMDI-DOT V2018 projection,25-44,27161,True,summary
+2040,UMDI-DOT V2018 projection,45-64,15930,True,summary
+2040,UMDI-DOT V2018 projection,65-74,5369,True,summary
+2040,UMDI-DOT V2018 projection,75-84,4183,True,summary
+2040,UMDI-DOT V2018 projection,85+,2916,True,summary
+2040,UMDI-DOT V2018 projection,65+,12468,True,summary
+2040,UMDI-DOT V2018 projection,75+,7099,True,summary

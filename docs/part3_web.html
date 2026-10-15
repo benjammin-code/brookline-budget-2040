@@ -1,0 +1,835 @@
+<meta charset="utf-8">
+<title>The Path to 2040</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #eef0ea;
+  --paper-card: #f7f8f3;
+  --paper-card-border: #d9dcd1;
+  --ink: #1b2420;
+  --ink-muted: #55625a;
+  --ink-faint: #838f85;
+  --pine: #1f6355;
+  --pine-strong: #16453b;
+  --pine-tint: #dce8e2;
+  --copper: #b8551f;
+  --copper-tint: #f2e0d2;
+  --rule: #cbcfc4;
+
+  --line-ref: #9ba096;
+  --line-levy-actual: #8c7a5e;
+  --line-no-override: #a6852f;
+  --wf-base: #a3ab9e;
+  --line-total: #182019;
+  --line-education: #1f6355;
+  --line-benefits: #4fae8c;
+  --line-levy: #c1622d;
+
+  --sankey-src-1: #1f6355;
+  --sankey-src-2: #3c8272;
+  --sankey-src-3: #5c9c8d;
+  --sankey-src-4: #85b7ab;
+  --sankey-src-5: #b3d3ca;
+  --sankey-src-6: #d0e3dc;
+  --sankey-use-1: #b8551f;
+  --sankey-use-2: #c56d3d;
+  --sankey-use-3: #d1875e;
+  --sankey-use-4: #dda282;
+  --sankey-use-5: #e8bfa8;
+  --sankey-use-6: #f0d3c1;
+  --sankey-pool: #24322c;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #161a15;
+    --paper-card: #1d221c;
+    --paper-card-border: #333a30;
+    --ink: #e9ece4;
+    --ink-muted: #a8b0a1;
+    --ink-faint: #77806f;
+    --pine: #6bb39e;
+    --pine-strong: #8fcab8;
+    --pine-tint: #223832;
+    --copper: #e2924f;
+    --copper-tint: #3a2c1f;
+    --rule: #333a30;
+
+    --line-ref: #a8ae9f;
+    --line-levy-actual: #b7a687;
+    --line-no-override: #d1ab52;
+    --wf-base: #4b5546;
+    --line-total: #edefe9;
+    --line-education: #2f8a73;
+    --line-benefits: #7fe0b8;
+    --line-levy: #e58a4e;
+
+    --sankey-src-1: #4a9c86;
+    --sankey-src-2: #3c8272;
+    --sankey-src-3: #5c9c8d;
+    --sankey-src-4: #6ea296;
+    --sankey-src-5: #8fb3a8;
+    --sankey-src-6: #a8c4ba;
+    --sankey-use-1: #e2924f;
+    --sankey-use-2: #c56d3d;
+    --sankey-use-3: #cf8760;
+    --sankey-use-4: #c99b7c;
+    --sankey-use-5: #cbab93;
+    --sankey-use-6: #d2b8a3;
+    --sankey-pool: #d8ddd3;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #161a15;
+  --paper-card: #1d221c;
+  --paper-card-border: #333a30;
+  --ink: #e9ece4;
+  --ink-muted: #a8b0a1;
+  --ink-faint: #77806f;
+  --pine: #6bb39e;
+  --pine-strong: #8fcab8;
+  --pine-tint: #223832;
+  --copper: #e2924f;
+  --copper-tint: #3a2c1f;
+  --rule: #333a30;
+
+  --line-ref: #a8ae9f;
+  --line-levy-actual: #b7a687;
+  --line-no-override: #d1ab52;
+  --wf-base: #4b5546;
+  --line-total: #edefe9;
+  --line-education: #2f8a73;
+  --line-benefits: #7fe0b8;
+  --line-levy: #e58a4e;
+
+  --sankey-src-1: #4a9c86;
+  --sankey-src-2: #3c8272;
+  --sankey-src-3: #5c9c8d;
+  --sankey-src-4: #6ea296;
+  --sankey-src-5: #8fb3a8;
+  --sankey-src-6: #a8c4ba;
+  --sankey-use-1: #e2924f;
+  --sankey-use-2: #c56d3d;
+  --sankey-use-3: #cf8760;
+  --sankey-use-4: #c99b7c;
+  --sankey-use-5: #cbab93;
+  --sankey-use-6: #d2b8a3;
+  --sankey-pool: #d8ddd3;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--pine-strong); text-decoration-color: var(--rule); text-underline-offset: 2px; }
+a:hover { text-decoration-color: currentColor; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.wide  { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+header.hero {
+  padding: 76px 0 48px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 56px;
+}
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--copper);
+}
+h1.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 22px;
+  text-wrap: balance;
+  color: var(--ink);
+}
+p.dek {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.28rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  max-width: 620px;
+  margin: 0;
+  text-wrap: pretty;
+}
+.meta {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+.meta a { color: var(--ink-faint); }
+
+main { padding-bottom: 40px; }
+
+section.part { margin-bottom: 76px; }
+
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--pine);
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+h2.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 3.4vw, 2.15rem);
+  line-height: 1.15;
+  margin: 0 0 34px;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+h3.sub {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 40px 0 4px;
+  color: var(--ink);
+}
+
+.wrap p { margin: 0 0 20px; }
+.wrap ul { margin: 0 0 20px; padding-left: 1.3em; }
+.wrap li { margin-bottom: 10px; }
+
+strong { font-weight: 600; color: var(--ink); }
+em { font-style: italic; }
+
+.pull {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  line-height: 1.35;
+  color: var(--ink);
+  border-left: 3px solid var(--copper);
+  padding: 4px 0 4px 26px;
+  margin: 40px 0;
+  text-wrap: balance;
+}
+
+.table-card {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 6px;
+  padding: 22px 24px 8px;
+  margin: 24px 0;
+  overflow-x: auto;
+}
+.table-card-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+table.growth-table { min-width: 480px; }
+table.growth-table th:not(:first-child), table.growth-table td:not(:first-child) { width: 78px; }
+tr.sub-row td:first-child { color: var(--ink-muted); padding-left: 22px; }
+
+.note {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 3px;
+  padding: 18px 22px;
+  font-size: 15px;
+  color: var(--ink-muted);
+  margin: 28px 0;
+}
+.note strong { color: var(--ink-muted); }
+
+.stat-row {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 32px 0 8px;
+}
+.stat {
+  flex: 1 1 200px;
+  border-top: 2px solid var(--pine);
+  padding-top: 10px;
+}
+.stat.copper { border-top-color: var(--copper); }
+.stat .num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: var(--ink);
+  display: block;
+  line-height: 1.1;
+}
+.stat .lbl {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+.callout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+@media (min-width: 700px) {
+  .callout-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.callout {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 4px;
+  padding: 20px 20px 18px;
+}
+.callout .tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.callout.neg .tag { background: var(--copper-tint); color: var(--copper); }
+.callout.pos .tag { background: var(--pine-tint); color: var(--pine-strong); }
+.callout h4 {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.callout p { font-size: 14.5px; color: var(--ink-muted); margin: 0; }
+.callout .fig {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 10px 0 6px;
+  display: block;
+}
+.callout.neg .fig { color: var(--copper); }
+.callout.pos .fig { color: var(--pine-strong); }
+
+/* charts */
+.chart-block {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 6px;
+  padding: 28px 26px 20px;
+  margin: 36px 0 40px;
+}
+.chart-head { margin-bottom: 6px; }
+.chart-head h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+.chart-head .sub {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.chart-svg-wrap { position: relative; margin-top: 14px; }
+svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.axis-label, .tick-label {
+  font-family: var(--font-mono);
+  fill: var(--ink-faint);
+}
+.gridline { stroke: var(--rule); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 16px; font-size: 12.5px; }
+.legend-item { display: flex; align-items: center; gap: 7px; color: var(--ink-muted); }
+.legend-swatch { width: 14px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+
+.chart-row { display: flex; gap: 28px; align-items: flex-start; }
+.chart-row .chart-col { flex: 1 1 auto; min-width: 0; }
+.legend-vertical {
+  flex: 0 0 248px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 30px;
+  font-size: 12.5px;
+}
+.legend-vertical .legend-item { align-items: flex-start; line-height: 1.4; }
+.legend-vertical .legend-swatch { margin-top: 5px; }
+@media (max-width: 760px) {
+  .chart-row { flex-direction: column; }
+  .legend-vertical { flex-direction: row; flex-wrap: wrap; padding-top: 16px; gap: 10px 20px; }
+  .legend-vertical .legend-item { flex: 1 1 45%; }
+}
+
+.waterfall-stats { flex: 0 0 240px; display: flex; flex-direction: column; gap: 18px; padding-top: 4px; }
+.wf-stat { border-top: 3px solid var(--rule); padding-top: 8px; }
+.wf-stat .wf-val { font-family: var(--font-mono); font-weight: 600; font-size: 1.5rem; color: var(--ink); display: block; line-height: 1.1; }
+.wf-stat .wf-pct { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-muted); display: block; margin-top: 2px; }
+.wf-stat .wf-label { font-size: 13px; color: var(--ink-muted); display: block; margin-top: 3px; }
+.wf-stat.total { border-top-color: var(--ink); }
+.wf-stat.total .wf-val { font-size: 1.7rem; }
+.wider { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 11px;
+  border-radius: 4px;
+  line-height: 1.55;
+  opacity: 0;
+  transition: opacity 0.08s;
+  white-space: nowrap;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+.tooltip .tt-title { font-weight: 600; margin-bottom: 4px; color: var(--paper); opacity: 0.75;}
+.tooltip .tt-row { display: flex; justify-content: space-between; gap: 14px; }
+.tooltip .tt-swatch { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px; box-shadow: 0 0 0 1px var(--paper); }
+
+.toggle-table-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.toggle-table-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
+
+.data-table-wrap { overflow-x: auto; margin-top: 14px; display: none; }
+.data-table-wrap.open { display: block; }
+table.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+table.data-table th, table.data-table td {
+  text-align: right;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+table.data-table th:first-child, table.data-table td:first-child { text-align: left; }
+table.data-table th { color: var(--ink-muted); font-weight: 500; }
+
+.sankey-label { font-family: var(--font-mono); font-size: 12.5px; fill: var(--ink); }
+.sankey-label.pct { fill: var(--ink-muted); font-size: 11px; }
+.sankey-col-head {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  fill: var(--ink-faint);
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 36px 0 60px;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+footer p { margin: 0 0 12px; }
+
+@media (max-width: 560px) {
+  header.hero { padding: 52px 0 36px; }
+  .wrap, .wide { padding: 0 18px; }
+  .chart-block { padding: 20px 16px 16px; }
+}
+</style>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">A Brookline Finances Project — Part 3 of 3</p>
+    <h1 class="title">The Path to 2040</h1>
+    <p class="dek">Two forecasts of the same town, and the real menu of levers that could close whatever gap turns out to be real — sized honestly, not promised as a single answer.</p>
+    <p class="meta">Extends the whitepaper <a href="https://www.brooklinefuture.org/post/how-does-construction-impact-brookline-s-town-finances" target="_blank" rel="noopener">&ldquo;How does construction impact Brookline&rsquo;s town finances?&rdquo;</a> &middot; Reference document, Part 3 of 3</p>
+  </div>
+</header>
+
+<main>
+
+<section class="part">
+  <div class="wrap">
+    <p class="section-kicker">3A</p>
+    <h2 class="section-title">Where the baseline trajectory leads through 2040</h2>
+
+    <p>Part 2 defined &ldquo;sustainable&rdquo; precisely: not whether actual revenue matches actual expenses each year (Massachusetts towns can&rsquo;t run a real deficit &mdash; that&rsquo;s always forced into balance by law), but whether <em>automatic</em> revenue &mdash; 2.5% a year plus new growth, no override &mdash; grows fast enough on its own to keep pace with real cost growth. Run that question forward through 2040, and the answer depends entirely on which assumptions get used &mdash; the single biggest finding of this section, ahead of any individual number.</p>
+
+    <p>This project builds two forecasts side by side: <strong>town_assumptions</strong> takes the Town&rsquo;s own currently-published FY2026&ndash;2031 planning figures and mechanically extends them to FY2040 with no changes. <strong>trend_corrected</strong> replaces those figures, category by category, with this project&rsquo;s own reconstruction from real trailing data &mdash; the real 2024 pension actuarial valuation (not the Financial Plan&rsquo;s still-cited 2022 one), a full OPEB liability roll-forward, and the Town&rsquo;s own real CIP/Free Cash funding policy applied to its own real six-year table. Debt exclusion nets to exactly $0 every year in both &mdash; this is entirely an operating-budget story.</p>
+
+    <div class="stat-row">
+      <div class="stat copper">
+        <span class="num">-$146.1M</span>
+        <span class="lbl">town_assumptions, FY2040 &mdash; -22.4% of revenue, deficit starts FY2027</span>
+      </div>
+      <div class="stat">
+        <span class="num">+$28.4M</span>
+        <span class="lbl">trend_corrected, FY2040 &mdash; +3.8% of revenue, stays positive throughout</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide">
+    <div class="chart-block">
+      <div class="chart-head">
+        <h4>Operating surplus/deficit, % of revenue, FY2026&ndash;FY2040</h4>
+        <p class="sub">Two forecasts of the same town &mdash; the gap between them is entirely about which assumptions are used, not any new lever</p>
+      </div>
+      <div class="chart-svg-wrap" id="baseline-wrap">
+        <svg class="chart" id="baseline-svg" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="baseline-tooltip"></div>
+      </div>
+      <div class="legend" id="baseline-legend"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>That is a genuinely large gap between two forecasts of the <em>same</em> town, worth being precise about: neither scenario assumes any new lever &mdash; no faster new growth, no expense cuts, no future override beyond the real one already passed in May 2026. The entire difference comes from <em>which set of underlying assumptions is more accurate right now</em>. Put plainly: getting the assumptions right closes most of this gap on its own, before any policy lever is even considered &mdash; which makes the size of the real gap itself the first finding for 3b to work from, not a settled fact to build a lever menu on top of unchallenged.</p>
+
+    <p>The two forecasts agree on one thing precisely: the Town&rsquo;s own currently-published planning figures, taken at face value and extended with no changes, do not describe a sustainable trajectory. Whether that&rsquo;s a $146 million problem or something closer to already-solved depends on which picture is closer to right &mdash; and either way, what follows is about what happens next, on top of whichever baseline turns out correct.</p>
+  </div>
+</section>
+
+<section class="part">
+  <div class="wrap">
+    <p class="section-kicker">3B</p>
+    <h2 class="section-title">A menu of levers to close the gap</h2>
+
+    <p>However large the real remaining gap turns out to be, closing it is not a single decision. This project takes that advice from two sources that don&rsquo;t usually get cited together: the ERSC Final Report&rsquo;s own explicit caution against point estimates, and the Town&rsquo;s own <strong>2030 Roadmap</strong> (approved by the Select Board May 19, 2026), whose Goal 3 &mdash; &ldquo;increase the Town&rsquo;s fiscal health and stability&rdquo; &mdash; already names three of these four levers as adopted Town strategy, not a menu this project invented from scratch.</p>
+  </div>
+
+  <div class="wide">
+    <div class="callout-grid" id="lever-grid"></div>
+  </div>
+
+  <div class="wrap">
+    <h3 class="sub" style="margin-top:52px">Relying on overrides alone</h3>
+    <p>The lever every real historical gap has actually been closed with. This project models what &ldquo;nothing but overrides, at a realistic cadence&rdquo; would require: taking town_assumptions&rsquo; operating gap as-is, and asking what size override &mdash; called roughly every three years, matching the ERSC&rsquo;s own finding that override intervals have compressed &mdash; would bring the budget back to breakeven each time.</p>
+  </div>
+
+  <div class="wide">
+    <div class="chart-block">
+      <div class="chart-head">
+        <h4>Four overrides, each bigger than the last, still not enough</h4>
+        <p class="sub">New override called each cycle (bars) vs. the gap that reopens between cycles (line, % of revenue)</p>
+      </div>
+      <div class="chart-svg-wrap" id="override-wrap">
+        <svg class="chart" id="override-svg" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="override-tooltip"></div>
+      </div>
+      <div class="legend" id="override-legend"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>FY2029 ($8.1M), FY2032 ($16.8M), FY2035 ($33.6M), FY2038 ($42.1M) &mdash; each roughly double the one before, compounding to <strong>$113.3 million a year</strong> of permanent added levy capacity by FY2040. That&rsquo;s roughly three times this project&rsquo;s entire FY2005&ndash;2025 real-override total ($38.7M, compounded), raised in about three-quarters of the time. And even with all four, the budget isn&rsquo;t fully closed by FY2040: two years after the last one, the gap has already reopened to -$32.8 million (-5.0% of revenue). A pure override-reliance strategy doesn&rsquo;t settle into a steady rhythm &mdash; it has to keep accelerating.</p>
+
+    <div class="note">
+      <strong>None of these four levers is sized to close the whole gap alone</strong>, and that&rsquo;s the point of a menu rather than a recommendation. New growth&rsquo;s best case is real but modest against a nine-figure annual gap; permitting reform has a real data foundation but isn&rsquo;t sized to a target yet; expense management&rsquo;s best current documentation, from the Town&rsquo;s own dedicated study, tops out under half a million dollars a year; overrides alone still leave a real gap open by 2040 while requiring rapidly escalating individual asks. The honest picture is a combination, sized against whichever baseline turns out closer to right &mdash; not a single lever asked to do all the work.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>This is Part 3 of a three-part reference document &mdash; a comprehensive, technically detailed companion to a shorter public article this project is building toward. Parts 1 (Brookline&rsquo;s financial history and its parcel-level growth map) and 2 (how the town&rsquo;s fiscal machine actually works) are both done.</p>
+    <p>Figures throughout are sourced from this project&rsquo;s own baseline revenue/expense/surplus-deficit forecasts (built from the Town&rsquo;s own Financial Plans, Long-Range Financial Projections, and the real 2024 pension actuarial valuation), the Town of Brookline 2030 Roadmap (approved May 19, 2026), and the E&amp;RSC Final Report (March 13, 2026).</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function css(v) {
+    return getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  }
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+  function fmtMoney(n, decimals) {
+    decimals = decimals || 1;
+    var abs = Math.abs(n);
+    if (abs >= 1e6) return "$" + (n / 1e6).toFixed(decimals) + "M";
+    if (abs >= 1e3) return "$" + (n / 1e3).toFixed(0) + "K";
+    return "$" + n.toFixed(0);
+  }
+
+  /* ---------------- BASELINE TRAJECTORY CHART ---------------- */
+  var baselineData = [
+    {fy:2026, ta:0.0, tc:0.69},
+    {fy:2027, ta:-0.875, tc:1.886},
+    {fy:2028, ta:-1.328, tc:2.381},
+    {fy:2029, ta:-1.652, tc:2.952},
+    {fy:2030, ta:-2.059, tc:5.798},
+    {fy:2031, ta:-2.99, tc:4.558},
+    {fy:2032, ta:-4.805, tc:4.739},
+    {fy:2033, ta:-6.572, tc:4.383},
+    {fy:2034, ta:-8.564, tc:4.375},
+    {fy:2035, ta:-10.63, tc:4.35},
+    {fy:2036, ta:-12.785, tc:4.3},
+    {fy:2037, ta:-15.035, tc:4.226},
+    {fy:2038, ta:-17.38, tc:4.125},
+    {fy:2039, ta:-19.825, tc:3.999},
+    {fy:2040, ta:-22.373, tc:3.847}
+  ];
+
+  function drawBaselineChart() {
+    var svg = document.getElementById("baseline-svg");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = 900, H = 460;
+    var m = { top: 24, right: 24, bottom: 40, left: 56 };
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+    var minY = 2026, maxY = 2040;
+    var vMax = 8, vMin = -24;
+    function x(fy) { return m.left + (fy - minY) / (maxY - minY) * iw; }
+    function y(v) { return m.top + ih - (v - vMin) / (vMax - vMin) * ih; }
+
+    for (var gv = -24; gv <= vMax; gv += 4) {
+      var isZero = gv === 0;
+      svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: y(gv), y2: y(gv), stroke: isZero ? css("--ink-faint") : css("--rule"), "stroke-width": isZero ? 1.5 : 1 }));
+      var gl = svgEl("text", { x: m.left - 10, y: y(gv) + 4, class: "tick-label", "text-anchor": "end", "font-size": "11" });
+      gl.textContent = gv + "%";
+      svg.appendChild(gl);
+    }
+    [2026, 2030, 2035, 2040].forEach(function (yr) {
+      var tl = svgEl("text", { x: x(yr), y: m.top + ih + 22, class: "tick-label", "text-anchor": "middle", "font-size": "11" });
+      tl.textContent = "FY" + yr;
+      svg.appendChild(tl);
+    });
+
+    function linePath(key, colorVar) {
+      var pts = baselineData.map(function (d) { return x(d.fy) + "," + y(d[key]); }).join(" L");
+      svg.appendChild(svgEl("path", { d: "M" + pts, fill: "none", stroke: css(colorVar), "stroke-width": 2.5, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    }
+    linePath("ta", "--copper");
+    linePath("tc", "--pine");
+
+    var hitRect = svgEl("rect", { x: m.left, y: m.top, width: iw, height: ih, fill: "transparent" });
+    var crosshair = svgEl("line", { y1: m.top, y2: m.top + ih, stroke: css("--ink-faint"), "stroke-width": 1, "stroke-dasharray": "3,3", opacity: 0 });
+    svg.appendChild(crosshair);
+    svg.appendChild(hitRect);
+    var tooltip = document.getElementById("baseline-tooltip");
+    var wrap = document.getElementById("baseline-wrap");
+    hitRect.addEventListener("mousemove", function (e) {
+      var rect = svg.getBoundingClientRect();
+      var scale = W / rect.width;
+      var mx = (e.clientX - rect.left) * scale;
+      var fy = Math.round(minY + (mx - m.left) / iw * (maxY - minY));
+      fy = Math.max(minY, Math.min(maxY, fy));
+      var d = baselineData[fy - minY];
+      crosshair.setAttribute("x1", x(fy)); crosshair.setAttribute("x2", x(fy)); crosshair.setAttribute("opacity", 1);
+      var html = '<div class="tt-title">FY' + fy + '</div>';
+      html += '<div class="tt-row"><span><span class="tt-swatch" style="background:' + css("--copper") + '"></span>town_assumptions</span><span>' + d.ta.toFixed(1) + '%</span></div>';
+      html += '<div class="tt-row"><span><span class="tt-swatch" style="background:' + css("--pine") + '"></span>trend_corrected</span><span>' + d.tc.toFixed(1) + '%</span></div>';
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = 1;
+      var wrect = wrap.getBoundingClientRect();
+      tooltip.style.left = (e.clientX - wrect.left + 14) + "px";
+      tooltip.style.top = (e.clientY - wrect.top - 10) + "px";
+    });
+    hitRect.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; crosshair.setAttribute("opacity", 0); });
+
+    var legend = document.getElementById("baseline-legend");
+    legend.innerHTML = "";
+    [["town_assumptions", "--copper"], ["trend_corrected", "--pine"]].forEach(function (item) {
+      var el = document.createElement("div"); el.className = "legend-item";
+      var sw = document.createElement("span"); sw.className = "legend-swatch"; sw.style.background = css(item[1]);
+      el.appendChild(sw);
+      var txt = document.createElement("span"); txt.textContent = item[0];
+      el.appendChild(txt);
+      legend.appendChild(el);
+    });
+  }
+
+  /* ---------------- OVERRIDE-RELIANCE CHART ---------------- */
+  var overrideData = [
+    {fy:2026, newOverride:0, resultPct:0.0},
+    {fy:2027, newOverride:0, resultPct:-0.875},
+    {fy:2028, newOverride:0, resultPct:-1.328},
+    {fy:2029, newOverride:8071128, resultPct:0.0},
+    {fy:2030, newOverride:0, resultPct:-0.414},
+    {fy:2031, newOverride:0, resultPct:-1.348},
+    {fy:2032, newOverride:16804446, resultPct:0.0},
+    {fy:2033, newOverride:0, resultPct:-1.779},
+    {fy:2034, newOverride:0, resultPct:-3.776},
+    {fy:2035, newOverride:33575224, resultPct:0.0},
+    {fy:2036, newOverride:0, resultPct:-2.168},
+    {fy:2037, newOverride:0, resultPct:-4.428},
+    {fy:2038, newOverride:42084490, resultPct:0.0},
+    {fy:2039, newOverride:0, resultPct:-2.462},
+    {fy:2040, newOverride:0, resultPct:-5.027}
+  ];
+
+  function drawOverrideChart() {
+    var svg = document.getElementById("override-svg");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = 900, H = 420;
+    var m = { top: 24, right: 50, bottom: 40, left: 56 };
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+    var minY = 2026, maxY = 2040;
+    var barMax = 45e6;
+    var pctMin = -6, pctMax = 1;
+
+    function x(fy) { return m.left + (fy - minY) / (maxY - minY) * iw; }
+    var barW = iw / (maxY - minY) * 0.5;
+    function yBar(v) { return m.top + ih - (v / barMax) * ih; }
+    function yPct(v) { return m.top + ih - (v - pctMin) / (pctMax - pctMin) * ih; }
+
+    // bars: new override this year
+    overrideData.forEach(function (d) {
+      if (d.newOverride > 0) {
+        var bx = x(d.fy) - barW / 2;
+        var by = yBar(d.newOverride);
+        svg.appendChild(svgEl("rect", { x: bx, y: by, width: barW, height: (m.top + ih) - by, rx: 3, fill: css("--copper") }));
+        var lbl = svgEl("text", { x: x(d.fy), y: by - 8, class: "axis-label", "text-anchor": "middle", "font-size": "12" });
+        lbl.textContent = fmtMoney(d.newOverride);
+        svg.appendChild(lbl);
+      }
+    });
+
+    // zero line for pct axis
+    svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: yPct(0), y2: yPct(0), stroke: css("--ink-faint"), "stroke-width": 1, "stroke-dasharray": "3,3" }));
+
+    // line: resulting gap % of revenue
+    var pts = overrideData.map(function (d) { return x(d.fy) + "," + yPct(d.resultPct); }).join(" L");
+    svg.appendChild(svgEl("path", { d: "M" + pts, fill: "none", stroke: css("--pine"), "stroke-width": 2.5, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    overrideData.forEach(function (d) {
+      svg.appendChild(svgEl("circle", { cx: x(d.fy), cy: yPct(d.resultPct), r: 2.5, fill: css("--pine") }));
+    });
+
+    [2026, 2029, 2032, 2035, 2038, 2040].forEach(function (yr) {
+      var tl = svgEl("text", { x: x(yr), y: m.top + ih + 22, class: "tick-label", "text-anchor": "middle", "font-size": "11" });
+      tl.textContent = "FY" + yr;
+      svg.appendChild(tl);
+    });
+    // right-side pct axis labels
+    [-6,-4,-2,0].forEach(function(p){
+      var gl = svgEl("text", { x: m.left + iw + 8, y: yPct(p) + 4, class: "tick-label", "font-size": "11" });
+      gl.textContent = p + "%";
+      svg.appendChild(gl);
+    });
+
+    var tooltip = document.getElementById("override-tooltip");
+    var wrap = document.getElementById("override-wrap");
+    var hitRect = svgEl("rect", { x: m.left, y: m.top, width: iw, height: ih, fill: "transparent" });
+    svg.appendChild(hitRect);
+    hitRect.addEventListener("mousemove", function (e) {
+      var rect = svg.getBoundingClientRect();
+      var scale = W / rect.width;
+      var mx = (e.clientX - rect.left) * scale;
+      var fy = Math.round(minY + (mx - m.left) / iw * (maxY - minY));
+      fy = Math.max(minY, Math.min(maxY, fy));
+      var d = overrideData[fy - minY];
+      var html = '<div class="tt-title">FY' + fy + '</div>';
+      if (d.newOverride > 0) html += '<div class="tt-row"><span>New override</span><span>' + fmtMoney(d.newOverride) + '</span></div>';
+      html += '<div class="tt-row"><span>Resulting gap</span><span>' + d.resultPct.toFixed(1) + '% of revenue</span></div>';
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = 1;
+      var wrect = wrap.getBoundingClientRect();
+      tooltip.style.left = (e.clientX - wrect.left + 14) + "px";
+      tooltip.style.top = (e.clientY - wrect.top - 10) + "px";
+    });
+    hitRect.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; });
+
+    var legend = document.getElementById("override-legend");
+    legend.innerHTML = "";
+    var l1 = document.createElement("div"); l1.className = "legend-item";
+    var sw1 = document.createElement("span"); sw1.className = "legend-swatch"; sw1.style.background = css("--copper");
+    l1.appendChild(sw1); var t1 = document.createElement("span"); t1.textContent = "New override called that year";
+    l1.appendChild(t1); legend.appendChild(l1);
+    var l2 = document.createElement("div"); l2.className = "legend-item";
+    var sw2 = document.createElement("span"); sw2.className = "legend-swatch"; sw2.style.background = css("--pine");
+    l2.appendChild(sw2); var t2 = document.createElement("span"); t2.textContent = "Resulting gap, % of revenue";
+    l2.appendChild(t2); legend.appendChild(l2);
+  }
+
+  /* ---------------- LEVER CARDS ---------------- */
+  var levers = [
+    { tag: "New growth", cls: "pos", fig: "$23.9M–$35.2M", h: "Already modeled — and close to the Town's own target", p: "Phase 2's scenarios (trend_continues to peer-target) imply $23.9M–$35.2M of new-growth revenue FY26-30 — the 2030 Roadmap's own KPI targets $15M–$20M over the same window. This project's baseline already tracks close to what the Town itself calls sufficient." },
+    { tag: "Permitting & zoning", cls: "neutral", fig: "Not yet sized", h: "Real data foundation, deliberately not quantified yet", p: "The whitepaper's original thesis, and Roadmap Goal 3.B. Permit-lag case studies (Part 1b) show real 15–40 month permit-to-assessment timelines — a real, measurable lever. Sizing it needs a target from the other levers first, not a generic “faster permitting” guess." },
+    { tag: "Reducing costs", cls: "neutral", fig: "$390K/yr quantified", h: "The Town's own dedicated study found real but small savings", p: "The ERSC's Future Subcommittee's only quantified recommendation: a $3.2M Solar Initiative saving ~$390K/yr. Electric demand management and school-model classroom consolidation are real but not yet costed. Dwarfed by a nine-figure gap — not nothing, but not the answer alone." },
+    { tag: "Relying on overrides", cls: "neg", fig: "$113.3M/yr by 2040", h: "Works, but has to keep accelerating", p: "Four overrides at a realistic 3-year cadence (FY29/32/35/38), each roughly double the last, compound to $113.3M/yr of permanent capacity — 3x this project's entire FY05-25 real-override total. Still $32.8M short by FY2040." }
+  ];
+
+  function buildLevers() {
+    var grid = document.getElementById("lever-grid");
+    grid.innerHTML = "";
+    levers.forEach(function (c) {
+      var card = document.createElement("div");
+      card.className = "callout " + (c.cls === "neutral" ? "" : c.cls);
+      if (c.cls === "neutral") { card.style.borderStyle = "dashed"; }
+      var tag = document.createElement("span");
+      tag.className = "tag";
+      if (c.cls === "neutral") { tag.style.background = "var(--rule)"; tag.style.color = "var(--ink-muted)"; }
+      tag.textContent = c.tag;
+      card.appendChild(tag);
+      var h4 = document.createElement("h4"); h4.textContent = c.h; card.appendChild(h4);
+      var fig = document.createElement("span"); fig.className = "fig"; fig.textContent = c.fig; card.appendChild(fig);
+      var p = document.createElement("p"); p.textContent = c.p; card.appendChild(p);
+      grid.appendChild(card);
+    });
+  }
+
+  function render() {
+    drawBaselineChart();
+    drawOverrideChart();
+  }
+  buildLevers();
+  render();
+  window.addEventListener("resize", function () {
+    clearTimeout(window.__rt);
+    window.__rt = setTimeout(render, 150);
+  });
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  }
+})();
+</script>

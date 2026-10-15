@@ -1,0 +1,7 @@
+website/dist/
+docs/site/build/
+__pycache__/
+*.pyc
+.DS_Store
+output/rebuild_report.md
+output/rebuild_log.txt

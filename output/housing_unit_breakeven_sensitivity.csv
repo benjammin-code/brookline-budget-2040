@@ -1,0 +1,9 @@
+case,apartment_9plus_breakeven_fy2027,apartment_9plus_breakeven_fy2040,condominium_breakeven_fy2027,condominium_breakeven_fy2040
+Base case,0.213,0.168,0.664,0.531
+"Student cost at the full average, $26,683 (FY2024) grown 3%/yr",0.123,0.113,0.383,0.358
+Student cost grows 5%/yr (school pay at the School Department's forecast),0.213,0.153,0.664,0.483
+Student cost grows 3%/yr (pay and premiums at target),0.213,0.197,0.664,0.62
+"Town services $1,109/home (RKG)",0.178,0.138,0.629,0.501
+Town services $230/home,0.246,0.197,0.697,0.56
+"Home's tax grows 2.31%/yr (trend, all existing property)",0.213,0.163,0.664,0.517
+Tax rate 10% lower (e.g. residential exemption),0.186,0.147,0.592,0.473

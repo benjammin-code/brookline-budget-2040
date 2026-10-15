@@ -1,0 +1,896 @@
+<title>What Decides Brookline's 2040 Budget</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --ground: #fbfbf8; --surface: #f1f0ec; --panel: #f1f0ec;
+    --ink: #1c1c1a; --ink-2: #4f4f4a; --ink-3: #75756e;
+    --rule: #dcdbd5; --rule-strong: #b9b8b1;
+    --accent: #1f3a5f; --accent-ink: #142843; --accent-soft: #e3e9f1;
+    --warm-ink: #9a4a2c; --warm-soft: #f4e6df;
+    --flag: #7a5a12; --flag-soft: #f6efdc; --flag-rule: #dcc796;
+    --s1: #2b5c97; --s2: #b66946; --s3: #447b46; --axis: #9a9a92; --grid: #e6e5e0;
+    --sans: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --mono: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --measure: 40rem; --wide: 58rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #151719; --surface: #23272b; --panel: #23272b;
+      --ink: #e8e6e1; --ink-2: #b9b7b0; --ink-3: #8f8d86;
+      --rule: #2f3236; --rule-strong: #4a4d52;
+      --accent: #8fb0d8; --accent-ink: #b5cbe6; --accent-soft: #1d2a3a;
+      --warm-ink: #e0937a; --warm-soft: #33231d;
+      --flag: #d6b25f; --flag-soft: #2b2516; --flag-rule: #4d4224;
+      --s1: #4c82c6; --s2: #a3563b; --s3: #3b793f; --axis: #6d6c67; --grid: #26292d;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #151719; --surface: #23272b; --panel: #23272b;
+    --ink: #e8e6e1; --ink-2: #b9b7b0; --ink-3: #8f8d86;
+    --rule: #2f3236; --rule-strong: #4a4d52;
+    --accent: #8fb0d8; --accent-ink: #b5cbe6; --accent-soft: #1d2a3a;
+    --warm-ink: #e0937a; --warm-soft: #33231d;
+    --flag: #d6b25f; --flag-soft: #2b2516; --flag-rule: #4d4224;
+    --s1: #4c82c6; --s2: #a3563b; --s3: #3b793f; --axis: #6d6c67; --grid: #26292d;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink); font-family: var(--serif);
+    font-size: 17px; line-height: 1.62; margin: 0; padding: 0 1.25rem 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--wide); margin: 0 auto; }
+
+  header.masthead { border-bottom: 2px solid var(--ink); padding: 3.5rem 0 1.5rem; margin-bottom: 2.5rem; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0 0 1rem;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: clamp(2rem, 5.5vw, 3rem);
+    line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; margin: 0 0 1rem;
+  }
+  .standfirst { font-size: 1.12rem; color: var(--ink-2); max-width: var(--measure); margin: 0 0 1.75rem; }
+  .masthead-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-family: var(--mono); font-size: 0.76rem; color: var(--ink-3); }
+  .masthead-meta b { color: var(--ink-2); font-weight: 500; }
+
+  section { margin: 0 0 4rem; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.012em;
+    line-height: 1.25; text-wrap: balance; margin: 0 0 0.9rem; padding-top: 0.9rem;
+    border-top: 1px solid var(--rule-strong);
+  }
+  h2 .share {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500; color: var(--accent);
+    display: block; margin-bottom: 0.45rem; letter-spacing: 0.04em;
+  }
+  h3 {
+    font-family: var(--sans); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-2); margin: 2.25rem 0 0.9rem;
+  }
+  p { margin: 0 0 1.05rem; max-width: var(--measure); }
+  .lede { color: var(--ink-2); }
+  strong { font-weight: 600; }
+  .n { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.92em; }
+  code { font-family: var(--mono); font-size: 0.85em; background: var(--panel); padding: 0.08em 0.34em; border-radius: 2px; }
+  ol.steps, ul.plain { max-width: var(--measure); padding-left: 1.3rem; margin: 0 0 1.25rem; }
+  ol.steps li, ul.plain li { margin-bottom: 0.6rem; }
+
+  /* ranked bars */
+  .bars { margin: 0.5rem 0 1.5rem; }
+  .b-head {
+    display: grid; grid-template-columns: 1fr; font-family: var(--sans); font-size: 0.7rem;
+    font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+    padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule-strong);
+  }
+  .b-row {
+    display: grid; grid-template-columns: 1fr; gap: 0.25rem; padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule); cursor: default; position: relative;
+  }
+  @media (min-width: 46rem) {
+    .b-row, .b-head { grid-template-columns: 15.5rem 1fr 8.5rem; align-items: center; gap: 0 1rem; }
+  }
+  .b-row:hover, .b-row:focus-visible { background: var(--surface); outline: none; }
+  .b-row:focus-visible { box-shadow: inset 3px 0 0 var(--accent); }
+  .b-label { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; }
+  .b-track { position: relative; height: 1.25rem; }
+  .b-zero { position: absolute; top: -0.2rem; bottom: -0.2rem; width: 1px; background: var(--axis); }
+  .b-bar { position: absolute; top: 0.15rem; height: 0.95rem; }
+  .b-bar.pos { background: var(--s1); border-radius: 0 4px 4px 0; }
+  .b-bar.neg { background: var(--s2); border-radius: 4px 0 0 4px; }
+  .b-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.82rem; color: var(--ink-2); white-space: nowrap; }
+  @media (min-width: 46rem) { .b-val { text-align: right; } }
+  .b-val b { color: var(--ink); font-weight: 600; }
+  .b-total { font-family: var(--sans); font-size: 0.85rem; font-weight: 700; border-bottom: 2px solid var(--ink); }
+
+  .tip {
+    position: fixed; z-index: 10; pointer-events: none; max-width: 20rem;
+    background: var(--ink); color: var(--ground); font-family: var(--sans); font-size: 0.78rem;
+    line-height: 1.45; padding: 0.6rem 0.75rem; border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  }
+  .tip b { display: block; margin-bottom: 0.25rem; font-size: 0.82rem; }
+  .tip table { min-width: 0; width: 100%; font-size: 0.74rem; }
+  .tip td { color: inherit; border: 0; padding: 0.05rem 0 0.05rem 0.75rem; opacity: 0.92; }
+  .tip td:first-child { padding-left: 0; }
+
+  /* who-sets-it */
+  .who { display: grid; gap: 0.2rem; margin: 0 0 1.5rem; max-width: var(--wide); }
+  .who-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; padding: 0.6rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (min-width: 46rem) { .who-row { grid-template-columns: 15.5rem 1fr 8.5rem; align-items: center; } }
+  .who-name { font-family: var(--sans); font-weight: 600; font-size: 0.9rem; }
+  .who-desc { font-size: 0.88rem; color: var(--ink-2); grid-column: 1 / -1; }
+  @media (min-width: 46rem) { .who-desc { grid-column: auto; } }
+  .who-val { font-family: var(--mono); font-size: 0.82rem; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink-2); }
+  @media (min-width: 46rem) { .who-val { grid-column: 3; grid-row: 1; } .who-desc { grid-column: 2; grid-row: 1; } }
+  .who-val b { color: var(--ink); }
+
+  /* part lists */
+  .parts { display: grid; gap: 0; margin: 0 0 1.5rem; max-width: var(--measure); font-size: 0.93rem; }
+  .parts div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px dotted var(--rule-strong); }
+  .parts span:last-child { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.85rem; white-space: nowrap; }
+  .parts .sum { border-bottom: 0; border-top: 1px solid var(--ink-2); font-weight: 600; }
+
+  .tablewrap { overflow-x: auto; margin: 0 0 1.25rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-family: var(--mono); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+  th {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-3); text-align: right; padding: 0 0.7rem 0.5rem;
+    border-bottom: 1px solid var(--rule-strong); vertical-align: bottom;
+  }
+  th:first-child, td:first-child { text-align: left; padding-left: 0; }
+  td { text-align: right; padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
+  td.hi { color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 0.84rem; }
+  tr.tot td { border-top: 1px solid var(--ink-2); color: var(--ink); font-weight: 600; }
+  td.cell { position: relative; }
+  td.neg { color: var(--warm-ink); }
+
+  .fig { margin: 0.5rem 0 1.5rem; }
+  .fig svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--ink-2); margin: 0 0 0.5rem; }
+  .sw { display: inline-block; width: 0.9rem; height: 2px; vertical-align: middle; margin-right: 0.4rem; }
+  .figcap { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-3); max-width: var(--measure); }
+  details { margin: 0.25rem 0 1.25rem; font-family: var(--sans); font-size: 0.85rem; }
+  summary { cursor: pointer; color: var(--accent-ink); font-weight: 600; }
+  summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .note {
+    font-size: 0.93rem; line-height: 1.55; color: var(--ink-2); background: var(--flag-soft);
+    border-left: 3px solid var(--flag-rule); padding: 0.8rem 1rem; margin: 0 0 1.25rem; max-width: none;
+  }
+  .note b { color: var(--flag); font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.02em; }
+  .fwd {
+    font-size: 0.93rem; line-height: 1.55; color: var(--ink-2); background: var(--accent-soft);
+    border-left: 3px solid var(--accent); padding: 0.8rem 1rem; margin: 0 0 1.25rem; max-width: none;
+  }
+  .fwd b { color: var(--accent-ink); font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.02em; }
+
+  footer { border-top: 2px solid var(--ink); margin-top: 1rem; padding-top: 1.5rem; font-size: 0.9rem; color: var(--ink-3); }
+  footer p { max-width: var(--measure); }
+  footer a { color: var(--accent-ink); }
+
+  .stat { display: grid; grid-template-columns: 1fr; gap: 0.5rem 1.5rem; align-items: start;
+          background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--accent);
+          padding: 1.4rem 1.5rem 0.4rem; margin: 0 0 1.5rem; }
+  @media (min-width: 46rem) { .stat { grid-template-columns: auto 1fr; } }
+  .stat-big { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600;
+              font-size: clamp(2.6rem, 8vw, 3.6rem); line-height: 1; letter-spacing: -0.03em; color: var(--accent-ink); }
+  .stat-cap { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; margin: 0 0 0.5rem; }
+  .stat p { font-size: 0.97rem; }
+  em.cat { font-style: normal; font-family: var(--sans); font-weight: 600; font-size: 0.9em;
+           color: var(--accent-ink); background: var(--accent-soft); padding: 0.02em 0.35em; border-radius: 3px;
+           white-space: nowrap; }
+
+  /* tornado: two diverging panels flanking the labels */
+  .tor { margin: 0.5rem 0 1.25rem; }
+  .tor-head, .tor-row { display: grid; grid-template-columns: 1fr; gap: 0.3rem; }
+  @media (min-width: 52rem) {
+    .tor-head, .tor-row { grid-template-columns: 1fr 17rem 1fr; gap: 0 1rem; align-items: center; }
+  }
+  .tor-head { font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em;
+              text-transform: uppercase; color: var(--ink-3); padding-bottom: 0.45rem;
+              border-bottom: 1px solid var(--rule-strong); }
+  .tor-head span:nth-child(2) { text-align: center; }
+  .tor-row { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+  .tor-lab { font-family: var(--sans); font-size: 0.86rem; font-weight: 600; line-height: 1.3; }
+  @media (min-width: 52rem) { .tor-lab { text-align: center; order: 0; } }
+  .tor-lab small { display: block; font-weight: 500; font-size: 0.72rem; color: var(--ink-3); letter-spacing: 0.02em; margin-top: 0.15rem; }
+  .tor-cell { display: grid; grid-template-columns: 1fr 5.2rem; gap: 0.5rem; align-items: center; }
+  .tor-track { position: relative; height: 1.1rem; }
+  .tor-zero { position: absolute; top: -0.25rem; bottom: -0.25rem; width: 1px; background: var(--axis); left: 50%; }
+  .tor-bar { position: absolute; top: 0.1rem; height: 0.9rem; }
+  .tor-bar.up { background: var(--s1); left: 50%; border-radius: 0 4px 4px 0; }
+  .tor-bar.down { background: var(--s2); right: 50%; border-radius: 4px 0 0 4px; }
+  .tor-val { font-family: var(--mono); font-size: 0.78rem; font-variant-numeric: tabular-nums; color: var(--ink-2); text-align: right; white-space: nowrap; }
+  .tor-cap { font-family: var(--sans); font-size: 0.7rem; color: var(--ink-3); display: block; }
+  @media (min-width: 52rem) { .tor-cap { display: none; } }
+  .tag { display: inline-block; font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.05em;
+         text-transform: uppercase; padding: 0.05rem 0.4rem; border-radius: 3px; margin-top: 0.25rem; }
+  .tag.local { background: var(--accent-soft); color: var(--accent-ink); }
+  .tag.outside { background: var(--panel); color: var(--ink-2); }
+  .tag.growth { background: var(--flag-soft); color: var(--flag); }
+  .tor-key { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-family: var(--sans); font-size: 0.78rem; color: var(--ink-2); margin: 0 0 0.6rem; }
+  .sq { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 2px; vertical-align: -0.1rem; margin-right: 0.35rem; }
+  td.pos { color: var(--accent-ink); }
+
+  /* Town paper */
+  h1, h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.012em; }
+  header.masthead { border-bottom: 3px solid var(--ink); }
+  table, svg text, .n, .big { font-variant-numeric: tabular-nums; }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Brookline fiscal model &middot; driver-based forecast</p>
+  <h1>What Decides Brookline's 2040 Budget</h1>
+  <p class="standfirst">
+    Starting from the FY2027 budget Town Meeting adopted in May 2026, and assuming costs
+    keep behaving the way they did from FY2011 to FY2025, annual operating spending grows
+    from $415 million to $685 million by FY2040. With the May 2026 override, revenue stays
+    about $10 to $19 million a year ahead of spending through the 2030s. Four decisions
+    about what existing services cost, each worth $20 to $46 million a year by FY2040,
+    matter far more than how fast the town grows, and none of them cuts a service.
+  </p>
+  <div class="masthead-meta">
+    <span><b>Measure</b> annual General Fund operating spending</span>
+    <span><b>Years</b> FY2026&ndash;FY2040</span>
+    <span><b>Base case</b> adopted FY2027 budget, then Brookline's FY2011&ndash;25 record</span>
+    <span><b>Updated</b> 2026-10-05, forward-looking only</span>
+  </div>
+</header>
+
+<section>
+  <h2>The outlook</h2>
+  <p class="lede">
+    Annual operating revenue minus annual operating spending, base case, with the May 2026
+    override. Excluded debt is left out of both sides because voters approved a separate tax
+    that pays it exactly.
+  </p>
+  <div class="fig">
+    <div class="legend">
+      <span><span class="sw" style="background:var(--s1)"></span>Revenue minus spending, base case</span>
+    </div>
+    <div id="bal"></div>
+    <p class="figcap">$ millions per year. Hover for values.</p>
+    <details>
+      <summary>Show the numbers</summary>
+      <div class="tablewrap"><table>
+        <thead><tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">Spending</th><th scope="col">Revenue minus spending</th></tr></thead>
+        <tbody><tr><th scope="row">FY2026</th><td>$392.3M</td><td>$391.0M</td><td>+$1.3M</td></tr><tr><th scope="row">FY2027</th><td>$418.0M</td><td>$415.3M</td><td>+$2.7M</td></tr><tr><th scope="row">FY2028</th><td>$438.3M</td><td>$428.4M</td><td>+$9.9M</td></tr><tr><th scope="row">FY2029</th><td>$462.1M</td><td>$450.1M</td><td>+$12.0M</td></tr><tr><th scope="row">FY2030</th><td>$480.6M</td><td>$463.5M</td><td>+$17.1M</td></tr><tr><th scope="row">FY2031</th><td>$496.4M</td><td>$480.6M</td><td>+$15.8M</td></tr><tr><th scope="row">FY2032</th><td>$516.7M</td><td>$499.8M</td><td>+$16.9M</td></tr><tr><th scope="row">FY2033</th><td>$537.5M</td><td>$519.7M</td><td>+$17.8M</td></tr><tr><th scope="row">FY2034</th><td>$559.3M</td><td>$540.1M</td><td>+$19.3M</td></tr><tr><th scope="row">FY2035</th><td>$580.2M</td><td>$561.1M</td><td>+$19.1M</td></tr><tr><th scope="row">FY2036</th><td>$601.8M</td><td>$583.1M</td><td>+$18.7M</td></tr><tr><th scope="row">FY2037</th><td>$624.1M</td><td>$606.4M</td><td>+$17.7M</td></tr><tr><th scope="row">FY2038</th><td>$647.3M</td><td>$630.9M</td><td>+$16.3M</td></tr><tr><th scope="row">FY2039</th><td>$671.3M</td><td>$657.1M</td><td>+$14.2M</td></tr><tr><th scope="row">FY2040</th><td>$696.2M</td><td>$684.7M</td><td>+$11.5M</td></tr></tbody>
+      </table></div>
+    </details>
+  </div>
+  <p>
+    <strong>No further override is needed before 2040 if costs keep behaving as they
+    have.</strong> Revenue runs $10 million ahead of spending in FY2028, about $16 to $19
+    million a year from FY2031 through FY2038, and $12 million in FY2040, about 2% of
+    revenue.
+  </p>
+  <p>
+    The room peaks in the mid-2030s and then narrows. Once the override is fully phased in,
+    revenue grows about 3.78% a year and spending about 3.98%, the same kind of small,
+    persistent gap Brookline lived with for twenty years. It is best read as capacity the
+    decisions below will use, not a surplus that will accumulate: Brookline has consistently
+    spent close to what it has, and the override's later steps ($5.6 million in FY2028 and
+    $7.8 million in FY2029) were sized to the School Department's own, faster cost forecast.
+  </p>
+  <p>
+    Budgets are balanced every year by law, so a projected gap is not a deficit anyone will
+    run. It is the size of the choices ahead. FY2026 and FY2027, both adopted balanced
+    budgets, come out at +$1.3 million and +$2.7 million, which is the check that the
+    revenue side is counted correctly.
+  </p>
+  <p class="note">
+    <b>How free cash is counted.</b> The Town budgets local receipts (excise, meals tax,
+    fees, permits) below what it expects to collect; actual receipts ran $11 to $15
+    million above budget in FY2022&ndash;25. The excess, plus unspent appropriations,
+    becomes the year-end surplus, which the state certifies as free cash and the Town
+    appropriates two budgets later. This forecast budgets receipts the way the Town does
+    (74% of expected collections) and returns each year's excess as free cash two years
+    later, at the 84% share the Town has appropriated recently. An earlier version counted
+    the excess in both places.
+  </p>
+</section>
+
+<section>
+  <h2>What decides it</h2>
+  <p class="lede">
+    Each row changes one assumption from the base case and shows the effect on the annual
+    balance in FY2040 (left) and on the total over FY2026&ndash;40 (right).
+  </p>
+  <div class="tor-key">
+    <span><span class="sq" style="background:var(--s1)"></span>improves the balance</span>
+    <span><span class="sq" style="background:var(--s2)"></span>worsens it</span>
+    <span><span class="tag local">Brookline decides</span></span>
+    <span><span class="tag outside">Set outside Brookline</span></span>
+    <span><span class="tag growth">Growth</span></span>
+  </div>
+  <div class="tor" id="tor">
+    <div class="tor-head"><span>FY2040, per year</span><span>Change from the base case</span><span>FY2026&ndash;40 total</span></div>
+  </div>
+  <p>
+    <strong>The largest lever is what the Town pays for the services it already
+    provides.</strong> Pay settlements, the health plan, how staffing follows enrollment,
+    and what the pension savings are used for. None of these cuts a service. Each is a
+    decision Brookline makes anyway, every year, in bargaining, benefit design and the
+    school budget, and each is worth more than any plausible difference in how fast the
+    town grows.
+  </p>
+  <p><strong>Four decisions dominate</strong>, and three of them are Brookline's to make:</p>
+  <ul class="plain">
+    <li><strong>Pay settlements.</strong> One point of pay growth a year for all staff is
+    worth $46 million a year by FY2040 and $272 million over the forecast. School wages at
+    the School Department's own forecast rate, about 5% a year including steps, would cost
+    $35 million a year by FY2040.</li>
+    <li><strong>The FY2031 pension shift.</strong> When the pension system reaches full
+    funding, about $37 million a year of pension payments ends. The Town's schedule moves
+    that money into prefunding retiree health. Not moving it would leave $35 million a year
+    of room.</li>
+    <li><strong>School staffing as enrollment changes.</strong> If enrollment falls as
+    NESDEC projects and enrollment-linked positions follow it down, FY2040 improves by $22
+    million a year. If enrollment instead rebounds as the School Department's own forecast
+    projects and staff follow it up, FY2040 worsens by $18 million.</li>
+    <li><strong>Health premiums</strong>, which Brookline controls only through its 83%
+    share and plan design: 6.5% instead of 8% long run improves FY2040 by $20 million;
+    10% worsens it by $32 million.</li>
+  </ul>
+  <h3>When the room runs out</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>If</th><th>The room runs out</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Costs keep behaving as they have</td><td>not before FY2040</td></tr>
+        <tr><td class="hi">Health premiums settle at 10%</td><td>FY2038</td></tr>
+        <tr><td class="hi">Enrollment rebounds and staff follow</td><td>FY2038</td></tr>
+        <tr><td class="hi">Pay runs one point higher for all staff</td><td>FY2035</td></tr>
+        <tr><td class="hi">School wages follow the School Department's forecast</td><td>FY2036</td></tr>
+        <tr><td class="hi">Pay one point higher and premiums at 10%</td><td>FY2033</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Growth moves the answer less than any of these in the first decade and can move it
+    more by 2040, depending on its kind (covered below).
+  </p>
+  <p class="note">
+    <b>Where these are decided.</b> Several of these decisions already have a place in the
+    Select Board's 2030 Roadmap. Action 3.D.3 revises the Town's policy on funding retiree
+    health, which is the FY2031 pension decision, from July 2027. Actions 3.D.2 and 3.E.1
+    call for a five-year service and funding priority list, targeted for FY2027, the natural
+    place to weigh all four. Actions 1.B.1 and 6.B.2 commit to competitive pay without
+    putting a price on it. Health insurance and school staffing are not in the Roadmap's
+    fiscal goal.
+  </p>
+</section>
+
+<section>
+  <h2>Why the Town's own plan shows a large deficit</h2>
+  <p>
+    The Town's FY2027&ndash;31 long-range plan, presented in January 2026, shows a gap of
+    $42.7 million by FY2031. Run through this model with the Town's own revenue, its
+    spending lines imply:
+  </p>
+  <ul class="plain">
+    <li><strong>Town departments:</strong> measured from the adopted FY2027 budget, pay
+    growth of only about 1.5% a year with staff flat, well below the base case's 3.0%. On
+    departments the Town's plan is more optimistic than the base case.</li>
+    <li><strong>Schools:</strong> either school pay growing about 6.6% a year with staff
+    flat, or staff growing to about 1,350 positions by FY2031 while enrollment falls.
+    Neither matches the record.</li>
+  </ul>
+  <p>
+    The school line explains it. Every school figure in the Town's plan is the School
+    Department's own forecast, stitched from two versions. FY2027&ndash;29 come from a
+    December 2025 forecast; FY2030&ndash;31 come from a November 2025 forecast that the
+    School Department labeled "preliminary estimates of PSB costs prior to any analysis
+    for potential efficiencies." Its stated assumptions: "Staffing levels remain constant,
+    enroll remains flat," with salaries rising about 5% a year (steps and lanes of about
+    $2.0 million a year, plus cost-of-living raises), out-of-district tuition up 4% a year,
+    and bus contracts repricing about 20% at renewal. The two versions differ by $3.1
+    million in FY2029, which adds a one-time jump to FY2030. The budget the School
+    Department adopted in February grows about 4% a year instead.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Step, FY2031</th><th>What differs</th><th>$ per year</th><th>Running</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Start: the Town's plan, FY2031</td><td></td><td></td><td>&minus;$42.7M</td></tr>
+        <tr><td class="hi">1. The override</td><td>Passed four months after the Town's plan; phased in over FY2027&ndash;29 ($9.9M, $5.6M, $7.8M), each piece then grows with the levy; by FY2031 it is worth $27.3M a year (the year-by-year arithmetic is in section 4a of the reference document)</td><td>+$27.3M</td><td>&minus;$15.5M</td></tr>
+        <tr><td class="hi">2. New growth</td><td>The Town's plan assumes a flat $2.5M a year; the base case continues the FY2021&ndash;25 rate (1.28% of the levy), which grows as the levy does: about $4.1M in FY2028, rising to about $4.7M in FY2031; it adds Chestnut Hill from FY2032</td><td>+$8.8M</td><td>&minus;$6.7M</td></tr>
+        <tr><td class="hi">3. Other revenue</td><td>Both budget local receipts well below what is collected; the difference is growth. The Town's plan grows budgeted receipts ~1.5% a year from FY2027 and state aid ~2.5%; the base case grows receipts ~3% (collections at their FY2019&ndash;25 pace) and state aid 3.5% (its FY2015&ndash;25 rate), and returns each surplus as free cash two years later. FY2031: receipts +$3.8M, free cash +$2.6M, state aid +$1.6M</td><td>+$8.1M</td><td>+$1.4M</td></tr>
+        <tr><td class="hi">4. Schools</td><td>Both hold school staffing constant. The Town's plan uses the School Department's pre-efficiency forecast, with salaries rising about 5% a year and enrollment flat; the base case has salaries rising about 3.7% a year and enrollment following NESDEC's projected decline. The 3.7% is the middle of the School Department's own arithmetic for the current contract</td><td>+$14.4M</td><td>+$15.8M</td></tr>
+        <tr><td class="hi">5. Town departments</td><td>The Town's plan grows Town department spending slowly: matching it would take raises of only about 1.5% a year with staff flat. The base case uses 3.0% (4.5% for Public Safety), so on this step the base case is the more cautious one</td><td>&minus;$5.2M</td><td>+$10.6M</td></tr>
+        <tr><td class="hi">6. Capital, reserves, other</td><td>The Town's plan carries higher capital lines than the Town's later six-year capital funding table (6.6% of prior-year net revenue, per Select Board policy); the base case uses the table</td><td>+$4.8M</td><td>+$15.4M</td></tr>
+        <tr><td class="hi">7. Other and rounding</td><td>Small differences, mostly in benefits</td><td>+$0.4M</td><td>+$15.8M</td></tr>
+        <tr class="tot"><td class="hi">End: the base case, FY2031</td><td></td><td></td><td>+$15.8M</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>The two biggest differences are the override that passed and school pay.</strong>
+    Together, steps 1 and 4 are $41.7 million of the $58.5 million between the Town's plan
+    and the base case. The two answer different questions. The Town's plan asks what happens
+    if school costs follow the School Department's own pre-efficiency forecast; the base case
+    asks what happens if costs and revenue keep behaving as they have. Which is closer
+    depends mostly on whether school pay keeps rising about 5% a year, as the School
+    Department forecasts, or about 3.7%, the middle of the 3.3&ndash;4.1% range the School
+    Department's FY2026 budget build gives at the contract's 2.75% raise. The teachers'
+    contracts expired on August 31, 2026 and are being renegotiated.
+  </p>
+</section>
+
+<section>
+  <h2>The base case: Brookline's own record</h2>
+  <p>
+    Each assumption continues what Brookline actually did from FY2011 to FY2025, unless a
+    published schedule says otherwise. A base case where staff shrink with enrollment and
+    pay holds exactly to target would show large surpluses, and neither happened in the
+    last fifteen years; those are shown as levers above instead.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Assumption</th><th>Base case</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Starting level</td><td>FY2027 adopted budget</td><td style="text-align:left">Voted by Town Meeting in May 2026, including the override; drivers apply from FY2028</td></tr>
+        <tr><td class="hi">Pay growth, Town staff</td><td>3.0%/yr</td><td style="text-align:left">Town's bargaining target; national public-sector pay rose 2.8%/yr FY2011&ndash;25. With the two rows below, all staff average about 3.8%</td></tr>
+        <tr><td class="hi">School pay above target</td><td>+0.7 pt (3.7%)</td><td style="text-align:left">Middle of the 3.3&ndash;4.1% range from the School Department's FY2026 budget build (steps, column moves and turnover at the contract's 2.75% raise); the FY2011&ndash;25 record was +0.4</td></tr>
+        <tr><td class="hi">Public Safety pay above target</td><td>+1.5 pts</td><td style="text-align:left">Ran 1.7 pts above the benchmark in FY2021&ndash;25</td></tr>
+        <tr><td class="hi">School staff</td><td>Kept at the FY2027 level (about 1,214)</td><td style="text-align:left">FY2027 cut 22.1 positions; after FY2019, enrollment fell 10.6% and staff 5.0%; students from above-trend growth are still staffed</td></tr>
+        <tr><td class="hi">Enrollment</td><td>NESDEC projection</td><td style="text-align:left">6,949 (FY2026), 6,889 (FY2027, September count), then NESDEC's path to about 6,000 by FY2040</td></tr>
+        <tr><td class="hi">Health premiums</td><td>12%/yr to FY2029, then 8%</td><td style="text-align:left">Town's near-term figure; 8% sits between the 25-year average (6.5%) and recent years (10&ndash;12%)</td></tr>
+        <tr><td class="hi">Prices</td><td>2.5%/yr</td><td style="text-align:left">Boston consumer prices, FY2011&ndash;25</td></tr>
+        <tr><td class="hi">Town staff</td><td>FY2027 budget level, then flat plus growth</td><td style="text-align:left">Town headcount was flat for twenty years</td></tr>
+        <tr><td class="hi">Pensions, retiree health, debt</td><td>Town schedules to FY2031</td><td style="text-align:left">Published; pension full funding in FY2030 and the shift to OPEB in FY2031</td></tr>
+        <tr><td class="hi">Local receipts and free cash</td><td>Town's budgeting practice</td><td style="text-align:left">Receipts budgeted at 74% of collections; excess returns as free cash two years later</td></tr>
+        <tr><td class="hi">Growth</td><td>Trend, about 170 homes/yr</td><td style="text-align:left">FY2018&ndash;24 mix of new growth; Chestnut Hill project from FY2029</td></tr>
+        <tr><td class="hi">Cost of a new home</td><td>$660/yr town services</td><td style="text-align:left">350-town comparison; RKG's $1,109 and $230 as the range</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Where the money goes</h2>
+  <p class="lede">Annual operating spending by line, base case.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Line</th><th>FY2027 adopted</th><th>FY2031</th><th>FY2040</th><th>Growth/yr</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Schools</td><td>$149.8M</td><td>$170.8M</td><td>$232.1M</td><td>3.4%</td></tr>
+        <tr><td class="hi">Town departments</td><td>$103.5M</td><td>$119.6M</td><td>$166.5M</td><td>3.7%</td></tr>
+        <tr><td class="hi">Health insurance</td><td>$46.4M</td><td>$68.9M</td><td><b>$143.1M</b></td><td><b>9.1%</b></td></tr>
+        <tr><td class="hi">Pensions</td><td>$41.2M</td><td>$7.3M</td><td>$9.5M</td><td>&minus;10.7%</td></tr>
+        <tr><td class="hi">Retiree health prefunding (OPEB)</td><td>$4.9M</td><td>$43.0M</td><td>$43.0M</td><td></td></tr>
+        <tr><td class="hi">Other benefits</td><td>$6.7M</td><td>$8.1M</td><td>$10.6M</td><td>3.6%</td></tr>
+        <tr><td class="hi">Within-levy debt</td><td>$14.0M</td><td>$16.6M</td><td>$22.6M</td><td>3.7%</td></tr>
+        <tr><td class="hi">Capital, reserves, other</td><td>$48.8M</td><td>$46.4M</td><td>$57.2M</td><td>1.2%</td></tr>
+        <tr class="tot"><td class="hi">Total spending</td><td>$415.3M</td><td>$480.6M</td><td>$684.7M</td><td>3.9%</td></tr>
+        <tr><td class="hi">Revenue, with override</td><td>$418.0M</td><td>$496.4M</td><td>$696.2M</td><td>4.0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>Health insurance is the line to watch.</strong> It more than triples, from $46
+    million to $143 million, and by FY2040 is nearly as large as all town departments
+    combined. Three years of 12% premium increases, then 8%, on a plan that covers about
+    1,700 retirees as well as current staff, compounds quickly.
+  </p>
+  <p>
+    The pension and retiree health lines swap places in FY2031. The pension payment falls
+    from $44 million to $7 million when the system reaches full funding, and retiree health
+    prefunding rises from $6 million to $43 million under the Town's schedule. Total
+    spending barely notices, which is also why a two-year delay in full funding changes the
+    fifteen-year total by only $3 million.
+  </p>
+  <p>
+    FY2027's capital, reserves and other line includes a $3.6 million deposit to
+    a new Override Stabilization Fund and a $1.6 million increase to the liability fund;
+    from FY2028 the line follows the Town's capital policy again, which is why it dips.
+    The deposit comes back as revenue, about $1.2 million a year in FY2028&ndash;30.
+  </p>
+</section>
+
+<section>
+  <h2>Schools: enrollment, staffing and pay</h2>
+  <h3>Two enrollment forecasts that disagree</h3>
+  <p>
+    Two demographers produced forecasts for the district in 2023, and they point in
+    opposite directions. NESDEC projects enrollment falling to about 6,130 by 2033&ndash;34.
+    Cropper-McKibben, the forecast the School Department plans with, projects a low in
+    2027&ndash;28 and a rise to about 7,440. Both have been close so far.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>School year</th><th>Actual</th><th>NESDEC</th><th>Cropper-McKibben</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">2024&ndash;25</td><td>7,023</td><td>7,013 (&minus;0.1%)</td><td>6,980 (&minus;0.6%)</td></tr>
+        <tr><td class="hi">2025&ndash;26</td><td>6,948</td><td>6,880 (&minus;1.0%)</td><td>6,929 (&minus;0.3%)</td></tr>
+        <tr><td class="hi">2026&ndash;27</td><td>6,889 (Sept.)</td><td>6,774 (&minus;1.7%)</td><td>6,917 (+0.4%)</td></tr>
+        <tr><td class="hi">2033&ndash;34</td><td></td><td><b>6,127</b></td><td><b>7,444</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Cropper-McKibben has tracked the last three years slightly better. The base case still
+    uses NESDEC because the population data points the same way: births to Brookline
+    residents fell from about 690 a year (2008&ndash;13) to about 490 (2020&ndash;22), and
+    UMass Donahue Institute projections have Brookline's 5&ndash;14 age group falling about
+    28% from 2020 to 2035. What would drive Cropper-McKibben's rebound isn't stated in the
+    documents reviewed. With staff held at today's level, the choice between the two moves
+    FY2040 by only $5 million; it matters much more if staffing follows enrollment.
+  </p>
+  <h3>How Brookline's staffing compares</h3>
+  <p>
+    Against 17 peer K&ndash;12 districts, Brookline had 5.6 students per staff member in
+    FY2025, the 7th most staffed of 18 (peer median 5.9), and the same rank ten years
+    earlier. Its needs rank 4th: 41% high-needs students (median 30%) and 11% English
+    learners (median 4%). Peers added staff faster than enrollment too: over ten years
+    Brookline's staff grew 10% while enrollment fell 6.5%; the peer median was +17% staff
+    and &minus;4% enrollment. Brookline serves most students with disabilities in-district,
+    so its out-of-district tuition is low (5% of spending, 16th of 18). What stands out is
+    pay: Brookline's average teacher salary ($132,000 in FY2025) is the highest of the 17
+    districts with data, against a peer median of about $112,000.
+  </p>
+  <p class="fwd">
+    <b>For the forecast.</b> Staffing is somewhat above peers and so are needs, so there
+    is no strong case for treating it as an outlier to be trimmed. School pay growth is the
+    larger open question, and it is being bargained now.
+  </p>
+</section>
+
+<section>
+  <h2>Town services: what the workload data shows</h2>
+  <p>
+    Police and fire workload counts from sixteen Town Financial Plans and thirteen police
+    annual reports, FY2003&ndash;25:
+  </p>
+  <ul class="plain">
+    <li><strong>Police calls don't track housing.</strong> The Town's reported count fell
+    from about 75,000 (FY2013) to about 53,000&ndash;56,000 (FY2024&ndash;25). Part of that
+    is a switch between two different counts and an unexplained 26% drop in 2016 with no
+    change in the stated definition. The step down around 2020 is real but is mostly less
+    officer-initiated activity: moving violations fell from about 13,700 (2019) to
+    about 2,800&ndash;4,700 a year and arrests by more than half, while sworn staffing ran
+    14 to 19 officers below authorized strength. 911 calls rose. So the counts say nothing about
+    new homes adding police demand, and they shouldn't be read as falling need either.</li>
+    <li><strong>Fire and EMS workload is rising, about five times faster than
+    housing.</strong> Total fire responses grew 3.0% a year from FY2013 to FY2025, to about
+    10,500, and medical emergencies 2.7% a year. New homes account for perhaps 55 more
+    responses a year against increases of several hundred. The likely driver is age:
+    Brookline's 65-and-over population grew 36% from 2010 to 2020, and UMass Donahue
+    projects the 75-and-over group growing another 43% by 2030.</li>
+    <li><strong>Staffing didn't follow workload.</strong> Public Safety positions fell by
+    five over FY2011&ndash;25. The Town attributes its recurring Fire Department overtime
+    deficit to leave rules in the FY2018 contract, injury leave up about 150%, and a 2022
+    arbitration award, and has floated three-firefighter companies.</li>
+  </ul>
+  <p class="fwd">
+    <b>Compared with peers.</b> Brookline fields more police and firefighters per
+    resident than most comparable towns, and its staffing has not grown with its
+    population: from 2010 to 2020 residents rose 7.6% while budgeted police and fire
+    positions stayed flat. Across Massachusetts, larger towns carry roughly proportionally
+    more of both, and Brookline sits above what its size and density predict (about 6%
+    for police, 30% for fire). Fire staffing moves in steps, a station or company at a
+    time, not with each new home.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Per 1,000 residents</th><th>Police officers</th><th>Career firefighters</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Brookline</td><td>2.03</td><td>2.55</td></tr>
+        <tr><td class="hi">Cambridge</td><td>2.26</td><td>2.35</td></tr>
+        <tr><td class="hi">Watertown</td><td>1.98</td><td>2.49</td></tr>
+        <tr><td class="hi">Newton</td><td>1.68</td><td>2.07</td></tr>
+        <tr><td class="hi">Somerville</td><td>1.57</td><td>1.88</td></tr>
+        <tr><td class="hi">Arlington</td><td>1.38</td><td>1.68</td></tr>
+        <tr><td class="hi">Median of 10 peer towns</td><td>1.57</td><td>2.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap">Police: FBI full-time officers, 2019, the last complete year before reporting
+    gaps and before 2020&ndash;22 attrition; at 2022's 116 sworn officers Brookline is about 1.8.
+    Fire: U.S. Fire Administration registry (self-reported; Brookline's matches its budget).
+    Population: 2020 Census. Per-resident ratios leave out commuters and visitors.</p>
+  <p>
+    <b>For the forecast.</b> This supports a low cost per new home for police and points to
+    an aging population, not growth, as the pressure on fire and EMS. The forecast doesn't
+    yet add a separate aging effect; the Public Safety pay premium carries it implicitly.
+  </p>
+</section>
+
+<section>
+  <h2>What growth brings in, by type</h2>
+  <p class="lede">
+    Annual tax revenue minus annual service cost in FY2040, by type of growth, for each
+    growth scenario.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Type of growth</th><th>Trend</th><th>Balanced</th><th>Commercial-led</th><th>Residential-led</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">New homes</td><td class="neg">&minus;$2.1M</td><td class="neg">&minus;$5.1M</td><td class="neg">&minus;$2.1M</td><td class="neg">&minus;$8.2M</td></tr>
+        <tr><td class="hi">Residential renovation</td><td class="pos">+$43.1M</td><td class="pos">+$44.9M</td><td class="pos">+$44.9M</td><td class="pos">+$44.9M</td></tr>
+        <tr><td class="hi">New commercial space</td><td class="pos">+$0.6M</td><td class="pos">+$22.4M</td><td class="pos">+$44.2M</td><td class="pos">+$0.6M</td></tr>
+        <tr><td class="hi">Commercial renovation</td><td class="pos">+$14.3M</td><td class="pos">+$14.9M</td><td class="pos">+$14.9M</td><td class="pos">+$14.9M</td></tr>
+        <tr><td class="hi">Business equipment (personal property)</td><td class="pos">+$16.5M</td><td class="pos">+$17.2M</td><td class="pos">+$17.2M</td><td class="pos">+$17.2M</td></tr>
+        <tr><td class="hi">Chestnut Hill project</td><td class="pos">+$3.9M</td><td class="pos">+$3.9M</td><td class="pos">+$3.9M</td><td class="pos">+$3.9M</td></tr>
+        <tr><td class="hi">Planning and permitting staff for growth above the trend</td><td>&ndash;</td><td class="neg">&minus;$3.9M</td><td class="neg">&minus;$3.9M</td><td class="neg">&minus;$3.9M</td></tr>
+        <tr class="tot"><td class="hi">Effect on the FY2040 balance vs trend</td><td>base</td><td>+$30.8M</td><td>+$53.0M</td><td>+$8.6M</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>New homes come out slightly negative; everything else is net revenue.</strong>
+    A new home's tax can grow only 2.5% a year under the levy limit, while the cost of its
+    students and services grows with pay, so its net position worsens over time. At the
+    model's 0.244 students per home and about $16,500 per added student (FY2027 dollars:
+    one added position per 8.5 students, plus supplies, transport and health insurance),
+    school costs are most of it. Renovations, commercial
+    space and business equipment add tax with little or no added service demand.
+    Renovation is modeled with no cost, which overstates it if renovations add bedrooms
+    and students.
+  </p>
+
+  <h3>When a new home covers its costs</h3>
+  <p>
+    One home at a time: the number of school-age children at which a home's property tax
+    just covers the Town services ($866 a year in FY2027) and schooling ($16,443 per added
+    student) it brings. A home's tax grows about 2.5% a year under the levy limit while the
+    cost of a student grows about 4.1%, so the breakeven falls over time.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Home</th><th>Assessed value</th><th>Breakeven children, FY2027</th><th>FY2040</th><th>Net at 0.244 children, FY2027</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Condominium, average</td><td>$1,175,950</td><td>0.68</td><td>0.55</td><td class="pos">+$7,164</td></tr>
+        <tr><td class="hi">New construction, mean</td><td>$794,300</td><td>0.44</td><td>0.36</td><td class="pos">+$3,256</td></tr>
+        <tr><td class="hi">Apartment, 4&ndash;8 units</td><td>$672,850</td><td>0.37</td><td>0.30</td><td class="pos">+$2,012</td></tr>
+        <tr><td class="hi">Apartment, 9+ units</td><td>$434,283</td><td>0.22</td><td>0.18</td><td class="neg">&minus;$431</td></tr>
+        <tr><td class="hi">Typical new home (units-weighted)</td><td>$430,000</td><td>0.22</td><td>0.17</td><td class="neg">&minus;$475</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <strong>A typical new Brookline home roughly breaks even</strong>; it needs to be worth
+    about $477,000 to cover 0.244 children. Ownership homes pay their way with room to
+    spare. That is why housing is a weak lever for the budget: each added tenth of a
+    percentage point of new growth, sustained, is worth about <strong>$8.9 million a year by
+    FY2040</strong> through renovation, $7.1 million at today's mix, and only
+    <strong>$1.2 million</strong> through new housing alone. The cost of a student is the
+    assumption that matters most: at the full average cost per pupil instead of the marginal
+    one, the rental breakeven falls from 0.22 to 0.12 children.
+  </p>
+  <p>
+    <strong>Town-wide, births matter more than new housing.</strong> Brookline residents had
+    about 690 babies a year in 2008&ndash;13 and 422 in 2023, almost 40% fewer. So far families
+    moving in have held enrollment level: from FY2021 to FY2025 the pool of Brookline-born
+    children fell 4% while enrollment stayed near 7,000. From here they slow the decline
+    rather than stop it. By FY2040 that pool is about 28% smaller, and keeping enrollment
+    level would take more families moving in than during the 2010s boom; NESDEC projects
+    about 5,970 students. Homes built at the recent pace plus Chestnut Hill, about 2,500 by
+    FY2040, bring roughly 430 to 610 students into a system serving fewer than it did, and
+    NESDEC's projection already includes them. The School Department's forecaster,
+    Cropper-McKibben, projects enrollment rising to about 7,400 by 2034 instead, on projected
+    construction and migration. That would mean Brookline drawing families the way suburbs like Newton or
+    Lexington do, where kindergarten classes run 1.1 to 2 times the births five years
+    earlier; in Brookline and its urban neighbors they run at or below births (0.93 in fall
+    2025). Section 3c of the reference document sets out the arithmetic.
+  </p>
+
+  <h3>How the cost of an added student is calculated</h3>
+  <p>
+    The forecast treats two-thirds of the school budget as moving with enrollment and
+    one-third as fixed (buildings, administration, leadership), the split RKG set with
+    Town staff. It staffs the enrollment-linked share at the FY2027 ratio of 5.67 students
+    per staff member (6,889 students, about 1,214 staff). An added student therefore brings
+    0.67 &divide; 5.67 = 0.118 positions, or one position per 8.5 students.
+  </p>
+  <div class="parts">
+    <div><span>Staff: 0.118 positions &times; $102,386 (FY2027 school salary budget per staff member)</span><span>$12,092</span></div>
+    <div><span>Non-personnel: 17% of the budget per pupil ($3,697) &times; 0.67</span><span>$2,477</span></div>
+    <div><span>Health insurance: 0.118 positions &times; active-staff health cost per FTE</span><span>$1,453</span></div>
+    <div><span>Medicare and other payroll-linked benefits</span><span>$421</span></div>
+    <div class="sum"><span>Cost of one added student, FY2027 dollars</span><span>$16,443</span></div>
+  </div>
+  <p>
+    That is 76% of the $21,745 average school budget per pupil in FY2027, and close to
+    RKG's $15,572 (FY2025), which uses the same two-thirds split. It rises with pay and
+    premiums: about $21,800 in FY2034 and $27,700 in FY2040 in nominal dollars. Teacher
+    pensions are paid by the state and aren't included. The script checks these components
+    against the full model's result. In practice the cost is lumpy: with K&ndash;8 classes
+    averaging 17 to 21 against guidelines of 22 to 25, a child joining a grade with room
+    costs little, while one that forces a new section costs a teacher. $16,443 is the
+    long-run average.
+  </p>
+
+  <h3>Chestnut Hill: how it's counted</h3>
+  <p>
+    The Chestnut Hill project is added on top of trend growth on both sides: its property
+    tax, rooms tax and excise ramp in over FY2032&ndash;34, after construction in FY2029&ndash;31 as the Planning Department's June 2026 pipeline shows, and so do the costs of its 266
+    homes, their students and about 960 employees. The five published fiscal-impact
+    scenarios describe different buildings, which is why their revenue ranges from $3.2
+    million to $6.7 million:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Scenario</th><th>Homes</th><th>Office + retail</th><th>Hotel rooms</th><th>Property tax</th><th>Rooms + excise</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">City Realty 1</td><td>668</td><td>184,000 sf</td><td>200</td><td>$6.69M</td><td>$1.01M</td></tr>
+        <tr><td class="hi">City Realty 2</td><td>424</td><td>213,000 sf</td><td>225</td><td>$5.75M</td><td>$1.02M</td></tr>
+        <tr><td class="hi">City Realty 3</td><td>388</td><td>51,000 sf</td><td>152</td><td>$3.78M</td><td>$0.72M</td></tr>
+        <tr><td class="hi">RKG</td><td>265</td><td>74,000 sf</td><td>100</td><td>$3.16M</td><td>$0.48M</td></tr>
+        <tr><td class="hi">Approved plan (base case)</td><td>266</td><td>184,000 sf (assumed)</td><td>200</td><td><b>$4.54M</b></td><td><b>$0.86M</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    The approved plan is priced from the scenarios' own rates: RKG's residential tax per
+    home, and City Realty 1's commercial space, the only scenario with the approved
+    200-room hotel. Its 184,000 square feet of office and retail is consistent with the
+    zoning requirement that more than half the floor area be commercial, but the actual
+    commercial square footage isn't published. The tornado shows the alternatives: City
+    Realty's average (+$1.2 million in FY2040), RKG's estimate (&minus;$2.3 million), and
+    counting Chestnut Hill as part of trend growth instead of on top of it (&minus;$5.4
+    million a year, &minus;$38 million over fifteen years).
+  </p>
+</section>
+
+<section>
+  <h2>How this compares with this project's earlier forecast</h2>
+  <p>
+    The earlier forecast grew each budget line at its own historical rate. With the same
+    revenue, it shows +$11 million a year in FY2031 and +$22 million in FY2040, against +$16
+    million and +$12 million here. Total spending in FY2040 is close ($671.7 million against
+    $684.7 million); the mix differs, with health insurance and
+    other benefits about $15 million higher here and schools about $7 million lower.
+  </p>
+</section>
+
+<section>
+  <h2>How sure these numbers are</h2>
+  <ol class="steps">
+    <li><strong>The method's own error.</strong> Run backward over FY2011&ndash;25 with the
+    actual staff counts, enrollment and price indices, it predicts town departments 3.8% too
+    high and schools 5.7% too low.</li>
+    <li><strong>The two enrollment forecasts disagree</strong> by about 1,300 students by
+    2033&ndash;34.</li>
+    <li><strong>The school variable share (67%)</strong> is RKG's judgment with Town staff,
+    not a measured response.</li>
+    <li><strong>One pay rate per group.</strong> Contracts differ by bargaining unit and
+    year, and the teachers' contracts are open.</li>
+    <li><strong>Retiree health is held flat after FY2031</strong> in nominal dollars, as in
+    the Town's schedule.</li>
+    <li><strong>Free cash depends on the Town continuing to budget receipts
+    conservatively</strong> and appropriating about 84% of each surplus.</li>
+    <li><strong>The Override Stabilization Fund</strong> ($3.6 million set aside in FY2027)
+    is assumed to be drawn down evenly over FY2028&ndash;30, about $1.2 million a year, to
+    smooth the override's phase-in. The Town documents reviewed don't state the plan.</li>
+  </ol>
+  <p>
+    Checks in the script: FY2026 matches the Town's FY2026 budget and FY2027 matches the
+    budget adopted by Town Meeting, both to the dollar, and both come out balanced after
+    revenue; lines sum to the total every year; each assumption
+    moves only the lines that depend on it; NESDEC's grade table sums to its own totals.
+  </p>
+</section>
+
+<footer>
+  <p>
+    Generated by <code>scripts/expense_driver_forecast.py</code> and
+    <code>scripts/recreate_town_forecast.py</code>, with methodology in
+    <code>output/</code>. Sources include the Town's Financial Plans and FY27&ndash;31
+    long-range plan, School Department budget documents and forecasts, NESDEC and
+    Cropper-McKibben enrollment forecasts, DESE district data, Brookline Police annual
+    reports, the Census, and UMass Donahue Institute projections. Builds on
+    Where the $177 Million Went.
+  </p>
+</footer>
+
+</div>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function () {
+  const tip = document.getElementById("tip");
+  const hide = () => { tip.hidden = true; };
+  const fmt = v => (v < 0 ? "−$" : (v > 0 ? "+$" : "$")) + Math.abs(v).toFixed(1) + "M";
+
+  // ------------------------------------------------ balance chart
+  const yrs = [2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040];
+  const withOv = [1.28,2.70,9.94,12.04,17.13,15.81,16.87,17.78,19.27,19.13,18.71,17.70,16.32,14.19,11.52];
+  const W = 640, H = 280, L = 44, R = 128, T = 14, B = 30;
+  const x = yy => L + (yy - 2026) / 14 * (W - L - R);
+  const y = v => T + (30 - v) / 31 * (H - T - B);
+  let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Annual operating balance FY2026 to FY2040. With the override it is near zero in FY2026 and FY2027, stays between about 16 and 19 million from FY2031 to FY2038, and ends at 11.5 million in FY2040.">';
+  [0,10,20,30].forEach(t => {
+    s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(t) + '" y2="' + y(t) + '" stroke="' + (t === 0 ? 'var(--axis)' : 'var(--grid)') + '" stroke-width="1"/>';
+    s += '<text x="' + (L - 8) + '" y="' + (y(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)">' + (t < 0 ? '−' + Math.abs(t) : t) + '</text>';
+  });
+  [2026,2030,2035,2040].forEach(t => {
+    s += '<text x="' + x(t) + '" y="' + (H - 8) + '" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)">FY' + t + '</text>';
+  });
+  const path = arr => arr.map((v, i) => (i ? "L" : "M") + x(yrs[i]).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  s += '<path d="' + path(withOv) + '" fill="none" stroke="var(--s1)" stroke-width="2.5"/>';
+  s += '<text x="' + (x(2040) + 8) + '" y="' + (y(11.5) + 4) + '" font-family="Libre Franklin, sans-serif" font-size="12" font-weight="600" fill="var(--ink)">+$11.5M in FY2040</text>';
+  s += '<line id="bx" y1="' + T + '" y2="' + (H - B) + '" stroke="var(--axis)" visibility="hidden"/>';
+  s += '<circle id="b1" r="4" fill="var(--s1)" stroke="var(--ground)" stroke-width="2" visibility="hidden"/>';
+  s += '<rect id="bh" x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '" fill="transparent"/>';
+  s += '</svg>';
+  const bal = document.getElementById("bal");
+  bal.innerHTML = s;
+  const svg = bal.querySelector("svg"), bh = svg.querySelector("#bh");
+  const bx = svg.querySelector("#bx"), b1 = svg.querySelector("#b1");
+  bh.addEventListener("mousemove", ev => {
+    const pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+    const i = Math.max(0, Math.min(14, Math.round((p.x - L) / (W - L - R) * 14)));
+    const cx = x(yrs[i]);
+    bx.setAttribute("x1", cx); bx.setAttribute("x2", cx); bx.setAttribute("visibility", "visible");
+    b1.setAttribute("cx", cx); b1.setAttribute("cy", y(withOv[i])); b1.setAttribute("visibility", "visible");
+    tip.innerHTML = "<b>FY" + yrs[i] + "</b><table><tr><td>Revenue minus spending</td><td>" + fmt(withOv[i]) + "</td></tr></table>";
+    tip.hidden = false;
+    tip.style.left = Math.min(window.innerWidth - tip.offsetWidth - 8, ev.clientX + 14) + "px";
+    tip.style.top = (ev.clientY + 14) + "px";
+  });
+  bh.addEventListener("mouseleave", () => { hide(); [bx, b1].forEach(e => e.setAttribute("visibility", "hidden")); });
+  window.addEventListener("scroll", hide, { passive: true });
+
+  // ------------------------------------------------ tornado
+  const dials = [
+    ["Pay growth 1 point higher for every group", "base: Town 3.0%, schools 3.7%, Public Safety 4.5%", "local", -46.20, -272.49],
+    ["School wages at the School Department's forecast, about 5%", "base: 3.7%", "local", -35.17, -209.30],
+    ["Pension savings kept, not moved to retiree health", "base: Town's FY2031 shift", "local", 34.56, 356.87],
+    ["Health premiums 10% a year long run", "base: 8%", "outside", -31.86, -145.53],
+    ["School and Public Safety pay held to the 3.0% target", "base: +0.7 and +1.5 pts", "local", 30.68, 187.93],
+    ["School staff follow NESDEC enrollment down", "base: kept at the FY2027 level", "local", 22.10, 161.88],
+    ["Pay growth half a point lower for every group", "base: Town 3.0%", "local", 21.20, 128.29],
+    ["Health premiums 6.5% a year long run", "base: 8%", "outside", 20.31, 97.08],
+    ["Cropper-McKibben enrollment, staff follow it", "base: NESDEC, staff kept", "outside", -17.55, -135.68],
+    ["School non-personnel 2 pts above prices", "base: prices", "outside", -9.16, -56.96],
+    ["Prices 3.5% a year", "base: 2.5%", "outside", -8.84, -55.60],
+    ["Chestnut Hill counted inside trend growth", "base: added on top", "growth", -5.42, -38.25],
+    ["Capital at the full 6.6% policy from revenue", "base: the Town's capital plan, about 5.8%", "local", -5.10, -51.10],
+    ["Cropper-McKibben enrollment, staff kept", "base: NESDEC", "outside", -4.93, -39.56],
+    ["Chestnut Hill at RKG's revenue estimate", "base: approved program", "growth", -2.26, -15.98],
+    ["Cost of a new home $1,109 (RKG)", "base: $660", "growth", -2.19, -13.85],
+    ["Cost of a new home $230", "base: $660", "growth", 2.09, 13.27],
+    ["Chestnut Hill at City Realty's average", "base: approved program", "growth", 1.23, 8.63],
+    ["Pension full funding two years late", "base: FY2030", "outside", 0.00, -3.29],
+  ];
+  const tags = { local: ["local", "Brookline decides"], outside: ["outside", "Set outside Brookline"], growth: ["growth", "Growth"] };
+  const tor = document.getElementById("tor");
+  const M1 = 50, M2 = 360;
+  const cell = (v, m, cap) => {
+    const w = Math.max(Math.abs(v) / m * 50, v === 0 ? 0 : 0.6);
+    const bar = v >= 0 ? '<div class="tor-bar up" style="width:' + w + '%"></div>' : '<div class="tor-bar down" style="width:' + w + '%"></div>';
+    return '<div><span class="tor-cap">' + cap + '</span><div class="tor-cell"><div class="tor-track"><div class="tor-zero"></div>' + bar + '</div><span class="tor-val">' + fmt(v) + '</span></div></div>';
+  };
+  dials.forEach(d => {
+    const row = document.createElement("div");
+    row.className = "tor-row";
+    row.innerHTML = cell(d[3], M1, "FY2040, per year") +
+      '<div class="tor-lab">' + d[0] + '<small>' + d[1] + '</small><span class="tag ' + tags[d[2]][0] + '">' + tags[d[2]][1] + '</span></div>' +
+      cell(d[4], M2, "FY2026–40 total");
+    tor.appendChild(row);
+  });
+  // on wide screens, put the label in the middle column
+  const mq = window.matchMedia("(min-width: 52rem)");
+  const order = () => tor.querySelectorAll(".tor-row").forEach(r => {
+    const [a, lab, c] = [r.children[0], r.querySelector(".tor-lab"), r.children[2]];
+    if (mq.matches && r.children[1] !== lab) r.insertBefore(lab, r.children[1]);
+    if (!mq.matches && r.children[0] !== lab) r.insertBefore(lab, r.children[0]);
+  });
+  order(); mq.addEventListener("change", order);
+})();
+</script>

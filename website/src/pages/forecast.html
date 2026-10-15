@@ -1,0 +1,264 @@
+<!--
+title: Brookline's Finances to 2040
+description: An independent forecast of Brookline's General Fund through FY2040: five findings, the decisions that decide it, and how to test every assumption yourself.
+image: img/whitepaper-chart.png
+-->
+<header class="masthead">
+  <p class="eyebrow">An independent forecast, FY2027 to FY2040</p>
+  <h1 class="title">Brookline's finances to 2040</h1>
+  <p class="standfirst">Where the Town's General Fund is headed, what decides it, and how you can
+  test every assumption yourself.</p>
+  <p><a class="button" href="/forecast/explorer">Try the Forecast Explorer</a></p>
+</header>
+
+<style>
+  .tk-list { list-style: none; margin: 0; padding: 0; counter-reset: tk; }
+  .tk { counter-increment: tk; border-top: 3px solid var(--rule-heavy); padding: 1rem 0 2.25rem; }
+  .tk-text { max-width: 40rem; }
+  .tk-text .eyebrow-n { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin: 0 0 0.35rem; }
+  .tk-text .eyebrow-n::before { content: counter(tk) " of 5 \00b7  "; }
+  .tk-text h3 { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; line-height: 1.2; color: var(--pine); margin: 0 0 0.5rem; }
+  .tk-text .tk-lead { font-size: 1.12rem; line-height: 1.5; color: var(--ink); margin: 0 0 0.7rem; }
+  .tk-text p { margin: 0 0 0.6rem; }
+  .tk figure { margin: 1rem 0 0; }
+  .tk-figs { display: grid; gap: 1.5rem; }
+  .detail-group { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 1.8rem 0 0.3rem; }
+  .detail-intro { color: var(--ink-muted); margin: 0 0 0.4rem; max-width: 40rem; }
+  @media (min-width: 60rem) { .tk-figs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+  .tk figure img { display: block; width: 100%; max-width: 38rem; height: auto; }
+  .tk figure figcaption { font-size: 0.9rem; color: var(--ink-muted); margin-top: 0.5rem; max-width: 38rem; }
+  @media (min-width: 60rem) {
+    .tk:not(.tk-wide) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 2rem; align-items: start; }
+    .tk:not(.tk-wide) figure { margin-top: 0; }
+  }
+</style>
+<section>
+  <p class="takeaway"><strong>Brookline's finances can stay healthy through 2040. A few recurring
+  decisions matter more than anything else, and new building makes the picture stronger, not
+  weaker.</strong></p>
+  <h2 class="section-head" id="findings">What the forecast finds</h2>
+  <p class="prose">Five findings, each with the chart behind it. Each links to a short read with
+  the detail.</p>
+  <ol class="tk-list">
+    <li class="tk">
+      <div class="tk-text">
+        <p class="eyebrow-n">How Brookline got here</p>
+        <h3>Inflation, not growth, drove spending</h3>
+        <p class="tk-lead">Inflation was {{fact:cause_pct_inflation}} of the growth in General Fund spending from
+        FY2011 to FY2025. More staff, mostly in the schools, was another
+        {{fact:cause_pct_staffing_levels}}, and debt for new buildings, mostly schools, another
+        {{fact:cause_pct_buildings_debt_service}}. Growth in homes and commercial space added about
+        {{fact:cause_pct_new_homes_commercial_space}}.</p>
+        <p>The same staff doing the same work cost more each year, in pay, prices and health
+        premiums. The revenue Brookline controls kept pace with that; state aid did not, and the
+        overrides filled most of the gap.</p>
+        <p><a href="/forecast/got-here">Read: How Brookline got here</a></p>
+      </div>
+      <figure>
+        <a href="/forecast/spending#where-the-177-million-went"><picture>
+          <source srcset="/img/takeaway-causes-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/img/takeaway-causes-light.png" width="1224" height="728" loading="lazy"
+               alt="Bar chart of the increase in yearly General Fund spending from FY2011 to FY2025 by cause: inflation $75.3 million (42%), staffing levels $27.0 million (15%), buildings debt service $26.8 million (15%), past pension shortfall $19.6 million (11%), other $8.9 million (5%), pay and costs above inflation $7.6 million (4%), new homes and commercial space $7.3 million (4%), retiree health prefunding $3.4 million (2%), enrollment not from new homes $1.5 million (1%).">
+        </picture></a>
+        <figcaption>Each bar is part of the rise in yearly spending, colored by who sets it.</figcaption>
+      </figure>
+    </li>
+    <li class="tk">
+      <div class="tk-text">
+        <p class="eyebrow-n">Where the budget is headed</p>
+        <h3>The override keeps the budget ahead to 2040</h3>
+        <p class="tk-lead">The override helped. Counting it, revenue covers spending every year to 2040 in
+        the base case, with room of {{fact:room_2030s_low}} to {{fact:room_2030s_high}} a year through the
+        2030s and {{fact:room_fy2040}} in FY2040.</p>
+        <p>The base case continues how costs and revenue have behaved since FY2011: school staff
+        fall about half as fast as enrollment, health premiums rise 12% a year through FY2029 and
+        then 8%, and Brookline adds {{fact:homes_pace}} homes a year. Once the pension money has
+        paid off the retiree health liability, in {{fact:opeb_paid_off}}, the base case sets it
+        aside for a decision rather than counting it as room. FY2028 is the thinnest year, with
+        {{fact:room_fy2028}} of room. The room is capacity for the decisions below, not a surplus
+        that piles up.</p>
+        <p><a href="/forecast/outlook">Read: Where the budget is headed</a></p>
+      </div>
+      <figure>
+        <a href="/forecast/base-case#the-base-case-outlook"><picture>
+          <source srcset="/img/takeaway-outlook-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/img/takeaway-outlook-light.png" width="1224" height="725" loading="lazy"
+               alt="Line chart of revenue minus spending each year, FY2026 to FY2040. With the May 2026 override, the base case rises to about {{fact:room_2030s_high}} of room in FY2036 to FY2038 and ends at {{fact:room_fy2040}} in FY2040. Without the override's revenue, it falls below zero from FY2027 and ends with a shortfall of {{fact:room_fy2040_no_override}} in FY2040.">
+        </picture></a>
+        <figcaption>Revenue minus spending in the base case, with and without the override's
+        revenue.</figcaption>
+      </figure>
+    </li>
+    <li class="tk">
+      <div class="tk-text">
+        <p class="eyebrow-n">Growth</p>
+        <h3>Judge growth town-wide, by capacity</h3>
+        <p class="tk-lead">Construction adds revenue predictably, about two years after its permits.
+        Costs have not followed new homes; they rise when a service runs out of room, and by some
+        measures there is room today.</p>
+        <p>From FY2011 to FY2025 permits added {{fact:homes_permitted_fy11_25}} homes while police and
+        fire staffing fell by five positions, and enrollment followed births, not new buildings.
+        Costs step up when a grade fills or the town needs a new fire company, which depends on
+        everything being built, not any one project. Those measures of room still need checking
+        with the people who run the services.</p>
+        <p><a href="/forecast/growth">Read: Growth, what it adds and what it costs</a></p>
+      </div>
+      <figure>
+        <a href="/forecast/topics/growth-links#town-staff"><picture>
+          <source srcset="/img/takeaway-services-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/img/takeaway-services-light.png" width="1224" height="794" loading="lazy"
+               alt="Line chart of homes, students and staff from FY2010 to FY2025, each set to 100 in FY2010. Homes rise slowly to about 108. Students rise to about 121 by FY2019 and fall back to about 108. School staff rise to about 138 and fall to about 126. Police and fire positions stay near 100 throughout. Other Town department positions stay near 100 until FY2020 and rise to about 115.">
+        </picture></a>
+        <figcaption>Each line set to 100 in FY2010. Homes grew; police and fire staffing did not,
+        and school staff followed students.</figcaption>
+      </figure>
+    </li>
+    <li class="tk tk-wide">
+      <div class="tk-text">
+        <p class="eyebrow-n">The decisions that matter</p>
+        <h3>Four decisions matter most</h3>
+        <p class="tk-lead">Four recurring decisions matter more than anything else: how fast pay grows, what the
+        health plan costs, school staffing as enrollment falls, and what to do with the money
+        freed when the pension liability is paid off. Each is worth tens of millions a year by
+        2040.</p>
+        <p>None of them requires closing a program. Most are about what the Town pays for the
+        services it already provides.</p>
+        <p><a href="/forecast/decisions">Read: The decisions that matter</a>, or try your own
+        answers in the <a href="/forecast/explorer">Forecast Explorer</a>.</p>
+      </div>
+      {{levers_chart}}
+    </li>
+    <li class="tk tk-wide">
+      <div class="tk-text">
+        <p class="eyebrow-n">What to watch</p>
+        <h3>A few readings show what's coming</h3>
+        <p class="tk-lead">Births, permits, open seats, and pay and health costs show whether the
+        forecast is holding, some of them years ahead, so plans can adjust early. The first two are already
+        in: building permits show less construction than expected in the next few years, and births
+        remain well below what the School Department's forecast assumes.</p>
+        <p>Permits issued in 2024 and 2025 point to FY2028 new growth well under what the base
+        case assumes. Each year's levy builds on the last, so that one shortfall carries forward:
+        even if growth returns to its usual pace afterward, FY2040 would have
+        {{fact:pl_effect_fy2040}} less room. Births of {{fact:ind_births}} in {{fact:ind_births_year}}, against
+        {{fact:ind_births_cm}} a year in the School Department's forecast, point to enrollment that
+        keeps falling. Fire and medical calls are among the other readings.</p>
+        <p><a href="/forecast/watch">Read: What to watch</a></p>
+      </div>
+      <div class="tk-figs">
+        <figure>
+          <a href="/forecast/topics/growth-links#revenue-follows-construction-about-two-years-later"><picture>
+            <source srcset="/img/takeaway-permits-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="/img/takeaway-permits-light.png" width="1224" height="968" loading="lazy"
+                 alt="Two-part bar chart. Top: construction permitted on taxable property each calendar year, 2019 to 2025, between about $230 million and $380 million, lowest in 2024 and 2025. Bottom: the real estate new growth the state certified about two years later, FY2022 to FY2026, about $200 million to $280 million a year; for FY2027 and FY2028, the {{fact:pl_2027_expected}} and {{fact:pl_2028_expected}} the 2024 and 2025 permits point to, against {{fact:pl_2027_base}} and {{fact:pl_2028_base}} in the base case.">
+          </picture></a>
+          <figcaption>Each year's permits became new growth about two years later. The 2024 and 2025
+          permits point to far less than the base case assumes for FY2028.</figcaption>
+        </figure>
+        <figure>
+          <a href="/forecast/watch#births-the-earliest-reading-for-the-schools"><picture>
+            <source srcset="/img/takeaway-births-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="/img/takeaway-births-light.png" width="1224" height="794" loading="lazy"
+                 alt="Line chart of births to Brookline residents from 2005 to 2024, and what each enrollment forecast assumes. Actual births fell from about 690 a year in 2008 to 2013 to 443 in 2024. The base case holds about 449 a year, NESDEC assumed about 500, and the School Department's forecast about 590 to 630.">
+          </picture></a>
+          <figcaption>Births set kindergarten about five years later. They remain well below what
+          the School Department's forecast assumes.</figcaption>
+        </figure>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2 class="section-head">Why this differs from the Town's plan</h2>
+  <div class="prose">
+    <p>The two answer different questions: a budget plan is deliberately cautious, and this asks
+    what happens if costs and revenue keep behaving as they have. The Town's long-range plan,
+    presented in January 2026, shows a gap of about $43 million in FY2031; this forecast shows
+    about {{fact:room_fy2031}} of room that year. Most of the difference is the override, which
+    passed four months after the plan was written and is worth about $27 million a year by
+    FY2031, and school pay. The Town's plan uses the School Department's forecast of about 5% growth
+    per year; this one uses about 3.7%, what the current contract's 2.75% raises plus step increases
+    work out to by the School Department's own arithmetic.
+    <a href="/forecast/base-case#why-the-towns-own-plan-shows-a-deficit">Every step between
+    the two</a> is laid out in the base case chapter.</p>
+  </div>
+</section>
+
+
+<section>
+  <h2 class="section-head" id="tools">Tools</h2>
+  <ul class="links">
+    <li><a href="/forecast/tax-bill">What this means for your tax bill</a><span>How a typical bill changes to 2040, with a calculator for your own.</span></li>
+    <li><a href="/forecast/explorer">Forecast Explorer</a><span>Change any assumption and see revenue and spending to 2040.</span></li>
+  </ul>
+</section>
+
+<section id="full-detail">
+  <h2 class="section-head">The full detail</h2>
+  <p class="prose">The full chapters behind each short read, and technical pages for anyone who
+  wants to check the work, grouped by the question they answer. Every page stands on its own, with
+  its sources and method.</p>
+  <form class="site-search" action="/forecast/search" method="get" role="search">
+    <label for="forecast-q">Search the forecast</label>
+    <input id="forecast-q" name="q" type="search" placeholder="for example: health premiums, Baker School, free cash">
+    <button type="submit">Search</button>
+  </form>
+  <h3 class="detail-group">The budget, and how it works</h3>
+  <ul class="links">
+    <li><a href="/forecast/money">Where Brookline's money comes from and goes</a><span>The FY2027 budget in two pictures, every source and use and all five Town funds.</span></li>
+    <li><a href="/forecast/topics/budget">How Brookline's budget works</a><span>Funds, Proposition 2&frac12;, free cash, and what the Town may collect.</span></li>
+    <li><a href="/forecast/topics/liabilities">Liabilities, reserves and the credit rating</a><span>Pensions, retiree health, reserves and Brookline's Aaa rating.</span></li>
+  </ul>
+  <h3 class="detail-group">How Brookline got here</h3>
+  <ul class="links">
+    <li><a href="/forecast/spending">How Brookline got here, in full</a><span>Every cause of spending growth since FY2011, how inflation was measured, the school staffing ratio, and what Brookline controls.</span></li>
+    <li><a href="/forecast/topics/spending">Spending, FY2011 to FY2025</a><span>How each dollar of spending growth was assigned to a cause.</span></li>
+    <li><a href="/forecast/topics/revenue">Revenue, FY2005 to FY2025</a><span>Why revenue fell behind spending, and which parts.</span></li>
+  </ul>
+  <h3 class="detail-group">The forecast to 2040</h3>
+  <ul class="links">
+    <li><a href="/forecast/base-case">The base case to 2040, in full</a><span>Every base-case assumption, the staffing it implies, and the steps between it and the Town's plan.</span></li>
+    <li><a href="/forecast/budget-to-2040">Will Brookline need another override?</a><span>Each risk and decision, when the room would run out, and what growth is worth.</span></li>
+    <li><a href="/forecast/next-few-years">Navigating the next few years</a><span>Every decision ahead, including police, fire, zoning and capital, and the full readings to watch.</span></li>
+    <li><a href="/forecast/topics/forecast">The forecast: method and results</a><span>How the forecast is built and checked, and every step between it and the Town's plan.</span></li>
+    <li><a href="/forecast/assumptions">Assumptions register</a><span>Every key assumption, the evidence for it, and what it is worth if wrong.</span></li>
+  </ul>
+  <h3 class="detail-group">Growth and new homes</h3>
+  <p class="detail-intro">Start with the first, which sets out the town-wide view; each of the others answers one narrower question.</p>
+  <ul class="links">
+    <li><a href="/forecast/topics/growth-links">New homes and the budget: is there room?</a><span>Project estimates against the town-wide view, how much room the schools, fire and police have, and what to watch.</span></li>
+    <li><a href="/forecast/new-growth">New homes and Brookline's budget</a><span>What a new home adds when its children fill open seats, school by school.</span></li>
+    <li><a href="/forecast/topics/growth">Growth: when a new home pays for itself</a><span>What each kind of growth adds in tax and in cost, tenure, and the breakeven test for a specific building.</span></li>
+    <li><a href="/forecast/topics/growth-value">Growth: renovation and what faster growth is worth</a><span>Where Brookline's new growth comes from, and what faster growth of each kind would add by 2040.</span></li>
+    <li><a href="/forecast/topics/homes">Counting Brookline's homes</a><span>Five ways of counting the homes Brookline adds, what kinds they are, and what the forecast assumes.</span></li>
+    <li><a href="/maps">Land value and growth maps</a><span>Parcel-level maps of assessed value and where new growth came from.</span></li>
+  </ul>
+  <h3 class="detail-group">Schools and families</h3>
+  <ul class="links">
+    <li><a href="/forecast/topics/enrollment">Enrollment: three forecasts compared</a><span>NESDEC, the School Department's forecast and the base case: how each sets kindergarten and moves classes up the grades, and how each has done so far.</span></li>
+    <li><a href="/forecast/topics/schools">Schools: staffing, costs and open seats</a><span>How the schools reached their size, how their staffing compares, what an added student costs, and the open seats.</span></li>
+    <li><a href="/forecast/topics/families">Why families settle elsewhere</a><span>Births, family-sized homes and prices in Brookline and eleven nearby towns: why the suburbs draw young families and Brookline does not.</span></li>
+    <li><a href="/forecast/Brookline_Enrollment_Explained.xlsx">The enrollment workbook</a><span>Births, kindergarten and every grade, FY2005 to FY2040, for all three enrollment forecasts, with a version you can change.</span></li>
+  </ul>
+  <h3 class="detail-group">Data, sources and the model</h3>
+  <ul class="links">
+    <li><a href="/forecast/sources">Data and sources</a><span>Where every number comes from, with links and downloads.</span></li>
+    <li><a href="/forecast/glossary">Glossary</a><span>Plain definitions of the budget terms used here.</span></li>
+    <li><a href="/forecast/Brookline_Forecast_Model.xlsx">The Excel model</a><span>The same forecast as the Explorer, with every setting and every formula visible, plus the historical data.</span></li>
+    <li><a href="https://github.com/benjammin-code/brookline-budget-2040">The code and data on GitHub</a><span>Everything behind this forecast: the model, its inputs, the checks and the text of every page, free to reuse or adapt for another town.</span></li>
+    <li><a href="/forecast/changes">What has changed</a><span>Every change that moved a published figure, newest first.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="section-head">About this work</h2>
+  <div class="note">
+    <p>This is an independent analysis by <a href="/about-ben-chostner">Ben Chostner</a>, a Town
+    Meeting Member for Precinct 9. It is not an official Town document. It is built from the
+    Town's published budgets, financial plans and assessment records, School Department budget
+    documents, state data and enrollment forecasts, and every figure can be traced to its
+    <a href="/forecast/sources">source</a>.</p>
+    <p>If something here is wrong, I would rather know. Email:
+    <button type="button" class="reveal" data-user="ben" data-domain="brooklinefuture.org">click to show the address</button></p>
+  </div>
+</section>

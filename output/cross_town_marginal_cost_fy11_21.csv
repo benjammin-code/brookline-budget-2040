@@ -1,0 +1,9 @@
+outcome,specification,towns,per_unit_fy21,ci_low_fy21,ci_high_fy21,per_unit_fy25,rkg_fy25,common_growth,nonres_coef_per_dollar
+All five town departments,unweighted,350,2412,610,4582,2837,1109.0,0.1846,0.00337
+All five town departments,per existing unit,350,157,-865,1007,185,1109.0,0.3811,0.00138
+All five town departments,"unweighted, without Boston",349,2229,418,4545,2622,1109.0,0.2043,0.00346
+Public safety only,unweighted,350,1167,-80,2150,1373,980.0,0.2425,-2e-05
+Public safety only,per existing unit,350,253,-14,715,297,980.0,0.3735,0.00144
+Public safety only,"unweighted, without Boston",349,437,-236,1446,514,980.0,0.3508,3e-05
+All five town departments,growth-rate (elasticity) x Brookline spend per unit,329,564,-325,1359,663,1109.0,,
+Public safety only,growth-rate (elasticity) x Brookline spend per unit,329,199,-1037,961,234,980.0,,

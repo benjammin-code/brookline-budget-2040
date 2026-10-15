@@ -1,0 +1,17 @@
+bucket,window,fy_start,fy_end,actual_cagr,predicted_cagr,residual_cagr,personnel_share_fy2019,fte_cagr,eci_cagr,cpi_cagr,spend_start,spend_end,predicted_spend_end,note
+General Government,"clean, pre-FTE-seam",2011,2020,0.033563,0.030968,0.002517,0.7785,0.011753,0.022393,0.018083,9347954,12581935,12300509,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Public Safety,"clean, pre-FTE-seam",2011,2020,0.025399,0.022209,0.003121,0.8554,0.00049,0.022393,0.018083,28030700,35129432,34158010,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Public Works,"clean, pre-FTE-seam",2011,2020,0.006712,0.019945,-0.012974,0.6119,-0.001253,0.022393,0.018083,11997166,12741652,14330706,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Human Services,"clean, pre-FTE-seam",2011,2020,0.019068,0.026306,-0.007052,0.8348,0.00536,0.022393,0.018083,1992869,2362158,2517506,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Culture & Recreation,"clean, pre-FTE-seam",2011,2020,0.027956,0.021394,0.006425,0.5247,0.001885,0.022393,0.018083,5863962,7515548,7094623,predicted = personnel x headcount change x ECI + non-personnel x CPI
+General Government,post-FTE-seam,2021,2025,0.033377,0.049203,-0.015084,0.7785,0.009082,0.041497,0.042969,12790198,14585216,15499432,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Public Safety,post-FTE-seam,2021,2025,0.055333,0.037439,0.017248,0.8554,-0.004803,0.041497,0.042969,35067861,43497816,40621844,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Public Works,post-FTE-seam,2021,2025,0.033445,0.052837,-0.018419,0.6119,0.016761,0.041497,0.042969,13221233,15080716,16244880,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Human Services,post-FTE-seam,2021,2025,0.034569,0.06232,-0.026123,0.8348,0.023551,0.041497,0.042969,2438501,2793578,3105591,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Culture & Recreation,post-FTE-seam,2021,2025,0.033067,0.051573,-0.017598,0.5247,0.016987,0.041497,0.042969,7607961,8665288,9303078,predicted = personnel x headcount change x ECI + non-personnel x CPI
+Group health,"clean, pre-FTE-seam",2011,2020,0.05282,0.031358,0.020809,,,0.031358,,19390951,30816683,25602693,"group health only; pensions and OPEB excluded, not prices"
+Group health,post-FTE-seam,2021,2025,0.046823,0.043012,0.003654,,,0.043012,,31867664,38268676,37714381,"group health only; pensions and OPEB excluded, not prices"
+Schools (per pupil),"clean, pre-FTE-seam",2011,2020,0.03492,0.022393,0.012253,,,0.022393,,11685,15914,14262,"per-pupil spend, so the quantity is already divided out"
+Schools (per pupil),post-FTE-seam,2021,2025,0.032031,0.041497,-0.009089,,,0.041497,,18382,20852,21628,"per-pupil spend, so the quantity is already divided out"
+Schools (per staff FTE),"clean, pre-FTE-seam",2011,2020,0.014566,0.022393,-0.007655,,,0.022393,,78831,89788,96218,"per-staff FTE spend, so the quantity is already divided out"
+Schools (per staff FTE),post-FTE-seam,2021,2025,0.056857,0.041497,0.014747,,,0.041497,,93953,117213,110546,"per-staff FTE spend, so the quantity is already divided out"

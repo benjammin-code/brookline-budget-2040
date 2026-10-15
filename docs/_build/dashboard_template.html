@@ -1,0 +1,825 @@
+<title>Brookline Forecast Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --ground: #fbfbf8; --surface: #f1f0ec; --panel: #f1f0ec;
+    --ink: #1c1c1a; --ink-2: #4f4f4a; --ink-3: #75756e;
+    --rule: #dcdbd5; --rule-strong: #b9b8b1;
+    --accent: #1f3a5f; --accent-ink: #142843; --accent-soft: #e3e9f1;
+    --warm-ink: #9a4a2c; --warm-soft: #f4e6df;
+    --flag: #7a5a12; --flag-soft: #f6efdc; --flag-rule: #dcc796;
+    --s1: #2b5c97; --s2: #b66946; --s3: #447b46; --axis: #9a9a92; --grid: #e6e5e0;
+    --c1: #2b5c97; --c2: #ca932e; --c3: #447b46; --c4: #924b84; --c5: #479dc4; --c6: #b66946; --c7: #9a9a92;
+    --sans: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --mono: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #151719; --surface: #23272b; --panel: #23272b;
+      --ink: #e8e6e1; --ink-2: #b9b7b0; --ink-3: #8f8d86;
+      --rule: #2f3236; --rule-strong: #4a4d52;
+      --accent: #8fb0d8; --accent-ink: #b5cbe6; --accent-soft: #1d2a3a;
+      --warm-ink: #e0937a; --warm-soft: #33231d;
+      --flag: #d6b25f; --flag-soft: #2b2516; --flag-rule: #4d4224;
+      --s1: #4c82c6; --s2: #a3563b; --s3: #3b793f; --axis: #6d6c67; --grid: #26292d;
+      --c1: #4c82c6; --c2: #b8892d; --c3: #3b793f; --c4: #9b4e8c; --c5: #19a4b7; --c6: #a3563b; --c7: #76746e;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #151719; --surface: #23272b; --panel: #23272b;
+    --ink: #e8e6e1; --ink-2: #b9b7b0; --ink-3: #8f8d86;
+    --rule: #2f3236; --rule-strong: #4a4d52;
+    --accent: #8fb0d8; --accent-ink: #b5cbe6; --accent-soft: #1d2a3a;
+    --warm-ink: #e0937a; --warm-soft: #33231d;
+    --flag: #d6b25f; --flag-soft: #2b2516; --flag-rule: #4d4224;
+    --s1: #4c82c6; --s2: #a3563b; --s3: #3b793f; --axis: #6d6c67; --grid: #26292d;
+    --c1: #4c82c6; --c2: #b8892d; --c3: #3b793f; --c4: #9b4e8c; --c5: #19a4b7; --c6: #a3563b; --c7: #76746e;
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body {
+    background: var(--ground); color: var(--ink); font-family: var(--sans);
+    font-size: 15px; line-height: 1.5; margin: 0; padding: 0 1.25rem 5rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 78rem; margin: 0 auto; }
+  .n { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  header.masthead { border-bottom: 2px solid var(--ink); padding: 2.5rem 0 1.25rem; margin-bottom: 1.5rem; }
+  .eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.75rem; }
+  h1 { font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 2.6rem); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; margin: 0 0 0.75rem; }
+  .standfirst { font-family: var(--serif); font-size: 1.08rem; color: var(--ink-2); max-width: 44rem; margin: 0; }
+  .standfirst + .standfirst { margin-top: 0.6rem; }
+
+  .layout { display: grid; grid-template-columns: minmax(0, 23rem) minmax(0, 1fr); gap: 2rem; align-items: start; }
+  .outputs { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 0.75rem); display: flex; flex-direction: column; gap: 1.25rem; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    .outputs { position: static; order: -1; }
+  }
+
+  /* ---------- headline */
+  .headline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--surface); }
+  .tile { padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.2rem; }
+  .tile + .tile { border-left: 1px solid var(--rule); }
+  .tile .lab { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+  .tile .big { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 600; line-height: 1.1; }
+  .tile .sub { font-size: 0.78rem; color: var(--ink-2); }
+  .pos { color: var(--accent); } .neg { color: var(--warm-ink); }
+  @media (max-width: 560px) {
+    .headline { grid-template-columns: minmax(0, 1fr); }
+    .tile + .tile { border-left: 0; border-top: 1px solid var(--rule); }
+  }
+  .changed { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; font-size: 0.8rem; color: var(--ink-2); min-height: 1.6rem; }
+  .chip { border: 1px solid var(--rule-strong); border-radius: 999px; padding: 0.1rem 0.6rem; background: var(--ground); }
+  .chip b { font-family: var(--mono); font-weight: 500; }
+
+  /* ---------- charts */
+  .card { border: 1px solid var(--rule); border-radius: 6px; padding: 0.9rem 1rem 0.6rem; background: var(--ground); }
+  .card h2 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.15rem; letter-spacing: -0.005em; }
+  .card .cap { font-size: 0.78rem; color: var(--ink-3); margin: 0 0 0.5rem; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-size: 0.75rem; color: var(--ink-2); margin: 0 0 0.4rem; }
+  .legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .ln { width: 16px; height: 0; border-top: 2.5px solid; display: inline-block; }
+  .ln.dash { border-top-style: dashed; border-top-width: 1.5px; }
+  .chart { position: relative; width: 100%; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .chart text { font-family: var(--mono); font-size: 11px; fill: var(--ink-3); }
+  .tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--ground); font-size: 0.75rem; line-height: 1.4; padding: 0.45rem 0.6rem; border-radius: 4px; white-space: nowrap; z-index: 5; transform: translate(-50%, calc(-100% - 10px)); }
+  .tip .n { font-size: 0.72rem; }
+  .tip table { border-collapse: collapse; }
+  .tip td { padding: 0 0.4rem 0 0; }
+  .tip td.r { text-align: right; }
+
+  table.years { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  table.years th, table.years td { padding: 0.35rem 0.5rem; text-align: right; border-bottom: 1px solid var(--rule); }
+  table.years th:first-child, table.years td:first-child { text-align: left; }
+  table.years th { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  table.years td { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .tablewrap { overflow-x: auto; }
+
+  /* ---------- controls */
+  .controls { display: flex; flex-direction: column; gap: 1rem; }
+  .presets { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .presets .lab { width: 100%; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+  button { font: inherit; cursor: pointer; }
+  .pbtn { font-size: 0.78rem; padding: 0.3rem 0.65rem; border-radius: 999px; border: 1px solid var(--rule-strong); background: var(--ground); color: var(--ink); }
+  .pbtn:hover { border-color: var(--accent); }
+  .pbtn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--ground); }
+  button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .layer { border-top: 2px solid var(--ink); padding-top: 0.75rem; display: flex; flex-direction: column; gap: 0.25rem; }
+  .layer h2 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0; display: flex; justify-content: space-between; gap: 0.5rem; }
+  .layer h2 .count { font-family: var(--mono); font-weight: 500; color: var(--ink-3); letter-spacing: 0; text-transform: none; }
+  .layer .intro { font-family: var(--serif); font-size: 0.9rem; color: var(--ink-2); margin: 0 0 0.25rem; }
+  .ctl { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.3rem; }
+  .ctl:last-child { border-bottom: 0; }
+  .ctl .top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+  .ctl label { font-weight: 600; font-size: 0.88rem; }
+  .ctl .val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.85rem; white-space: nowrap; }
+  .ctl .help { font-size: 0.78rem; color: var(--ink-2); margin: 0; }
+  .ctl .meta { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.72rem; color: var(--ink-3); }
+  .ctl .alone { font-family: var(--mono); }
+  .ctl.moved .val { color: var(--accent-ink); }
+  .ctl .reset { border: 0; background: none; color: var(--accent); padding: 0; font-size: 0.72rem; text-decoration: underline; text-underline-offset: 2px; }
+  input[type="range"] { width: 100%; accent-color: var(--accent); margin: 0.15rem 0; }
+  .ctl .ix { margin: 0; font-size: 0.76rem; color: var(--ink-2); padding-left: 0.6rem; border-left: 2px solid var(--accent); }
+  .ctl .glab { font-weight: 600; font-size: 0.88rem; }
+  .opts { display: flex; flex-direction: column; gap: 0.3rem; margin: 0.1rem 0; }
+  .opts.compact { flex-direction: row; flex-wrap: wrap; }
+  .opt { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.4rem 0.6rem; border: 1px solid var(--rule-strong); border-radius: 4px; background: var(--ground); font-size: 0.84rem; line-height: 1.35; cursor: pointer; }
+  .opts.compact .opt { padding: 0.3rem 0.65rem; position: relative; }
+  .opt:hover { border-color: var(--accent); }
+  .ctl .opt { font-weight: 400; }
+  .ctl .opt:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; }
+  .opt input { accent-color: var(--accent); margin: 0.15rem 0 0; flex: none; }
+  .opts.compact .opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .opts.compact .opt:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .opt .otext { display: flex; flex-direction: column; gap: 0.1rem; }
+  .opt .odet { font-size: 0.74rem; font-weight: 400; color: var(--ink-2); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .opt .tag { margin-left: auto; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-2); padding-top: 0.1rem; }
+  select { width: 100%; font: inherit; font-size: 0.85rem; padding: 0.35rem 0.4rem; border: 1px solid var(--rule-strong); border-radius: 4px; background: var(--ground); color: var(--ink); }
+  .more { align-self: flex-start; font-size: 0.85rem; font-weight: 600; padding: 0.55rem 0.95rem; border-radius: 4px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-ink); }
+  .more:hover { background: var(--accent); color: var(--ground); }
+  .end { border: 1px dashed var(--rule-strong); border-radius: 6px; padding: 1rem; font-family: var(--serif); font-size: 0.95rem; }
+  .end p { margin: 0 0 0.5rem; } .end p:last-child { margin: 0; }
+  .end a { color: var(--accent-ink); }
+  .end .try { font-family: var(--sans); font-weight: 600; font-size: 0.8rem; padding: 0.3rem 0.7rem; margin-left: 0.25rem; border-radius: 4px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-ink); }
+  .resetall { align-self: flex-start; border: 1px solid var(--rule-strong); background: var(--ground); color: var(--ink); border-radius: 4px; padding: 0.35rem 0.75rem; font-size: 0.8rem; }
+
+  .vs { margin: 0 0 1.75rem; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--surface); padding: 1rem 1.15rem; max-width: 52rem; }
+  .vs .lab { font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 0.4rem; }
+  .vs p { font-family: var(--serif); font-size: 0.98rem; margin: 0 0 0.6rem; max-width: 46rem; }
+  .vs p.lead { font-size: 1.05rem; }
+  .vs details { border-top: 1px solid var(--rule); padding-top: 0.6rem; }
+  .vs summary { cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--accent-ink); }
+  .vs summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .vs details[open] summary { margin-bottom: 0.6rem; }
+  .vs .ttl { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--ink); margin: 0.25rem 0 0.4rem; }
+  .vs table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin: 0 0 0.75rem; }
+  .vs th, .vs td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  .vs th { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  .vs td.r, .vs th.r { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .vs tr.tot td { font-weight: 600; border-bottom: 0; }
+  .vs .try { font-family: var(--sans); font-weight: 600; font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 4px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-ink); }
+  .vs .try:hover { background: var(--accent); color: var(--ground); }
+
+  .notes { margin-top: 3rem; border-top: 1px solid var(--rule-strong); padding-top: 1rem; font-family: var(--serif); font-size: 0.92rem; color: var(--ink-2); max-width: 46rem; }
+  .notes h2 { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
+  .notes p { margin: 0 0 0.7rem; }
+
+  .dock { display: none; }
+  @media (max-width: 900px) {
+    .dock { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; justify-content: space-between; gap: 1rem;
+            padding: 0.55rem 1.25rem calc(0.55rem + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--ground); font-size: 0.82rem; }
+    .dock .n { font-weight: 600; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .layer.reveal { animation: rise 0.35s ease-out; }
+    @keyframes rise { from { transform: translateY(6px); opacity: 0.4; } to { transform: none; opacity: 1; } }
+  }
+
+  /* Town paper */
+  h1, h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.012em; }
+  header.masthead { border-bottom: 3px solid var(--ink); }
+  table, svg text, .n, .big { font-variant-numeric: tabular-nums; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">Brookline General Fund · FY2027 to FY2040</p>
+    <h1>Brookline Forecast Explorer</h1>
+    <p class="standfirst">Move the assumptions and watch revenue and spending through 2040. Every setting starts at the base case: the FY2027 budget Town Meeting adopted, with the May 2026 override, carried forward on Brookline's own record since FY2011.</p>
+    <p class="standfirst"><b>Room</b> is revenue minus the cost of continuing today's services. Positive room can pay for new priorities or capital; negative room means cuts or new revenue.</p>
+  </header>
+
+  <section class="vs" id="vs">
+    <p class="lab">Why the base case differs from the Town's plan</p>
+    <p class="lead">The Town's Long-Range Financial Plan (January 2026) shows a gap of <b class="n">$42.7M</b> by FY2031. The base case on this page shows <b class="n">{{fact:walk_end}}</b> of room that year. The two answer different questions. The Town's plan is deliberately cautious, since being wrong in the optimistic direction means painful cuts if spending outruns revenue. This page's base case asks what happens if costs and revenue keep behaving as they have.</p>
+    <p>Two things explain most of the difference. The May 2026 override passed four months after the Town's plan was written. And the Town's plan takes school costs from the School Department's own forecast, made before any look at efficiencies, with salaries rising about 5% a year; the base case has school pay rising about 3.7% a year, the middle of the range the School Department's own budget arithmetic gives for the current contract.</p>
+    <details id="vs-detail">
+      <summary>Show the step-by-step walk from the Town's plan to the base case</summary>
+      <p class="ttl">FY2031 balance, from the Town's plan to the base case, before any settings on this page are moved (a gap is negative, room positive)</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Step, FY2031</th><th>What differs</th><th class="r">Change</th><th class="r">Running</th></tr></thead>
+        <tbody>
+          <tr><td>Start</td><td>The Town's plan: the FY2027 to FY2031 Long-Range Financial Plan, presented January 13, 2026</td><td class="r"></td><td class="r">&minus;$42.7M</td></tr>
+          <tr><td>1. The override</td><td>Passed May 2026, after the Town's plan was written. It phases in over three years: $9.9M in FY2027, $5.6M in FY2028 and $7.8M in FY2029. Each piece then grows with the levy. By FY2031 it is worth $27.3M a year.</td><td class="r">+$27.3M</td><td class="r">&minus;$15.5M</td></tr>
+          <tr><td>2. New growth</td><td>The Town's plan assumes a flat $2.5M a year; the base case uses that $2.5M in FY2027, as the adopted budget does, then continues the recent rate, 1.23% of the levy, which grows as the levy does: about {{fact:walk_ng_fy2028}} in FY2028, rising to about {{fact:walk_ng_fy2031}} in FY2031</td><td class="r">{{fact:walk_ng}}</td><td class="r">{{fact:walk_run2}}</td></tr>
+          <tr><td>3. Other revenue</td><td>Both budget local receipts well below what is collected (Brookline budgeted $33.1M in FY2025 and collected $44.4M). The difference is growth. The Town's plan grows budgeted receipts about 1.5% a year from FY2027; the base case lets collections grow at their FY2019 to FY2025 pace with investment income held flat (budgeted receipts about 1.3% a year) and returns each year's surplus as free cash two years later. By the Town's free cash policy, free cash left after the capital and reserve uses already counted goes to capital and one-time uses, not the operating budget. Both grow state aid 2.5% a year. In FY2031: receipts {{fact:walk_rev_receipts}}, free cash {{fact:walk_rev_fc}}, state aid {{fact:walk_rev_sa}}, {{fact:walk_rev_fc_policy}}.</td><td class="r">{{fact:walk_rev}}</td><td class="r">{{fact:walk_run3}}</td></tr>
+          <tr><td>4. Schools</td><td>The Town's plan uses the School Department's pre-efficiency forecast, with salaries rising about 5% a year, enrollment flat and staffing held constant. The base case has salaries rising about 3.7% a year, enrollment following NESDEC's projected decline, and school staff falling half as fast as enrollment, as they did from FY2019 to FY2025</td><td class="r">{{fact:walk_schools}}</td><td class="r">{{fact:walk_run4}}</td></tr>
+          <tr><td>5. Town departments</td><td>The Town's plan grows Town department spending slowly: matching it would take raises of only about 1.5% a year with staff flat. The base case uses 3.0% (3.5% for Public Safety, plus the fire steps and police positions already agreed), so on this step the base case is the more cautious one</td><td class="r">{{fact:walk_town}}</td><td class="r">{{fact:walk_run5}}</td></tr>
+          <tr><td>6. Capital and reserves</td><td>The Town's plan carries higher capital lines than the six-year capital funding table the Town published later in the FY2027 Financial Plan. That table follows the Select Board's policy: capital funding equal to 6.6% of the prior year's net revenue, 4.5% for debt and 2.1% paid in cash. The table has less capital paid in cash and about $1 million more debt service. The base case uses the table's debt, and tops capital paid in cash up to 6.6% of its own revenue, which counts the override.</td><td class="r">{{fact:walk_capital}}</td><td class="r">{{fact:walk_run6}}</td></tr>
+          <tr><td>7. Other and rounding</td><td>Small differences, mostly in health insurance</td><td class="r">{{fact:walk_other}}</td><td class="r">{{fact:walk_end}}</td></tr>
+          <tr class="tot"><td>End</td><td>The base case, FY2031</td><td class="r"></td><td class="r">{{fact:walk_end}}</td></tr>
+        </tbody>
+      </table></div>
+      <p><b>The two biggest differences are the override that passed and school pay.</b> Together, steps 1 and 4 are {{fact:walk_override_schools_m}} of the {{fact:walk_gap_m}} between the Town's plan and the base case. School pay is the real difference of view, and it turns on one number: whether it keeps rising about 5% a year. The teachers' contracts expired August 31, 2026 and are being negotiated now.</p>
+      <p>The full walk is in <a href="/forecast/topics/forecast#from-the-towns-plan-to-the-base-case-step-by-step">The forecast: method and results</a>, including the year-by-year arithmetic behind the override's $27.3M.</p>
+      <p><button type="button" class="try" id="try-schools">See the schools' pay forecast on the charts</button></p>
+    </details>
+  </section>
+
+  <div class="layout">
+    <aside class="controls" id="controls">
+      <div class="presets" id="presets"><span class="lab">Try one decision on its own</span></div>
+    </aside>
+
+    <main class="outputs" id="outputs">
+      <div class="headline">
+        <div class="tile"><span class="lab">Room in FY2040</span><span class="big n" id="h-room">…</span><span class="sub" id="h-room-sub"></span></div>
+        <div class="tile"><span class="lab">Room runs out</span><span class="big n" id="h-out">…</span><span class="sub" id="h-out-sub"></span></div>
+        <div class="tile"><span class="lab">Room in FY2031</span><span class="big n" id="h-31">…</span><span class="sub" id="h-31-sub"></span></div>
+      </div>
+      <div class="changed" id="changed"></div>
+
+      <section class="card">
+        <h2>Revenue and spending</h2>
+        <p class="cap">Millions of dollars a year, operating basis (excluded debt left out of both). Shading is the room.</p>
+        <div class="legend">
+          <span><i class="ln" style="border-color:var(--s1)"></i>Revenue</span>
+          <span><i class="ln" style="border-color:var(--s3)"></i>Spending</span>
+          <span><i class="ln dash" style="border-color:var(--ink-3)"></i>Base case</span>
+        </div>
+        <div class="chart" id="lineChart"></div>
+      </section>
+
+      <section class="card">
+        <h2>Where the spending goes</h2>
+        <p class="cap">Spending by part of the budget, millions of dollars. The line is revenue.</p>
+        <div class="legend" id="stackLegend"></div>
+        <div class="chart" id="stackChart"></div>
+      </section>
+
+      <section class="card">
+        <h2>Selected years</h2>
+        <div class="tablewrap"><table class="years" id="yearTable"></table></div>
+      </section>
+    </main>
+  </div>
+
+  <section class="notes">
+    <h2>How this works</h2>
+    <p>The Explorer runs the same forecast as the rest of this site, starting from the budget Town Meeting adopted for FY2027. Each part of the budget moves with what drives it: how many staff there are and what they are paid, prices, health premiums, enrollment, and the homes and commercial space that new growth brings. Revenue follows Proposition 2&frac12;: what the Town may collect grows 2.5% a year plus tax on new construction and renovation, state aid grows 2.5% a year, as in the Town's own plan, local fees grow at their recent rate, and each year's surplus comes back as free cash two years later. By the Town's free cash policy, what is left after the capital and reserve uses goes to capital and one-time uses, so it is not counted as room.</p>
+    <p><strong>How it was checked.</strong> The forecast's method was run backward over FY2011 to FY2025, given what actually happened to staffing, enrollment and prices: it came within about 4% of what Town departments actually spent in FY2025, and within 6% for schools. It also reproduces the budgets Town Meeting adopted for the years already decided. This page gives the same answer as the underlying model in all 112 test cases, to within $5 a year.</p>
+    <p>The Explorer also lets you add another override, which the forecast itself never assumes: choose its size with "A further override" and its first year with "First year of that override." Like a real override, it then grows 2.5% a year. It is the one setting not checked against the underlying model, since the model has nothing to compare it with.</p>
+    <p><a href="/forecast/base-case">The base case</a> explains what each starting assumption is, and the <a href="/forecast/assumptions">assumptions register</a> sets out the evidence behind it.</p>
+  </section>
+</div>
+
+<div class="dock" id="dock" aria-hidden="true"><span>Room in FY2040</span><span class="n" id="dock-room"></span></div>
+<div class="sr-only" id="sr-live" aria-live="polite" aria-atomic="true"></div>
+
+<script>
+/*__ENGINE__*/
+</script>
+<script>
+var D = /*__DATA__*/;
+</script>
+<script>
+(function () {
+  "use strict";
+  var B = D.base, R = D.revenue;
+  var fmtM = function (x, d) { d = d == null ? 1 : d; var v = x / 1e6; var s = Math.abs(v).toFixed(d); return (v < -0.0499 ? "−" : "") + "$" + s + "M"; };
+  var fmtSM = function (x) { var v = x / 1e6; return (v >= 0.05 ? "+" : v <= -0.05 ? "−" : "") + "$" + Math.abs(v).toFixed(1) + "M"; };
+  var pct = function (x, d) { return (x * 100).toFixed(d == null ? 1 : d) + "%"; };
+  var pts = function (x) { return (x >= 0 ? "+" : "−") + Math.abs(x * 100).toFixed(1) + " pt"; };
+  var STEP_BASE = D.steps.indexOf(0);
+  // payroll weights, FY2027 adopted budget: Town (non-Public Safety), Public Safety, schools
+  var PAYW = (function () {
+    var t = D.adopted.town_departments * D.consts.pD, ps = t * D.consts.psD, sc = D.adopted.schools * D.consts.school_personnel_share;
+    return { town: t - ps, ps: ps, sch: sc, tot: t + sc };
+  })();
+  function payAvg(s) {
+    return (PAYW.town * s.pay + PAYW.ps * (s.pay + s.pay_ps_premium) + PAYW.sch * (s.pay + s.school_pay_drift)) / PAYW.tot;
+  }
+
+  // ---------------------------------------------------------------- controls
+  // Each control: id, layer, label, help, kind (range/select), base value, apply(a, rv, v), show(v)
+  var C = [
+    { id: "pay", layer: 1, label: "Pay raises compared with the base case", kind: "range", min: -0.015, max: 0.02, step: 0.0025, base: 0,
+      help: "Moves every employee group's yearly raise by the same amount. The base case starts from the Town's 3.0% bargaining target, with schools and Public Safety above it by as much as they have run in recent years (next layer). The all-staff figure is weighted by FY2027 payroll.",
+      show: function (v) { return Math.abs(v) < 1e-9 ? "Base case" : pts(v); },
+      sub: function (v, s) { return "All staff " + pct(payAvg(s)) + ": Town " + pct(s.pay) + ", schools " + pct(s.pay + s.school_pay_drift) + ", Public Safety " + pct(s.pay + s.pay_ps_premium); },
+      apply: function (a, rv, v) { a.pay = B.pay + v; } },
+    { id: "opeb", layer: 1, label: "Pension savings after full funding", kind: "select", base: "redirect",
+      options: [["redirect", "Moved to retiree health (OPEB), the Town's plan; once it's paid off, held for a decision"], ["spend", "Moved to retiree health (OPEB); once it's paid off, counted as room"], ["keep", "Kept in the budget as room"]],
+      help: "The pension system reaches full funding in FY2030. The Town plans to use the money it stops paying toward pensions, about $43 million a year from FY2031, to pay down its retiree health (OPEB) liability instead. On the actuary's healthcare trend that liability is paid off in {{fact:opeb_paid_off}}. What the Town does with the money then is a decision for that time, so the base case keeps it in the budget and doesn't count it as room. The second choice counts it as room.",
+      apply: function (a, rv, v) { a.opeb_redirect = v !== "keep"; a.opeb_hold = v === "redirect"; } },
+    { id: "staffing", layer: 1, label: "School staff as enrollment falls", kind: "select", base: "half",
+      options: [["half", "Fall half as fast as enrollment, as in FY2019 to FY2025"], ["keep", "Held at the FY2027 level"], ["hold", "Follow enrollment, students per staff held"], ["partial", "Follow enrollment, students per staff a third back to FY2019"]],
+      help: "Enrollment is forecast to fall. From FY2019 to FY2025, enrollment fell 10.6% and school staff 5.0%, about half as fast, so students per staff member went from 6.0 to 5.6. The base case continues that pattern: the part of school staffing that varies with enrollment falls half as fast as enrollment, about 10 positions a year, while students from new homes are staffed in full. Holding staff at the FY2027 level instead, as the School Department's own FY2027 to FY2029 plan does, costs {{fact:fy40_staff_keep_abs}} a year by FY2040.",
+      apply: function (a, rv, v) { a.ratio_mode = v; } },
+    { id: "premium_long", layer: 1, label: "Health premium growth, FY2030 on", kind: "range", min: 0.05, max: 0.12, step: 0.005, base: B.premium_long,
+      help: "Yearly rise in health insurance premiums. The 25-year average is 6.5%; recent years ran 10 to 12%.",
+      show: function (v) { return pct(v) + "/yr"; },
+      apply: function (a, rv, v) { a.premium_long = v; } },
+    { id: "growth", layer: 1, label: "Property tax new growth", kind: "range", min: 0, max: D.steps.length - 1, step: 1, base: STEP_BASE,
+      help: "Tax base added each year by construction, renovation and business equipment, as a share of last year's levy. The 80th percentile of Massachusetts towns is about " + pct(D.peer_rate, 2) + ". New homes at the recent pace are already inside the enrollment forecast, which falls anyway; only growth above the trend adds students the model has to staff.",
+      show: function (v) { return pct(D.trend_rate + D.steps[v] * 0.001, 2) + " of levy"; },
+      sub: function (v) { var k = D.steps[v]; return k === 0 ? "Recent trend" : (k > 0 ? "+" : "−") + Math.abs(k / 10).toFixed(1) + " pt vs recent trend"; },
+      apply: function (a, rv, v) { a._step = D.steps[v]; } },
+    { id: "homes", layer: 1, label: "New homes built", kind: "select", base: "all",
+      options: [["all", "As expected, {{fact:homes_pace}} a year"], ["half", "Half as many"], ["none", "None: renovation and commercial growth only"]],
+      help: "New homes are about a sixth of Brookline's new growth; most of it is home renovation, business equipment and commercial property. This setting scales only the new-homes part, so the other kinds of growth continue at their pace. Fewer homes mean less tax and fewer Town costs and students; the enrollment forecast already reflects the recent pace of building, so it is left as it is. Building permits in 2024 and 2025 were the lowest since at least 2018. They point to FY2027 new growth about at the Town's budgeted $2.5M, which the base case already uses, and FY2028 new growth well below the trend, which would leave {{fact:pl_effect_fy2028}} less room in FY2028.",
+      ix: "Scales the new homes in whatever new growth is set above, including any added growth.",
+      apply: function (a, rv, v) { a._homes = v; } },
+
+    { id: "school_drift", layer: 2, label: "School pay above the Town target", kind: "range", min: 0, max: 0.025, step: 0.001, base: B.school_pay_drift,
+      help: "The base case puts school pay 0.7 point above the Town target (3.7%), the middle of the 3.3 to 4.1% range the School Department's FY2026 budget build gives: the contract's 2.75% raise plus steps and column moves, less turnover savings. The FY2011 to FY2025 record was 0.4 point. The schools' own forecast implies about 2 points.",
+      show: function (v) { return pts(v); },
+      sub: function (v, s) { return "Schools at " + pct(s.pay + v) + "/yr"; },
+      ix: "Adds to the pay raises setting above: school pay is 3.0% plus both.",
+      apply: function (a, rv, v) { a.school_pay_drift = v; } },
+    { id: "ps_premium", layer: 2, label: "Public Safety pay above the Town target", kind: "range", min: 0, max: 0.025, step: 0.0025, base: B.pay_ps_premium,
+      help: "The base case puts Public Safety pay 0.5 point above the target, 3.5% a year. Police and fire cost per position grew about 3.3% a year from FY2011 to FY2025. The faster rise from FY2021 to FY2025 came mostly from one-time changes, a police stipend rising from 4% to 7.5% of pay and new steps, which are already in the FY2027 budget; the fire steps agreed for FY2028 and the four police positions to be refilled in FY2028 and FY2029 are counted on top.",
+      show: function (v) { return pts(v); },
+      sub: function (v, s) { return "Public Safety at " + pct(s.pay + v) + "/yr"; },
+      ix: "Adds to the pay raises setting above: Public Safety pay is 3.0% plus both.",
+      apply: function (a, rv, v) { a.pay_ps_premium = v; } },
+    { id: "lr", layer: 2, label: "Local receipts growth", kind: "range", min: 0.01, max: 0.06, step: "any", base: R.lr_cagr,
+      help: "Fees, excise and other local revenue, apart from meals tax and building permits (which follow the economy and construction) and investment income (held at the Town's FY2027 budget, about $0.9M a year). Base: the FY2019 to FY2025 rate with investment income set aside; counting it, the rate was 3.3%.",
+      show: function (v) { return pct(v) + "/yr"; },
+      apply: function (a, rv, v) { rv.lr = v; } },
+    { id: "cpi", layer: 2, label: "Inflation", kind: "range", min: 0.015, max: 0.05, step: 0.0025, base: B.cpi,
+      help: "Price growth for everything that is not pay: supplies, utilities, contracts. The 2.5% base is the long-run rise in Boston-area consumer prices, about 2.6% a year from FY2011 to FY2025; the last ten years, which include the 2021 to 2023 spike, ran 2.9%.",
+      show: function (v) { return pct(v) + "/yr"; },
+      apply: function (a, rv, v) { a.cpi = v; } },
+    { id: "sa", layer: 2, label: "State aid growth", kind: "range", min: 0, max: 0.06, step: "any", base: R.sa_cagr,
+      help: "Chapter 70 school aid and unrestricted local aid, grown from the adopted FY2027 figure. The base case uses 2.5% a year, the rate in the Town's own long-range plan. From FY2015 to FY2025 state aid grew 3.5% a year, but that includes a one-year rise of 8.6% in FY2019; since FY2019 it has grown 2.0% a year.",
+      show: function (v) { return pct(v) + "/yr"; },
+      apply: function (a, rv, v) { rv.sa = v; } },
+
+    { id: "mix", layer: 3, label: "Where added growth comes from", kind: "select", base: "mix",
+      options: [["mix", "Today's mix"], ["housing", "New homes"], ["commercial", "New commercial space"], ["even", "Half homes, half commercial"]],
+      help: "Today's mix is the recent trend, 1.23% of the levy a year: home renovation 52%, new homes 17%, business equipment 19%, commercial renovation 11%, new commercial space under 1%. New homes add students and services; commercial space pays a higher tax rate and costs less to serve. Growth faster than the trend also adds planning and building-inspection staff in proportion; the building permit fees it brings in are already counted.",
+      ix: "Only matters when property tax new growth above is set higher than the recent trend.",
+      apply: function (a, rv, v) { a._mix = v; } },
+    { id: "fill", layer: 3, label: "Students from added homes", kind: "select", base: "staff",
+      options: [["staff", "Each brings new staff at today's ratio"], ["fill", "Fill seats left open as enrollment falls"]],
+      help: "With enrollment falling faster than staff, classes have room. In FY2027 the K-8 classes already had about 945 seats open under the School Committee's class-size guidelines. Filling seats, students from added homes need new staff only once the open seats are used: all the seats the decline leaves with staff held at the FY2027 level, half of them with staff falling half as fast.",
+      ix: "Only matters when new growth above the trend includes new homes, and while school staff are not following enrollment fully.",
+      apply: function (a, rv, v) { a.fill_capacity = v === "fill"; } },
+    { id: "enroll", layer: 3, label: "School enrollment forecast", kind: "select", base: "nesdec",
+      options: [["nesdec", "NESDEC, updated for actual births (declines)"], ["flat", "Flat at FY2027"], ["cm", "Cropper-McKibben, the schools' forecast (rises)"]],
+      help: "Which enrollment path the schools serve. It moves school staff (half as fast as enrollment in the base case) and non-personnel costs.",
+      ix: "Unless school staff are held at the FY2027 level (above), this also changes staff, not just costs.",
+      apply: function (a, rv, v) { a.enroll_mode = v; } },
+    { id: "premium_near", layer: 3, label: "Health premium growth, FY2028 and FY2029", kind: "range", min: 0.06, max: 0.14, step: 0.01, base: B.premium_near,
+      help: "The Town's own forecast for the next two years.",
+      show: function (v) { return pct(v, 0) + "/yr"; },
+      ix: "Compounds with the FY2030-on premium above: it sets the level that rate grows from.",
+      apply: function (a, rv, v) { a.premium_near = v; } },
+    { id: "np_extra", layer: 3, label: "School non-personnel costs above inflation", kind: "range", min: 0, max: 0.03, step: 0.0025, base: B.sch_np_extra,
+      help: "Special education placements and transportation have at times grown faster than prices in general.",
+      show: function (v) { return pts(v); },
+      ix: "Adds to inflation in the layer above.",
+      apply: function (a, rv, v) { a.sch_np_extra = v; } },
+    { id: "capital", layer: 3, label: "Capital funding", kind: "select", base: "full",
+      options: [["full", "The 6.6% policy, from FY2028"], ["table", "Held at the Town's six-year table, about 6%"]],
+      help: "The Select Board's policy puts 6.6% of the prior year's net revenue into capital (4.5% for debt, 2.1% in cash), with free cash topping the total up to at least 8%. The Financial Plan holds it at 6% for FY2026 and FY2027 only, for operating relief, and assumes the full policy after that; the base case follows it from FY2028, on this forecast's own revenue. Holding capital at the dollars in the Town's six-year table instead comes to about 6% of that revenue, since the override and faster growth raise revenue above the table's. Large school buildings are paid for by debt exclusions, outside this forecast.",
+      apply: function (a, rv, v) { a.capital_full = v === "full"; } },
+    { id: "cost_home", layer: 3, label: "Town cost of serving a new home", kind: "range", min: 200, max: 1200, step: 10, base: B.cost_per_home,
+      help: "Town department cost per added home a year, in FY2025 dollars, before schools. The forecast leaves out fire's share, about a fifth, since fire is counted in steps under Police and fire staffing, and police's share too when police grow with homes. The $660 base comes from how department spending actually grew with housing across 350 Massachusetts towns, FY2011 to FY2021. RKG's $1,109 is an average: it divides the budget lines that serve households by the number of households, and most of it is police and fire, which in Brookline fell slightly over FY2011 to FY2025 while the town's building permits added {{fact:homes_permitted_fy11_25}} homes.",
+      show: function (v) { return "$" + Math.round(v).toLocaleString(); },
+      ix: "Grows with the property tax new growth setting above: more homes, more cost.",
+      apply: function (a, rv, v) { a.cost_per_home = v; } },
+    { id: "ps_staff", layer: 3, label: "Police and fire staffing", kind: "select", base: "budget",
+      options: [["budget", "FY2027 budget, plus a fire company at about 31,200 homes"],
+                ["police", "FY2027 budget and the fire company, with police growing with homes"],
+                ["restore", "Restored to earlier levels, police 136 and fire 168, plus the company"],
+                ["none", "FY2027 budget, no added fire company"]],
+      help: "The FY2027 budget funds 128 sworn police officers and 160 firefighters. Fire staffing was 161 from FY2010 to FY2026 and police positions have been 136 as recently as FY2018 to FY2020; the departments sometimes run below their budgeted numbers, and the money not spent returns as free cash, which the forecast already counts. A fire company is 20 firefighters, about $3.0 million a year in FY2025 dollars by the Fire Department's own costing. The base case adds one when the town reaches about 31,200 homes, the point at which firefighters per home fall to the median of 21 nearby cities and towns; at the recent pace of building that is {{fact:fire_company_fy}}. Police calls have fallen since FY2016, so the base case holds police at 128 and lets police cost grow a little with each new home instead. With police growing with homes, the town keeps 4.42 officers per 1,000 homes, the median of the same towns, adding officers one at a time from about 29,000 homes; at the recent pace that is 11 more by FY2040. Restoring earlier staffing adds 16 positions from FY2028.",
+      ix: "The company arrives sooner when property tax new growth above adds homes faster. The Town cost of serving a new home above leaves out fire's share, about a fifth, since fire is counted here, and police's share too when police grow with homes.",
+      apply: function (a, rv, v) { a.ps_restore = v === "restore"; a.fire_step = v !== "none"; a.police_step = v === "police"; } },
+    { id: "chca", layer: 3, label: "Chestnut Hill redevelopment", kind: "select", base: "approved",
+      options: [["approved", "Approved program, Town Meeting May 2026", "Taxes and fees about $6.5M a year once built (FY2034), against about $1.2M of service and school costs"],
+                ["cr_avg", "City Realty's average estimate", "About $1.4M a year more revenue than the approved program"],
+                ["rkg", "RKG's estimate", "About $1.9M a year less revenue than the approved program"],
+                ["in_trend", "Already inside trend growth", "Treats it as part of normal new growth, so it adds nothing extra: about $6.5M less revenue and $1.2M less cost"]],
+      help: "266 homes and a 200-room hotel, with revenue and costs arriving FY2032 to FY2034. The estimates differ only in revenue; the homes and hotel, and so the costs, stay the same. The estimates are in FY2025 dollars: each third of the property tax enters the levy at its entry year's value and then grows with the levy, and the rooms tax and car excise grow like other local receipts. Dollar figures are FY2034.",
+      apply: function (a, rv, v) { a.chca = v; } },
+    { id: "slip", layer: 3, label: "Pension full funding slips", kind: "select", base: "0",
+      options: [["0", "On schedule, FY2030"], ["1", "One year late"], ["2", "Two years late"], ["3", "Three years late"]],
+      help: "If investment returns fall short, the pension system reaches full funding later. FY2030's last catch-up payment is then spread over the extra years in level installments, at the system's 6.8% assumed return, and the rest of the money set aside for pensions goes to retiree health, as the Town plans after FY2030. So a slip barely moves the room: it moves money between the pension and retiree health, and the retiree health liability is paid down later.",
+      ix: "With pension savings kept in the budget (above), the installments after FY2030 come out of the room instead.",
+      apply: function (a, rv, v) { a.pension_slip = +v; } },
+    { id: "ov_amt", layer: 3, label: "A further override", kind: "range", min: 0, max: 30e6, step: 0.5e6, base: 0,
+      help: "An operating override added to the levy, in dollars of its first year, growing 2.5% a year after.",
+      show: function (v) { return v ? fmtM(v) : "None"; },
+      apply: function (a, rv, v) { rv.ovAmt = v; } },
+    { id: "ov_year", layer: 3, label: "First year of that override", kind: "select", base: "2031",
+      options: [2029, 2030, 2031, 2032, 2033, 2034, 2035].map(function (y) { return [String(y), "FY" + y]; }),
+      help: "Only matters when the override above is more than zero.",
+      apply: function (a, rv, v) { rv.ovYear = +v; } }
+  ];
+  var LAYERS = [
+    { n: 1, title: "The big six", intro: "The assumptions that move the 2040 budget most. Three are decisions the Town makes: pay, school staffing and what to do with pension savings." },
+    { n: 2, title: "The next five", intro: "Smaller, but each worth $5 to $25 million a year by 2040 for a one-point change." },
+    { n: 3, title: "Everything else", intro: "The remaining settings in the model." }
+  ];
+  var PRESETS = [
+    ["Base case", {}],
+    ["Pay +1 point", { pay: 0.01 }],
+    ["School pay at the schools' forecast", { school_drift: 0.02 }],
+    ["Premiums 10%", { premium_long: 0.10 }],
+    ["Staff held flat", { staffing: "keep" }],
+    ["No new homes", { homes: "none" }],
+    ["Pension savings kept", { opeb: "keep" }]
+  ];
+
+  var state = {};
+  C.forEach(function (c) { state[c.id] = c.base; });
+  var shown = 1;
+  try {
+    var saved = JSON.parse(localStorage.getItem("bbe-state") || "null");
+    if (saved && saved.v === 2) {
+      C.forEach(function (c) { if (saved.s[c.id] != null) state[c.id] = saved.s[c.id]; });
+      shown = Math.min(Math.max(saved.shown || 1, 1), 4);
+    }
+  } catch (e) {}
+  function save() { try { localStorage.setItem("bbe-state", JSON.stringify({ v: 2, s: state, shown: shown })); } catch (e) {} }
+
+  function settings(st) {
+    var a = Object.assign({}, B), rv = {};
+    a._step = 0; a._mix = "mix"; a._homes = "all"; rv.ovYear = 2031;
+    C.forEach(function (c) { c.apply(a, rv, st[c.id]); });
+    var h = a._homes === "all" ? "" : "_homes_" + a._homes;
+    a.growth = a._step === 0 ? (h ? "trend" + h : "trend_continues")
+      : "grid_" + (a._step < 0 ? "mix" : a._mix) + "_" + (a._step > 0 ? "+" : "") + a._step + h;
+    return { a: a, rv: rv };
+  }
+  function run(st) { var s = settings(st); return runModel(D, s.a, s.rv); }
+  var baseState = {}; C.forEach(function (c) { baseState[c.id] = c.base; });
+  var BASE_RUN = run(baseState);
+  var YRS = BASE_RUN.years, iY = function (y) { return YRS.indexOf(y); };
+  var room40 = function (r) { return r.room[r.room.length - 1]; };
+
+  // ---------------------------------------------------------------- build controls
+  var ctlEl = document.getElementById("controls"), presetsEl = document.getElementById("presets");
+  PRESETS.forEach(function (p) {
+    var b = document.createElement("button");
+    b.className = "pbtn"; b.type = "button"; b.textContent = p[0]; b.dataset.preset = p[0];
+    b.addEventListener("click", function () {
+      C.forEach(function (c) { state[c.id] = c.base; });
+      Object.keys(p[1]).forEach(function (k) { state[k] = p[1][k]; });
+      // open the layer that holds the setting the preset moves
+      var need = Math.max.apply(null, [1].concat(Object.keys(p[1]).map(function (k) {
+        return C.filter(function (c) { return c.id === k; })[0].layer; })));
+      if (need > shown) { shown = need; showLayers(); }
+      syncInputs(); update();
+    });
+    presetsEl.appendChild(b);
+  });
+
+  var layerEls = {};
+  LAYERS.forEach(function (L) {
+    var sec = document.createElement("section");
+    sec.className = "layer"; sec.id = "layer" + L.n;
+    var n = C.filter(function (c) { return c.layer === L.n; }).length;
+    sec.innerHTML = "<h2><span>" + L.title + "</span><span class=\"count\">" + n + " settings</span></h2><p class=\"intro\">" + L.intro + "</p>";
+    C.filter(function (c) { return c.layer === L.n; }).forEach(function (c) {
+      var d = document.createElement("div");
+      d.className = "ctl"; d.id = "ctl-" + c.id;
+      var input;
+      if (c.kind === "range") {
+        input = "<input type=\"range\" id=\"in-" + c.id + "\" min=\"" + c.min + "\" max=\"" + c.max + "\" step=\"" + c.step + "\">";
+      } else {
+        // every choice visible: a radio list (pills when the choices are short)
+        var compact = c.options.every(function (o) { return o[1].length <= 8; });
+        input = "<div class=\"opts" + (compact ? " compact" : "") + "\" role=\"radiogroup\" aria-labelledby=\"lab-" + c.id + "\">" +
+          c.options.map(function (o, k) {
+            return "<label class=\"opt\"><input type=\"radio\" name=\"r-" + c.id + "\" id=\"in-" + c.id + "-" + k + "\" value=\"" + o[0] + "\">" +
+              "<span class=\"otext\"><span>" + o[1] + "</span>" + (o[2] ? "<span class=\"odet\">" + o[2] + "</span>" : "") + "</span>" + (String(o[0]) === String(c.base) && !compact ? "<span class=\"tag\">base</span>" : "") + "</label>";
+          }).join("") + "</div>";
+      }
+      d.innerHTML = "<div class=\"top\">" + (c.kind === "range" ? "<label for=\"in-" + c.id + "\">" + c.label + "</label>"
+          : "<span class=\"glab\" id=\"lab-" + c.id + "\">" + c.label + "</span>") +
+        (c.kind === "range" ? "<span class=\"val\" id=\"val-" + c.id + "\"></span>" : "") + "</div>" + input +
+        "<div class=\"meta\"><span id=\"sub-" + c.id + "\"></span><span><span class=\"alone\" id=\"alone-" + c.id + "\"></span> <button type=\"button\" class=\"reset\" id=\"reset-" + c.id + "\" hidden>reset</button></span></div>" +
+        "<p class=\"help\">" + c.help + "</p>" + (c.ix ? "<p class=\"ix\">" + c.ix + "</p>" : "");
+      sec.appendChild(d);
+    });
+    ctlEl.appendChild(sec);
+    layerEls[L.n] = sec;
+  });
+  var moreBtn = document.createElement("button");
+  moreBtn.type = "button"; moreBtn.className = "more"; moreBtn.id = "more";
+  ctlEl.appendChild(moreBtn);
+  var endEl = document.createElement("div");
+  endEl.className = "end"; endEl.id = "end";
+  endEl.innerHTML = "<p><b>You've reached the end.</b> Those are all the settings in the model.</p>" +
+    "<p>Want more detail? Email Ben Chostner, Town Meeting Member for Precinct 9. <button type=\"button\" class=\"try\" id=\"showmail\">Show email address</button><span id=\"mail\" hidden></span></p>";
+  ctlEl.appendChild(endEl);
+  // address assembled only on request, so it is not in the page source as plain text
+  document.getElementById("showmail").addEventListener("click", function () {
+    var a = ["ben", "brooklinefuture.org"].join("@"), m = document.getElementById("mail");
+    m.innerHTML = "<span class=\"n\">" + a + "</span> (<a href=\"mailto:" + a + "\">write</a>)";
+    m.hidden = false; this.hidden = true;
+  });
+  var resetAll = document.createElement("button");
+  resetAll.type = "button"; resetAll.className = "resetall"; resetAll.textContent = "Reset everything to the base case";
+  resetAll.addEventListener("click", function () { C.forEach(function (c) { state[c.id] = c.base; }); syncInputs(); update(); });
+  ctlEl.appendChild(resetAll);
+
+  moreBtn.addEventListener("click", function () {
+    shown = Math.min(shown + 1, 4);
+    if (layerEls[shown]) { layerEls[shown].classList.add("reveal"); }
+    showLayers(); save();
+    var target = layerEls[shown] || endEl;
+    if (target.scrollIntoView) target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+  function showLayers() {
+    LAYERS.forEach(function (L) { layerEls[L.n].hidden = L.n > shown; });
+    moreBtn.hidden = shown >= 4;
+    moreBtn.textContent = shown === 1 ? "I want more detail: show the next five" : shown === 2 ? "I want more detail: show everything else" : "I want even more detail";
+    endEl.hidden = shown < 4;
+  }
+
+  C.forEach(function (c) {
+    if (c.kind === "range") {
+      var el = document.getElementById("in-" + c.id);
+      el.addEventListener("input", function () { state[c.id] = +el.value; update(); });
+    } else {
+      c.options.forEach(function (o, k) {
+        document.getElementById("in-" + c.id + "-" + k).addEventListener("change", function (ev) {
+          if (ev.target.checked) { state[c.id] = ev.target.value; update(); }
+        });
+      });
+    }
+    document.getElementById("reset-" + c.id).addEventListener("click", function () { state[c.id] = c.base; syncInputs(); update(); });
+  });
+  function syncInputs() {
+    C.forEach(function (c) {
+      if (c.kind === "range") document.getElementById("in-" + c.id).value = state[c.id];
+      else c.options.forEach(function (o, k) {
+        document.getElementById("in-" + c.id + "-" + k).checked = String(o[0]) === String(state[c.id]);
+      });
+    });
+  }
+  function isMoved(c) { return c.kind === "range" ? Math.abs(state[c.id] - c.base) > 1e-9 : String(state[c.id]) !== String(c.base); }
+
+  // ---------------------------------------------------------------- charts
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, parent) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function niceTicks(lo, hi, n) {
+    var span = hi - lo, step = Math.pow(10, Math.floor(Math.log10(span / n))), err = span / n / step;
+    step *= err >= 7.5 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1;
+    var t = [], v = Math.ceil(lo / step) * step;
+    for (; v <= hi + 1e-9; v += step) t.push(v);
+    return t;
+  }
+  var W = 640, H = 300, M = { l: 52, r: 14, t: 12, b: 26 };
+
+  function tipAt(box, x, y, html) {
+    var t = box.querySelector(".tip");
+    if (!t) { t = document.createElement("div"); t.className = "tip"; box.appendChild(t); }
+    t.innerHTML = html; t.hidden = false;
+    var bw = box.clientWidth, sx = bw / W;
+    var px = Math.min(Math.max(x * sx, 90), bw - 90);
+    t.style.left = px + "px"; t.style.top = (y * sx) + "px";
+  }
+  function hideTip(box) { var t = box.querySelector(".tip"); if (t) t.hidden = true; }
+
+  function drawLine(r) {
+    var box = document.getElementById("lineChart");
+    box.innerHTML = "";
+    var jl = r.revenue.length - 1;
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Line chart of revenue and spending, FY2027 to FY2040, with the current settings. In FY2040 revenue is " +
+      fmtM(r.revenue[jl]) + " and spending " + fmtM(r.spending[jl]) + ", leaving room of " + fmtSM(r.revenue[jl] - r.spending[jl]) + ". The year-by-year figures are in the table below." }, box);
+    var all = r.revenue.concat(r.spending, BASE_RUN.revenue, BASE_RUN.spending).map(function (v) { return v / 1e6; });
+    var lo = Math.min.apply(null, all), hi = Math.max.apply(null, all);
+    var ticks = niceTicks(lo - (hi - lo) * 0.04, hi + (hi - lo) * 0.04, 5);
+    var y0 = ticks[0], y1 = ticks[ticks.length - 1];
+    if (y0 > lo) y0 -= ticks[1] - ticks[0];
+    if (y1 < hi) y1 += ticks[1] - ticks[0];
+    ticks = niceTicks(y0, y1, 5);
+    var X = function (i) { return M.l + i * (W - M.l - M.r) / (YRS.length - 1); };
+    var Yv = function (v) { return M.t + (1 - (v / 1e6 - y0) / (y1 - y0)) * (H - M.t - M.b); };
+    ticks.forEach(function (t) {
+      var yy = Yv(t * 1e6);
+      el("line", { x1: M.l, x2: W - M.r, y1: yy, y2: yy, stroke: "var(--grid)", "stroke-width": 1 }, svg);
+      el("text", { x: M.l - 6, y: yy + 3.5, "text-anchor": "end" }, svg).textContent = "$" + t.toFixed(0) + "M";
+    });
+    YRS.forEach(function (y, i) {
+      if (i % 2 === 0 || i === YRS.length - 1) {
+        el("text", { x: X(i), y: H - 8, "text-anchor": "middle" }, svg).textContent = "FY" + String(y).slice(2);
+      }
+    });
+    var pts = function (arr) { return arr.map(function (v, i) { return X(i) + "," + Yv(v); }).join(" "); };
+    // room shading: band between the lines, clipped above / below the spending line
+    var defs = el("defs", {}, svg), id = "c" + Math.random().toString(36).slice(2, 7);
+    var above = el("clipPath", { id: id + "a" }, defs), below = el("clipPath", { id: id + "b" }, defs);
+    var sp = pts(r.spending);
+    el("polygon", { points: X(0) + "," + M.t + " " + sp + " " + X(YRS.length - 1) + "," + M.t, fill: "#000" }, above);
+    el("polygon", { points: X(0) + "," + (H - M.b) + " " + sp + " " + X(YRS.length - 1) + "," + (H - M.b), fill: "#000" }, below);
+    var band = pts(r.revenue) + " " + r.spending.map(function (v, i) { return X(i) + "," + Yv(v); }).reverse().join(" ");
+    el("polygon", { points: band, fill: "var(--accent-soft)", "clip-path": "url(#" + id + "a)" }, svg);
+    el("polygon", { points: band, fill: "var(--warm-soft)", "clip-path": "url(#" + id + "b)" }, svg);
+    el("polyline", { points: pts(BASE_RUN.revenue), fill: "none", stroke: "var(--ink-3)", "stroke-width": 1.25, "stroke-dasharray": "4 3" }, svg);
+    el("polyline", { points: pts(BASE_RUN.spending), fill: "none", stroke: "var(--ink-3)", "stroke-width": 1.25, "stroke-dasharray": "4 3" }, svg);
+    el("polyline", { points: pts(r.revenue), fill: "none", stroke: "var(--s1)", "stroke-width": 2.5, "stroke-linejoin": "round" }, svg);
+    el("polyline", { points: pts(r.spending), fill: "none", stroke: "var(--s3)", "stroke-width": 2.5, "stroke-linejoin": "round" }, svg);
+    var n = YRS.length - 1;
+    el("circle", { cx: X(n), cy: Yv(r.revenue[n]), r: 4, fill: "var(--s1)", stroke: "var(--ground)", "stroke-width": 2 }, svg);
+    el("circle", { cx: X(n), cy: Yv(r.spending[n]), r: 4, fill: "var(--s3)", stroke: "var(--ground)", "stroke-width": 2 }, svg);
+    // hover
+    var cross = el("line", { y1: M.t, y2: H - M.b, stroke: "var(--axis)", "stroke-width": 1, visibility: "hidden" }, svg);
+    var hit = el("rect", { x: M.l, y: 0, width: W - M.l - M.r, height: H, fill: "transparent" }, svg);
+    function move(ev) {
+      var rect = svg.getBoundingClientRect(), sx = W / rect.width;
+      var cx = ((ev.touches ? ev.touches[0].clientX : ev.clientX) - rect.left) * sx;
+      var i = Math.round((cx - M.l) / ((W - M.l - M.r) / n)); i = Math.max(0, Math.min(n, i));
+      cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("visibility", "visible");
+      var rm = r.room[i], br = BASE_RUN.room[i];
+      tipAt(box, X(i), Math.min(Yv(r.revenue[i]), Yv(r.spending[i])),
+        "<b>FY" + YRS[i] + "</b><table>" +
+        "<tr><td>Revenue</td><td class=\"r n\">" + fmtM(r.revenue[i]) + "</td></tr>" +
+        "<tr><td>Spending</td><td class=\"r n\">" + fmtM(r.spending[i]) + "</td></tr>" +
+        "<tr><td>Room</td><td class=\"r n\">" + fmtSM(rm) + "</td></tr>" +
+        "<tr><td>Base case room</td><td class=\"r n\">" + fmtSM(br) + "</td></tr></table>");
+    }
+    hit.addEventListener("mousemove", move); hit.addEventListener("touchmove", move, { passive: true }); hit.addEventListener("touchstart", move, { passive: true });
+    hit.addEventListener("mouseleave", function () { cross.setAttribute("visibility", "hidden"); hideTip(box); });
+  }
+
+  var CATS = [
+    ["Schools", "--c1", function (L, j) { return L.schools[j]; }],
+    ["Town departments", "--c2", function (L, j) { return L.departmental_base[j] + L.departmental_growth[j]; }],
+    ["Health insurance", "--c3", function (L, j) { return L.group_health[j]; }],
+    ["Pensions", "--c4", function (L, j) { return L.pensions[j]; }],
+    ["Retiree health and other benefits", "--c5", function (L, j) { return L.opeb[j] + L.other_benefits[j] + L.growth_staff_benefits[j]; }],
+    ["Debt (within the levy)", "--c6", function (L, j) { return L.debt_within_levy[j]; }],
+    ["Capital, reserves and other", "--c7", function (L, j) { return L.other_nondept[j]; }]
+  ];
+  document.getElementById("stackLegend").innerHTML = CATS.map(function (c) {
+    return "<span><i class=\"sw\" style=\"background:var(" + c[1] + ")\"></i>" + c[0] + "</span>";
+  }).join("") + "<span><i class=\"ln\" style=\"border-color:var(--ink)\"></i>Revenue</span>";
+
+  function drawStack(r) {
+    var box = document.getElementById("stackChart");
+    box.innerHTML = "";
+    var js = r.spending.length - 1;
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Stacked bar chart of spending by part of the budget, FY2027 to FY2040, with the current settings. In FY2040 spending is " +
+      fmtM(r.spending[js]) + ": " + CATS.map(function (c) { return c[0].toLowerCase() + " " + fmtM(c[2](r.lines, js)); }).join(", ") + "." }, box);
+    var hi = Math.max(Math.max.apply(null, r.spending), Math.max.apply(null, r.revenue)) / 1e6;
+    var ticks = niceTicks(0, hi * 1.04, 5), top = ticks[ticks.length - 1];
+    if (top < hi) { top += ticks[1] - ticks[0]; ticks.push(top); }
+    var n = YRS.length, bw = (W - M.l - M.r) / n, gap = Math.max(bw * 0.28, 4);
+    var X = function (i) { return M.l + i * bw + gap / 2; }, Xc = function (i) { return M.l + (i + 0.5) * bw; };
+    var Yv = function (v) { return M.t + (1 - v / 1e6 / top) * (H - M.t - M.b); };
+    ticks.forEach(function (t) {
+      var yy = Yv(t * 1e6);
+      el("line", { x1: M.l, x2: W - M.r, y1: yy, y2: yy, stroke: "var(--grid)", "stroke-width": 1 }, svg);
+      el("text", { x: M.l - 6, y: yy + 3.5, "text-anchor": "end" }, svg).textContent = "$" + t.toFixed(0) + "M";
+    });
+    YRS.forEach(function (y, i) {
+      if (i % 2 === 0 || i === n - 1) el("text", { x: Xc(i), y: H - 8, "text-anchor": "middle" }, svg).textContent = "FY" + String(y).slice(2);
+      var acc = 0, g = el("g", {}, svg);
+      CATS.forEach(function (c) {
+        var v = c[2](r.lines, i), y0 = Yv(acc), y1v = Yv(acc + v);
+        el("rect", { x: X(i), y: y1v, width: bw - gap, height: Math.max(y0 - y1v - 1.5, 0.5), fill: "var(" + c[1] + ")" }, g);
+        acc += v;
+      });
+    });
+    var rp = r.revenue.map(function (v, i) { return Xc(i) + "," + Yv(v); }).join(" ");
+    el("polyline", { points: rp, fill: "none", stroke: "var(--ground)", "stroke-width": 5, "stroke-linejoin": "round" }, svg);
+    el("polyline", { points: rp, fill: "none", stroke: "var(--ink)", "stroke-width": 2, "stroke-linejoin": "round" }, svg);
+    var hl = el("rect", { y: M.t, height: H - M.t - M.b, width: bw, fill: "var(--ink)", opacity: 0, "pointer-events": "none" }, svg);
+    var hit = el("rect", { x: M.l, y: 0, width: W - M.l - M.r, height: H, fill: "transparent" }, svg);
+    function move(ev) {
+      var rect = svg.getBoundingClientRect(), sx = W / rect.width;
+      var cx = ((ev.touches ? ev.touches[0].clientX : ev.clientX) - rect.left) * sx;
+      var i = Math.max(0, Math.min(n - 1, Math.floor((cx - M.l) / bw)));
+      hl.setAttribute("x", M.l + i * bw); hl.setAttribute("opacity", 0.06);
+      var rows = CATS.slice().reverse().map(function (c) {
+        var v = c[2](r.lines, i), b = c[2](BASE_RUN.lines, i), d = v - b;
+        return "<tr><td><i class=\"sw\" style=\"background:var(" + c[1] + ")\"></i> " + c[0] + "</td><td class=\"r n\">" + fmtM(v) + "</td><td class=\"r n\">" +
+          (Math.abs(d) >= 0.05e6 ? fmtSM(d) : "") + "</td></tr>";
+      }).join("");
+      tipAt(box, Xc(i), Yv(r.spending[i]),
+        "<b>FY" + YRS[i] + "</b> &nbsp;spending " + fmtM(r.spending[i]) + ", revenue " + fmtM(r.revenue[i]) +
+        "<table>" + rows + "</table><span style=\"opacity:.7\">Last column: change from the base case</span>");
+    }
+    hit.addEventListener("mousemove", move); hit.addEventListener("touchmove", move, { passive: true }); hit.addEventListener("touchstart", move, { passive: true });
+    hit.addEventListener("mouseleave", function () { hl.setAttribute("opacity", 0); hideTip(box); });
+  }
+
+  function drawTable(r) {
+    var rows = [2028, 2031, 2035, 2040].map(function (y) {
+      var j = iY(y), rm = r.room[j], br = BASE_RUN.room[j];
+      return "<tr><td>FY" + y + "</td><td>" + fmtM(r.revenue[j]) + "</td><td>" + fmtM(r.spending[j]) + "</td><td class=\"" + (rm >= 0 ? "pos" : "neg") + "\">" + fmtSM(rm) +
+        "</td><td>" + fmtSM(br) + "</td><td>" + (Math.abs(rm - br) >= 0.05e6 ? fmtSM(rm - br) : "–") + "</td></tr>";
+    }).join("");
+    document.getElementById("yearTable").innerHTML = "<thead><tr><th>Year</th><th>Revenue</th><th>Spending</th><th>Room</th><th>Base case room</th><th>Change</th></tr></thead><tbody>" + rows + "</tbody>";
+  }
+
+  // ---------------------------------------------------------------- update
+  // the year the room runs out for good: below zero that year and every year after to FY2040
+  // (the site's "runs out" facts use the same rule); firstShort is the first year below zero at all
+  function runsOut(r) {
+    var y = null;
+    for (var j = r.room.length - 1; j >= 0 && YRS[j] >= 2028 && r.room[j] < 0; j--) y = YRS[j];
+    return y;
+  }
+  function firstShort(r) {
+    for (var j = 0; j < r.room.length; j++) if (YRS[j] >= 2028 && r.room[j] < 0) return YRS[j];
+    return null;
+  }
+  // each render is about two dozen model runs, a few milliseconds; draw immediately
+  function update() { render(); }
+  function render() {
+    var r = run(state);
+    var rm = room40(r), b = room40(BASE_RUN), d = rm - b;
+    var hr = document.getElementById("h-room");
+    hr.textContent = fmtSM(rm); hr.className = "big n " + (rm >= 0 ? "pos" : "neg");
+    document.getElementById("h-room-sub").textContent = Math.abs(d) < 0.05e6 ? "Base case" : fmtSM(d) + " vs base case (" + fmtSM(b) + ")";
+    var out = runsOut(r), bo = runsOut(BASE_RUN), ho = document.getElementById("h-out");
+    ho.textContent = out ? "FY" + out : "Not by 2040"; ho.className = "big n " + (out ? "neg" : "pos");
+    var fs = firstShort(r);
+    document.getElementById("h-out-sub").textContent = out
+      ? (fs && fs < out ? "Spending stays ahead from then on; first short in FY" + fs : "Spending stays ahead from then on")
+      : (fs ? "Short in FY" + fs + ", then revenue recovers" : "Revenue stays ahead every year");
+    var j31 = iY(2031), r31 = r.room[j31], b31 = BASE_RUN.room[j31], h31 = document.getElementById("h-31");
+    h31.textContent = fmtSM(r31); h31.className = "big n " + (r31 >= 0 ? "pos" : "neg");
+    document.getElementById("h-31-sub").textContent = Math.abs(r31 - b31) < 0.05e6 ? "First year after the pension is fully funded" : fmtSM(r31 - b31) + " vs base case";
+    document.getElementById("dock-room").textContent = fmtSM(rm) + (out ? ", runs out FY" + out : "");
+    // announce once a change settles, not on every step of a slider
+    clearTimeout(window.__srT);
+    var said = "Room in FY2040 " + fmtSM(rm) + (out ? ", spending passes revenue in FY" + out : "");
+    window.__srT = setTimeout(function () { document.getElementById("sr-live").textContent = said; }, 900);
+
+    // per-control readouts, and each change's effect on its own
+    var chips = [];
+    C.forEach(function (c) {
+      var v = state[c.id], moved = isMoved(c);
+      var row = document.getElementById("ctl-" + c.id);
+      row.classList.toggle("moved", moved);
+      if (c.kind === "range") {
+        var shown = c.show(v, settings(state).a);
+        document.getElementById("val-" + c.id).textContent = shown;
+        // screen readers announce the shown value, not the raw number
+        document.getElementById("in-" + c.id).setAttribute("aria-valuetext", shown);
+      }
+      document.getElementById("sub-" + c.id).textContent = c.sub ? c.sub(v, settings(state).a) : (c.kind === "range" ? (moved ? "Base: " + baseLabel(c) : "Base case") : (moved && c.options.every(function (o) { return o[1].length <= 8; }) ? "Base: " + baseLabel(c) : ""));
+      document.getElementById("reset-" + c.id).hidden = !moved;
+      var alone = document.getElementById("alone-" + c.id);
+      if (moved && c.id !== "ov_year") {
+        // effect of this one change from the base case; the growth mix and the
+        // override year only mean something alongside the setting they qualify
+        var one = Object.assign({}, baseState), ref = b;
+        one[c.id] = v;
+        if (c.id === "mix") {
+          var g0 = Object.assign({}, baseState, { growth: state.growth });
+          ref = room40(run(g0)); one.growth = state.growth;
+        }
+        if (c.id === "ov_amt") one.ov_year = state.ov_year;
+        var dd = room40(run(one)) - ref;
+        if (c.id === "mix" && D.steps[state.growth] <= 0) {
+          alone.textContent = "No effect unless new growth is above trend";
+        } else {
+          alone.textContent = "On its own: " + fmtSM(dd) + " in FY2040";
+          chips.push("<span class=\"chip\">" + c.label + " <b>" + fmtSM(dd) + "</b></span>");
+        }
+      } else alone.textContent = "";
+    });
+    document.getElementById("changed").innerHTML = chips.length
+      ? "<span>Changed, each on its own in FY2040:</span>" + chips.join("")
+      : "<span>Showing the base case. Move any setting, or try a decision.</span>";
+    document.querySelectorAll(".pbtn").forEach(function (btn) {
+      var p = PRESETS.filter(function (x) { return x[0] === btn.dataset.preset; })[0][1];
+      var match = C.every(function (c) { return String(state[c.id]) === String(p[c.id] != null ? p[c.id] : c.base); });
+      btn.setAttribute("aria-pressed", match ? "true" : "false");
+    });
+    drawLine(r); drawStack(r); drawTable(r);
+    save();
+  }
+  function baseLabel(c) {
+    if (c.kind === "range") return c.show(c.base, B);
+    var o = c.options.filter(function (x) { return String(x[0]) === String(c.base); })[0];
+    return o ? o[1] : c.base;
+  }
+
+  document.getElementById("try-schools").addEventListener("click", function () {
+    var b = document.querySelector('.pbtn[data-preset="School pay at the schools\' forecast"]');
+    if (b) b.click();
+    var o = document.getElementById("outputs");
+    if (o.scrollIntoView) o.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  syncInputs(); showLayers(); render();
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(render, 120); });
+})();
+</script>

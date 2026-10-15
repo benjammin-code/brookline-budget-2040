@@ -1,0 +1,28 @@
+<!--
+title: Search the forecast
+description: Search Brookline's finances to 2040: the short reads, the technical pages, the assumptions register and the glossary.
+-->
+<header class="masthead">
+  <p class="eyebrow">Brookline's finances to 2040</p>
+  <h1 class="title">Search the forecast</h1>
+  <p class="standfirst">Searches the short reads, the technical pages, the assumptions register and
+  the glossary. Nothing you type leaves this page.</p>
+</header>
+<section>
+  <div id="search"></div>
+</section>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    var ui = new PagefindUI({ element: "#search", showSubResults: true, showImages: false,
+                              resetStyles: false, translations: { placeholder: "Search the forecast" } });
+    var q = new URLSearchParams(window.location.search).get("q");
+    if (q) ui.triggerSearch(q);
+    // Pagefind's search box has a placeholder but no label; give it one for screen readers
+    (function label() {
+      var i = document.querySelector("#search input");
+      if (i) i.setAttribute("aria-label", "Search the forecast"); else setTimeout(label, 50);
+    })();
+  });
+</script>

@@ -1,0 +1,5 @@
+staff,spec,n,elasticity_pop,se_pop,elasticity_density,r2,brookline_actual,brookline_predicted
+police officers,population only,162,1.07,0.022,,0.937,128,120
+police officers,population and density,162,1.059,0.031,0.011,0.937,128,121
+career firefighters (mostly-career departments),population only,105,0.967,0.034,,0.885,161,121
+career firefighters (mostly-career departments),population and density,105,0.943,0.043,0.028,0.886,161,124

@@ -1,0 +1,26 @@
+block,component,group,dollars,share_of_total_growth,fy_start,fy_end,note
+Town departments,Wage & price inflation,Inflation,26209238,0.1477,2011,2025,"personnel at national state/local ECI, non-personnel at Boston CPI"
+Town departments,Staff to serve new homes & commercial space,New homes & commercial space,1696462,0.0096,2011,2025,"1,251 homes x $1,371 + 1,745 commercial employees x $219 (RKG), department share 81%; benefits counted under Benefits"
+Town departments,Other staffing change,Staffing levels (service choices),2669520,0.015,2011,2025,town FTE +48.9 in total; +18.5 of it at the unvalidated FY2020/21 seam
+Town departments,Cost per head above/below inflation,Pay & costs above/below inflation,-3185257,-0.018,2011,2025,"residual: step/grade, turnover, role mix, local pay vs national"
+Schools,Wage & price inflation,Inflation,35666129,0.201,2011,2025,"personnel (81%, derived) at the ECI, non-personnel at Boston CPI"
+Schools,Staff for students from new homes,New homes & commercial space,4247515,0.0239,2011,2025,"305 students at 0.2442/home, at the FY2011 staff ratio"
+Schools,Staff for other enrollment change,Enrollment change (not from new homes),1258370,0.0071,2011,2025,"net enrollment 6,627 -> 7,023; peaked at 7,855 in FY2019"
+Schools,Lower students-per-staff ratio,Staffing levels (service choices),19548206,0.1102,2011,2025,students per staff FTE 6.75 -> 5.62
+Schools,Cost per staff above/below inflation,Pay & costs above/below inflation,8290276,0.0467,2011,2025,residual
+Benefits,Health: premium inflation,Inflation,12073603,0.068,2011,2025,national state/local ECI benefits index
+Benefits,Health: more covered staff,New homes & commercial space,1242202,0.007,2011,2025,20% of the +316 town+school FTE change
+Benefits,Health: more covered staff,Enrollment change (not from new homes),259238,0.0015,2011,2025,4% of the +316 town+school FTE change
+Benefits,Health: more covered staff,Staffing levels (service choices),4604909,0.026,2011,2025,75% of the +316 town+school FTE change
+Benefits,Health: premiums above inflation,Pay & costs above/below inflation,182065,0.001,2011,2025,"residual; includes retirees on the plan, who do not scale with active staff"
+Benefits,Pensions being earned now: pay inflation,Inflation,1339848,0.0076,2011,2025,"FY2011 normal cost $3,352,208, carried back from the 1/1/2014 valuation's FY2013 figure; grown at the ECI for wages"
+Benefits,Pensions being earned now: more town staff,New homes & commercial space,132537,0.0007,2011,2025,town FTE growth share
+Benefits,Pensions being earned now: more town staff,Staffing levels (service choices),208558,0.0012,2011,2025,town FTE other share
+Benefits,Pensions being earned now: higher cost per dollar of pay,Pay & costs above/below inflation,2274633,0.0128,2011,2025,"employer normal cost 5.48% of payroll (FY2013) -> 7.71% (FY2025), actuarial assumption changes"
+Benefits,Pensions: paying down the unfunded liability,Legacy pension paydown,19586527,0.1104,2011,2025,"amortization $10.6M -> $30.2M; ends at full funding, FY2030"
+Benefits,OPEB trust contributions,OPEB prefunding,3403449,0.0192,2011,2025,funding-policy transfers into the retiree health trust
+Benefits,"Other benefits (Medicare tax, workers' comp, IOD, etc.)",Other,2534593,0.0143,2011,2025,
+Benefits,Other fixed costs & Schedule A reconciling difference,Other,4006246,0.0226,2011,2025,Schedule A fixed costs minus the Town's benefits detail
+Debt service,Voter-approved excluded debt,School & other buildings (debt),20753548,0.117,2011,2025,"Devotion, BHS, Driscoll, Pierce, Newbury, fire stations"
+Debt service,Routine within-levy borrowing,School & other buildings (debt),6041841,0.0341,2011,2025,
+State & MBTA assessments,"State, county and MBTA assessments",Other,2383693,0.0134,2011,2025,outside local control

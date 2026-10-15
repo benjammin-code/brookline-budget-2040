@@ -1,0 +1,29 @@
+<!-- Site bar, injected at the top of every page. Self-contained (own fonts and
+     tokens) so it looks the same on the forecast pages, which bring their own CSS. -->
+<style>
+#bf-bar { --bf-bg: #fbfbf8; --bf-ink: #1c1c1a; --bf-muted: #4f4f4a; --bf-accent: #1f3a5f;
+  background: var(--bf-bg); color: var(--bf-ink); border-bottom: 1px solid var(--bf-ink);
+  font: 600 14px/1.3 "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding-top: env(safe-area-inset-top, 0px); position: relative; z-index: 50; }
+@media (prefers-color-scheme: dark) { #bf-bar { --bf-bg: #151719; --bf-ink: #e8e6e1; --bf-muted: #b9b7b0; --bf-accent: #8fb0d8; } }
+#bf-bar * { box-sizing: border-box; }
+#bf-bar .bf-in { max-width: 62rem; margin: 0 auto; padding: 0.65rem 1.25rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1.4rem; }
+#bf-bar a { color: var(--bf-ink); text-decoration: none; }
+#bf-bar a:hover { color: var(--bf-accent); }
+#bf-bar a[aria-current="page"] { color: var(--bf-accent); text-decoration: underline; text-underline-offset: 0.35em; text-decoration-thickness: 2px; }
+#bf-bar a:focus-visible { outline: 2px solid var(--bf-accent); outline-offset: 2px; }
+#bf-bar .bf-home { font: 700 20px/1.1 "Newsreader", Georgia, serif; letter-spacing: -0.01em; margin-right: auto; }
+#bf-bar nav { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; }
+</style>
+<header id="bf-bar">
+  <div class="bf-in">
+    <a class="bf-home" href="/">brooklinefuture.org</a>
+    <nav aria-label="Site">
+      <a href="/forecast" data-sec="forecast">Forecast</a>
+      <a href="/brookline-insights" data-sec="writing">Writing</a>
+      <a href="/maps" data-sec="maps">Maps</a>
+      <a href="/about-ben-chostner" data-sec="about">About</a>
+      <a href="/forecast/search" data-sec="search">Search</a>
+    </nav>
+  </div>
+</header>

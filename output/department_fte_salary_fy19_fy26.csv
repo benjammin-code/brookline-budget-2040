@@ -1,0 +1,19 @@
+department,category,salary_budget_fy19,salary_budget_fy26,salary_cagr_7yr,general_fund_fte_fy19,general_fund_fte_fy26,soft_money_fte_fy19,soft_money_fte_fy26,total_fte_fy19,total_fte_fy26,total_fte_cagr_7yr,cost_per_fte_fy19,cost_per_fte_fy26,note
+Select Board,General Government,687929,966951,0.0498,6.48,7.5,0.0,2.5,6.48,10.0,0.0639,106162,96695,"Added communications officer (moved from DEICR); one grant-funded position eliminated in FY26 so actual total is 9 FTEs, not 10.00 as tabulated."
+Human Resources,General Government,309024,463096,0.0595,3.53,4.48,2.25,3.3,5.779999999999999,7.78,0.0434,53464,59524,"Generalist/investigator position, FY24 override."
+Information Technology,General Government,1156208,1530186,0.0408,12.4,13.0,0.0,0.0,12.4,13.0,0.0068,93243,117707,
+DEICR,General Government,218753,352466,0.0705,2.72,3.72,0.0,0.0,2.72,3.72,0.0457,80424,94749,"Language access coordinator, FY24 override."
+Finance Department,General Government,2318263,2610351,0.0171,31.22,29.42,0.0,0.0,31.22,29.42,-0.0084,74256,88727,Assessing reorganization to meet FY25 budget deficit.
+Legal Services,General Government,694633,909253,0.0392,7.03,8.21,0.0,0.0,7.03,8.21,0.0224,98810,110749,Labor counsel added FY20.
+Advisory Committee,General Government,23201,27312,0.0236,0.4,0.4,0.0,0.0,0.4,0.4,0.0,58002,68280,
+Town Clerk,General Government,651815,568372,-0.0194,5.5,5.5,0.0,0.0,5.5,5.5,0.0,118512,103340,
+Planning,General Government,1078652,1351660,0.0328,13.39,13.56,5.1,5.44,18.490000000000002,19.0,0.0039,58337,71140,
+Police,Public Safety,15078231,19502670,0.0374,179.8,171.3,1.0,2.0,180.8,173.3,-0.006,83397,112537,"Held open 6 officers and eliminated park security officers; budget book incorrectly shows a reduction of one FTE in FY2026 (corrected in the ERSC report's own table, used here)."
+Fire,Public Safety,14504987,18414756,0.0347,160.0,161.0,0.0,0.0,160.0,161.0,0.0009,90656,114377,
+Building,General Government,2550206,3159486,0.0311,34.61,35.76,2.0,2.85,36.61,38.61,0.0076,69659,81831,"Building inspector, short-term rentals, added FY20."
+Public Works,Public Works,8152083,9505745,0.0222,126.72,125.16,3.66,8.75,130.38,133.91,0.0038,62526,70986,Sanitation reduction; FTEs added and moved to soft funds.
+Library,Culture & Recreation,3056639,3510670,0.02,52.84,56.22,0.0,0.0,52.84,56.22,0.0089,57847,62445,
+Health,Human Services,941807,1197408,0.0349,12.26,13.01,5.78,13.27,18.04,26.28,0.0552,52207,45563,
+Veterans' Services,Human Services,171571,168201,-0.0028,2.0,2.0,0.0,0.0,2.0,2.0,0.0,85786,84100,
+Council on Aging,Human Services,822520,1134534,0.047,13.74,15.39,3.17,3.7,16.91,19.09,0.0175,48641,59431,"Social worker and transportation coordinator, FY24 override."
+Recreation,Culture & Recreation,801595,944109,0.0237,12.0,11.0,0.0,0.0,12.0,11.0,-0.0124,66800,85828,

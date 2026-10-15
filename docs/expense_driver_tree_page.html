@@ -1,0 +1,864 @@
+<title>Where the $177 Million Went</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --ground: #fbfbf8; --surface: #f1f0ec; --panel: #f1f0ec;
+    --ink: #1c1c1a; --ink-2: #4f4f4a; --ink-3: #75756e;
+    --rule: #dcdbd5; --rule-strong: #b9b8b1;
+    --accent: #1f3a5f; --accent-ink: #142843; --accent-soft: #e3e9f1;
+    --warm-ink: #9a4a2c; --warm-soft: #f4e6df;
+    --flag: #7a5a12; --flag-soft: #f6efdc; --flag-rule: #dcc796;
+    --s1: #2b5c97; --s2: #b66946; --s3: #447b46; --axis: #9a9a92; --grid: #e6e5e0;
+    --sans: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --mono: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --measure: 40rem; --wide: 58rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #151719; --surface: #23272b; --panel: #23272b;
+      --ink: #e8e6e1; --ink-2: #b9b7b0; --ink-3: #8f8d86;
+      --rule: #2f3236; --rule-strong: #4a4d52;
+      --accent: #8fb0d8; --accent-ink: #b5cbe6; --accent-soft: #1d2a3a;
+      --warm-ink: #e0937a; --warm-soft: #33231d;
+      --flag: #d6b25f; --flag-soft: #2b2516; --flag-rule: #4d4224;
+      --s1: #4c82c6; --s2: #a3563b; --s3: #3b793f; --axis: #6d6c67; --grid: #26292d;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #151719; --surface: #23272b; --panel: #23272b;
+    --ink: #e8e6e1; --ink-2: #b9b7b0; --ink-3: #8f8d86;
+    --rule: #2f3236; --rule-strong: #4a4d52;
+    --accent: #8fb0d8; --accent-ink: #b5cbe6; --accent-soft: #1d2a3a;
+    --warm-ink: #e0937a; --warm-soft: #33231d;
+    --flag: #d6b25f; --flag-soft: #2b2516; --flag-rule: #4d4224;
+    --s1: #4c82c6; --s2: #a3563b; --s3: #3b793f; --axis: #6d6c67; --grid: #26292d;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink); font-family: var(--serif);
+    font-size: 17px; line-height: 1.62; margin: 0; padding: 0 1.25rem 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--wide); margin: 0 auto; }
+
+  header.masthead { border-bottom: 2px solid var(--ink); padding: 3.5rem 0 1.5rem; margin-bottom: 2.5rem; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 0 0 1rem;
+  }
+  h1 {
+    font-family: var(--sans); font-weight: 700; font-size: clamp(2rem, 5.5vw, 3rem);
+    line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; margin: 0 0 1rem;
+  }
+  .standfirst { font-size: 1.12rem; color: var(--ink-2); max-width: var(--measure); margin: 0 0 1.75rem; }
+  .masthead-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-family: var(--mono); font-size: 0.76rem; color: var(--ink-3); }
+  .masthead-meta b { color: var(--ink-2); font-weight: 500; }
+
+  section { margin: 0 0 4rem; }
+  h2 {
+    font-family: var(--sans); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.012em;
+    line-height: 1.25; text-wrap: balance; margin: 0 0 0.9rem; padding-top: 0.9rem;
+    border-top: 1px solid var(--rule-strong);
+  }
+  h2 .share {
+    font-family: var(--mono); font-size: 0.78rem; font-weight: 500; color: var(--accent);
+    display: block; margin-bottom: 0.45rem; letter-spacing: 0.04em;
+  }
+  h3 {
+    font-family: var(--sans); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-2); margin: 2.25rem 0 0.9rem;
+  }
+  p { margin: 0 0 1.05rem; max-width: var(--measure); }
+  .lede { color: var(--ink-2); }
+  strong { font-weight: 600; }
+  .n { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.92em; }
+  code { font-family: var(--mono); font-size: 0.85em; background: var(--panel); padding: 0.08em 0.34em; border-radius: 2px; }
+  ol.steps, ul.plain { max-width: var(--measure); padding-left: 1.3rem; margin: 0 0 1.25rem; }
+  ol.steps li, ul.plain li { margin-bottom: 0.6rem; }
+
+  /* ranked bars */
+  .bars { margin: 0.5rem 0 1.5rem; }
+  .b-head {
+    display: grid; grid-template-columns: 1fr; font-family: var(--sans); font-size: 0.7rem;
+    font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+    padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule-strong);
+  }
+  .b-row {
+    display: grid; grid-template-columns: 1fr; gap: 0.25rem; padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule); cursor: default; position: relative;
+  }
+  @media (min-width: 46rem) {
+    .b-row, .b-head { grid-template-columns: 15.5rem 1fr 8.5rem; align-items: center; gap: 0 1rem; }
+  }
+  .b-row:hover, .b-row:focus-visible { background: var(--surface); outline: none; }
+  .b-row:focus-visible { box-shadow: inset 3px 0 0 var(--accent); }
+  .b-label { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; }
+  .b-track { position: relative; height: 1.25rem; }
+  .b-zero { position: absolute; top: -0.2rem; bottom: -0.2rem; width: 1px; background: var(--axis); }
+  .b-bar { position: absolute; top: 0.15rem; height: 0.95rem; }
+  .b-bar.pos { background: var(--s1); border-radius: 0 4px 4px 0; }
+  .b-bar.neg { background: var(--s2); border-radius: 4px 0 0 4px; }
+  .b-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.82rem; color: var(--ink-2); white-space: nowrap; }
+  @media (min-width: 46rem) { .b-val { text-align: right; } }
+  .b-val b { color: var(--ink); font-weight: 600; }
+  .b-total { font-family: var(--sans); font-size: 0.85rem; font-weight: 700; border-bottom: 2px solid var(--ink); }
+
+  .tip {
+    position: fixed; z-index: 10; pointer-events: none; max-width: 20rem;
+    background: var(--ink); color: var(--ground); font-family: var(--sans); font-size: 0.78rem;
+    line-height: 1.45; padding: 0.6rem 0.75rem; border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  }
+  .tip b { display: block; margin-bottom: 0.25rem; font-size: 0.82rem; }
+  .tip table { min-width: 0; width: 100%; font-size: 0.74rem; }
+  .tip td { color: inherit; border: 0; padding: 0.05rem 0 0.05rem 0.75rem; opacity: 0.92; }
+  .tip td:first-child { padding-left: 0; }
+
+  /* who-sets-it */
+  .who { display: grid; gap: 0.2rem; margin: 0 0 1.5rem; max-width: var(--wide); }
+  .who-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; padding: 0.6rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (min-width: 46rem) { .who-row { grid-template-columns: 15.5rem 1fr 8.5rem; align-items: center; } }
+  .who-name { font-family: var(--sans); font-weight: 600; font-size: 0.9rem; }
+  .who-desc { font-size: 0.88rem; color: var(--ink-2); grid-column: 1 / -1; }
+  @media (min-width: 46rem) { .who-desc { grid-column: auto; } }
+  .who-val { font-family: var(--mono); font-size: 0.82rem; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink-2); }
+  @media (min-width: 46rem) { .who-val { grid-column: 3; grid-row: 1; } .who-desc { grid-column: 2; grid-row: 1; } }
+  .who-val b { color: var(--ink); }
+
+  /* part lists */
+  .parts { display: grid; gap: 0; margin: 0 0 1.5rem; max-width: var(--measure); font-size: 0.93rem; }
+  .parts div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px dotted var(--rule-strong); }
+  .parts span:last-child { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 0.85rem; white-space: nowrap; }
+  .parts .sum { border-bottom: 0; border-top: 1px solid var(--ink-2); font-weight: 600; }
+
+  .tablewrap { overflow-x: auto; margin: 0 0 1.25rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-family: var(--mono); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+  th {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-3); text-align: right; padding: 0 0.7rem 0.5rem;
+    border-bottom: 1px solid var(--rule-strong); vertical-align: bottom;
+  }
+  th:first-child, td:first-child { text-align: left; padding-left: 0; }
+  td { text-align: right; padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
+  td.hi { color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 0.84rem; }
+  tr.tot td { border-top: 1px solid var(--ink-2); color: var(--ink); font-weight: 600; }
+  td.cell { position: relative; }
+  td.neg { color: var(--warm-ink); }
+
+  .fig { margin: 0.5rem 0 1.5rem; }
+  .fig svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--ink-2); margin: 0 0 0.5rem; }
+  .sw { display: inline-block; width: 0.9rem; height: 2px; vertical-align: middle; margin-right: 0.4rem; }
+  .figcap { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-3); max-width: var(--measure); }
+  details { margin: 0.25rem 0 1.25rem; font-family: var(--sans); font-size: 0.85rem; }
+  summary { cursor: pointer; color: var(--accent-ink); font-weight: 600; }
+  summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .note {
+    font-size: 0.93rem; line-height: 1.55; color: var(--ink-2); background: var(--flag-soft);
+    border-left: 3px solid var(--flag-rule); padding: 0.8rem 1rem; margin: 0 0 1.25rem; max-width: none;
+  }
+  .note b { color: var(--flag); font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.02em; }
+  .fwd {
+    font-size: 0.93rem; line-height: 1.55; color: var(--ink-2); background: var(--accent-soft);
+    border-left: 3px solid var(--accent); padding: 0.8rem 1rem; margin: 0 0 1.25rem; max-width: none;
+  }
+  .fwd b { color: var(--accent-ink); font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.02em; }
+
+  footer { border-top: 2px solid var(--ink); margin-top: 1rem; padding-top: 1.5rem; font-size: 0.9rem; color: var(--ink-3); }
+  footer p { max-width: var(--measure); }
+  footer a { color: var(--accent-ink); }
+
+  .stat { display: grid; grid-template-columns: 1fr; gap: 0.5rem 1.5rem; align-items: start;
+          background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--accent);
+          padding: 1.4rem 1.5rem 0.4rem; margin: 0 0 1.5rem; }
+  @media (min-width: 46rem) { .stat { grid-template-columns: auto 1fr; } }
+  .stat-big { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600;
+              font-size: clamp(2.6rem, 8vw, 3.6rem); line-height: 1; letter-spacing: -0.03em; color: var(--accent-ink); }
+  .stat-cap { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; margin: 0 0 0.5rem; }
+  .stat p { font-size: 0.97rem; }
+  em.cat { font-style: normal; font-family: var(--sans); font-weight: 600; font-size: 0.9em;
+           color: var(--accent-ink); background: var(--accent-soft); padding: 0.02em 0.35em; border-radius: 3px;
+           white-space: nowrap; }
+
+  /* Town paper */
+  h1, h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.012em; }
+  header.masthead { border-bottom: 3px solid var(--ink); }
+  table, svg text, .n, .big { font-variant-numeric: tabular-nums; }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Brookline fiscal model &middot; expense driver tree</p>
+  <h1>Where the $177 Million Went</h1>
+  <p class="standfirst">
+    Brookline's General Fund spent $187.2 million in FY2011 and $364.7 million in FY2025.
+    Every dollar of that $177.4 million increase in yearly spending can be assigned to one
+    of nine causes.
+  </p>
+  <div class="masthead-meta">
+    <span><b>Measure</b> annual General Fund spending</span>
+    <span><b>Years</b> FY2011 vs FY2025</span>
+    <span><b>Sources</b> Schedule A, Town Financial Plans, pension valuations, BLS, DESE</span>
+    <span><b>Updated</b> 2026-09-28</span>
+  </div>
+</header>
+
+<section>
+  <h2>The answer</h2>
+  <p class="lede">
+    How much more Brookline spent in FY2025 than in FY2011, by cause. Each figure is the
+    difference in <strong>one year's spending</strong>, not a total added up over fourteen
+    years. Hover or focus a row to see which budget lines it came from.
+  </p>
+
+  <div class="bars" id="bars">
+    <div class="b-head"><span>Cause</span><span></span><span>Added per year</span></div>
+  </div>
+
+  <p>
+    <strong>Inflation is the largest piece, at 42%.</strong> It is what it would have cost
+    to keep the same staff doing the same work as pay and prices rose. Three more pieces
+    account for most of the rest: <strong>debt service on school and other
+    buildings</strong>, <strong>staffing levels</strong> (mainly more school staff per
+    student), and <strong>paying down past pension underfunding</strong>. Growth in the
+    town itself, new homes and new commercial space, is 5%.
+  </p>
+</section>
+
+<section>
+  <h2>How much of this Brookline controls</h2>
+  <div class="stat">
+    <span class="stat-big">36%</span>
+    <div>
+      <p class="stat-cap">of the growth came from Brookline's own decisions.</p>
+      <p>
+        That covers how many staff it employs, what it builds and borrows for, how it
+        prefunds retiree health, and how its pay and benefits compare with the benchmarks.
+        Counting growth in homes and commercial space, which zoning and permitting shape,
+        it is <strong>41%</strong>. Most of the rest, <strong>55%</strong>, was set outside
+        Brookline or by obligations already incurred.
+      </p>
+    </div>
+  </div>
+  <div class="who">
+    <div class="who-row"><span class="who-name">Set by Brookline decisions</span><span class="who-desc">Staffing levels, voter-approved and routine borrowing, retiree health prefunding, pay and benefits above or below the benchmarks</span><span class="who-val"><b>$64.2M</b> &middot; 36%</span></div>
+    <div class="who-row"><span class="who-name">Set by growth</span><span class="who-desc">Service costs of new homes and commercial space</span><span class="who-val"><b>$9.5M</b> &middot; 5%</span></div>
+    <div class="who-row"><span class="who-name">Set outside Brookline</span><span class="who-desc">Inflation in pay, prices and premiums; state, county and MBTA assessments</span><span class="who-val"><b>$77.7M</b> &middot; 44%</span></div>
+    <div class="who-row"><span class="who-name">Set by past obligations</span><span class="who-desc">Paying down the pension shortfall on a fixed schedule</span><span class="who-val"><b>$19.6M</b> &middot; 11%</span></div>
+    <div class="who-row"><span class="who-name">Other</span><span class="who-desc">Smaller benefits, an accounting difference, and net enrollment change</span><span class="who-val"><b>$6.5M</b> &middot; 4%</span></div>
+  </div>
+  <p>
+    The lines between groups are judgment calls. Pay rates are bargained locally, so
+    Brookline has some say over the part filed under inflation too; this page counts only
+    the part of pay growth that differs from the national benchmark as a local decision.
+    The pension shortfall built up over decades of earlier decisions, and the payment
+    schedule is now fixed.
+  </p>
+</section>
+
+<section>
+  <h2>How each dollar gets assigned</h2>
+  <p>
+    Each budget line starts from what it cost in FY2011. For the town departments and the
+    schools, three questions are asked in order, and each answer is filed under one of the
+    nine causes in the chart above:
+  </p>
+  <ol class="steps">
+    <li><strong>What would the FY2011 operation cost in FY2025 if nothing changed but pay
+    and prices?</strong> Staff costs grow with the national Employment Cost Index for state
+    and local government workers, and other costs (contracts, supplies, utilities) grow
+    with Boston consumer prices. The difference is categorized as
+    <em class="cat">Inflation</em>.</li>
+    <li><strong>How many more staff were there, and how many would growth have needed?</strong>
+    Staff needed for new homes and commercial space are categorized as <em class="cat">New
+    homes &amp; commercial space</em>, and staff for other enrollment change as
+    <em class="cat">Enrollment not from new homes</em>. Staff beyond that are categorized
+    as <em class="cat">Staffing levels</em>.</li>
+    <li><strong>What is left?</strong> That is categorized as <em class="cat">Pay &amp;
+    costs vs inflation</em>. It is a leftover, not a measurement of one thing.</li>
+  </ol>
+  <p>
+    Benefits and debt are handled separately because they don't behave like wages. Health
+    insurance is split into premium inflation, more people covered, and a leftover.
+    Pension contributions are split into the cost of pensions employees earn each year and
+    the payment toward pensions already earned but not yet funded
+    (<em class="cat">Past pension shortfall</em>). Debt service is categorized as
+    <em class="cat">Buildings</em>.
+  </p>
+
+  <h3>Why start in FY2011</h3>
+  <p>
+    The state's spending data for Brookline goes back to FY2005, but in FY2010 about $6
+    million moved between spending categories: the five town department categories fell
+    12.9% that year while total spending fell 2.3%. Comparing any year before FY2010 with
+    any year after would mix that relabeling with real change, and it made General
+    Government and Public Works look far more restrained than they were. FY2011 is the
+    first full year on the new basis, and it is also the earliest year for which the
+    Town's benefits detail and spending-by-type actuals are available in the Financial
+    Plans used here.
+  </p>
+
+  <p class="note">
+    <b>The benchmarks.</b> Over FY2011&ndash;25, national public-sector compensation rose
+    <span class="n">2.79%</span> a year (<span class="n">+47%</span> in total), Boston
+    consumer prices <span class="n">2.53%</span> (<span class="n">+42%</span>), and the
+    public-sector benefits index <span class="n">3.44%</span> (<span class="n">+61%</span>).
+    BLS doesn't publish the pay index by state. The closest Massachusetts check is BLS
+    average pay for local government workers, which grew <span class="n">3.40%</span> a
+    year in Massachusetts against <span class="n">3.65%</span> nationally from 2014 to
+    2024. So the national benchmark doesn't understate Massachusetts pay growth; if
+    anything it runs slightly ahead.
+  </p>
+</section>
+
+<section>
+  <h2><span class="share">42% &middot; $75.3M</span>Inflation: the same staff at the going rate</h2>
+  <div class="parts">
+    <div><span>Schools</span><span>$35.7M</span></div>
+    <div><span>Town departments</span><span>$26.2M</span></div>
+    <div><span>Health insurance premiums</span><span>$12.1M</span></div>
+    <div><span>Pensions employees earn each year</span><span>$1.3M</span></div>
+    <div class="sum"><span>Total</span><span>$75.3M</span></div>
+  </div>
+  <p>
+    If Brookline had kept exactly the FY2011 staff and services, yearly spending would
+    still have grown by about $75 million, because pay, prices and health premiums all
+    rose. Schools carry the largest share because they are the largest budget line.
+  </p>
+  <p>
+    Non-personnel spending needed its own check, because the method assumes it grows with
+    consumer prices. The Town's own actuals by type of expense (services, supplies,
+    utilities, capital outlay) show it did. From FY2011 to FY2024 it grew
+    <span class="n">2.9%</span> a year, or <span class="n">2.5%</span> without an "Other"
+    line whose contents appear to have changed, against <span class="n">2.5%</span> for
+    Boston prices. Personnel spending grew <span class="n">4.1%</span> a year over the same
+    years, which is where most of the rest of this page comes from.
+  </p>
+  <p class="fwd">
+    <b>For the forecast.</b> This piece depends on two rates: public-sector pay growth and
+    health premium growth. It is the largest single piece, so those two assumptions carry
+    more weight than any other.
+  </p>
+</section>
+
+<section>
+  <h2><span class="share">15% &middot; $26.8M</span>Buildings: debt service</h2>
+  <div class="parts">
+    <div><span>Voter-approved (excluded) debt</span><span>$20.8M</span></div>
+    <div><span>Routine borrowing within the levy limit</span><span>$6.0M</span></div>
+    <div class="sum"><span>Total</span><span>$26.8M</span></div>
+  </div>
+  <p>
+    Debt service rose from $9.5 million to $36.3 million a year. Most of the increase is
+    debt voters approved for specific projects: the Devotion School (now Florida Ruffin
+    Ridley) expansion (approved 2015), the high school expansion and renovation (2018), the
+    Driscoll School expansion (2019), the Newbury College land purchase (2020), fire
+    station renovations (2022) and the Pierce School (2023). Devotion and Driscoll were
+    expansions approved during the enrollment rise shown further down.
+  </p>
+  <p>
+    Excluded debt is paid by a separate tax that voters approve for each project, outside
+    the Proposition 2&frac12; levy limit. So the $20.8 million grew the budget without
+    taking room under the limit from operating spending.
+  </p>
+  <p>
+    The $6.0 million of routine borrowing does take room under the limit. It follows a
+    standing Town policy: about 6% of the prior year's net revenue (6.6% today) goes to
+    capital each year, split between projects paid in cash and debt service on projects
+    financed within the levy. Within-levy debt service went from $8.2 million to $14.3
+    million, rising roughly with revenue as the policy intends. The capital plan's debt
+    schedule lists the individual projects; they aren't itemized here.
+  </p>
+  <p class="fwd">
+    <b>For the forecast.</b> Repayment schedules for existing debt are known in advance, so
+    this is the easiest piece to project. The Town already projects excluded debt service
+    at about $36&ndash;37 million a year from FY2028 on.
+  </p>
+</section>
+
+<section>
+  <h2><span class="share">15% &middot; $26.5M</span>Staffing levels: mostly more school staff per student</h2>
+  <div class="parts">
+    <div><span>Schools: fewer students per staff member</span><span>$19.6M</span></div>
+    <div><span>Health insurance for the added staff</span><span>$4.5M</span></div>
+    <div><span>Town departments: staff beyond what growth explains</span><span>$2.2M</span></div>
+    <div><span>Pensions for added town staff</span><span>$0.2M</span></div>
+    <div class="sum"><span>Total</span><span>$26.5M</span></div>
+  </div>
+  <p>
+    Brookline had 6.75 students per school staff member in FY2011 and 5.62 in FY2025. If
+    staff had moved one-for-one with enrollment, the schools would have about 208 fewer
+    positions today. At about <strong>$94,000</strong> each in FY2025 salary, that gap is
+    the $19.6 million. Health insurance and pensions for those positions are in the
+    benefits lines.
+  </p>
+  <p>
+    The $94,000 is an average across all school staff, including paraprofessionals,
+    aides and other roles paid less than teachers; the state reports Brookline's average
+    teacher salary at $132,000 in FY2025. It comes from salaries being about 81% of school
+    spending, with the rest going to special education tuition, transportation, supplies
+    and similar costs that don't scale with staff.
+  </p>
+  <p>
+    Comparing only FY2011 and FY2025 hides how it happened, because enrollment rose and
+    then fell:
+  </p>
+
+  <div class="fig">
+    <div class="legend">
+      <span><span class="sw" style="background:var(--s1)"></span>School staff FTE</span>
+      <span><span class="sw" style="background:var(--s3)"></span>Enrollment</span>
+    </div>
+    <div id="enr"></div>
+    <p class="figcap">Index, FY2011 = 100. Hover for values. Staff data begin FY2008.</p>
+  </div>
+  <details>
+    <summary>Show the numbers</summary>
+    <div class="tablewrap" id="enr-table"></div>
+  </details>
+
+  <p>
+    From FY2011 to FY2019, enrollment rose <span class="n">18.5%</span>, to 7,855, and
+    staff rose <span class="n">34%</span>. After COVID, enrollment fell
+    <span class="n">10.6%</span> by FY2025 while staff fell <span class="n">5.0%</span>.
+    Measured separately, about 150 of the positions beyond enrollment were added while
+    enrollment was rising, and about 73 are positions kept after it fell.
+  </p>
+  <p>
+    Two measured changes run alongside this. Students with an IEP rose from 1,046 to 1,270
+    (<span class="n">+21%</span>, against <span class="n">+6%</span> for enrollment),
+    from 15.8% to 18.1% of students. And per-pupil spending grew fastest in pupil services
+    (<span class="n">5.9%</span> a year FY2009&ndash;25) and guidance and counseling
+    (<span class="n">4.6%</span>), while teacher spending per pupil grew
+    <span class="n">2.7%</span>. Neither establishes why the ratio changed; both show where
+    the added spending went.
+  </p>
+  <p>
+    On the town side, departments added 48.9 positions. About 24 of them are what new
+    homes and commercial space would call for at the model's rates, leaving about 25. Of
+    the 48.9, 18.5 appear at a break between two data sources in FY2020/21 and may reflect
+    a change in how positions were counted rather than hiring.
+  </p>
+  <p class="fwd">
+    <b>For the forecast: this is one of the most important assumptions.</b> The school
+    staffing ratio decides a large part of future spending. Holding it at 5.62 students
+    per staff member, returning part way toward FY2019 levels, and letting staff follow
+    enrollment are three different expense paths, and the forecast should show all three
+    rather than pick one silently.
+  </p>
+</section>
+
+<section>
+  <h2><span class="share">11% &middot; $19.6M</span>Paying for pensions already earned</h2>
+  <div class="parts">
+    <div><span>Pension payment toward the unfunded liability, FY2011</span><span>$10.6M</span></div>
+    <div><span>Same payment, FY2025</span><span>$30.2M</span></div>
+    <div class="sum"><span>Increase</span><span>$19.6M</span></div>
+  </div>
+  <p>
+    The Town's pension contribution rose from $14.0 million to $37.5 million a year. Part
+    of that pays for pensions current employees earn each year, which actuaries call the
+    normal cost. It rose from about $3.3 million to $7.3 million, and it is split across
+    three causes: pay inflation ($1.3 million), more town staff ($0.3 million), and a
+    higher cost per dollar of pay ($2.3 million), since the normal cost went from 5.48% to
+    7.71% of payroll as the retirement system's actuarial assumptions changed. That last
+    piece is under <em class="cat">Pay &amp; costs vs inflation</em>.
+  </p>
+  <p>
+    The rest pays down the gap between pensions already promised and the money set aside
+    for them. That payment ends when the system reaches full funding, which the Town
+    projects for 2030. After that the pension contribution falls to the normal cost. The
+    Town's own long-range schedule redirects most of that room to retiree health (OPEB)
+    starting in FY2031, at about $43 million that year.
+  </p>
+  <p class="fwd">
+    <b>For the forecast.</b> This is set by a published schedule through 2030, then changes
+    sharply. How the room freed in FY2031 is used is a policy choice the forecast has to
+    represent explicitly.
+  </p>
+</section>
+
+<section>
+  <h2>Does staff turnover raise costs?</h2>
+  <p>
+    Turnover with the same number of positions moves costs in both directions, and only
+    one direction lasts past the employee's departure.
+  </p>
+  <ul class="plain">
+    <li><strong>Pay usually goes down.</strong> A new hire usually starts lower on the pay
+    scale than the person who left, while the staff who stay move up it. Both effects are
+    inside <em class="cat">Pay &amp; costs vs inflation</em>, and this data can't separate
+    them; that would need payroll records by employee.</li>
+    <li><strong>Pensions don't add a new Town payment when someone leaves.</strong> The
+    Town pays for each pension while the employee is working (the normal cost), and
+    retirees are paid from the retirement fund. Departures add cost only when actual
+    experience differs from the actuaries' assumptions, for example longer lifespans or
+    earlier retirements, and that shows up in the payment toward the unfunded
+    liability.</li>
+    <li><strong>Retiree health insurance does add cost.</strong> The Town covers retirees
+    and their survivors on its health plan. In FY2025, 1,659 of the plan's 3,390
+    subscribers were retirees, about half. So retirement adds a health subscriber without
+    removing one, since the position is refilled. In this tree, retirees sit inside the
+    health leftover, which is small ($0.2 million) because total subscribers grew about in
+    line with staff. Prefunding future retiree health is what the OPEB contributions are
+    for.</li>
+    <li><strong>Other costs of departures are small</strong>: unemployment compensation
+    (about $0.5 million a year or less) and payouts of unused leave, which sit in department
+    budgets.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="share">5% &middot; $9.5M</span>Growth in the town itself</h2>
+  <div class="parts">
+    <div><span>Schools: staff for students from new homes</span><span>$5.6M</span></div>
+    <div><span>Town departments: services for new homes</span><span>$1.8M</span></div>
+    <div><span>Health insurance and pensions for the added staff</span><span>$1.8M</span></div>
+    <div><span>Town departments: services for new commercial space</span><span>$0.3M</span></div>
+    <div class="sum"><span>Total</span><span>$9.5M</span></div>
+  </div>
+  <p>
+    <strong>New homes add real costs, and they are small next to everything else.</strong>
+    $9.5 million a year compares with $75.3 million for inflation, $26.8 million for debt
+    service and $26.5 million for staffing levels. This page covers costs only; the tax
+    revenue those homes bring is a separate question.
+  </p>
+
+  <h3>Town services for new homes</h3>
+  <p>
+    About 1,638 homes were added over FY2012&ndash;25, estimated from new-growth tax
+    dollars; three independent counts agree on the order of magnitude. The fiscal model
+    charges $1,371 per home for town services, taken from the Town's consultant RKG.
+    Of that, $262 is benefits, debt and insurance, which this page counts in the benefits
+    lines instead, so the town-department share used here is $1,109 per home, or $1.8
+    million.
+  </p>
+  <p>
+    RKG puts 88% of that $1,109 in police ($448) and fire ($532), with general government
+    at $57, public works $48, library $19 and the rest under $10 each. That reflects RKG's
+    judgment, line by line through the FY2025 budget, about which costs rise with
+    households. Brookline's actual staffing went the other way: public safety positions
+    fell by 5 over FY2011&ndash;25, while general government added 24.6, human services
+    17.8 (12.5 of them at the FY2020/21 data break), public works 8.0 and culture and
+    recreation 3.5. The total added cost roughly matches the model's rate in the one
+    window measured directly (FY2022&ndash;24, $1,349 per home), but not the mix.
+  </p>
+
+  <h3>Students from new homes</h3>
+  <p>
+    At the model's 0.244 students per new home, those homes would bring about 400
+    students. Staffed at the FY2011 ratio and FY2025 pay, they account for $5.6 million.
+    A Town and Schools count of ten developments of 8 or more units built since 2015 found
+    between 0.03 and 0.56 enrolled students per unit in Fall 2025, a simple average of
+    about 0.21, so the model's figure sits in the observed range. Net enrollment change
+    over the window was also about 400, which is why <em class="cat">Enrollment not from
+    new homes</em> nets to nearly zero. That match is a coincidence of endpoints: the path
+    above moved much more than new housing could supply.
+  </p>
+
+  <h3>Commercial space</h3>
+  <p>
+    Non-residential new growth totalled $688 million over FY2012&ndash;25, but most of
+    that is personal property, mainly utility equipment, which creates no service demand.
+    In FY2026, the one year with a published split, personal property was 74% of it. At
+    that split, about 350,000 square feet of commercial space was added, roughly 7% of
+    today's stock of about 5.1 million, costing about $0.3 million a year in department
+    services. Treating all non-residential growth as commercial space gives an upper bound
+    of $1.2 million.
+  </p>
+  <p class="fwd">
+    <b>For the forecast.</b> Because this piece is small, differences between growth
+    scenarios will move expenses less than the pay, staffing and pension assumptions do.
+  </p>
+</section>
+
+<section>
+  <h2><span class="share">11% &middot; $19.8M</span>The smaller pieces</h2>
+  <div class="parts">
+    <div><span>Pay &amp; costs above/below inflation, net</span><span>$7.6M</span></div>
+    <div><span>Schedule A fixed costs not in the Town's benefits detail</span><span>$4.0M</span></div>
+    <div><span>OPEB: transfers into the retiree health trust ($2.0M to $5.4M)</span><span>$3.4M</span></div>
+    <div><span>Other benefits: Medicare payroll tax, workers' comp, injured-on-duty</span><span>$2.5M</span></div>
+    <div><span>State, county and MBTA assessments</span><span>$2.4M</span></div>
+    <div><span>Enrollment change not from new homes, net</span><span>&minus;$0.1M</span></div>
+  </div>
+  <p>
+    The $4.0 million is the difference between what the state's Schedule A reports as
+    fixed costs and what the Town's benefits detail lists. It likely includes property and
+    liability insurance and differences in how the two sources classify items. It isn't
+    itemized in either source.
+  </p>
+
+  <h3>Pay and costs above and below inflation, by budget line</h3>
+  <p>
+    This is the leftover after inflation and staffing. It holds step and grade raises,
+    turnover, changes in the mix of roles, any gap between Brookline pay and the national
+    benchmark, and, for schools, non-personnel costs growing faster than prices.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Budget line</th><th>Growth</th><th>Inflation</th><th>Staffing</th><th>Above / below</th><th>FTE change</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">Schools</td><td>$69.0M</td><td>$35.7M</td><td>$25.0M</td><td><b>+$8.3M</b></td><td>+267.1</td></tr>
+        <tr><td class="hi">Public Safety</td><td>$15.5M</td><td>$13.0M</td><td class="neg">&minus;$0.5M</td><td><b>+$3.0M</b></td><td>&minus;5.0</td></tr>
+        <tr><td class="hi">Pensions earned each year</td><td>$4.0M</td><td>$1.3M</td><td>$0.3M</td><td><b>+$2.3M</b></td><td>n/a</td></tr>
+        <tr><td class="hi">Health insurance</td><td>$18.4M</td><td>$12.1M</td><td>$6.1M</td><td>+$0.2M</td><td>n/a</td></tr>
+        <tr><td class="hi">Culture &amp; Recreation</td><td>$2.8M</td><td>$2.6M</td><td>$0.3M</td><td class="neg">&minus;$0.1M</td><td>+3.5</td></tr>
+        <tr><td class="hi">General Government</td><td>$5.2M</td><td>$4.3M</td><td>$2.4M</td><td class="neg">&minus;$1.4M</td><td>+24.6</td></tr>
+        <tr><td class="hi">Human Services</td><td>$0.8M</td><td>$0.9M</td><td>$1.6M</td><td class="neg">&minus;$1.7M</td><td>+17.8</td></tr>
+        <tr><td class="hi">Public Works</td><td>$3.1M</td><td>$5.4M</td><td>$0.7M</td><td class="neg">&minus;$3.0M</td><td>+8.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Schools ran $8.3 million above the benchmarks. Two things measured elsewhere fit that:
+    the state reports Brookline's average teacher salary rising from $96,000 in FY2018 to
+    $132,000 in FY2025, about 4.7% a year against 3.3% for the national wage benchmark
+    (an average that also moves with the experience mix of the teachers employed), and
+    special education and other non-personnel costs aren't limited to consumer-price
+    growth. Public Safety is the one town department well above the benchmark, with
+    headcount slightly down. Public Works came in $3.0 million below; about 39% of its
+    budget is contracts, fleet and materials, where the consumer price benchmark fits less
+    well. Health premiums tracked the national public-sector benefits index almost exactly.
+  </p>
+</section>
+
+<section>
+  <h2>Where each cause shows up in the budget</h2>
+  <p>
+    The same $177.4 million, by cause and by budget line. Shading shows size. Reading down
+    the columns, new homes and commercial space are a small entry in every budget line
+    they touch.
+  </p>
+  <div class="tablewrap">
+    <table id="matrix"></table>
+  </div>
+</section>
+
+<section>
+  <h2>Corrections and revisions</h2>
+  <h3>To this page, 2026-09-28</h3>
+  <ul class="plain">
+    <li><strong>Pensions earned each year in FY2011.</strong> The first version estimated
+    $4.9 million by scaling back from FY2025. The Town's 2014 actuarial valuation gives
+    $3.4 million for FY2013, which puts FY2011 near $3.3 million. That moved $1.5 million
+    out of the pension shortfall and showed the rise in cost per dollar of pay.</li>
+    <li><strong>Town services for new homes counted benefits twice.</strong> The $1,371 per
+    home includes $262 of benefits and debt, which were already counted under health and
+    pensions. Only the $1,109 department share is used now.</li>
+    <li><strong>Added school staff were priced too high.</strong> The first version priced
+    them at total school spending per staff member (about $116,000), which includes
+    tuition, transport and supplies. They are now priced at salary (about $94,000), with
+    non-personnel school costs growing at consumer prices.</li>
+  </ul>
+  <p>
+    Net effect: <em class="cat">Staffing levels</em> fell from $30.3 million to $26.5
+    million, <em class="cat">New homes &amp; commercial space</em> from $11.2 million to
+    $9.5 million, <em class="cat">Past pension shortfall</em> from $21.1 million to $19.6
+    million, and <em class="cat">Pay &amp; costs vs inflation</em> rose from &minus;$1.4
+    million to +$7.6 million.
+  </p>
+  <h3>To the earlier Phases A&ndash;C page</h3>
+  <ul class="plain">
+    <li><strong>Coverage.</strong> Phases A&ndash;C covered town departments and schools,
+    $96.4 million of the $177.4 million. Debt service and pensions, $47.9 million between
+    them, were not in scope.</li>
+    <li><strong>Health premiums.</strong> Phase B reported premiums running about 2 points a
+    year above the benefits index for FY2011&ndash;20, using a figure reconstructed from
+    budgets. On the Town's actual FY2011 spending, premiums track the index over
+    FY2011&ndash;25.</li>
+    <li><strong>Enrollment.</strong> Phase C reported enrollment up 6% against staff up 27%.
+    Both are correct for the endpoints, but enrollment rose 18.5% and then fell in
+    between.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>How sure these numbers are</h2>
+  <p>In order of how much each could move the picture:</p>
+  <ol class="steps">
+    <li><strong>Growth costs are allocations at the model's rates.</strong> The total per
+    home matches one observed three-year window, but the department mix doesn't match
+    where Brookline actually added staff.</li>
+    <li><strong>The school personnel share (81%) is derived</strong>, from total General
+    Fund personnel minus town department personnel. FY2024 on the same basis gives about
+    83%.</li>
+    <li><strong>Pensions earned in FY2011 are carried back two years</strong> from the 2014
+    valuation. The 2010 valuation would pin it exactly; the remaining error is a few
+    hundred thousand dollars.</li>
+    <li><strong>Town staff counts cross a data break in FY2020/21</strong> (18.5
+    positions).</li>
+    <li><strong>The commercial split uses one year</strong> of the commercial and personal
+    property mix.</li>
+    <li><strong>The Town's expense-type tables for FY2014&ndash;18 were not used.</strong>
+    They repeat the same figures under different year labels, so only FY2011, FY2023 and
+    FY2024 actuals feed the non-personnel check.</li>
+  </ol>
+  <p>
+    Every total on this page is checked in the script: the nine causes sum to the $177.4
+    million change to the dollar, each budget line sums to its own change, and the town
+    department split reproduces the earlier Phase B result.
+  </p>
+</section>
+
+<footer>
+  <p>
+    Generated by <code>scripts/expense_drivers_tree.py</code>, with its methodology in
+    <code>output/expense_drivers_tree_methodology.md</code>. Massachusetts pay check:
+    <code>scripts/fetch_qcew_local_gov_pay.py</code>. Builds on
+    More People or Costlier People
+    (Phases A&ndash;C). Nothing here has been changed in the forecast yet; that is Phase D.
+  </p>
+</footer>
+
+</div>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function () {
+  const TOTAL = 177.43;
+  const drivers = [
+    { name: "Inflation", v: 75.29, parts: [["Schools", 35.67], ["Town departments", 26.21], ["Health premiums", 12.07], ["Pensions earned each year", 1.34]] },
+    { name: "Buildings (debt service)", v: 26.80, parts: [["Voter-approved debt", 20.75], ["Routine borrowing", 6.04]] },
+    { name: "Staffing levels", v: 26.48, parts: [["Schools", 19.55], ["Health for added staff", 4.51], ["Town departments", 2.24], ["Pensions for added staff", 0.18]] },
+    { name: "Past pension shortfall", v: 19.59, parts: [["Payment toward unfunded liability", 19.59]] },
+    { name: "New homes & commercial space", v: 9.46, parts: [["Schools", 5.56], ["Town: homes", 1.82], ["Health for added staff", 1.61], ["Town: commercial", 0.31], ["Pensions for added staff", 0.17]] },
+    { name: "Other", v: 8.92, parts: [["Fixed-cost difference", 4.01], ["Other benefits", 2.53], ["State & MBTA assessments", 2.38]] },
+    { name: "Pay & costs vs inflation", v: 7.56, parts: [["Schools", 8.29], ["Pension cost per $ of pay", 2.27], ["Health premiums", 0.18], ["Town departments", -3.19]] },
+    { name: "Retiree health prefunding", v: 3.40, parts: [["OPEB trust transfers", 3.40]] },
+    { name: "Enrollment not from new homes", v: -0.07, parts: [["Schools", -0.06], ["Health", -0.01]] },
+  ];
+  const MIN = -4, MAX = 80, span = MAX - MIN;
+  const pct = x => ((x - MIN) / span) * 100;
+  const fmt = x => (x < 0 ? "−$" : "$") + Math.abs(x).toFixed(1) + "M";
+  const bars = document.getElementById("bars");
+  const tip = document.getElementById("tip");
+
+  function showTip(d, x, y) {
+    tip.innerHTML = "<b>" + d.name + ": " + fmt(d.v) + "</b><table>" +
+      d.parts.map(p => "<tr><td>" + p[0] + "</td><td>" + fmt(p[1]) + "</td></tr>").join("") + "</table>";
+    tip.hidden = false;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = x + 14, top = y + 14;
+    if (left + w > window.innerWidth - 8) left = x - w - 14;
+    if (top + h > window.innerHeight - 8) top = y - h - 14;
+    tip.style.left = Math.max(8, left) + "px"; tip.style.top = Math.max(8, top) + "px";
+  }
+  const hide = () => { tip.hidden = true; };
+
+  drivers.forEach(d => {
+    const row = document.createElement("div");
+    row.className = "b-row"; row.tabIndex = 0;
+    row.setAttribute("aria-label", d.name + ", " + fmt(d.v) + ", " + Math.round(d.v / TOTAL * 100) + " percent");
+    const z = pct(0), e = pct(d.v);
+    const bar = d.v >= 0
+      ? '<div class="b-bar pos" style="left:' + z + '%;width:' + Math.max(e - z, 0.4) + '%"></div>'
+      : '<div class="b-bar neg" style="left:' + e + '%;width:' + Math.max(z - e, 0.4) + '%"></div>';
+    row.innerHTML = '<span class="b-label">' + d.name + '</span><div class="b-track"><div class="b-zero" style="left:' + z + '%"></div>' + bar + '</div>' +
+      '<span class="b-val"><b>' + fmt(d.v) + '</b> &middot; ' + (d.v / TOTAL * 100).toFixed(0).replace("-0", "0").replace("-", "\u2212") + '%</span>';
+    row.addEventListener("mousemove", ev => showTip(d, ev.clientX, ev.clientY));
+    row.addEventListener("mouseleave", hide);
+    row.addEventListener("focus", () => { const r = row.getBoundingClientRect(); showTip(d, r.left + 40, r.bottom - 10); });
+    row.addEventListener("blur", hide);
+    bars.appendChild(row);
+  });
+  const tot = document.createElement("div");
+  tot.className = "b-row b-total";
+  tot.innerHTML = '<span>Total, FY2011 to FY2025</span><span></span><span class="b-val"><b>$177.4M</b> &middot; 100%</span>';
+  bars.appendChild(tot);
+  window.addEventListener("scroll", hide, { passive: true });
+
+  // ---------------------------------------------- enrollment vs staff
+  const yrs = [2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
+  const enr = [6168,6321,6472,6627,6875,7112,7288,7508,7668,7695,7801,7855,7777,6891,6928,7060,7039,7023];
+  const stf = [968.4,989.0,994.6,982.3,1066.5,1070.7,1074.3,1134.5,1195.9,1256.5,1242.0,1315.8,1378.4,1348.2,1299.4,1345.8,1265.8,1249.4];
+  const iE = enr.map(v => v / 6627 * 100), iS = stf.map(v => v / 982.3 * 100);
+  const W = 640, H = 290, L = 44, R = 92, T = 14, B = 30;
+  const x = y => L + (y - 2008) / (2025 - 2008) * (W - L - R);
+  const y = v => T + (145 - v) / (145 - 90) * (H - T - B);
+  let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="School staff and enrollment, indexed to FY2011 equals 100, FY2008 to FY2025. Staff peaks at 140 in FY2020; enrollment peaks at 119 in FY2019 and falls to 106.">';
+  [90,100,110,120,130,140].forEach(t => {
+    s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(t) + '" y2="' + y(t) + '" stroke="var(--grid)" stroke-width="1"/>';
+    s += '<text x="' + (L - 8) + '" y="' + (y(t) + 4) + '" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)">' + t + '</text>';
+  });
+  s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(100) + '" y2="' + y(100) + '" stroke="var(--axis)" stroke-width="1"/>';
+  [2008,2011,2015,2019,2025].forEach(t => {
+    s += '<text x="' + x(t) + '" y="' + (H - 8) + '" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)">FY' + t + '</text>';
+  });
+  const path = arr => arr.map((v, i) => (i ? "L" : "M") + x(yrs[i]).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  s += '<path d="' + path(iE) + '" fill="none" stroke="var(--s3)" stroke-width="2" stroke-linejoin="round"/>';
+  s += '<path d="' + path(iS) + '" fill="none" stroke="var(--s1)" stroke-width="2" stroke-linejoin="round"/>';
+  const n = yrs.length - 1;
+  s += '<text x="' + (x(2025) + 8) + '" y="' + (y(iS[n]) + 4) + '" font-family="Libre Franklin, sans-serif" font-size="12" font-weight="600" fill="var(--ink)">Staff ' + iS[n].toFixed(0) + '</text>';
+  s += '<text x="' + (x(2025) + 8) + '" y="' + (y(iE[n]) + 4) + '" font-family="Libre Franklin, sans-serif" font-size="12" font-weight="600" fill="var(--ink)">Enrollment ' + iE[n].toFixed(0) + '</text>';
+  s += '<line id="xh" y1="' + T + '" y2="' + (H - B) + '" stroke="var(--axis)" stroke-width="1" visibility="hidden"/>';
+  s += '<circle id="dS" r="4" fill="var(--s1)" stroke="var(--ground)" stroke-width="2" visibility="hidden"/>';
+  s += '<circle id="dE" r="4" fill="var(--s3)" stroke="var(--ground)" stroke-width="2" visibility="hidden"/>';
+  s += '<rect id="hit" x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '" fill="transparent"/>';
+  s += '</svg>';
+  const box = document.getElementById("enr");
+  box.innerHTML = s;
+  const svg = box.querySelector("svg"), hit = svg.querySelector("#hit");
+  const xh = svg.querySelector("#xh"), dS = svg.querySelector("#dS"), dE = svg.querySelector("#dE");
+  hit.addEventListener("mousemove", ev => {
+    const pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+    const i = Math.max(0, Math.min(n, Math.round((p.x - L) / (W - L - R) * n)));
+    const cx = x(yrs[i]);
+    xh.setAttribute("x1", cx); xh.setAttribute("x2", cx); xh.setAttribute("visibility", "visible");
+    dS.setAttribute("cx", cx); dS.setAttribute("cy", y(iS[i])); dS.setAttribute("visibility", "visible");
+    dE.setAttribute("cx", cx); dE.setAttribute("cy", y(iE[i])); dE.setAttribute("visibility", "visible");
+    tip.innerHTML = "<b>FY" + yrs[i] + "</b><table><tr><td>Staff FTE</td><td>" + stf[i].toLocaleString("en-US", {minimumFractionDigits: 1}) + " (" + iS[i].toFixed(0) + ")</td></tr>" +
+      "<tr><td>Enrollment</td><td>" + enr[i].toLocaleString("en-US") + " (" + iE[i].toFixed(0) + ")</td></tr>" +
+      "<tr><td>Students per staff</td><td>" + (enr[i] / stf[i]).toFixed(2) + "</td></tr></table>";
+    tip.hidden = false;
+    const w = tip.offsetWidth;
+    tip.style.left = Math.min(window.innerWidth - w - 8, ev.clientX + 14) + "px";
+    tip.style.top = (ev.clientY + 14) + "px";
+  });
+  hit.addEventListener("mouseleave", () => { hide(); [xh, dS, dE].forEach(e => e.setAttribute("visibility", "hidden")); });
+
+  let t = '<table><thead><tr><th>Year</th><th>Enrollment</th><th>Staff FTE</th><th>Students per staff</th></tr></thead><tbody>';
+  yrs.forEach((yr, i) => { t += "<tr><td>FY" + yr + "</td><td>" + enr[i].toLocaleString("en-US") + "</td><td>" + stf[i].toFixed(1) + "</td><td>" + (enr[i] / stf[i]).toFixed(2) + "</td></tr>"; });
+  document.getElementById("enr-table").innerHTML = t + "</tbody></table>";
+
+  // ---------------------------------------------- matrix
+  const cols = ["Town depts", "Schools", "Benefits", "Debt", "Assessments"];
+  const M = [
+    ["Inflation", [26.21, 35.67, 13.41, 0, 0]],
+    ["Buildings (debt service)", [0, 0, 0, 26.80, 0]],
+    ["Staffing levels", [2.24, 19.55, 4.69, 0, 0]],
+    ["Past pension shortfall", [0, 0, 19.59, 0, 0]],
+    ["New homes & commercial", [2.13, 5.56, 1.77, 0, 0]],
+    ["Other", [0, 0, 6.54, 0, 2.38]],
+    ["Pay & costs vs inflation", [-3.19, 8.29, 2.46, 0, 0]],
+    ["Retiree health prefunding", [0, 0, 3.40, 0, 0]],
+    ["Enrollment not from new homes", [0, -0.07, -0.01, 0, 0]],
+  ];
+  let mt = "<thead><tr><th>Cause</th>" + cols.map(c => "<th>" + c + "</th>").join("") + "<th>Total</th></tr></thead><tbody>";
+  M.forEach(([name, vals]) => {
+    const sum = vals.reduce((a, b) => a + b, 0);
+    mt += '<tr><td class="hi">' + name + "</td>" + vals.map(v => {
+      if (v === 0) return '<td style="color:var(--ink-3)">&middot;</td>';
+      const a = Math.min(1, Math.abs(v) / 37);
+      const bg = v > 0 ? "color-mix(in srgb, var(--s1) " + Math.round(a * 42 + 4) + "%, transparent)" : "var(--warm-soft)";
+      return '<td class="cell' + (v < 0 ? " neg" : "") + '" style="background:' + bg + ';color:var(--ink)">' + fmt(v) + "</td>";
+    }).join("") + "<td><b>" + fmt(sum) + "</b></td></tr>";
+  });
+  const colSum = cols.map((_, j) => M.reduce((a, r) => a + r[1][j], 0));
+  mt += '<tr class="tot"><td class="hi">Total</td>' + colSum.map(v => "<td>" + fmt(v) + "</td>").join("") + "<td>$177.4M</td></tr></tbody>";
+  document.getElementById("matrix").innerHTML = mt;
+})();
+</script>

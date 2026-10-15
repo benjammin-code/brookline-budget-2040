@@ -1,0 +1,29 @@
+bucket,window,fy_start,fy_end,crosses_fte_seam,spend_cagr,fte_cagr,cost_per_fte_cagr,spend_start,spend_end,fte_start,fte_end,spend_per_fte_start,spend_per_fte_end,share_of_growth_from_headcount,measure
+General Government,"clean, pre-FTE-seam",2011,2020,False,0.033563,0.011753,0.021556,9347954,12581935,110.56,122.82,84551,102442,0.3502,Schedule A category expenditure / budgeted funded FTE
+Public Safety,"clean, pre-FTE-seam",2011,2020,False,0.025399,0.00049,0.024897,28030700,35129432,339.3,340.8,82613,103079,0.0193,Schedule A category expenditure / budgeted funded FTE
+Public Works,"clean, pre-FTE-seam",2011,2020,False,0.006712,-0.001253,0.007975,11997166,12741652,131.86,130.38,90984,97727,-0.1867,Schedule A category expenditure / budgeted funded FTE
+Human Services,"clean, pre-FTE-seam",2011,2020,False,0.019068,0.00536,0.013636,1992869,2362158,27.19,28.53,73294,82796,0.2811,Schedule A category expenditure / budgeted funded FTE
+Culture & Recreation,"clean, pre-FTE-seam",2011,2020,False,0.027956,0.001885,0.026021,5863962,7515548,63.75,64.84,91984,115909,0.0674,Schedule A category expenditure / budgeted funded FTE
+General Government,post-FTE-seam,2021,2025,False,0.033377,0.009082,0.024076,12790198,14585216,130.34,135.14,98129,107927,0.2721,Schedule A category expenditure / budgeted funded FTE
+Public Safety,post-FTE-seam,2021,2025,False,0.055333,-0.004803,0.060426,35067861,43497816,340.8,334.3,102899,130116,-0.0868,Schedule A category expenditure / budgeted funded FTE
+Public Works,post-FTE-seam,2021,2025,False,0.033445,0.016761,0.016409,13221233,15080716,130.91,139.91,100995,107789,0.5012,Schedule A category expenditure / budgeted funded FTE
+Human Services,post-FTE-seam,2021,2025,False,0.034569,0.023551,0.010764,2438501,2793578,40.99,44.99,59490,62093,0.6813,Schedule A category expenditure / budgeted funded FTE
+Culture & Recreation,post-FTE-seam,2021,2025,False,0.033067,0.016987,0.015811,7607961,8665288,62.84,67.22,121069,128909,0.5137,Schedule A category expenditure / budgeted funded FTE
+General Government,"clean, crosses FTE seam",2011,2025,True,0.032285,0.014443,0.017588,9347954,14585216,110.56,135.14,84551,107927,0.4473,Schedule A category expenditure / budgeted funded FTE
+Public Safety,"clean, crosses FTE seam",2011,2025,True,0.031884,-0.00106,0.032979,28030700,43497816,339.3,334.3,82613,130116,-0.0332,Schedule A category expenditure / budgeted funded FTE
+Public Works,"clean, crosses FTE seam",2011,2025,True,0.016473,0.004242,0.01218,11997166,15080716,131.86,139.91,90984,107789,0.2575,Schedule A category expenditure / budgeted funded FTE
+Human Services,"clean, crosses FTE seam",2011,2025,True,0.024418,0.036626,-0.011776,1992869,2793578,27.19,44.99,73294,62093,1.4999,Schedule A category expenditure / budgeted funded FTE
+Culture & Recreation,"clean, crosses FTE seam",2011,2025,True,0.028285,0.003793,0.0244,5863962,8665288,63.75,67.22,91984,128909,0.1341,Schedule A category expenditure / budgeted funded FTE
+General Government,"all data, spans the FY2010 break",2005,2025,True,0.008923,0.007626,0.001287,12211085,14585216,116.09,135.14,105186,107927,0.8547,Schedule A category expenditure / budgeted funded FTE
+Public Safety,"all data, spans the FY2010 break",2005,2025,True,0.027317,-0.000992,0.028337,25373371,43497816,341.0,334.3,74409,130116,-0.0363,Schedule A category expenditure / budgeted funded FTE
+Public Works,"all data, spans the FY2010 break",2005,2025,True,0.004658,0.000507,0.004149,13742331,15080716,138.5,139.91,99223,107789,0.1088,Schedule A category expenditure / budgeted funded FTE
+Human Services,"all data, spans the FY2010 break",2005,2025,True,0.026595,0.024491,0.002054,1652626,2793578,27.73,44.99,59597,62093,0.9209,Schedule A category expenditure / budgeted funded FTE
+Culture & Recreation,"all data, spans the FY2010 break",2005,2025,True,0.014622,0.008993,0.005579,6481806,8665288,56.2,67.22,115335,128909,0.615,Schedule A category expenditure / budgeted funded FTE
+Schools (per total school staff FTE),full,2008,2025,False,0.045522,0.0151,0.02997,68709239,146446110,968.4,1249.4,70951,117213,0.3317,Schedule A education expenditure / the named quantity
+Schools (per enrollment),full,2005,2025,False,0.045245,0.008037,0.036912,60438282,146446110,5984.0,7023.0,10100,20852,0.1776,Schedule A education expenditure / the named quantity
+Schools (per teacher FTE),full,2005,2025,False,0.045245,0.002277,0.04287,60438282,146446110,519.9,544.1,116250,269153,0.0503,Schedule A education expenditure / the named quantity
+General Government,personnel_share_fy2019,2019,2019,False,,,,12444751,12444751,,,,,,"salary 9,688,684 / Schedule A 12,444,751 = 0.779 personnel share"
+Public Safety,personnel_share_fy2019,2019,2019,False,,,,34584040,34584040,,,,,,"salary 29,583,218 / Schedule A 34,584,040 = 0.855 personnel share"
+Public Works,personnel_share_fy2019,2019,2019,False,,,,13321964,13321964,,,,,,"salary 8,152,083 / Schedule A 13,321,964 = 0.612 personnel share"
+Human Services,personnel_share_fy2019,2019,2019,False,,,,2318926,2318926,,,,,,"salary 1,935,898 / Schedule A 2,318,926 = 0.835 personnel share"
+Culture & Recreation,personnel_share_fy2019,2019,2019,False,,,,7353301,7353301,,,,,,"salary 3,858,234 / Schedule A 7,353,301 = 0.525 personnel share"

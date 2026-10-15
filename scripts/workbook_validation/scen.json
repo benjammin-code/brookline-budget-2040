@@ -1,0 +1,152 @@
+{
+ "01 base": {},
+ "02 pay +1 point": {
+  "pay": 0.01
+ },
+ "03 pay -0.5 point": {
+  "pay": -0.005
+ },
+ "04 pension savings kept": {
+  "opeb": "keep"
+ },
+ "04b freed money counted as room": {
+  "opeb": "spend"
+ },
+ "05 staff follow enrollment": {
+  "staffing": "hold"
+ },
+ "06 staff held flat": {
+  "staffing": "keep"
+ },
+ "07 staff a third back to FY2019": {
+  "staffing": "partial"
+ },
+ "08 premiums 10%": {
+  "premium_long": 0.1
+ },
+ "09 growth +4, today's mix": {
+  "growth": 4
+ },
+ "10 growth +7 homes, fill seats": {
+  "growth": 7,
+  "mix": "housing",
+  "fill": "fill"
+ },
+ "11 growth +13 commercial, RKG Chestnut Hill": {
+  "growth": 13,
+  "mix": "commercial",
+  "chca": "rkg"
+ },
+ "12 growth -6, mix set to even": {
+  "growth": -6,
+  "mix": "even"
+ },
+ "13 growth +5 even, state aid 4%, receipts 2%": {
+  "growth": 5,
+  "mix": "even",
+  "sa": 0.04,
+  "lr": 0.02
+ },
+ "14 school pay +2.0, Public Safety at target": {
+  "school_drift": 0.02,
+  "ps_premium": 0
+ },
+ "15 inflation 3.5%, school non-personnel +2": {
+  "cpi": 0.035,
+  "np_extra": 0.02
+ },
+ "16 Cropper-McKibben, staff follow": {
+  "enroll": "cm",
+  "staffing": "hold"
+ },
+ "17 enrollment flat": {
+  "enroll": "flat"
+ },
+ "18 premiums FY2028-29 at 8%": {
+  "premium_near": 0.08
+ },
+ "19 capital held at the Town's table": {
+  "capital": "table"
+ },
+ "20 cost per home $1,109": {
+  "cost_home": 1109
+ },
+ "21 Chestnut Hill inside trend": {
+  "chca": "in_trend"
+ },
+ "22 Chestnut Hill City Realty": {
+  "chca": "cr_avg"
+ },
+ "23 pension slips 2 years": {
+  "slip": "2"
+ },
+ "24 pension slips 2, savings kept": {
+  "slip": "2",
+  "opeb": "keep"
+ },
+ "25 override $10M from FY2032": {
+  "ov_amt": 10000000,
+  "ov_year": "2032"
+ },
+ "26 combination": {
+  "pay": 0.01,
+  "premium_long": 0.1,
+  "staffing": "hold",
+  "capital": "full",
+  "ov_amt": 5000000,
+  "ov_year": "2030",
+  "growth": 3,
+  "mix": "even",
+  "fill": "fill"
+ },
+ "27 slip 3, capital at table, growth +8 commercial": {
+  "slip": "3",
+  "capital": "table",
+  "growth": 8,
+  "mix": "commercial"
+ },
+ "28 police grow with homes, growth +7 homes": {
+  "ps_staff": "police",
+  "growth": 7,
+  "mix": "housing"
+ },
+ "29 police and fire restored": {
+  "ps_staff": "restore"
+ },
+ "30 no added fire company": {
+  "ps_staff": "none"
+ },
+ "31 premiums 4.5%, retiree health paid off": {
+  "premium_long": 0.045
+ },
+ "32 no new homes": {
+  "homes": "none"
+ },
+ "33 half the homes, growth +5 homes-led": {
+  "homes": "half",
+  "growth": 5,
+  "mix": "housing"
+ },
+ "34 fill seats, base staffing": {
+  "fill": "fill",
+  "growth": 7,
+  "mix": "housing"
+ },
+ "35 no new homes, growth -3": {
+  "homes": "none",
+  "growth": -3
+ },
+ "36 Cropper-McKibben, base staffing": {
+  "enroll": "cm"
+ },
+ "37 Cropper-McKibben, fill seats, growth +7 homes": {
+  "enroll": "cm",
+  "fill": "fill",
+  "growth": 7,
+  "mix": "housing"
+ },
+ "38 premiums 4.5%, near 6%, retiree health paid off": {
+  "premium_long": 0.045,
+  "premium_near": 0.06
+ }
+}

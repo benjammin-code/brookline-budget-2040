@@ -1,0 +1,951 @@
+<meta charset="utf-8">
+<title>How Brookline Got Here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #eef0ea;
+  --paper-card: #f7f8f3;
+  --paper-card-border: #d9dcd1;
+  --ink: #1b2420;
+  --ink-muted: #55625a;
+  --ink-faint: #838f85;
+  --pine: #1f6355;
+  --pine-strong: #16453b;
+  --pine-tint: #dce8e2;
+  --copper: #b8551f;
+  --copper-tint: #f2e0d2;
+  --rule: #cbcfc4;
+
+  --line-ref: #9ba096;
+  --line-levy-actual: #8c7a5e;
+  --line-no-override: #a6852f;
+  --wf-base: #a3ab9e;
+  --line-total: #182019;
+  --line-education: #1f6355;
+  --line-benefits: #4fae8c;
+  --line-levy: #c1622d;
+
+  --sankey-src-1: #1f6355;
+  --sankey-src-2: #3c8272;
+  --sankey-src-3: #5c9c8d;
+  --sankey-src-4: #85b7ab;
+  --sankey-src-5: #b3d3ca;
+  --sankey-src-6: #d0e3dc;
+  --sankey-use-1: #b8551f;
+  --sankey-use-2: #c56d3d;
+  --sankey-use-3: #d1875e;
+  --sankey-use-4: #dda282;
+  --sankey-use-5: #e8bfa8;
+  --sankey-use-6: #f0d3c1;
+  --sankey-pool: #24322c;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #161a15;
+    --paper-card: #1d221c;
+    --paper-card-border: #333a30;
+    --ink: #e9ece4;
+    --ink-muted: #a8b0a1;
+    --ink-faint: #77806f;
+    --pine: #6bb39e;
+    --pine-strong: #8fcab8;
+    --pine-tint: #223832;
+    --copper: #e2924f;
+    --copper-tint: #3a2c1f;
+    --rule: #333a30;
+
+    --line-ref: #a8ae9f;
+    --line-levy-actual: #b7a687;
+    --line-no-override: #d1ab52;
+    --wf-base: #4b5546;
+    --line-total: #edefe9;
+    --line-education: #2f8a73;
+    --line-benefits: #7fe0b8;
+    --line-levy: #e58a4e;
+
+    --sankey-src-1: #4a9c86;
+    --sankey-src-2: #3c8272;
+    --sankey-src-3: #5c9c8d;
+    --sankey-src-4: #6ea296;
+    --sankey-src-5: #8fb3a8;
+    --sankey-src-6: #a8c4ba;
+    --sankey-use-1: #e2924f;
+    --sankey-use-2: #c56d3d;
+    --sankey-use-3: #cf8760;
+    --sankey-use-4: #c99b7c;
+    --sankey-use-5: #cbab93;
+    --sankey-use-6: #d2b8a3;
+    --sankey-pool: #d8ddd3;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #161a15;
+  --paper-card: #1d221c;
+  --paper-card-border: #333a30;
+  --ink: #e9ece4;
+  --ink-muted: #a8b0a1;
+  --ink-faint: #77806f;
+  --pine: #6bb39e;
+  --pine-strong: #8fcab8;
+  --pine-tint: #223832;
+  --copper: #e2924f;
+  --copper-tint: #3a2c1f;
+  --rule: #333a30;
+
+  --line-ref: #a8ae9f;
+  --line-levy-actual: #b7a687;
+  --line-no-override: #d1ab52;
+  --wf-base: #4b5546;
+  --line-total: #edefe9;
+  --line-education: #2f8a73;
+  --line-benefits: #7fe0b8;
+  --line-levy: #e58a4e;
+
+  --sankey-src-1: #4a9c86;
+  --sankey-src-2: #3c8272;
+  --sankey-src-3: #5c9c8d;
+  --sankey-src-4: #6ea296;
+  --sankey-src-5: #8fb3a8;
+  --sankey-src-6: #a8c4ba;
+  --sankey-use-1: #e2924f;
+  --sankey-use-2: #c56d3d;
+  --sankey-use-3: #cf8760;
+  --sankey-use-4: #c99b7c;
+  --sankey-use-5: #cbab93;
+  --sankey-use-6: #d2b8a3;
+  --sankey-pool: #d8ddd3;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--pine-strong); text-decoration-color: var(--rule); text-underline-offset: 2px; }
+a:hover { text-decoration-color: currentColor; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.wide  { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+header.hero {
+  padding: 76px 0 48px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 56px;
+}
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--copper);
+}
+h1.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 22px;
+  text-wrap: balance;
+  color: var(--ink);
+}
+p.dek {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.28rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  max-width: 620px;
+  margin: 0;
+  text-wrap: pretty;
+}
+.meta {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+.meta a { color: var(--ink-faint); }
+
+main { padding-bottom: 40px; }
+
+section.part { margin-bottom: 76px; }
+
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--pine);
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+h2.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 3.4vw, 2.15rem);
+  line-height: 1.15;
+  margin: 0 0 34px;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+h3.sub {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 40px 0 4px;
+  color: var(--ink);
+}
+
+.wrap p { margin: 0 0 20px; }
+.wrap ul { margin: 0 0 20px; padding-left: 1.3em; }
+.wrap li { margin-bottom: 10px; }
+
+strong { font-weight: 600; color: var(--ink); }
+em { font-style: italic; }
+
+.pull {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  line-height: 1.35;
+  color: var(--ink);
+  border-left: 3px solid var(--copper);
+  padding: 4px 0 4px 26px;
+  margin: 40px 0;
+  text-wrap: balance;
+}
+
+.table-card {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 6px;
+  padding: 22px 24px 8px;
+  margin: 24px 0;
+  overflow-x: auto;
+}
+.table-card-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+table.growth-table { min-width: 480px; }
+table.growth-table th:not(:first-child), table.growth-table td:not(:first-child) { width: 78px; }
+tr.sub-row td:first-child { color: var(--ink-muted); padding-left: 22px; }
+
+.note {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 3px;
+  padding: 18px 22px;
+  font-size: 15px;
+  color: var(--ink-muted);
+  margin: 28px 0;
+}
+.note strong { color: var(--ink-muted); }
+
+.stat-row {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 32px 0 8px;
+}
+.stat {
+  flex: 1 1 200px;
+  border-top: 2px solid var(--pine);
+  padding-top: 10px;
+}
+.stat.copper { border-top-color: var(--copper); }
+.stat .num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: var(--ink);
+  display: block;
+  line-height: 1.1;
+}
+.stat .lbl {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+.callout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+@media (min-width: 700px) {
+  .callout-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.callout {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 4px;
+  padding: 20px 20px 18px;
+}
+.callout .tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.callout.neg .tag { background: var(--copper-tint); color: var(--copper); }
+.callout.pos .tag { background: var(--pine-tint); color: var(--pine-strong); }
+.callout h4 {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.callout p { font-size: 14.5px; color: var(--ink-muted); margin: 0; }
+.callout .fig {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 10px 0 6px;
+  display: block;
+}
+.callout.neg .fig { color: var(--copper); }
+.callout.pos .fig { color: var(--pine-strong); }
+
+/* charts */
+.chart-block {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-card-border);
+  border-radius: 6px;
+  padding: 28px 26px 20px;
+  margin: 36px 0 40px;
+}
+.chart-head { margin-bottom: 6px; }
+.chart-head h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+.chart-head .sub {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.chart-svg-wrap { position: relative; margin-top: 14px; }
+svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.axis-label, .tick-label {
+  font-family: var(--font-mono);
+  fill: var(--ink-faint);
+}
+.gridline { stroke: var(--rule); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 16px; font-size: 12.5px; }
+.legend-item { display: flex; align-items: center; gap: 7px; color: var(--ink-muted); }
+.legend-swatch { width: 14px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+
+.chart-row { display: flex; gap: 28px; align-items: flex-start; }
+.chart-row .chart-col { flex: 1 1 auto; min-width: 0; }
+.legend-vertical {
+  flex: 0 0 248px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 30px;
+  font-size: 12.5px;
+}
+.legend-vertical .legend-item { align-items: flex-start; line-height: 1.4; }
+.legend-vertical .legend-swatch { margin-top: 5px; }
+@media (max-width: 760px) {
+  .chart-row { flex-direction: column; }
+  .legend-vertical { flex-direction: row; flex-wrap: wrap; padding-top: 16px; gap: 10px 20px; }
+  .legend-vertical .legend-item { flex: 1 1 45%; }
+}
+
+.waterfall-stats { flex: 0 0 240px; display: flex; flex-direction: column; gap: 18px; padding-top: 4px; }
+.wf-stat { border-top: 3px solid var(--rule); padding-top: 8px; }
+.wf-stat .wf-val { font-family: var(--font-mono); font-weight: 600; font-size: 1.5rem; color: var(--ink); display: block; line-height: 1.1; }
+.wf-stat .wf-pct { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-muted); display: block; margin-top: 2px; }
+.wf-stat .wf-label { font-size: 13px; color: var(--ink-muted); display: block; margin-top: 3px; }
+.wf-stat.total { border-top-color: var(--ink); }
+.wf-stat.total .wf-val { font-size: 1.7rem; }
+.wider { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 11px;
+  border-radius: 4px;
+  line-height: 1.55;
+  opacity: 0;
+  transition: opacity 0.08s;
+  white-space: nowrap;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+.tooltip .tt-title { font-weight: 600; margin-bottom: 4px; color: var(--paper); opacity: 0.75;}
+.tooltip .tt-row { display: flex; justify-content: space-between; gap: 14px; }
+.tooltip .tt-swatch { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:6px; box-shadow: 0 0 0 1px var(--paper); }
+
+.toggle-table-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.toggle-table-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
+
+.data-table-wrap { overflow-x: auto; margin-top: 14px; display: none; }
+.data-table-wrap.open { display: block; }
+table.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+table.data-table th, table.data-table td {
+  text-align: right;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+table.data-table th:first-child, table.data-table td:first-child { text-align: left; }
+table.data-table th { color: var(--ink-muted); font-weight: 500; }
+
+.sankey-label { font-family: var(--font-mono); font-size: 12.5px; fill: var(--ink); }
+.sankey-label.pct { fill: var(--ink-muted); font-size: 11px; }
+.sankey-col-head {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  fill: var(--ink-faint);
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 36px 0 60px;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+footer p { margin: 0 0 12px; }
+
+@media (max-width: 560px) {
+  header.hero { padding: 52px 0 36px; }
+  .wrap, .wide { padding: 0 18px; }
+  .chart-block { padding: 20px 16px 16px; }
+}
+</style>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">A Brookline Finances Project — Part 1 of 3</p>
+    <h1 class="title">How Brookline Got Here</h1>
+    <p class="dek">Twenty years of revenue, spending, overrides, and construction — the chronicle behind the mechanics, told through the town's own numbers and a sample of its actual buildings.</p>
+    <p class="meta">Extends the whitepaper <a href="https://www.brooklinefuture.org/post/how-does-construction-impact-brookline-s-town-finances" target="_blank" rel="noopener">&ldquo;How does construction impact Brookline&rsquo;s town finances?&rdquo;</a> &middot; Reference document, Part 1 of 3</p>
+  </div>
+</header>
+
+<main>
+
+<section class="part">
+  <div class="wrap">
+    <p class="section-kicker">1A</p>
+    <h2 class="section-title">Twenty years, four overrides, and a persistent growth gap</h2>
+
+    <p>Brookline&rsquo;s General Fund revenue grew from <strong>$168 million in FY2005 to $390 million in FY2025</strong> &mdash; more than doubled &mdash; while spending grew right alongside it, from $169 million to $365 million. Neither number moved smoothly or automatically. Both were shaped, year after year, by the same tension Part&nbsp;2 explains mechanically: property tax growth is capped by state law at 2.5% a year plus whatever &ldquo;new growth&rdquo; (new construction, renovation, conversion) adds to the tax base &mdash; and Brookline&rsquo;s new growth has chronically fallen short of what similar towns manage.</p>
+
+    <div class="stat-row">
+      <div class="stat">
+        <span class="num">$168M &rarr; $390M</span>
+        <span class="lbl">General Fund revenue, FY2005 &rarr; FY2025</span>
+      </div>
+      <div class="stat">
+        <span class="num">$169M &rarr; $365M</span>
+        <span class="lbl">General Fund spending, same period</span>
+      </div>
+      <div class="stat copper">
+        <span class="num">1.37%/yr</span>
+        <span class="lbl">Brookline&rsquo;s own new-growth rate, FY2005&ndash;25 &mdash; 26.5th percentile statewide</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide">
+    <div class="chart-block">
+      <div class="chart-head">
+        <h4>Revenue and spending, FY2005&ndash;FY2025</h4>
+        <p class="sub">General Fund, actual dollars &middot; markers show the four operating-override years in this window</p>
+      </div>
+      <div class="chart-svg-wrap" id="revexp-wrap">
+        <svg class="chart" id="revexp-svg" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="revexp-tooltip"></div>
+      </div>
+      <div class="legend" id="revexp-legend"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>Checked directly against all 351 Massachusetts municipalities&rsquo; own new-growth filings (MA Department of Local Services, FY2003&ndash;2026): over the full FY2005&ndash;2025 window, a town at the <strong>80th percentile</strong> &mdash; a reasonable &ldquo;how much would strong peer performance buy&rdquo; benchmark, not a ceiling &mdash; was adding new growth at <strong>2.03% a year</strong>, well ahead of Brookline&rsquo;s own 1.37%. The most recent five years (FY2021&ndash;2025) tell a more complicated story: Brookline&rsquo;s own rate barely moved (1.28%/yr), but the 80th-percentile bar came down too, to 1.97%/yr &mdash; moving Brookline&rsquo;s relative standing up to the 40th percentile, an improvement in ranking that reflects peers slowing down as much as it reflects Brookline speeding up.</p>
+  </div>
+
+  <div class="wide">
+    <div class="chart-block">
+      <div class="chart-head">
+        <h4>Brookline&rsquo;s new-growth rate vs. the statewide 80th percentile</h4>
+        <p class="sub">Two windows: the full FY05&ndash;25 history, and the most recent five years</p>
+      </div>
+      <div class="chart-svg-wrap" id="peer-wrap">
+        <svg class="chart" id="peer-svg" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+      <div class="legend" id="peer-legend"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>That gap compounds. A percentage point of new growth added this year keeps paying property tax at that rate every year after, permanently enlarging the base the 2.5% cap applies to. Twenty years of running behind peers by roughly half a percentage point a year adds up to a meaningfully smaller tax base today than the town would have if it had kept pace.</p>
+
+    <p><strong>Four times since 2005, that gap grew faster than new growth and the 2.5% cap alone could close it, and voters were asked to close it directly with an override</strong> &mdash; a permanent increase to the town&rsquo;s allowed tax levy, approved at the ballot:</p>
+  </div>
+
+  <div class="wrap">
+    <div class="table-card">
+      <p class="table-card-title">Operating overrides, FY2005&ndash;2025</p>
+      <table class="data-table">
+        <thead><tr><th style="text-align:left">Year</th><th style="text-align:left">Amount</th><th style="text-align:left">What it was for</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:left">2009</td><td style="text-align:left">$6.2M</td><td style="text-align:left">Schools, police, fire, and library funding</td></tr>
+          <tr><td style="text-align:left">2016</td><td style="text-align:left">$7.7M</td><td style="text-align:left">School enrollment growth and municipal departments</td></tr>
+          <tr><td style="text-align:left">2019</td><td style="text-align:left">$6.6M</td><td style="text-align:left">Public schools</td></tr>
+          <tr><td style="text-align:left">2024</td><td style="text-align:left">$12.0M</td><td style="text-align:left">Town-wide operating shortfall (Question 2a)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14.5px;color:var(--ink-muted)">A fifth override &mdash; $23.25 million, phased in over FY2027&ndash;2029, split $17.9 million for schools and $5.3 million for town departments &mdash; passed in May 2026, just after this twenty-year window closes; see Part&nbsp;2 for how it&rsquo;s treated in this project&rsquo;s own forward-looking forecasts.</p>
+
+    <p>Three of the four are explicitly schools-driven, and that&rsquo;s not a coincidence &mdash; it lines up with a separate, real wave of school construction and expansion happening on the capital side over the same twenty years. That side is funded differently: not by overrides, which permanently raise the tax base, but by <strong>debt exclusions</strong>, which raise taxes only for the life of a specific bond and then expire. Brookline voters approved debt exclusions for the Edward Devotion School expansion (2016), high school renovations (2019), and the Driscoll School expansion (2021) &mdash; and, most recently, two large ones still underway: the Pierce School&rsquo;s full PreK&ndash;8 rebuild (approved 2024, with roughly $114 million of already-authorized borrowing beyond what even this project&rsquo;s own balance-sheet forecast currently accounts for) and new fire station construction (2025). Operating overrides and capital debt exclusions are two different mechanisms, but they&rsquo;re pointed at the same underlying cause: a growing, aging set of public facilities and a student population the town has had to keep building and staffing for &mdash; even as, per Part&nbsp;2, enrollment itself has recently started to fall.</p>
+
+    <p>The other major driver of the gap sits on the benefits side, not schools, and it moves on its own separate, slower clock.</p>
+  </div>
+
+  <div class="wide">
+    <div class="chart-block">
+      <div class="chart-head">
+        <h4>Two unfunded liabilities, neither one a straight line</h4>
+        <p class="sub">Net pension liability (Town&rsquo;s ~96&ndash;97% share) and net OPEB liability, by year</p>
+      </div>
+      <div class="chart-svg-wrap" id="liab-wrap">
+        <svg class="chart" id="liab-svg" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="liab-tooltip"></div>
+      </div>
+      <div class="legend" id="liab-legend"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>Brookline&rsquo;s net pension liability swung from $184.5 million (2014) to as low as $125.3 million (2021, a strong investment year) and back up to $170.7 million (2023) &mdash; genuinely volatile, not steadily rising or falling, and driven mostly by investment returns rather than the town falling behind on its own contributions. Net OPEB liability (retiree health benefits, the town&rsquo;s largest unfunded liability) tells a similar story: $254.5 million and only 12.9% funded in 2017, down to $189.6 million and 32.6% funded by 2023 &mdash; then back up to $201.5 million in 2024, a reminder that this liability doesn&rsquo;t decline in a straight line either. The town&rsquo;s own funding schedule has the pension system reaching full funding by 2030, with the contribution capacity that frees up then redirected to OPEB &mdash; a real structural turning point Part&nbsp;3&rsquo;s forecast relies on directly.</p>
+
+    <p>None of this reads as crisis or mismanagement on its own &mdash; the pattern is mechanical and explainable, and Part&nbsp;2 walks through exactly why benefits and school costs tend to outrun the 2.5% cap. What this chronicle adds is the <em>when</em> and <em>why now</em>: four overrides, clustered mostly around school-driven need, layered on top of a tax base that grew more slowly than peer towns&rsquo; because new growth chronically underperformed. The next section goes to the parcel level, to look at where &mdash; and where not &mdash; that growth actually happened.</p>
+  </div>
+</section>
+
+<section class="part">
+  <div class="wrap">
+    <p class="section-kicker">1B</p>
+    <h2 class="section-title">Where did the growth go? A parcel-level look</h2>
+
+    <p>The finding above &mdash; 1.37% a year, 26th-percentile new growth, statewide &mdash; is a townwide average. It says nothing about where in Brookline that growth did or didn&rsquo;t happen, or what it actually looked like on the ground: a torn-down house replaced with something larger, an old office building converted to housing, a kitchen renovation, or nothing changing at all. This project built a parcel-by-parcel map to answer exactly that, by comparing every one of Brookline&rsquo;s roughly 8,500 parcels&rsquo; assessed value, year over year, against what that specific building or lot would be expected to do with <em>no</em> structural change at all &mdash; no addition, no conversion, no new unit, nothing but ordinary market movement. (251 of those parcels are permanently tax-exempt &mdash; schools, municipal buildings, religious institutions, housing authorities &mdash; and excluded from these growth figures entirely.)</p>
+
+    <p>Getting that &ldquo;expected, nothing changed&rdquo; baseline right mattered more than it might sound. Massachusetts&rsquo; 2.5% cap limits the town&rsquo;s total tax <em>levy</em>, not any individual property&rsquo;s assessed value &mdash; a naive 2.5%-a-year assumption badly understates real organic appreciation (this project&rsquo;s own data shows townwide assessed value actually grew roughly 5.9% a year, compounded, over the period examined). The map instead measures every parcel&rsquo;s growth against Brookline&rsquo;s own observed, real appreciation rate among parcels <em>already confirmed</em> to have had no structural change &mdash; not a stylized formula.</p>
+
+    <div class="stat-row">
+      <div class="stat">
+        <span class="num">287</span>
+        <span class="lbl">parcel-years of new construction detected, FY2017&ndash;2025</span>
+      </div>
+      <div class="stat">
+        <span class="num">467</span>
+        <span class="lbl">parcel-years of identified renovation, same period</span>
+      </div>
+      <div class="stat copper">
+        <span class="num">4.0&times;</span>
+        <span class="lbl">over-representation of real construction/renovation in the top decile of this metric &mdash; the best-grounded of four tried</span>
+      </div>
+    </div>
+
+    <p>Running that classifier across eight recent years of assessor data finds real, physical change on a meaningful but modest share of the town: 287 parcel-years of new construction and 467 of identified renovation, against roughly 61,000 parcel-years that saw nothing but ordinary market movement. That&rsquo;s the parcel-level face of the finding above: real construction and renovation genuinely happening across Brookline, just not at the pace &mdash; or possibly not in the mix &mdash; that would have closed the gap to peer towns.</p>
+
+    <h3 class="sub" style="margin-top:52px">Real stories, not just an abstraction</h3>
+    <p>This project&rsquo;s own design principle is to make findings concrete wherever possible &mdash; a specific parcel, not just an aggregate. Nine parcels were picked across Brookline&rsquo;s range of outcomes, and each one&rsquo;s story was checked against the town&rsquo;s actual building-permit records, not just its assessed-value history alone. Seven are done:</p>
+  </div>
+
+  <div class="wide">
+    <div class="callout-grid" id="case-study-grid"></div>
+  </div>
+
+  <div class="wrap">
+    <p style="font-size:14.5px;color:var(--ink-muted)">Two more of the nine &mdash; a hotel and a Chestnut Hill condominium redevelopment &mdash; are still being checked against real permit records as of this writing, and will be folded in once that&rsquo;s done; nothing in the finding above depends on them.</p>
+
+    <div class="note">
+      <strong>A tenth, messier case.</strong> Checked before this list of nine was formalized, one ordinary single-family home turned out to be the most instructive realistic example: a $200,000 renovation permit stalled for years, the property changed hands mid-project, a new contractor picked the same job back up at a reduced scope &mdash; and even after all that, part of the eventual assessed-value jump turned out to be an unrelated townwide land revaluation, not the renovation at all. Real projects are not always as clean as the seven above.
+    </div>
+
+    <div class="note">
+      <strong>One honest limitation.</strong> Brookline&rsquo;s own parcel identifiers occasionally change when a property is physically assembled from more than one lot &mdash; one real example found this way merged a neighboring property into an existing address&rsquo;s parcel entirely, with the town&rsquo;s own current records showing no link at all back to the absorbed parcel&rsquo;s old identifier. This project&rsquo;s map only catches that kind of change correctly when it happens to land on the same underlying lot number by coincidence; a genuine merger across two different lot numbers, like that one, can otherwise look like an unexplained value jump rather than what it actually is &mdash; a limit on precision in a small number of cases, not on the overall finding.
+    </div>
+
+    <p>Together, 1a and 1b tell the same twenty-year story from two directions &mdash; townwide numbers, and the real buildings and permits behind a sample of them. Part&nbsp;2, next, explains the mechanics that turn a shortfall in either direction into an override. Part&nbsp;3 turns to what would actually close the remaining gap.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>This is Part 1 of a three-part reference document &mdash; a comprehensive, technically detailed companion to a shorter public article this project is building toward. Part&nbsp;2 (how the town&rsquo;s fiscal machine actually works) is done; Part&nbsp;3 (a baseline forecast through 2040 and the real levers available to close any gap) is still in progress.</p>
+    <p>Figures throughout are sourced from MA Department of Local Services Schedule&nbsp;A and new-growth filings, the Town&rsquo;s own published Financial Plans, audited financial statements, and actuarial valuations, Brookline&rsquo;s own override/debt-exclusion voting history, and this project&rsquo;s parcel-level classifier built from Town Assessor CAMA data and building-permit records, cross-validated where more than one source exists.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function fmtMoney(n, decimals) {
+    decimals = decimals || 1;
+    var abs = Math.abs(n);
+    if (abs >= 1e6) return "$" + (n / 1e6).toFixed(decimals) + "M";
+    if (abs >= 1e3) return "$" + (n / 1e3).toFixed(0) + "K";
+    return "$" + n.toFixed(0);
+  }
+  function css(v) {
+    return getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  }
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+
+  /* ---------------- REVENUE / EXPENSE LINE CHART ---------------- */
+  var revExpData = [
+    {fy:2005,rev:167934717,exp:168967274},
+    {fy:2006,rev:168890619,exp:170248023},
+    {fy:2007,rev:178383652,exp:178526146},
+    {fy:2008,rev:185803513,exp:186716936},
+    {fy:2009,rev:192482479,exp:190655927},
+    {fy:2010,rev:195166931,exp:186354784},
+    {fy:2011,rev:197401346,exp:187248205},
+    {fy:2012,rev:212032653,exp:212923646},
+    {fy:2013,rev:225013338,exp:211111637},
+    {fy:2014,rev:223722368,exp:213383728},
+    {fy:2015,rev:231276828,exp:221588977},
+    {fy:2016,rev:249427185,exp:233880347},
+    {fy:2017,rev:259094788,exp:245480837},
+    {fy:2018,rev:269899635,exp:257211170},
+    {fy:2019,rev:285287238,exp:270294659},
+    {fy:2020,rev:297528480,exp:284450665},
+    {fy:2021,rev:310021983,exp:297759258},
+    {fy:2022,rev:339419364,exp:315366130},
+    {fy:2023,rev:350331838,exp:325266407},
+    {fy:2024,rev:367822295,exp:343426310},
+    {fy:2025,rev:389982477,exp:364676155}
+  ];
+  var overrideYears = [2009, 2016, 2019, 2024];
+
+  function drawRevExpChart() {
+    var svg = document.getElementById("revexp-svg");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = 900, H = 460;
+    var m = { top: 24, right: 24, bottom: 46, left: 56 };
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+
+    var minY = 2005, maxY = 2025;
+    var vMax = 400e6, vMin = 150e6;
+    function x(fy) { return m.left + (fy - minY) / (maxY - minY) * iw; }
+    function y(v) { return m.top + ih - (v - vMin) / (vMax - vMin) * ih; }
+
+    for (var gv = 150e6; gv <= vMax; gv += 50e6) {
+      svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: y(gv), y2: y(gv), class: "gridline" }));
+      var gl = svgEl("text", { x: m.left - 10, y: y(gv) + 4, class: "tick-label", "text-anchor": "end", "font-size": "11" });
+      gl.textContent = "$" + (gv / 1e6).toFixed(0) + "M";
+      svg.appendChild(gl);
+    }
+    [2005, 2010, 2015, 2020, 2025].forEach(function (yr) {
+      var tl = svgEl("text", { x: x(yr), y: m.top + ih + 22, class: "tick-label", "text-anchor": "middle", "font-size": "11" });
+      tl.textContent = "FY" + yr;
+      svg.appendChild(tl);
+    });
+
+    function linePath(key, colorVar, width) {
+      var pts = revExpData.map(function (d) { return x(d.fy) + "," + y(d[key]); }).join(" L");
+      var path = svgEl("path", { d: "M" + pts, fill: "none", stroke: css(colorVar), "stroke-width": width, "stroke-linejoin": "round", "stroke-linecap": "round" });
+      svg.appendChild(path);
+    }
+    linePath("rev", "--pine", 2.5);
+    linePath("exp", "--line-total", 2.5);
+
+    // override markers on the expense line
+    overrideYears.forEach(function (yr) {
+      var d = revExpData.filter(function (dd) { return dd.fy === yr; })[0];
+      var cy = y(d.exp);
+      svg.appendChild(svgEl("circle", { cx: x(yr), cy: cy, r: 5, fill: css("--copper"), stroke: css("--paper-card"), "stroke-width": 2 }));
+    });
+
+    var hitRect = svgEl("rect", { x: m.left, y: m.top, width: iw, height: ih, fill: "transparent" });
+    var crosshair = svgEl("line", { y1: m.top, y2: m.top + ih, stroke: css("--ink-faint"), "stroke-width": 1, "stroke-dasharray": "3,3", opacity: 0 });
+    svg.appendChild(crosshair);
+    svg.appendChild(hitRect);
+    var tooltip = document.getElementById("revexp-tooltip");
+    var wrap = document.getElementById("revexp-wrap");
+    hitRect.addEventListener("mousemove", function (e) {
+      var rect = svg.getBoundingClientRect();
+      var scale = W / rect.width;
+      var mx = (e.clientX - rect.left) * scale;
+      var fy = Math.round(minY + (mx - m.left) / iw * (maxY - minY));
+      fy = Math.max(minY, Math.min(maxY, fy));
+      var d = revExpData[fy - minY];
+      crosshair.setAttribute("x1", x(fy)); crosshair.setAttribute("x2", x(fy)); crosshair.setAttribute("opacity", 1);
+      var isOverride = overrideYears.indexOf(fy) !== -1;
+      var html = '<div class="tt-title">FY' + fy + (isOverride ? ' &middot; override year' : '') + '</div>';
+      html += '<div class="tt-row"><span><span class="tt-swatch" style="background:' + css("--pine") + '"></span>Revenue</span><span>' + fmtMoney(d.rev) + '</span></div>';
+      html += '<div class="tt-row"><span><span class="tt-swatch" style="background:' + css("--line-total") + '"></span>Spending</span><span>' + fmtMoney(d.exp) + '</span></div>';
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = 1;
+      var wrect = wrap.getBoundingClientRect();
+      tooltip.style.left = (e.clientX - wrect.left + 14) + "px";
+      tooltip.style.top = (e.clientY - wrect.top - 10) + "px";
+    });
+    hitRect.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; crosshair.setAttribute("opacity", 0); });
+
+    var legend = document.getElementById("revexp-legend");
+    legend.innerHTML = "";
+    [["Revenue", "--pine"], ["Spending", "--line-total"], ["Override year", "--copper"]].forEach(function (item) {
+      var el = document.createElement("div");
+      el.className = "legend-item";
+      var sw = document.createElement("span");
+      sw.className = "legend-swatch";
+      sw.style.background = css(item[1]);
+      if (item[0] === "Override year") { sw.style.borderRadius = "50%"; sw.style.width = "9px"; sw.style.height = "9px"; }
+      el.appendChild(sw);
+      var txt = document.createElement("span"); txt.textContent = item[0];
+      el.appendChild(txt);
+      legend.appendChild(el);
+    });
+  }
+
+  /* ---------------- PEER NEW-GROWTH BAR CHART ---------------- */
+  var peerData = [
+    { label: "FY05–25 (21yr)", brookline: 1.37, peer: 2.03 },
+    { label: "FY21–25 (5yr)", brookline: 1.28, peer: 1.97 }
+  ];
+
+  function drawPeerChart() {
+    var svg = document.getElementById("peer-svg");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = 900, H = 210;
+    var m = { top: 10, right: 60, bottom: 30, left: 130 };
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+    var vMax = 2.4;
+    function xv(v) { return m.left + (v / vMax) * iw; }
+
+    var groupH = ih / peerData.length;
+    peerData.forEach(function (d, i) {
+      var gy = m.top + i * groupH;
+      var barH = 16, gap = 10;
+      var y1 = gy + groupH / 2 - barH - gap / 2;
+      var y2 = gy + groupH / 2 + gap / 2;
+
+      var lbl = svgEl("text", { x: m.left - 14, y: gy + groupH / 2 + 4, class: "tick-label", "text-anchor": "end", "font-size": "12.5" });
+      lbl.textContent = d.label;
+      svg.appendChild(lbl);
+
+      svg.appendChild(svgEl("rect", { x: m.left, y: y1, width: xv(d.brookline) - m.left, height: barH, rx: 2, fill: css("--pine") }));
+      var t1 = svgEl("text", { x: xv(d.brookline) + 8, y: y1 + barH - 4, class: "axis-label", "font-size": "12.5", fill: css("--ink") });
+      t1.textContent = d.brookline.toFixed(2) + "%";
+      svg.appendChild(t1);
+
+      svg.appendChild(svgEl("rect", { x: m.left, y: y2, width: xv(d.peer) - m.left, height: barH, rx: 2, fill: css("--copper") }));
+      var t2 = svgEl("text", { x: xv(d.peer) + 8, y: y2 + barH - 4, class: "axis-label", "font-size": "12.5", fill: css("--ink") });
+      t2.textContent = d.peer.toFixed(2) + "%";
+      svg.appendChild(t2);
+    });
+    svg.appendChild(svgEl("line", { x1: m.left, x2: m.left, y1: m.top, y2: m.top + ih, stroke: css("--rule"), "stroke-width": 1 }));
+
+    var legend = document.getElementById("peer-legend");
+    legend.innerHTML = "";
+    [["Brookline's actual rate", "--pine"], ["Statewide 80th-percentile threshold", "--copper"]].forEach(function (item) {
+      var el = document.createElement("div"); el.className = "legend-item";
+      var sw = document.createElement("span"); sw.className = "legend-swatch"; sw.style.background = css(item[1]);
+      el.appendChild(sw);
+      var txt = document.createElement("span"); txt.textContent = item[0];
+      el.appendChild(txt);
+      legend.appendChild(el);
+    });
+  }
+
+  /* ---------------- LIABILITY CHART ---------------- */
+  var pensionData = [
+    [2014,184493444],[2015,220680561],[2016,219943037],[2017,213268118],[2018,239732913],
+    [2019,213447748],[2020,190785613],[2021,125295756],[2022,185207594],[2023,170723706]
+  ];
+  var opebData = [
+    [2017,254493372],[2018,262732400],[2019,247463419],[2020,253458013],
+    [2021,221120770],[2022,237766628],[2023,189638079],[2024,201475979]
+  ];
+
+  function drawLiabilityChart() {
+    var svg = document.getElementById("liab-svg");
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = 900, H = 420;
+    var m = { top: 24, right: 24, bottom: 40, left: 60 };
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+    var minY = 2014, maxY = 2024;
+    var vMax = 280e6, vMin = 100e6;
+    function x(fy) { return m.left + (fy - minY) / (maxY - minY) * iw; }
+    function y(v) { return m.top + ih - (v - vMin) / (vMax - vMin) * ih; }
+
+    for (var gv = 100e6; gv <= vMax; gv += 40e6) {
+      svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: y(gv), y2: y(gv), class: "gridline" }));
+      var gl = svgEl("text", { x: m.left - 10, y: y(gv) + 4, class: "tick-label", "text-anchor": "end", "font-size": "11" });
+      gl.textContent = "$" + (gv / 1e6).toFixed(0) + "M";
+      svg.appendChild(gl);
+    }
+    for (var yr = 2014; yr <= 2024; yr += 2) {
+      var tl = svgEl("text", { x: x(yr), y: m.top + ih + 22, class: "tick-label", "text-anchor": "middle", "font-size": "11" });
+      tl.textContent = yr;
+      svg.appendChild(tl);
+    }
+
+    function series(data, colorVar) {
+      var pts = data.map(function (d) { return x(d[0]) + "," + y(d[1]); }).join(" L");
+      svg.appendChild(svgEl("path", { d: "M" + pts, fill: "none", stroke: css(colorVar), "stroke-width": 2.5, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      data.forEach(function (d) { svg.appendChild(svgEl("circle", { cx: x(d[0]), cy: y(d[1]), r: 2.5, fill: css(colorVar) })); });
+    }
+    series(pensionData, "--line-education");
+    series(opebData, "--line-levy");
+
+    var tooltip = document.getElementById("liab-tooltip");
+    var wrap = document.getElementById("liab-wrap");
+    var hitRect = svgEl("rect", { x: m.left, y: m.top, width: iw, height: ih, fill: "transparent" });
+    svg.appendChild(hitRect);
+    hitRect.addEventListener("mousemove", function (e) {
+      var rect = svg.getBoundingClientRect();
+      var scale = W / rect.width;
+      var mx = (e.clientX - rect.left) * scale;
+      var fy = Math.round(minY + (mx - m.left) / iw * (maxY - minY));
+      fy = Math.max(minY, Math.min(maxY, fy));
+      var p = pensionData.filter(function (d) { return d[0] === fy; })[0];
+      var o = opebData.filter(function (d) { return d[0] === fy; })[0];
+      var html = '<div class="tt-title">' + fy + '</div>';
+      if (p) html += '<div class="tt-row"><span><span class="tt-swatch" style="background:' + css("--line-education") + '"></span>Pension liability</span><span>' + fmtMoney(p[1]) + '</span></div>';
+      if (o) html += '<div class="tt-row"><span><span class="tt-swatch" style="background:' + css("--line-levy") + '"></span>OPEB liability</span><span>' + fmtMoney(o[1]) + '</span></div>';
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = 1;
+      var wrect = wrap.getBoundingClientRect();
+      tooltip.style.left = (e.clientX - wrect.left + 14) + "px";
+      tooltip.style.top = (e.clientY - wrect.top - 10) + "px";
+    });
+    hitRect.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; });
+
+    var legend = document.getElementById("liab-legend");
+    legend.innerHTML = "";
+    [["Net pension liability (measurement year)", "--line-education"], ["Net OPEB liability (fiscal year end)", "--line-levy"]].forEach(function (item) {
+      var el = document.createElement("div"); el.className = "legend-item";
+      var sw = document.createElement("span"); sw.className = "legend-swatch"; sw.style.background = css(item[1]);
+      el.appendChild(sw);
+      var txt = document.createElement("span"); txt.textContent = item[0];
+      el.appendChild(txt);
+      legend.appendChild(el);
+    });
+  }
+
+  /* ---------------- CASE STUDY CARDS ---------------- */
+  var cases = [
+    { tag: "New construction", cls: "pos", fig: "$27K → $3.1M", h: "Vacant since at least 1994, finally built out", p: "A 2017 permit for a single-family home on long-vacant land. The lot was reclassified developable about a year before construction started, once zoning approval landed — the assessor priced in the right to build before the shovel went in. Substantially assessed within ~15 months of the permit." },
+    { tag: "Teardown / rebuild", cls: "pos", fig: "$91K → $2.0M", h: "Confirmed via sales history, not a permit", p: "Torn down and rebuilt sometime between 1999 and 2011, before this project's own data window opens. A 2011 sale at $2.105M lines up almost exactly with the rebuilt home's own assessed value that same year." },
+    { tag: "Renovation", cls: "pos", fig: "$611K permit", h: "Single-family to two-family conversion", p: "A zoning-board-approved gut renovation — basement underpinned, new roof, new porch. Town records already informally treated it as two units for years; the permit confirmed a real, substantial project, landing on the books ~22 months after filing." },
+    { tag: "Exempt → taxable", cls: "pos", fig: "+32.6% in one year", h: "A former church rectory, still Diocese-owned", p: "The Episcopal Diocese of Massachusetts lost its religious exemption on this property on its own, not via a sale — then spent $1.58M renovating it while still the owner. The renovation landed on the books just 6 months after the permit, notably fast for interior work on an already-standing building." },
+    { tag: "Institutional → new construction", cls: "pos", fig: "$2.8M → $77.2M", h: "Private school to 153-unit assisted living", p: "Tax-exempt for over a decade, demolished within ~5 months of a 2021 permit filed by a healthcare/senior-living developer, rebuilt as assisted living — the largest new-growth story found so far. ~40 months permit-to-substantially-complete, roughly double the typical single-family timeline." },
+    { tag: "Control case", cls: "neutral", fig: "Ordinary appreciation", h: "No construction event of any kind", p: "One of two single-family homes checked with no permits beyond routine maintenance across the entire period — the genuine control case every “did construction happen here” claim in this project needs." },
+    { tag: "Control case", cls: "neutral", fig: "Ordinary appreciation", h: "No construction event of any kind", p: "The second control case: no permits, no class-code change, assessed value tracking the town's real baseline closely throughout — confirms the classifier isn't flagging every property as a story." }
+  ];
+
+  function buildCaseStudies() {
+    var grid = document.getElementById("case-study-grid");
+    grid.innerHTML = "";
+    cases.forEach(function (c) {
+      var card = document.createElement("div");
+      card.className = "callout " + (c.cls === "neutral" ? "" : c.cls);
+      if (c.cls === "neutral") { card.style.borderStyle = "dashed"; }
+      var tag = document.createElement("span");
+      tag.className = "tag";
+      if (c.cls === "neutral") { tag.style.background = "var(--rule)"; tag.style.color = "var(--ink-muted)"; }
+      tag.textContent = c.tag;
+      card.appendChild(tag);
+      var h4 = document.createElement("h4"); h4.textContent = c.h; card.appendChild(h4);
+      var fig = document.createElement("span"); fig.className = "fig"; fig.textContent = c.fig; card.appendChild(fig);
+      var p = document.createElement("p"); p.textContent = c.p; card.appendChild(p);
+      grid.appendChild(card);
+    });
+  }
+
+  function render() {
+    drawRevExpChart();
+    drawPeerChart();
+    drawLiabilityChart();
+  }
+  buildCaseStudies();
+  render();
+  window.addEventListener("resize", function () {
+    clearTimeout(window.__rt);
+    window.__rt = setTimeout(render, 150);
+  });
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  }
+})();
+</script>

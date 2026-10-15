@@ -1,0 +1,859 @@
+"sy","dist_code","dist_name","org_code","org_name","org_type","subject","tchr_cnt","tchr_lic_pct","stu_tchr_ratio","exp_tchr_pct","tchr_wo_lic","tchr_infld_pct","core_acad_cnt","core_acad_pct"
+"2026","00090000","Andover","00090000","Andover","District","All Teachers","447.5","0.993","11.9 to 1",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Arts","33.3","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Civics/Government","0.6","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Core-All Subjects","11.0","0.909","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Economics","0.7","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","English/Language Arts","87.5","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Foreign Language","21.0","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Geography","0.0","0.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","History","9.7","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Mathematics","72.9","0.994","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Reading","14.8","1.0","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Science","72.0","0.995","N/A",,,,,
+"2026","00090000","Andover","00090000","Andover","District","Social Studies/Social Sciences","61.1","1.0","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","All Teachers","503.6","0.982","12.1 to 1",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Arts","36.3","0.972","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Civics/Government","6.2","0.987","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Core-All Subjects","38.8","0.983","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Economics","0.8","1.0","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","English/Language Arts","91.2","0.986","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Foreign Language","24.9","1.0","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Geography","0.8","1.0","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","History","12.5","0.987","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Mathematics","81.0","0.984","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Reading","17.2","1.0","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Science","72.0","0.983","N/A",,,,,
+"2026","00100000","Arlington","00100000","Arlington","District","Social Studies/Social Sciences","50.0","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","All Teachers","295.7","1.0","15.0 to 1",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Arts","24.7","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Civics/Government","3.2","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Core-All Subjects","51.2","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Economics","1.4","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","English/Language Arts","54.3","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Foreign Language","15.2","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Geography","3.0","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","History","10.2","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Mathematics","40.8","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Reading","12.2","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Science","37.8","1.0","N/A",,,,,
+"2026","00260000","Belmont","00260000","Belmont","District","Social Studies/Social Sciences","20.9","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","All Teachers","630.7","0.997","11.0 to 1",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Arts","37.2","0.995","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Civics/Government","1.6","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Core-All Subjects","65.6","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Economics","0.3","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","English/Language Arts","120.1","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Foreign Language","32.4","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Geography","0.6","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","History","17.1","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Mathematics","79.4","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Reading","18.6","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Science","64.0","1.0","N/A",,,,,
+"2026","00460000","Brookline","00460000","Brookline","District","Social Studies/Social Sciences","43.0","1.0","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","All Teachers","724.8","0.979","9.6 to 1",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Arts","60.6","0.964","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Civics/Government","1.1","0.843","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Core-All Subjects","36.2","0.972","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Economics","0.6","1.0","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","English/Language Arts","141.0","0.992","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Foreign Language","32.2","0.959","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Geography","0.0","0.0","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","History","21.7","1.0","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Mathematics","132.3","0.973","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Reading","0.0","0.0","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Science","95.6","0.991","N/A",,,,,
+"2026","00490000","Cambridge","00490000","Cambridge","District","Social Studies/Social Sciences","69.5","0.992","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","All Teachers","178.2","0.983","10.5 to 1",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Arts","13.0","1.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Core-All Subjects","36.3","0.948","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Economics","0.0","0.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","English/Language Arts","23.0","0.991","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Foreign Language","9.1","1.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Geography","0.1","1.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","History","0.4","1.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Mathematics","19.8","0.992","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Reading","3.0","1.0","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Science","17.6","0.991","N/A",,,,,
+"2026","00670000","Concord","00670000","Concord","District","Social Studies/Social Sciences","17.1","0.987","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","All Teachers","104.1","0.99","11.0 to 1",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Arts","5.8","0.845","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Civics/Government","1.0","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Core-All Subjects","6.3","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Economics","0.0","0.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","English/Language Arts","17.8","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Foreign Language","12.2","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Geography","0.0","0.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","History","11.1","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Mathematics","18.3","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Reading","0.9","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Science","16.2","1.0","N/A",,,,,
+"2026","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Social Studies/Social Sciences","3.3","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","All Teachers","285.5","0.996","12.6 to 1",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Arts","16.8","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Core-All Subjects","44.4","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Economics","0.0","0.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","English/Language Arts","44.2","0.977","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Foreign Language","20.8","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Geography","2.3","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","History","9.6","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Mathematics","42.9","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Reading","12.0","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Science","42.6","1.0","N/A",,,,,
+"2026","01310000","Hingham","01310000","Hingham","District","Social Studies/Social Sciences","23.8","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","All Teachers","634.1","0.985","10.3 to 1",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Arts","45.7","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Civics/Government","1.3","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Core-All Subjects","194.9","0.969","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Economics","2.4","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","English/Language Arts","73.3","0.986","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Foreign Language","44.5","0.966","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Geography","6.8","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","History","29.0","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Mathematics","65.7","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Reading","33.3","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Science","50.7","1.0","N/A",,,,,
+"2026","01550000","Lexington","01550000","Lexington","District","Social Studies/Social Sciences","11.8","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","All Teachers","129.9","0.999","10.5 to 1",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Arts","6.7","0.985","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Civics/Government","1.3","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Core-All Subjects","0.0","0.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Economics","0.8","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","English/Language Arts","17.4","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Foreign Language","15.8","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Geography","0.0","0.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","History","12.8","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Mathematics","19.9","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Reading","1.0","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Science","18.5","1.0","N/A",,,,,
+"2026","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Social Studies/Social Sciences","2.3","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","All Teachers","335.1","0.992","13.0 to 1",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Arts","17.4","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Civics/Government","0.2","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Core-All Subjects","41.8","0.976","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Economics","1.0","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","English/Language Arts","58.8","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Foreign Language","26.8","0.952","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Geography","3.3","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","History","8.3","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Mathematics","47.7","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Reading","6.0","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Science","46.0","1.0","N/A",,,,,
+"2026","01890000","Milton","01890000","Milton","District","Social Studies/Social Sciences","31.1","0.99","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","All Teachers","437.9","0.99","11.9 to 1",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Arts","29.3","1.0","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Civics/Government","5.2","1.0","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Core-All Subjects","32.8","0.939","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Economics","1.5","1.0","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","English/Language Arts","84.0","0.998","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Foreign Language","20.4","1.0","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Geography","0.4","1.0","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","History","9.8","1.0","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Mathematics","70.8","0.997","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Reading","10.0","0.9","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Science","63.0","0.996","N/A",,,,,
+"2026","01980000","Natick","01980000","Natick","District","Social Studies/Social Sciences","48.6","0.994","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","All Teachers","458.0","0.988","11.8 to 1",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Arts","32.4","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Civics/Government","1.9","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Core-All Subjects","158.9","0.994","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Economics","1.4","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","English/Language Arts","45.1","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Foreign Language","31.2","0.942","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Geography","0.0","0.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","History","13.6","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Mathematics","40.3","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Reading","13.4","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Science","35.1","1.0","N/A",,,,,
+"2026","01990000","Needham","01990000","Needham","District","Social Studies/Social Sciences","18.1","1.0","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","All Teachers","1086.0","0.963","10.6 to 1",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Arts","60.3","0.969","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Civics/Government","1.9","1.0","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Core-All Subjects","201.9","0.922","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Economics","1.4","1.0","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","English/Language Arts","195.0","0.983","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Foreign Language","65.5","0.989","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Geography","0.7","1.0","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","History","39.9","0.983","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Mathematics","156.0","0.968","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Reading","33.1","0.924","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Science","149.7","0.967","N/A",,,,,
+"2026","02070000","Newton","02070000","Newton","District","Social Studies/Social Sciences","104.3","0.966","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","All Teachers","449.4","0.973","10.9 to 1",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Arts","30.3","0.993","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Core-All Subjects","199.2","0.964","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Economics","0.0","0.0","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","English/Language Arts","43.9","0.975","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Foreign Language","13.1","0.962","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Geography","0.0","0.0","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","History","14.0","1.0","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Mathematics","36.7","0.971","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Reading","7.9","1.0","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Science","29.4","0.997","N/A",,,,,
+"2026","02740000","Somerville","02740000","Somerville","District","Social Studies/Social Sciences","14.8","0.994","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","All Teachers","226.6","1.0","11.2 to 1",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Arts","10.9","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Core-All Subjects","70.3","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Economics","0.0","0.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","English/Language Arts","30.8","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Foreign Language","6.9","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Geography","0.0","0.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","History","0.0","0.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Mathematics","39.1","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Reading","6.8","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Science","23.3","1.0","N/A",,,,,
+"2026","02880000","Sudbury","02880000","Sudbury","District","Social Studies/Social Sciences","22.8","1.0","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","All Teachers","273.9","0.97","10.4 to 1",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Arts","14.6","0.918","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Civics/Government","0.2","1.0","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Core-All Subjects","44.6","0.955","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Economics","0.2","1.0","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","English/Language Arts","49.6","0.999","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Foreign Language","16.8","0.881","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Geography","0.0","1.0","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","History","7.0","1.0","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Mathematics","39.5","0.954","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Reading","7.4","0.998","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Science","33.5","1.0","N/A",,,,,
+"2026","03140000","Watertown","03140000","Watertown","District","Social Studies/Social Sciences","25.2","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","All Teachers","245.9","0.992","10.8 to 1",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Arts","19.1","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Civics/Government","0.5","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Core-All Subjects","28.5","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Economics","0.0","0.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","English/Language Arts","48.0","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Foreign Language","17.4","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Geography","0.0","0.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","History","6.8","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Mathematics","38.5","0.974","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Reading","0.7","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Science","36.7","1.0","N/A",,,,,
+"2026","03150000","Wayland","03150000","Wayland","District","Social Studies/Social Sciences","26.8","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","All Teachers","374.2","0.981","10.5 to 1",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Arts","26.5","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Civics/Government","4.4","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Core-All Subjects","70.6","0.986","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Economics","0.8","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","English/Language Arts","55.5","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Foreign Language","29.2","0.897","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Geography","0.0","0.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","History","11.3","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Mathematics","49.7","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Reading","3.1","1.0","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Science","46.4","0.978","N/A",,,,,
+"2026","03170000","Wellesley","03170000","Wellesley","District","Social Studies/Social Sciences","27.2","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","All Teachers","194.4","0.998","10.7 to 1",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Arts","17.7","0.975","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Core-All Subjects","27.6","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Economics","0.8","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","English/Language Arts","31.8","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Foreign Language","15.9","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Geography","0.0","0.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","History","10.4","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Mathematics","29.4","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Reading","3.5","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Science","25.3","1.0","N/A",,,,,
+"2026","03300000","Weston","03300000","Weston","District","Social Studies/Social Sciences","16.0","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","All Teachers","232.4","0.996","12.2 to 1",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Arts","20.7","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Civics/Government","1.1","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Core-All Subjects","25.0","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Economics","0.7","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","English/Language Arts","35.8","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Foreign Language","12.4","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Geography","0.0","0.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","History","6.8","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Mathematics","37.1","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Reading","0.8","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Science","34.5","1.0","N/A",,,,,
+"2026","03350000","Westwood","03350000","Westwood","District","Social Studies/Social Sciences","25.4","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","All Teachers","361.5","1.0","12.0 to 1",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Arts","21.9","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Civics/Government","2.5","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Core-All Subjects","27.4","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Economics","0.8","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","English/Language Arts","74.9","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Foreign Language","23.4","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Geography","4.5","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","History","16.2","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Mathematics","85.7","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Reading","15.3","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Science","41.5","1.0","N/A",,,,,
+"2026","03440000","Winchester","03440000","Winchester","District","Social Studies/Social Sciences","14.0","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","All Teachers","457.6","0.996","11.8 to 1","0.858","97.7","0.991",,
+"2025","00090000","Andover","00090000","Andover","District","Arts","34.4","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Civics/Government","0.2","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Core-All Subjects","10.0","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Economics","0.9","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","English/Language Arts","90.1","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Foreign Language","21.8","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Geography","0.0","0.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","History","6.0","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Mathematics","76.2","0.99","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Reading","14.1","1.0","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Science","73.4","0.992","N/A",,,,,
+"2025","00090000","Andover","00090000","Andover","District","Social Studies/Social Sciences","64.6","1.0","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","All Teachers","484.3","0.989","12.6 to 1","0.7","92.2","0.947",,
+"2025","00100000","Arlington","00100000","Arlington","District","Arts","35.2","0.972","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Civics/Government","6.4","1.0","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Core-All Subjects","37.8","1.0","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Economics","0.6","1.0","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","English/Language Arts","83.4","0.998","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Foreign Language","25.8","0.962","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Geography","0.5","1.0","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","History","13.0","0.989","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Mathematics","80.0","0.986","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Reading","18.7","1.0","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Science","68.9","0.998","N/A",,,,,
+"2025","00100000","Arlington","00100000","Arlington","District","Social Studies/Social Sciences","48.7","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","All Teachers","309.4","1.0","14.4 to 1","0.805","97.4","0.969",,
+"2025","00260000","Belmont","00260000","Belmont","District","Arts","26.2","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Civics/Government","3.4","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Core-All Subjects","54.0","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Economics","2.0","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","English/Language Arts","54.6","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Foreign Language","14.8","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Geography","3.5","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","History","9.6","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Mathematics","45.5","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Reading","11.5","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Science","40.5","1.0","N/A",,,,,
+"2025","00260000","Belmont","00260000","Belmont","District","Social Studies/Social Sciences","22.5","1.0","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","All Teachers","544.1","0.984","12.9 to 1","0.794","94.7","0.946",,
+"2025","00460000","Brookline","00460000","Brookline","District","Arts","37.6","0.987","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Civics/Government","0.9","1.0","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Core-All Subjects","66.7","0.981","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Economics","0.3","1.0","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","English/Language Arts","97.2","0.993","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Foreign Language","32.9","1.0","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Geography","0.8","1.0","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","History","17.4","0.992","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Mathematics","68.4","0.998","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Reading","18.7","0.992","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Science","65.8","0.99","N/A",,,,,
+"2025","00460000","Brookline","00460000","Brookline","District","Social Studies/Social Sciences","43.6","0.977","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","All Teachers","747.8","0.98","9.4 to 1","0.754","92.1","0.924",,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Arts","67.7","0.983","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Civics/Government","1.9","1.0","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Core-All Subjects","44.0","0.977","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Economics","0.0","0.0","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","English/Language Arts","145.9","0.992","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Foreign Language","31.3","0.946","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Geography","0.0","0.0","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","History","21.7","0.988","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Mathematics","126.4","0.98","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Reading","14.8","0.954","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Science","87.9","0.981","N/A",,,,,
+"2025","00490000","Cambridge","00490000","Cambridge","District","Social Studies/Social Sciences","66.5","0.984","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","All Teachers","184.7","0.995","10.4 to 1","0.865","97.6","0.98",,
+"2025","00670000","Concord","00670000","Concord","District","Arts","13.1","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Core-All Subjects","36.4","0.973","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Economics","0.0","0.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","English/Language Arts","25.6","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Foreign Language","9.9","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Geography","0.0","0.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","History","0.7","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Mathematics","19.9","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Reading","3.0","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Science","18.2","1.0","N/A",,,,,
+"2025","00670000","Concord","00670000","Concord","District","Social Studies/Social Sciences","18.2","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","All Teachers","104.1","0.99","11.4 to 1","0.873","94.7","0.914",,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Arts","6.3","0.841","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Civics/Government","1.8","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Core-All Subjects","8.7","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Economics","0.0","0.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","English/Language Arts","18.1","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Foreign Language","12.2","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Geography","0.0","0.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","History","9.3","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Mathematics","16.6","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Reading","0.9","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Science","17.4","1.0","N/A",,,,,
+"2025","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Social Studies/Social Sciences","3.6","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","All Teachers","290.4","0.997","12.5 to 1","0.857","97.7","0.984",,
+"2025","01310000","Hingham","01310000","Hingham","District","Arts","16.0","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Core-All Subjects","44.4","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Economics","0.3","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","English/Language Arts","44.6","0.978","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Foreign Language","21.9","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Geography","3.0","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","History","10.9","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Mathematics","44.1","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Reading","10.9","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Science","44.2","1.0","N/A",,,,,
+"2025","01310000","Hingham","01310000","Hingham","District","Social Studies/Social Sciences","24.2","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","All Teachers","650.0","0.998","10.4 to 1","0.804","95.9","0.961",,
+"2025","01550000","Lexington","01550000","Lexington","District","Arts","48.0","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Civics/Government","1.0","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Core-All Subjects","204.9","0.995","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Economics","2.6","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","English/Language Arts","72.2","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Foreign Language","44.5","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Geography","7.0","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","History","26.7","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Mathematics","68.0","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Reading","33.3","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Science","51.2","1.0","N/A",,,,,
+"2025","01550000","Lexington","01550000","Lexington","District","Social Studies/Social Sciences","11.7","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","All Teachers","127.6","0.999","11.3 to 1","0.877","95.3","0.945",,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Arts","5.7","0.983","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Civics/Government","1.0","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Core-All Subjects","0.0","0.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Economics","0.8","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","English/Language Arts","17.5","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Foreign Language","16.1","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Geography","0.0","0.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","History","12.5","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Mathematics","18.7","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Reading","0.9","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Science","18.8","1.0","N/A",,,,,
+"2025","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Social Studies/Social Sciences","1.7","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","All Teachers","340.3","0.997","12.8 to 1","0.809","95.5","0.945",,
+"2025","01890000","Milton","01890000","Milton","District","Arts","17.7","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Civics/Government","0.8","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Core-All Subjects","37.8","0.974","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Economics","1.0","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","English/Language Arts","60.2","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Foreign Language","27.7","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Geography","3.0","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","History","8.6","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Mathematics","55.3","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Reading","7.0","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Science","48.2","1.0","N/A",,,,,
+"2025","01890000","Milton","01890000","Milton","District","Social Studies/Social Sciences","33.2","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","All Teachers","441.9","0.992","12.0 to 1","0.84","96.9","0.933",,
+"2025","01980000","Natick","01980000","Natick","District","Arts","31.7","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Civics/Government","5.3","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Core-All Subjects","32.9","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Economics","1.1","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","English/Language Arts","78.7","0.999","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Foreign Language","22.5","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Geography","0.2","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","History","9.8","1.0","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Mathematics","72.4","0.999","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Reading","8.6","0.884","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Science","65.0","0.999","N/A",,,,,
+"2025","01980000","Natick","01980000","Natick","District","Social Studies/Social Sciences","48.0","0.999","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","All Teachers","454.4","0.998","12.1 to 1","0.79","95.5","0.975",,
+"2025","01990000","Needham","01990000","Needham","District","Arts","33.1","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Civics/Government","2.1","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Core-All Subjects","157.4","0.994","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Economics","1.4","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","English/Language Arts","45.8","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Foreign Language","31.9","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Geography","0.0","0.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","History","14.2","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Mathematics","38.0","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Reading","14.2","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Science","34.6","1.0","N/A",,,,,
+"2025","01990000","Needham","01990000","Needham","District","Social Studies/Social Sciences","17.6","1.0","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","All Teachers","1108.1","0.968","10.5 to 1","0.778","96.0","0.933",,
+"2025","02070000","Newton","02070000","Newton","District","Arts","64.1","0.979","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Civics/Government","1.2","1.0","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Core-All Subjects","206.2","0.92","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Economics","0.6","1.0","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","English/Language Arts","199.8","0.985","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Foreign Language","67.8","1.0","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Geography","0.8","1.0","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","History","38.4","0.974","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Mathematics","158.8","0.972","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Reading","30.4","0.934","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Science","154.4","0.974","N/A",,,,,
+"2025","02070000","Newton","02070000","Newton","District","Social Studies/Social Sciences","107.9","0.981","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","All Teachers","420.8","0.987","11.8 to 1","0.715","93.1","0.835",,
+"2025","02740000","Somerville","02740000","Somerville","District","Arts","27.8","0.97","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Civics/Government","0.1","1.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Core-All Subjects","178.8","0.985","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Economics","0.0","0.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","English/Language Arts","40.1","0.979","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Foreign Language","14.4","1.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Geography","0.0","0.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","History","13.0","1.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Mathematics","33.7","1.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Reading","7.3","1.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Science","30.1","1.0","N/A",,,,,
+"2025","02740000","Somerville","02740000","Somerville","District","Social Studies/Social Sciences","14.8","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","All Teachers","232.4","0.944","10.9 to 1","0.787","97.0","0.905",,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Arts","10.9","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Civics/Government","0.0","0.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Core-All Subjects","78.5","0.834","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Economics","0.0","0.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","English/Language Arts","27.6","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Foreign Language","7.7","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Geography","0.0","0.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","History","0.0","0.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Mathematics","48.0","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Reading","2.8","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Science","21.0","1.0","N/A",,,,,
+"2025","02880000","Sudbury","02880000","Sudbury","District","Social Studies/Social Sciences","20.2","1.0","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","All Teachers","276.1","0.97","10.3 to 1","0.705","93.8","0.897",,
+"2025","03140000","Watertown","03140000","Watertown","District","Arts","15.5","0.884","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Civics/Government","0.2","1.0","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Core-All Subjects","42.0","0.976","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Economics","0.4","1.0","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","English/Language Arts","55.0","0.972","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Foreign Language","17.0","0.941","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Geography","0.4","1.0","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","History","6.5","0.998","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Mathematics","39.7","0.974","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Reading","8.1","1.0","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Science","33.2","0.999","N/A",,,,,
+"2025","03140000","Watertown","03140000","Watertown","District","Social Studies/Social Sciences","25.1","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","All Teachers","239.4","0.995","11.3 to 1","0.894","95.8","0.958",,
+"2025","03150000","Wayland","03150000","Wayland","District","Arts","15.2","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Civics/Government","0.6","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Core-All Subjects","40.6","0.975","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Economics","0.0","0.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","English/Language Arts","45.8","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Foreign Language","14.8","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Geography","0.0","0.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","History","6.4","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Mathematics","34.6","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Reading","2.4","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Science","33.9","1.0","N/A",,,,,
+"2025","03150000","Wayland","03150000","Wayland","District","Social Studies/Social Sciences","24.8","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","All Teachers","380.5","0.997","10.5 to 1","0.812","96.2","0.958",,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Arts","28.8","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Civics/Government","4.5","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Core-All Subjects","67.3","0.985","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Economics","0.8","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","English/Language Arts","56.2","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Foreign Language","29.4","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Geography","0.0","0.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","History","11.9","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Mathematics","54.0","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Reading","4.0","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Science","47.9","1.0","N/A",,,,,
+"2025","03170000","Wellesley","03170000","Wellesley","District","Social Studies/Social Sciences","27.6","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","All Teachers","170.1","0.999","12.1 to 1","0.813","91.7","0.94",,
+"2025","03300000","Weston","03300000","Weston","District","Arts","13.5","0.993","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Civics/Government","0.3","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Core-All Subjects","65.5","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Economics","0.5","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","English/Language Arts","15.2","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Foreign Language","13.5","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Geography","0.0","0.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","History","9.0","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Mathematics","16.1","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Reading","4.7","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Science","13.6","1.0","N/A",,,,,
+"2025","03300000","Weston","03300000","Weston","District","Social Studies/Social Sciences","3.5","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","All Teachers","229.0","0.996","12.4 to 1","0.808","94.8","0.95",,
+"2025","03350000","Westwood","03350000","Westwood","District","Arts","18.3","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Civics/Government","0.7","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Core-All Subjects","27.4","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Economics","0.8","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","English/Language Arts","38.2","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Foreign Language","12.3","0.919","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Geography","0.0","0.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","History","7.6","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Mathematics","34.0","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Reading","1.0","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Science","32.7","1.0","N/A",,,,,
+"2025","03350000","Westwood","03350000","Westwood","District","Social Studies/Social Sciences","24.4","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","All Teachers","347.3","1.0","12.6 to 1","0.822","96.7","0.973",,
+"2025","03440000","Winchester","03440000","Winchester","District","Arts","23.0","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Civics/Government","3.0","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Core-All Subjects","26.5","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Economics","0.9","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","English/Language Arts","72.3","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Foreign Language","22.1","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Geography","4.7","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","History","16.2","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Mathematics","79.1","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Reading","14.9","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Science","38.7","1.0","N/A",,,,,
+"2025","03440000","Winchester","03440000","Winchester","District","Social Studies/Social Sciences","11.9","1.0","N/A",,,,,
+"2015","00090000","Andover","00090000","Andover","District","All Teachers","456.9","1.0","13.3 to 1",,,,"2089","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Arts","31.1","1.0","N/A",,,,"476","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Civics/Government","1.2","1.0","N/A",,,,"18","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Core-All Subjects","56.4","1.0","N/A",,,,"21","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Economics","0.7","1.0","N/A",,,,"10","1.0"
+"2015","00090000","Andover","00090000","Andover","District","English/Language Arts","69.7","1.0","N/A",,,,"357","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Foreign Language","23.7","1.0","N/A",,,,"204","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00090000","Andover","00090000","Andover","District","History","7.8","1.0","N/A",,,,"71","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Mathematics","68.9","1.0","N/A",,,,"289","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Reading","13.7","1.0","N/A",,,,"36","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Science","64.5","1.0","N/A",,,,"332","1.0"
+"2015","00090000","Andover","00090000","Andover","District","Social Studies/Social Sciences","58.3","1.0","N/A",,,,"275","1.0"
+"2015","00100000","Arlington","00100000","Arlington","District","All Teachers","359.7","0.987","14.5 to 1",,,,"1810","0.99"
+"2015","00100000","Arlington","00100000","Arlington","District","Arts","20.2","0.97","N/A",,,,"397","0.987"
+"2015","00100000","Arlington","00100000","Arlington","District","Civics/Government","1.3","1.0","N/A",,,,"14","1.0"
+"2015","00100000","Arlington","00100000","Arlington","District","Core-All Subjects","168.1","0.994","N/A",,,,"647","0.992"
+"2015","00100000","Arlington","00100000","Arlington","District","Economics","0.4","1.0","N/A",,,,"6","1.0"
+"2015","00100000","Arlington","00100000","Arlington","District","English/Language Arts","30.7","1.0","N/A",,,,"199","0.99"
+"2015","00100000","Arlington","00100000","Arlington","District","Foreign Language","17.5","1.0","N/A",,,,"129","1.0"
+"2015","00100000","Arlington","00100000","Arlington","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00100000","Arlington","00100000","Arlington","District","History","10.8","1.0","N/A",,,,"69","0.986"
+"2015","00100000","Arlington","00100000","Arlington","District","Mathematics","27.3","0.988","N/A",,,,"154","0.987"
+"2015","00100000","Arlington","00100000","Arlington","District","Reading","11.9","0.924","N/A",,,,"9","0.667"
+"2015","00100000","Arlington","00100000","Arlington","District","Science","24.1","1.0","N/A",,,,"131","1.0"
+"2015","00100000","Arlington","00100000","Arlington","District","Social Studies/Social Sciences","10.6","1.0","N/A",,,,"55","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","All Teachers","248.6","0.996","17.2 to 1",,,,"1177","0.996"
+"2015","00260000","Belmont","00260000","Belmont","District","Arts","20.4","1.0","N/A",,,,"255","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Civics/Government","0.4","1.0","N/A",,,,"2","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Core-All Subjects","97.3","1.0","N/A",,,,"332","0.985"
+"2015","00260000","Belmont","00260000","Belmont","District","Economics","1.0","1.0","N/A",,,,"5","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","English/Language Arts","22.6","1.0","N/A",,,,"109","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Foreign Language","16.2","1.0","N/A",,,,"107","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00260000","Belmont","00260000","Belmont","District","History","9.4","1.0","N/A",,,,"43","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Mathematics","23.7","1.0","N/A",,,,"135","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Reading","10.4","1.0","N/A",,,,"37","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Science","21.7","1.0","N/A",,,,"99","1.0"
+"2015","00260000","Belmont","00260000","Belmont","District","Social Studies/Social Sciences","11.1","1.0","N/A",,,,"53","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","All Teachers","579.1","0.995","13.0 to 1",,,,"2872","0.993"
+"2015","00460000","Brookline","00460000","Brookline","District","Arts","39.0","1.0","N/A",,,,"673","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","Civics/Government","1.5","1.0","N/A",,,,"11","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","Core-All Subjects","196.4","1.0","N/A",,,,"877","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","Economics","0.0","0.0","N/A",,,,"3","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","English/Language Arts","63.3","1.0","N/A",,,,"376","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","Foreign Language","40.4","0.975","N/A",,,,"337","0.955"
+"2015","00460000","Brookline","00460000","Brookline","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00460000","Brookline","00460000","Brookline","District","History","16.6","1.0","N/A",,,,"93","1.0"
+"2015","00460000","Brookline","00460000","Brookline","District","Mathematics","39.7","1.0","N/A",,,,"211","0.981"
+"2015","00460000","Brookline","00460000","Brookline","District","Reading","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00460000","Brookline","00460000","Brookline","District","Science","34.4","1.0","N/A",,,,"197","0.99"
+"2015","00460000","Brookline","00460000","Brookline","District","Social Studies/Social Sciences","14.9","1.0","N/A",,,,"94","1.0"
+"2015","00490000","Cambridge","00490000","Cambridge","District","All Teachers","636.7","0.976","10.3 to 1",,,,"3105","0.963"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Arts","57.7","0.983","N/A",,,,"846","0.995"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Civics/Government","1.2","1.0","N/A",,,,"6","1.0"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Core-All Subjects","42.3","1.0","N/A",,,,"0","0.0"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Economics","1.0","1.0","N/A",,,,"3","1.0"
+"2015","00490000","Cambridge","00490000","Cambridge","District","English/Language Arts","98.1","0.985","N/A",,,,"524","0.954"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Foreign Language","26.2","0.984","N/A",,,,"201","0.985"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00490000","Cambridge","00490000","Cambridge","District","History","17.4","0.971","N/A",,,,"96","0.896"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Mathematics","100.9","0.965","N/A",,,,"489","0.935"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Reading","32.8","0.994","N/A",,,,"103","0.99"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Science","86.3","0.962","N/A",,,,"469","0.951"
+"2015","00490000","Cambridge","00490000","Cambridge","District","Social Studies/Social Sciences","65.5","0.972","N/A",,,,"368","0.948"
+"2015","00670000","Concord","00670000","Concord","District","All Teachers","161.5","1.0","13.1 to 1",,,,"797","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Arts","13.6","1.0","N/A",,,,"243","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Civics/Government","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00670000","Concord","00670000","Concord","District","Core-All Subjects","90.0","1.0","N/A",,,,"369","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Economics","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00670000","Concord","00670000","Concord","District","English/Language Arts","7.2","1.0","N/A",,,,"45","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Foreign Language","4.5","1.0","N/A",,,,"32","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00670000","Concord","00670000","Concord","District","History","0.0","0.0","N/A",,,,"0","0.0"
+"2015","00670000","Concord","00670000","Concord","District","Mathematics","8.7","1.0","N/A",,,,"44","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Reading","3.0","1.0","N/A",,,,"0","0.0"
+"2015","00670000","Concord","00670000","Concord","District","Science","6.2","1.0","N/A",,,,"32","1.0"
+"2015","00670000","Concord","00670000","Concord","District","Social Studies/Social Sciences","5.4","1.0","N/A",,,,"32","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","All Teachers","94.0","1.0","13.4 to 1",,,,"372","0.989"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Arts","7.3","1.0","N/A",,,,"64","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Civics/Government","1.8","1.0","N/A",,,,"9","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Core-All Subjects","0.0","0.0","N/A",,,,"0","0.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Economics","0.0","0.0","N/A",,,,"3","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","English/Language Arts","18.0","1.0","N/A",,,,"64","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Foreign Language","12.7","1.0","N/A",,,,"61","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","History","8.8","1.0","N/A",,,,"41","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Mathematics","15.7","1.0","N/A",,,,"62","1.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Reading","0.1","1.0","N/A",,,,"0","0.0"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Science","15.8","1.0","N/A",,,,"64","0.938"
+"2015","06400000","Concord-Carlisle","06400000","Concord-Carlisle","District","Social Studies/Social Sciences","1.0","1.0","N/A",,,,"4","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","All Teachers","285.1","0.996","15.1 to 1",,,,"1464","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Arts","17.0","1.0","N/A",,,,"308","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Civics/Government","0.0","0.0","N/A",,,,"2","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Core-All Subjects","27.7","1.0","N/A",,,,"0","0.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Economics","0.4","1.0","N/A",,,,"8","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","English/Language Arts","50.3","0.98","N/A",,,,"261","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Foreign Language","21.8","1.0","N/A",,,,"195","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Geography","3.2","1.0","N/A",,,,"17","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","History","10.2","1.0","N/A",,,,"70","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Mathematics","45.0","1.0","N/A",,,,"205","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Reading","8.2","1.0","N/A",,,,"18","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Science","46.6","1.0","N/A",,,,"264","1.0"
+"2015","01310000","Hingham","01310000","Hingham","District","Social Studies/Social Sciences","26.2","1.0","N/A",,,,"116","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","All Teachers","548.7","0.998","12.4 to 1",,,,"2332","0.999"
+"2015","01550000","Lexington","01550000","Lexington","District","Arts","38.7","1.0","N/A",,,,"668","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Civics/Government","0.2","1.0","N/A",,,,"6","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Core-All Subjects","191.1","0.996","N/A",,,,"729","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Economics","0.9","1.0","N/A",,,,"13","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","English/Language Arts","47.9","1.0","N/A",,,,"187","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Foreign Language","35.0","0.994","N/A",,,,"181","0.983"
+"2015","01550000","Lexington","01550000","Lexington","District","Geography","6.5","1.0","N/A",,,,"26","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","History","24.1","1.0","N/A",,,,"105","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Mathematics","51.1","1.0","N/A",,,,"190","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Reading","27.1","1.0","N/A",,,,"10","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Science","46.7","1.0","N/A",,,,"183","1.0"
+"2015","01550000","Lexington","01550000","Lexington","District","Social Studies/Social Sciences","6.8","1.0","N/A",,,,"34","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","All Teachers","123.6","0.993","13.1 to 1",,,,"809","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Arts","4.7","0.922","N/A",,,,"69","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Civics/Government","1.5","1.0","N/A",,,,"12","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Core-All Subjects","0.0","0.0","N/A",,,,"0","0.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Economics","0.5","1.0","N/A",,,,"4","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","English/Language Arts","19.4","1.0","N/A",,,,"144","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Foreign Language","15.3","1.0","N/A",,,,"127","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","History","13.5","1.0","N/A",,,,"108","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Mathematics","18.8","1.0","N/A",,,,"164","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Reading","0.5","1.0","N/A",,,,"2","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Science","18.6","1.0","N/A",,,,"169","1.0"
+"2015","06950000","Lincoln-Sudbury","06950000","Lincoln-Sudbury","District","Social Studies/Social Sciences","0.5","1.0","N/A",,,,"10","1.0"
+"2015","01890000","Milton","01890000","Milton","District","All Teachers","285.8","1.0","14.0 to 1",,,,"1414","0.993"
+"2015","01890000","Milton","01890000","Milton","District","Arts","14.4","1.0","N/A",,,,"316","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Civics/Government","0.2","1.0","N/A",,,,"1","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Core-All Subjects","119.3","1.0","N/A",,,,"471","0.979"
+"2015","01890000","Milton","01890000","Milton","District","Economics","0.4","1.0","N/A",,,,"5","1.0"
+"2015","01890000","Milton","01890000","Milton","District","English/Language Arts","29.7","1.0","N/A",,,,"143","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Foreign Language","19.3","1.0","N/A",,,,"163","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Geography","3.0","1.0","N/A",,,,"15","1.0"
+"2015","01890000","Milton","01890000","Milton","District","History","12.1","1.0","N/A",,,,"59","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Mathematics","24.4","1.0","N/A",,,,"126","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Reading","8.1","1.0","N/A",,,,"7","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Science","19.4","1.0","N/A",,,,"101","1.0"
+"2015","01890000","Milton","01890000","Milton","District","Social Studies/Social Sciences","1.5","1.0","N/A",,,,"7","1.0"
+"2015","01980000","Natick","01980000","Natick","District","All Teachers","368.7","0.998","14.6 to 1",,,,"2194","0.971"
+"2015","01980000","Natick","01980000","Natick","District","Arts","20.3","1.0","N/A",,,,"465","0.978"
+"2015","01980000","Natick","01980000","Natick","District","Civics/Government","0.8","1.0","N/A",,,,"8","1.0"
+"2015","01980000","Natick","01980000","Natick","District","Core-All Subjects","125.5","1.0","N/A",,,,"513","1.0"
+"2015","01980000","Natick","01980000","Natick","District","Economics","0.8","1.0","N/A",,,,"8","1.0"
+"2015","01980000","Natick","01980000","Natick","District","English/Language Arts","42.2","1.0","N/A",,,,"258","0.957"
+"2015","01980000","Natick","01980000","Natick","District","Foreign Language","20.5","1.0","N/A",,,,"222","0.946"
+"2015","01980000","Natick","01980000","Natick","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","01980000","Natick","01980000","Natick","District","History","11.1","1.0","N/A",,,,"131","1.0"
+"2015","01980000","Natick","01980000","Natick","District","Mathematics","39.0","1.0","N/A",,,,"266","0.944"
+"2015","01980000","Natick","01980000","Natick","District","Reading","8.3","1.0","N/A",,,,"6","0.667"
+"2015","01980000","Natick","01980000","Natick","District","Science","35.0","1.0","N/A",,,,"230","0.97"
+"2015","01980000","Natick","01980000","Natick","District","Social Studies/Social Sciences","18.9","1.0","N/A",,,,"87","0.931"
+"2015","01990000","Needham","01990000","Needham","District","All Teachers","381.1","0.993","14.5 to 1",,,,"1848","0.994"
+"2015","01990000","Needham","01990000","Needham","District","Arts","27.4","1.0","N/A",,,,"468","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Civics/Government","1.0","1.0","N/A",,,,"4","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Core-All Subjects","128.7","1.0","N/A",,,,"565","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Economics","0.1","1.0","N/A",,,,"2","1.0"
+"2015","01990000","Needham","01990000","Needham","District","English/Language Arts","36.3","1.0","N/A",,,,"149","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Foreign Language","25.3","0.953","N/A",,,,"239","0.958"
+"2015","01990000","Needham","01990000","Needham","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","01990000","Needham","01990000","Needham","District","History","12.3","1.0","N/A",,,,"61","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Mathematics","28.3","1.0","N/A",,,,"135","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Reading","13.7","1.0","N/A",,,,"20","1.0"
+"2015","01990000","Needham","01990000","Needham","District","Science","31.4","0.994","N/A",,,,"143","0.993"
+"2015","01990000","Needham","01990000","Needham","District","Social Studies/Social Sciences","14.7","1.0","N/A",,,,"62","1.0"
+"2015","02070000","Newton","02070000","Newton","District","All Teachers","1060.5","0.997","12.0 to 1",,,,"4273","0.994"
+"2015","02070000","Newton","02070000","Newton","District","Arts","66.5","0.995","N/A",,,,"1198","0.992"
+"2015","02070000","Newton","02070000","Newton","District","Civics/Government","2.0","1.0","N/A",,,,"12","1.0"
+"2015","02070000","Newton","02070000","Newton","District","Core-All Subjects","177.6","0.996","N/A",,,,"46","0.913"
+"2015","02070000","Newton","02070000","Newton","District","Economics","0.8","1.0","N/A",,,,"3","1.0"
+"2015","02070000","Newton","02070000","Newton","District","English/Language Arts","162.9","1.0","N/A",,,,"712","0.996"
+"2015","02070000","Newton","02070000","Newton","District","Foreign Language","62.3","0.997","N/A",,,,"351","0.997"
+"2015","02070000","Newton","02070000","Newton","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02070000","Newton","02070000","Newton","District","History","38.3","1.0","N/A",,,,"205","1.0"
+"2015","02070000","Newton","02070000","Newton","District","Mathematics","152.9","1.0","N/A",,,,"656","0.995"
+"2015","02070000","Newton","02070000","Newton","District","Reading","21.4","1.0","N/A",,,,"0","0.0"
+"2015","02070000","Newton","02070000","Newton","District","Science","148.4","1.0","N/A",,,,"653","0.995"
+"2015","02070000","Newton","02070000","Newton","District","Social Studies/Social Sciences","104.8","1.0","N/A",,,,"437","0.993"
+"2015","02740000","Somerville","02740000","Somerville","District","All Teachers","421.4","0.986","11.8 to 1",,,,"1858","0.992"
+"2015","02740000","Somerville","02740000","Somerville","District","Arts","27.3","0.909","N/A",,,,"468","0.983"
+"2015","02740000","Somerville","02740000","Somerville","District","Civics/Government","0.4","1.0","N/A",,,,"2","1.0"
+"2015","02740000","Somerville","02740000","Somerville","District","Core-All Subjects","170.0","1.0","N/A",,,,"713","0.999"
+"2015","02740000","Somerville","02740000","Somerville","District","Economics","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02740000","Somerville","02740000","Somerville","District","English/Language Arts","36.9","1.0","N/A",,,,"169","1.0"
+"2015","02740000","Somerville","02740000","Somerville","District","Foreign Language","13.1","0.923","N/A",,,,"67","0.97"
+"2015","02740000","Somerville","02740000","Somerville","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02740000","Somerville","02740000","Somerville","District","History","12.8","0.998","N/A",,,,"59","0.983"
+"2015","02740000","Somerville","02740000","Somerville","District","Mathematics","34.4","0.994","N/A",,,,"155","0.994"
+"2015","02740000","Somerville","02740000","Somerville","District","Reading","7.9","0.95","N/A",,,,"7","0.714"
+"2015","02740000","Somerville","02740000","Somerville","District","Science","31.8","1.0","N/A",,,,"154","1.0"
+"2015","02740000","Somerville","02740000","Somerville","District","Social Studies/Social Sciences","14.9","1.0","N/A",,,,"64","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","All Teachers","210.9","1.0","13.6 to 1",,,,"1036","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Arts","11.8","1.0","N/A",,,,"229","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Civics/Government","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Core-All Subjects","129.3","1.0","N/A",,,,"500","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Economics","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","English/Language Arts","11.6","1.0","N/A",,,,"48","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Foreign Language","8.2","1.0","N/A",,,,"115","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","History","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Mathematics","12.0","1.0","N/A",,,,"51","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Reading","0.0","0.0","N/A",,,,"0","0.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Science","11.7","1.0","N/A",,,,"47","1.0"
+"2015","02880000","Sudbury","02880000","Sudbury","District","Social Studies/Social Sciences","11.6","1.0","N/A",,,,"46","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","All Teachers","230.6","0.99","10.8 to 1",,,,"978","0.997"
+"2015","03140000","Watertown","03140000","Watertown","District","Arts","11.6","1.0","N/A",,,,"216","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Civics/Government","0.8","1.0","N/A",,,,"4","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Core-All Subjects","95.5","0.99","N/A",,,,"337","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Economics","0.5","1.0","N/A",,,,"4","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","English/Language Arts","25.5","1.0","N/A",,,,"107","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Foreign Language","9.6","0.875","N/A",,,,"35","0.914"
+"2015","03140000","Watertown","03140000","Watertown","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03140000","Watertown","03140000","Watertown","District","History","6.1","1.0","N/A",,,,"26","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Mathematics","18.3","1.0","N/A",,,,"105","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Reading","10.1","1.0","N/A",,,,"10","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Science","17.5","1.0","N/A",,,,"91","1.0"
+"2015","03140000","Watertown","03140000","Watertown","District","Social Studies/Social Sciences","7.3","1.0","N/A",,,,"43","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","All Teachers","205.0","0.99","13.0 to 1",,,,"1020","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Arts","16.7","0.952","N/A",,,,"323","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Civics/Government","0.8","1.0","N/A",,,,"6","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Core-All Subjects","81.1","0.993","N/A",,,,"251","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Economics","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03150000","Wayland","03150000","Wayland","District","English/Language Arts","23.2","1.0","N/A",,,,"117","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Foreign Language","12.6","1.0","N/A",,,,"66","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03150000","Wayland","03150000","Wayland","District","History","5.9","1.0","N/A",,,,"40","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Mathematics","17.6","1.0","N/A",,,,"87","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Reading","0.7","1.0","N/A",,,,"0","0.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Science","18.2","0.986","N/A",,,,"82","1.0"
+"2015","03150000","Wayland","03150000","Wayland","District","Social Studies/Social Sciences","9.2","1.0","N/A",,,,"48","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","All Teachers","377.9","0.989","13.4 to 1",,,,"1924","0.978"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Arts","30.4","0.968","N/A",,,,"501","0.97"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Civics/Government","0.6","1.0","N/A",,,,"5","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Core-All Subjects","146.8","0.993","N/A",,,,"559","0.982"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Economics","0.5","1.0","N/A",,,,"2","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","English/Language Arts","29.3","1.0","N/A",,,,"175","0.989"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Foreign Language","19.5","1.0","N/A",,,,"120","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","History","13.4","1.0","N/A",,,,"61","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Mathematics","31.6","1.0","N/A",,,,"169","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Reading","4.7","1.0","N/A",,,,"47","1.0"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Science","29.4","0.971","N/A",,,,"225","0.938"
+"2015","03170000","Wellesley","03170000","Wellesley","District","Social Studies/Social Sciences","11.3","1.0","N/A",,,,"60","0.967"
+"2015","03300000","Weston","03300000","Weston","District","All Teachers","196.7","0.996","11.5 to 1",,,,"965","0.97"
+"2015","03300000","Weston","03300000","Weston","District","Arts","16.5","0.952","N/A",,,,"256","0.918"
+"2015","03300000","Weston","03300000","Weston","District","Civics/Government","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03300000","Weston","03300000","Weston","District","Core-All Subjects","72.6","1.0","N/A",,,,"270","1.0"
+"2015","03300000","Weston","03300000","Weston","District","Economics","0.2","1.0","N/A",,,,"1","1.0"
+"2015","03300000","Weston","03300000","Weston","District","English/Language Arts","19.5","1.0","N/A",,,,"91","0.978"
+"2015","03300000","Weston","03300000","Weston","District","Foreign Language","15.8","1.0","N/A",,,,"110","0.991"
+"2015","03300000","Weston","03300000","Weston","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03300000","Weston","03300000","Weston","District","History","11.1","1.0","N/A",,,,"53","0.925"
+"2015","03300000","Weston","03300000","Weston","District","Mathematics","21.3","1.0","N/A",,,,"92","1.0"
+"2015","03300000","Weston","03300000","Weston","District","Reading","3.3","1.0","N/A",,,,"14","1.0"
+"2015","03300000","Weston","03300000","Weston","District","Science","15.2","1.0","N/A",,,,"64","0.984"
+"2015","03300000","Weston","03300000","Weston","District","Social Studies/Social Sciences","3.4","1.0","N/A",,,,"14","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","All Teachers","232.3","0.991","13.8 to 1",,,,"1107","0.996"
+"2015","03350000","Westwood","03350000","Westwood","District","Arts","21.4","1.0","N/A",,,,"318","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","Civics/Government","0.5","1.0","N/A",,,,"3","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","Core-All Subjects","11.0","1.0","N/A",,,,"15","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","Economics","0.3","1.0","N/A",,,,"2","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","English/Language Arts","40.4","0.994","N/A",,,,"203","0.995"
+"2015","03350000","Westwood","03350000","Westwood","District","Foreign Language","13.7","1.0","N/A",,,,"78","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","Geography","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03350000","Westwood","03350000","Westwood","District","History","7.1","1.0","N/A",,,,"40","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","Mathematics","34.3","0.993","N/A",,,,"160","0.994"
+"2015","03350000","Westwood","03350000","Westwood","District","Reading","2.0","1.0","N/A",,,,"20","1.0"
+"2015","03350000","Westwood","03350000","Westwood","District","Science","34.4","0.993","N/A",,,,"166","0.994"
+"2015","03350000","Westwood","03350000","Westwood","District","Social Studies/Social Sciences","23.7","0.989","N/A",,,,"102","0.99"
+"2015","03440000","Winchester","03440000","Winchester","District","All Teachers","332.8","1.0","13.5 to 1",,,,"1512","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Arts","21.2","1.0","N/A",,,,"387","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Civics/Government","0.0","0.0","N/A",,,,"0","0.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Core-All Subjects","37.1","1.0","N/A",,,,"23","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Economics","0.7","1.0","N/A",,,,"6","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","English/Language Arts","73.5","1.0","N/A",,,,"375","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Foreign Language","15.2","1.0","N/A",,,,"101","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Geography","3.1","1.0","N/A",,,,"17","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","History","16.7","1.0","N/A",,,,"84","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Mathematics","48.8","1.0","N/A",,,,"217","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Reading","17.7","1.0","N/A",,,,"0","0.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Science","40.1","1.0","N/A",,,,"206","1.0"
+"2015","03440000","Winchester","03440000","Winchester","District","Social Studies/Social Sciences","17.8","1.0","N/A",,,,"96","1.0"

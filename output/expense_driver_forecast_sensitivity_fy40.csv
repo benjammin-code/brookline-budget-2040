@@ -1,0 +1,35 @@
+dial,fy2040_spending,spending_change,fy2040_balance,balance_change,cumulative_balance_change_fy26_40,balance_change_fy2035
+"Capital held at the Town's capital table, about 6% (base: the 6.6% policy from FY2028)",651810537,-2890336,14862921,2890336,28124162,2397908
+"Pay growth +1 point for every group (base: Town 3.0%, schools 3.7%, Public Safety 3.5%)",697015544,42314671,-30342086,-42314671,-254941691,-21465630
+"Pay growth -0.5 point for every group (Town 2.5%, schools 3.2%, Public Safety 3.0%)",635287618,-19413255,31385840,19413255,120077867,10209984
+"School staff follow enrollment down, ratio held (base: half as fast as enrollment)",645241939,-9458935,21431519,9458935,63100419,5452717
+School staff follow enrollment and ratio moves a third back to FY2019,641886402,-12814472,24787056,12814472,95122151,8344690
+"School staff held at the FY2027 level as enrollment falls (base: half as fast, the FY2019-25 pattern)",682504602,27803729,-15831144,-27803729,-185503571,-16029832
+Students from new homes fill existing seats until enrollment is back to FY2027 (base: staffed at the FY2027 ratio),653847599,-853274,12825859,853274,5867626,683902
+"New growth at the peer rate, housing-led, students fill existing seats",700121182,45420309,36539503,24566918,163741457,13409107
+Enrollment flat at FY2027 (base: NESDEC decline),687553652,32852779,-20880194,-32852779,-222014051,-19255145
+"Enrollment per Cropper-McKibben, the schools' forecast (base: NESDEC)",702563472,47862599,-35890014,-47862599,-336925743,-31427647
+"Cropper-McKibben enrollment, staff follow it",702563472,47862599,-35890014,-47862599,-336811376,-31427647
+"School pay at PSB's forecast, about 5%/yr (base 3.7%)",686871760,32170887,-20198302,-32170887,-194864170,-16413527
+School and Public Safety pay held to the 3.0% Town target (base 3.7% and 3.5%),634685870,-20015004,31987588,20015004,125070764,10652244
+Health premiums 6.5%/yr from FY2030 (base 8%),635302239,-19398634,31371219,19398634,93347048,7407408
+Health premiums 10%/yr from FY2030 (base 8%),685125934,30425060,-18452476,-30425060,-139888231,-10710309
+"Health premiums 4.5%/yr from FY2030, the actuary's long-run trend (base 8%)",613347514,-41353360,53325944,41353360,204133428,16505284
+"School non-personnel costs at inflation +2 points (base: inflation, 2.5%)",663317320,8616447,3356138,-8616447,-54609228,-4665120
+Inflation 3.5%/yr (base 2.5%),663284500,8583626,3388958,-8583626,-54475904,-4654823
+"Town cost per new home $1,109, RKG, with police and fire growing with every home (base $660 and a fire company step)",656582842,1881969,10090616,-1881969,-12045808,-1098522
+Town cost per new home $230 (base $660),653564035,-1136838,13109423,1136838,7276492,663582
+"New growth at the peer rate, housing-led (base: recent trend)",718743309,64042436,17917376,5944791,39479226,2670932
+"New growth at the peer rate, commercial-led (base: trend)",675871641,21170767,58036645,46064061,280300307,23554957
+"New growth at the peer rate, even mix (base: trend)",699868977,45168104,35415508,23442923,145491930,10961865
+Half the expected new homes built; renovation and commercial growth at trend,653028182,-1672691,5064678,-6907907,-45900013,-3812261
+No new homes built; renovation and commercial growth at trend,651376172,-3324701,-1748541,-13721126,-91362227,-7592350
+Pension full funding slips 2 years (base: FY2030),654700873,0,11972585,0,0,0
+CHCA at City Realty average revenue (base: approved program),654895916,195042,13604827,1632243,11613170,1364895
+CHCA at RKG's revenue estimate,654392144,-308730,9847936,-2124648,-15306341,-1801790
+CHCA already inside trend growth (not additive),652142667,-2558206,6209101,-5763484,-41509466,-4876647
+Pension savings not moved to OPEB in FY2031,620138620,-34562253,46534838,34562253,356872530,35812253
+Money freed by the retiree health payoff counted as room (base: held for a decision),611706640,-42994233,54966818,42994233,205104178,0
+"Police and fire restored to earlier staffing, police 136 and fire 168 (base: FY2027 budget, 128 and 160)",657186535,2485661,9486923,-2485661,-26779601,-2092860
+"No added fire company (base: a company at about 31,200 homes)",655114429,413555,11559029,-413555,-2647020,-241396
+"Police grow with homes at the peer ratio, 4.42 officers per 1,000 homes (base: held at 128)",654974031,273158,11699427,-273158,453319,203281
