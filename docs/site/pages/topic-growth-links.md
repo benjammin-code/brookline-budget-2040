@@ -570,6 +570,6 @@ how close any service is to a step is not something the published figures can se
   housing units, for the {{fact:gl_towns_n}} cities and towns with at least 2,000 homes, each town
   one observation, the growth in children set against the growth in homes. A comparison between
   towns over one decade, not an experiment.
-- Method and code: `scripts/growth_links.py`, with every series written to
-  `output/growth_links_*.csv`. The fire and police sources, page by page, and the research on the
-  method, each source marked by how fully it was read, are in research notes in the same project.
+- **Method and code.** The code, every series behind this page, and research notes on the fire
+  and police sources, page by page, are in the [project's public files on
+  GitHub](https://github.com/benjammin-code/brookline-budget-2040).

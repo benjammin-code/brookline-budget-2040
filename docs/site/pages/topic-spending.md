@@ -421,7 +421,7 @@ budget instead, FY2040 would be about {{fact:fy40_util_6pct}} worse.
 *Source: Town Financial Plans, FY2006 to FY2027; actual spending through FY2024, budgets after.
 FY2019 to FY2022 are added up from each plan's department tables, a method that reproduces the
 General Fund totals the plans print to within $2,000. Prices are the Boston-area consumer price
-index. The series is in `output/utilities_history.csv`.*
+index. The year-by-year figures, with the source of each, are [on GitHub](https://github.com/benjammin-code/brookline-budget-2040/blob/main/output/utilities_history.csv).*
 
 ## How sure these numbers are
 
