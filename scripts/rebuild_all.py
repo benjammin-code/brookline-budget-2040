@@ -56,6 +56,7 @@ STEPS = [
     ("towns compared (births, families, housing)", ["python3", "families_by_town.py"]),
     ("what new homes do, year by year", ["python3", "growth_links.py"]),
     ("spending growth by cause, FY2011-25", ["python3", "expense_drivers_tree.py"]),
+    ("utilities history, FY2006-27", ["python3", "utilities_history.py"]),
     ("site facts", ["node", "site_facts.js"]),
     ("Explorer page", ["python3", "build_dashboard.py"]),
     ("CHECK Explorer matches the Python model", ["node", "test_dashboard_engine.js"]),

@@ -823,5 +823,15 @@
  "stress_ov_fy2035": "$31.5M",
  "stress_ov_fy2038": "$42.1M",
  "stress_ov_total": "$112.3 million",
- "stress_gap_fy2040": "−$32.8 million"
+ "stress_gap_fy2040": "−$32.8 million",
+ "util_fy2019": "$4.8 million",
+ "util_cpi_fy11_19": "1.9%",
+ "util_growth_fy19_24": "3.5%",
+ "util_cpi_fy19_24": "3.5%",
+ "util_growth_fy24_27_budget": "6.9%",
+ "util_fy2011": "$5.0 million",
+ "util_fy2024": "$5.7 million",
+ "util_fy2027": "$7.0 million",
+ "util_share_fy2027": "1.7%",
+ "fy40_util_6pct": "$5.3 million"
 }

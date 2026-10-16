@@ -168,6 +168,7 @@ one assumption moves and everything else stays at the base case; a minus sign me
 ### Inflation
 - **Base case:** 2.5% a year for everything the Town buys other than staff.
 - **If it is wrong:** 3.5% a year, {{fact:fy40_inflation_high}}.
+- **More:** [Utilities: in step with prices since 2019](@topic-spending#utilities-in-step-with-prices-since-2019).
 - **Change it:** "Inflation".
 
 ### Capital

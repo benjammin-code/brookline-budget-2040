@@ -10,6 +10,7 @@ The rebuild reads only a small part of the original documents. The rest of its i
 |---|---|
 | `2026 MA state new growth for all towns 20 years.xlsx` | New growth for every Massachusetts municipality over 20 years, from the Division of Local Services |
 | `DLS_AvgSingleFamTaxBill.xlsx` | Average single-family tax bills by town, from the Division of Local Services |
+| `bls_cache/CUURA103SA0.csv` | Boston-area consumer price index (CPI-U), monthly, from the Bureau of Labor Statistics |
 | `census_bps/` | Census Bureau Building Permits Survey, annual place files for the Northeast, 1990 to 2025 |
 | `census_cache/pl2010/`, `pl2020/` | 2010 and 2020 Census redistricting data (P.L. 94-171) for Massachusetts, town rows only (see below) |
 | `demographics/acs5yr/` | American Community Survey 5-year tables for Massachusetts towns |

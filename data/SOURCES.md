@@ -565,6 +565,22 @@ transactional confirmation of a rate change previously sourced only to a
 dated alert on `brooklinema.gov/172/Building-Department`, while the Town's
 own fee-schedule page still showed the old $20 rate.
 
+## Housing pipeline (Planning Department, October 2026)
+
+`data/Brookline Housing Active Development Pipeline 2026-10-15.xlsx` — every
+project adding homes that the Town's web pages show as under construction,
+permitted, in review or awaiting a zoning vote, compiled 10/15/2026 from the
+Town's Chapter 40B, Site Plan Review, Major Impact Project and Zoning Board
+pages and the Building Department's permit portal, with corrections from the
+Planning Department the same day. Gross and net new homes, stage, permit path
+and housing type per project; a sheet of small Zoning Board cases; and projects
+completed 2023–2026. Completion dates in the file are rough estimates except
+where the Town or a developer published one, and existing homes removed are
+blank (counted as 0) where the Town doesn't state them. Not republished, since
+it lists projects by name; used in totals only, for the 2,400 homes article
+(`articles/2400-homes/pipeline.py`), together with the Housing Plan 2024's
+Table 1.1 (Chapter 40B approvals 2014–2023) for how earlier approvals turned out.
+
 ## Development Look-Ahead (Planning Department, Select Board workshop 2026-06-16)
 
 `data/Development Look-Ahead June 2026.pdf` — "Potential Development

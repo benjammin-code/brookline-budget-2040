@@ -11,7 +11,7 @@ summary:
 - Growth in homes and commercial space added {{fact:cause_new_homes_commercial_space}} a year of the increase.
 - The staffing piece is almost all schools: 6.75 students per staff member in FY2011, 5.62 in FY2025.
 related: spending, topic-schools, topic-liabilities, topic-forecast
-updated: 2026-10-14
+updated: 2026-10-16
 ---
 
 This is the technical companion to [How Brookline got here](@spending), which tells the same
@@ -398,6 +398,30 @@ service-expansion story and responds to very different remedies. Much of the FY2
 came from one-time changes, the stipend and new steps, which are already in the FY2027 budget, so
 the forecast grows Public Safety pay 3.5% a year and adds the fire steps agreed for FY2028 and the
 four police positions to be refilled in FY2028 and FY2029 on top.
+
+## Utilities: in step with prices since 2019
+
+Utilities are a small line, {{fact:util_fy2027}} in the FY2027 budget and about
+{{fact:util_share_fy2027}} of General Fund spending: electricity, natural gas, water and fuel for
+Town vehicles. The Town pays utilities for the school buildings as well as its own, so the General
+Fund line covers all of them.
+
+Spending on utilities went from
+{{fact:util_fy2011}} in FY2011 to {{fact:util_fy2019}} in FY2019, a slight fall while Boston-area
+prices rose {{fact:util_cpi_fy11_19}} a year. From FY2019 to FY2024 it grew
+{{fact:util_growth_fy19_24}} a year, the same as prices ({{fact:util_cpi_fy19_24}}), with a dip in
+FY2020 when buildings closed and a jump with energy prices in 2022 and 2023. The budgets since
+then expect faster growth: the FY2027 budget is {{fact:util_growth_fy24_27_budget}} a year above
+the FY2024 actual, {{fact:util_fy2024}}. Budgets often run above what is spent, so that is the
+Town's expectation rather than a measured trend.
+
+The forecast grows utilities with prices, 2.5% a year. If they grew 6% a year from the FY2027
+budget instead, FY2040 would be about {{fact:fy40_util_6pct}} worse.
+
+*Source: Town Financial Plans, FY2006 to FY2027; actual spending through FY2024, budgets after.
+FY2019 to FY2022 are added up from each plan's department tables, a method that reproduces the
+General Fund totals the plans print to within $2,000. Prices are the Boston-area consumer price
+index. The series is in `output/utilities_history.csv`.*
 
 ## How sure these numbers are
 

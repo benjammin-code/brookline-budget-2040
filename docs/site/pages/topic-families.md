@@ -14,7 +14,7 @@ summary:
 - Single-family values have risen at about the same rate in Brookline and the family suburbs since 2010, so Brookline has been more expensive throughout rather than becoming so.
 - This is a comparison between towns. It shows what goes with drawing families, not what would happen if Brookline's housing changed.
 related: topic-enrollment, topic-schools, new-homes, sources
-updated: 2026-10-09
+updated: 2026-10-16
 ---
 
 The base case assumes Brookline keeps drawing young families at about its recent rate. The
@@ -69,7 +69,9 @@ were born here, because some families moved away or chose private school.
 
 The suburbs draw families with children already born, so their kindergarten classes are larger
 than their births. Brookline sits with its urban neighbors: kindergarten is a little smaller than
-births, and classes shrink further as they move up, as families leave or choose private schools.
+births. Before COVID its classes also shrank about 7% between kindergarten and grade 12; since
+FY2022 they have grown about 6%, partly as families returned after COVID
+([how a class moves up the grades](@topic-enrollment#how-a-class-moves-up-the-grades)).
 
 ## Children per family-sized home
 

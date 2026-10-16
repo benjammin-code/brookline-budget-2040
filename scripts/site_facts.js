@@ -709,5 +709,17 @@ fs.writeFileSync("../output/site_data.json", JSON.stringify(siteData));
   put("stress_ov_total", "$" + (last.cumulative_hypothetical_override / 1e6).toFixed(1) + " million");
   put("stress_gap_fy2040", "\u2212$" + Math.abs(last.resulting_operating_surplus_deficit / 1e6).toFixed(1) + " million"); }
 
+// ---- utilities, FY2006-FY2027 (utilities_history.py, from the Financial Plans)
+{ const u = csv("../output/utilities_history.csv"), at = y => u.find(r => +r.fiscal_year === y);
+  const g = (a, b, k) => pct(cagr(+at(a)[k], +at(b)[k], b - a));
+  put("util_fy2019", money(+at(2019).utilities)); put("util_cpi_fy11_19", g(2011, 2019, "boston_cpi_fy_avg"));
+  put("util_growth_fy19_24", g(2019, 2024, "utilities")); put("util_cpi_fy19_24", g(2019, 2024, "boston_cpi_fy_avg"));
+  put("util_growth_fy24_27_budget", g(2024, 2027, "utilities"));
+  put("util_fy2011", money(+at(2011).utilities)); put("util_fy2024", money(+at(2024).utilities));
+  put("util_fy2027", money(+at(2027).utilities));
+  put("util_share_fy2027", pct(+at(2027).utilities / +byYear[2027].operating_expenditure));
+  // if utilities grew 6% a year from the FY2027 budget instead of the base case's 2.5% for prices
+  put("fy40_util_6pct", money(+at(2027).utilities * (Math.pow(1.06, 13) - Math.pow(1.025, 13)))); }
+
 fs.writeFileSync("../output/site_facts.json", JSON.stringify(facts, null, 1));
 console.log(`wrote site_facts.json: ${Object.keys(facts).length} facts`);
