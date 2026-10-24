@@ -39,6 +39,8 @@ SRC = WEB / "src"
 DIST = WEB / "dist"
 DOCS = ROOT / "docs"
 MAPS = ROOT / "land-value-map" / "dist"
+# The school seats map's shareable build (school-seats-map/build_public.py), embedded in its post
+SEATS_MAP = ROOT / "school-seats-map" / "public" / "school_seats_map_public.html"
 EXCEL = ROOT / "Brookline_Forecast_Model.xlsx"   # mirrors the Explorer (scripts/build_explorer_workbook.py)
 SITE = "https://www.brooklinefuture.org"
 
@@ -413,7 +415,11 @@ def wrap_forecast_page(path, src):
 def post_pages(posts):
     items = []
     for p in sorted(posts, key=lambda p: p["published"], reverse=True):
-        body = (SRC / "posts" / (p["slug"] + ".html")).read_text()
+        src = SRC / "posts" / (p["slug"] + ".html")
+        if not src.exists():   # the public GitHub copy leaves out posts that name projects
+            print(f"post {p['slug']}: source not found, skipped")
+            continue
+        body = src.read_text()
         words = len(re.sub(r"<[^>]+>", " ", body).split())
         d = datetime.fromisoformat(p["published"].replace("Z", "+00:00")).date()
         when = d.strftime("%B %-d, %Y")
@@ -484,6 +490,19 @@ def maps():
         f.write_text(t)
 
 
+def seats_map():
+    """The school seats map as its own page, for the post's iframe; written as an Artifact, so it gets the skeleton."""
+    if not SEATS_MAP.exists():   # not in the public GitHub copy
+        print("seats map: school-seats-map/public not found, skipped")
+        return
+    (DIST / "embed").mkdir(exist_ok=True)
+    (DIST / "embed" / "school-seats-map.html").write_text(
+        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+        f'<link rel="canonical" href="{SITE}/post/school-seats-map">\n{ARTIFACT_RESET}\n</head>\n<body>\n'
+        + SEATS_MAP.read_text() + "\n</body>\n</html>\n")
+
+
 def main():
     vercel = DIST / ".vercel"
     keep = None
@@ -539,6 +558,7 @@ def main():
     shutil.copy2(ROOT / "Brookline_Enrollment_Explained.xlsx", DIST / "forecast" / "Brookline_Enrollment_Explained.xlsx")
 
     maps()
+    seats_map()
 
     # search index over the pages marked data-pagefind-body
     subprocess.run(["npx", "-y", PAGEFIND, "--site", str(DIST)], check=True,

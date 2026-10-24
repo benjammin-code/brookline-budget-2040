@@ -68,6 +68,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--pine); outline-
 .prose figure img { display: block; border: 1px solid var(--border); background: #fff; }
 .prose figure.video { position: relative; aspect-ratio: 16 / 9; max-width: 100%; }
 .prose figure.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 4px; }
+.prose figure.embed-map { width: calc(min(var(--wide), 100vw) - 2.5rem); max-width: none; }   /* wider than the text column */
+.prose figure.embed-map iframe { display: block; width: 100%; height: min(820px, 85vh); border: 1px solid var(--border); }
+.prose figure.embed-map figcaption { font-size: 0.9rem; margin-top: 0.4rem; }
+.prose td.hl { background: color-mix(in srgb, var(--pine) 14%, transparent); }   /* highlighted cell, as in the source doc */
+.prose td.muted { color: var(--ink-muted); background: color-mix(in srgb, var(--ink-faint) 10%, transparent); }
+.prose th { font-weight: 600; }
 .prose blockquote { margin: 1.2rem 0; padding-left: 1rem; border-left: 3px solid var(--pine); color: var(--ink-muted); }
 .prose table { border-collapse: collapse; font-size: 0.9rem; margin: 0 0 1.2rem; display: block; overflow-x: auto; }
 .prose td, .prose th { border-bottom: 1px solid var(--rule); padding: 0.4rem 0.7rem 0.4rem 0; text-align: left; vertical-align: top; }

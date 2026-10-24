@@ -581,6 +581,26 @@ it lists projects by name; used in totals only, for the 2,400 homes article
 (`articles/2400-homes/pipeline.py`), together with the Housing Plan 2024's
 Table 1.1 (Chapter 40B approvals 2014–2023) for how earlier approvals turned out.
 
+
+## School seats map sources (October 2026)
+
+Used by `school-seats-map/` (private working map; method in `school-seats-map/METHODOLOGY.md`):
+
+- `data/Superintendent Report_9.16.26.pdf`, last two pages: K-8 sections and average class size by school
+  and grade, September 11, 2026, and the class-size guidelines.
+- `data/ERSC Schools Subcommittee packet 2025-12-01 (space and capacity).pdf` (49 pages; CivicClerk fileId
+  27360): Cliff Brown's space and capacity analysis for the Expenditures and Revenues Study Committee's
+  Schools Subcommittee: floor plans of each K-8 building with room uses (pp. 8-43), the draft "School
+  Capacity Information" table with past PSB capacity figures (p. 44), and open seats by section as of
+  March 6, 2025 (pp. 45-46). Minutes: `data/ERSC Schools Subcommittee minutes 2025-12-01.pdf` (fileId 27290).
+- `data/Pierce School FAS presentation 2022-02 (educational program).pdf`: the Pierce design's educational
+  program against the MSBA standard (p. 3); from the Wayback Machine copy of the PSB site.
+- `data/GIS-CoreSchoolDistricts11x17_202608131433147293.pdf` and
+  `data/GIS-SchoolDistrictsWithBufferZones11X17_202608131428193893.pdf`: the Town GIS maps of the K-8
+  districts and buffer zones, August 13, 2026 (Ben added them 2026-10-17).
+- District boundaries: the Town's hosted ArcGIS layer (URL in the methodology), saved in
+  `school-seats-map/data/`.
+
 ## Development Look-Ahead (Planning Department, Select Board workshop 2026-06-16)
 
 `data/Development Look-Ahead June 2026.pdf` — "Potential Development
@@ -802,6 +822,22 @@ a roll-derived count unusable for this purpose.
 ## Births by municipality (added 2026-10-06)
 
 - `data/MA-DPH-2020-Birth-Report.docx`, `data/MA-DPH-2023-Birth-Report.docx`: Massachusetts Department of Public Health, Registry of Vital Records and Statistics, "Massachusetts Births 2020" and "Massachusetts Births 2023", from https://www.mass.gov/lists/annual-massachusetts-birth-reports (downloaded through Chrome; mass.gov returns 403 to scripts). Table 17, resident births by municipality, parsed to `output/ma_resident_births_by_town_2020_2023.csv` (351 towns; 2023 total matches the state's 67,068). Brookline: 487 (2020, matches the earlier series), 422 (2023). The 2024 report was not yet published in October 2026.
+
+## School Department enrollment report and the ERSC enrollment draft (2025-26)
+
+- `data/School Committee minutes 2025-11-06 (PSB Enrollment Report).pdf` (107 pages): minutes of
+  the November 6, 2025 School Committee meeting, with the "PSB Enrollment Report" slides (about
+  pp. 70-80; the standalone slide file's link is broken). Summer new-student registrations by
+  prior school (out of state, Massachusetts public, Massachusetts private), withdrawals, and the
+  FY2027 projection; the minutes record staff saying there was "nothing tangible to observe" yet
+  from federal policy on in-migration. Nothing on family income or size. From
+  brooklinema.api.civicclerk.com, fileId 27220.
+- `data/ERSC Schools Subcommittee packet 2026-03-02 (enrollment draft).pdf` (6 pages): the
+  Expenditures and Revenues Study Committee Schools Subcommittee's draft section on enrollment
+  forecasting; Brookline third among DESE peer districts for student turnover, attributed to
+  international graduate students and professionals on short assignments. fileId 30325.
+- Checked 2026-10-16 for a reported School Department analysis of new arrivals' income and family
+  size; neither document has one.
 
 ## Cropper-McKibben, Public Schools of Brookline Demographic Study 2023 (revised 04/03/2024)
 - File: `data/Cropper_McKibben_PSB_Demographic_Study_2023.pdf` (57 pages), downloaded 2026-10-06 from
