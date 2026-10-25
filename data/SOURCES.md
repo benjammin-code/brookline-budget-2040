@@ -5,6 +5,10 @@ sources are added rather than reconstructed at the end — this is the bibliogra
 for whatever we eventually publish. If you add or pull a new file into `data/`,
 add an entry here in the same pass.
 
+Every entry needs the public URL the file was downloaded from, so published work can link
+its primary sources. For a file someone else supplied, ask where it came from; if it has no
+public link, say so in the entry (and find a public copy before citing it).
+
 ## Property assessment & parcel data
 
 Full sourcing detail (MassGIS, Town GIS FeatureServer, Assessor CAMA extracts,
@@ -597,9 +601,32 @@ Used by `school-seats-map/` (private working map; method in `school-seats-map/ME
   program against the MSBA standard (p. 3); from the Wayback Machine copy of the PSB site.
 - `data/GIS-CoreSchoolDistricts11x17_202608131433147293.pdf` and
   `data/GIS-SchoolDistrictsWithBufferZones11X17_202608131428193893.pdf`: the Town GIS maps of the K-8
-  districts and buffer zones, August 13, 2026 (Ben added them 2026-10-17).
+  districts and buffer zones, August 13, 2026 (Ben added them 2026-10-17). From the Town's Schools page,
+  https://www.brooklinema.gov/723/Schools: core districts
+  https://www.brooklinema.gov/DocumentCenter/View/28438/Core-School-Districts---11x17 and districts with
+  buffer zones https://www.brooklinema.gov/DocumentCenter/View/28437/School-Districts-and-Buffer-Zones---11X17
+  (links may serve a newer version of the map).
 - District boundaries: the Town's hosted ArcGIS layer (URL in the methodology), saved in
   `school-seats-map/data/`.
+- Public links (found and md5-checked against the local copies 2026-10-25, unless noted):
+  - Superintendent's Report 9/16/26: https://brooklinema.portal.civicclerk.com/event/16515/files/attachment/18920
+    (CivicClerk attachment 18920; linked from https://www.psbma.org/district/school-committee/meeting-materials).
+    The cost-of-a-student article links a Google Drive copy instead.
+  - ERSC Schools Subcommittee packet 12/1/2025: https://brooklinema.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=27360,plainText=false)
+    (portal: https://brooklinema.portal.civicclerk.com/event/14550/files/agenda/27360); minutes: https://brooklinema.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=27290,plainText=false).
+  - Pierce FAS presentation 2022-02: https://web.archive.org/web/20240701060858/https://www.brookline.k12.ma.us/cms/lib/MA01907509/Centricity/Domain/722/Pierce%20FAS%20Meeting%20Presentation%20-%20FINAL.pdf
+    (the 20230207 capture is truncated). Its p. 2 is the source of "plus 48 Pre-K".
+  - Pierce project page ("4-sections per grade plus 3 BEEP classrooms"): https://www.psbma.org/district-projects/pierce-school-building-project
+  - MSBA Pierce memo (dated Feb 18, 2022, for the March 2, 2022 Board meeting; design enrollment 725 K-8, no pre-K figure):
+    https://www.massschoolbuildings.org/sites/default/files/edit-contentfiles/About_Us/Board_Meetings/2022_Board/3_2_2022/1.%20Brookline_Pierce_PS%20Memo_Final.pdf
+  - Driscoll Schematic Design Report, May 22, 2019 (four sections; not saved locally):
+    https://resources.finalsite.net/images/v1745567888/brooklinek12maus/khmgvwifrsh6qizorcha/1_driscollsdreport.pdf;
+    project page (36 classrooms): https://www.psbma.org/district-projects/driscoll-school-building-project
+  - Devotion/Ridley MSBA memo, Nov 12, 2014 (design enrollment 1,010 K-8; not saved locally):
+    https://www.massschoolbuildings.org/sites/default/files/edit-contentfiles/About_Us/Board_Meetings/2014_Board/11_19_14/Brookline_Devotion_PS_11_19_14.pdf;
+    "5-section school ... 1,050 students" (with pre-K): PSB Internal School Facility Assessment Summary, archived:
+    https://web.archive.org/web/20201124125105/https://www.brookline.k12.ma.us/cms/lib/MA01907509/Centricity/Domain/62/Internal%20School%20Facility%20Assessment%20Summary.pdf
+  - AdvCom FY27 write-up: attachment 15590 above is the 37-page write-up; the local 39-page file adds a 2-page agenda.
 
 ## Development Look-Ahead (Planning Department, Select Board workshop 2026-06-16)
 
@@ -907,3 +934,65 @@ Background only; several items were read in secondary summaries and are marked s
 don't (Burchell & Listokin 1978; Paulsen 2014; Kotchen & Schulte 2009; Edwards & Huddleston 2010;
 Kotval & Mullin; TischlerBise; Ladd; MAPC; Rapoza & Goodman), each entry marked read / abstract /
 secondary / not read. Check entries not marked "read" before citing them publicly.
+
+## School Department budget documents (`psb_budget/`, saved 2026-09-29)
+
+About 35 Public Schools of Brookline budget files (FY25 to FY28 budget reports, guidelines,
+slides, FAQs, Advisory Committee write-ups). Download URLs below were recovered on 2026-10-24
+from the command that fetched them on 2026-09-29; files without one still need theirs.
+
+- `FY26_sped_transportation.pdf`: one page exported from a Google Sheet, "FY26 Budget by Account
+  Description", table "Special Ed-RSC Transportation" with FY23-FY26 budgets and student counts;
+  FY26 total $4,479,950 for 177 students, including foster care and McKinney-Vento transportation.
+  Cited in the cost-of-a-new-student article.
+  https://www.psbma.org/fs/resource-manager/view/c27fd510-112b-419a-9dfa-8f85910eee4a
+- `FY26_budget_closing_summary.pdf`: https://brooklinema.portal.civicclerk.com/event/16545/files/attachment/18374
+- `AdvCom_Schools_Subcommittee_FY27_writeup_draft_2026-04-28_packet.pdf`: https://brooklinema.portal.civicclerk.com/event/16301/files/attachment/15590
+- `2025-11_PSB_5yr_budget_projection.pdf`: https://www.psbma.org/fs/resource-manager/view/a06303c8-fe91-4656-93b2-b9184567fc6f
+- `2025_PSB_forecast_spreadsheet.pdf`: https://www.psbma.org/fs/resource-manager/view/f85ff545-1e3c-4a9b-b413-d709361b904f
+- `FY27-31_budget_guidelines_3rd_draft.pdf`: https://www.psbma.org/fs/resource-manager/view/a9762442-8107-4e14-8b70-f05d3dbc9001
+- `FY27-31_budget_guidelines_v1.pdf`: https://www.psbma.org/fs/resource-manager/view/e05da75d-b812-4721-8346-87101ecf8127
+- `FY27_budget_guidelines_voted.pdf`: https://www.psbma.org/fs/resource-manager/view/bb4af822-778b-44b4-89ae-43617af8f80c
+- `FY2027_proposed_budget.pdf`: https://www.psbma.org/fs/resource-manager/view/9302441c-da76-4b5e-978b-bbf53e0b5f44
+- `FY27_budget_slides_2026-02-05.pdf`: https://brooklinema.portal.civicclerk.com/event/14953/files/attachment/10830
+- `FY27_budget_hearing_slides.pdf`: https://brooklinema.portal.civicclerk.com/event/14954/files/attachment/10976
+- `FY27_budget_update_hearing.pdf`: https://brooklinema.portal.civicclerk.com/event/14954/files/attachment/10977
+- `FY27_budget_FAQs_hearing.pdf`: https://brooklinema.portal.civicclerk.com/event/14954/files/attachment/10974
+- `FY27_budget_slides_2026-02-26.pdf`: https://brooklinema.portal.civicclerk.com/event/15013/files/attachment/14183
+- `FY27_budget_FAQs_2026-02-26.pdf`: https://brooklinema.portal.civicclerk.com/event/15013/files/attachment/14181
+- `FY27_failed_override_impacts.pdf`: https://brooklinema.portal.civicclerk.com/event/14115/files/attachment/14307
+- `FY27_budget_presentation_vote.pdf`: https://brooklinema.portal.civicclerk.com/event/14117/files/attachment/14725
+- `FY27_budget_request_final.pdf`: https://brooklinema.portal.civicclerk.com/event/14116/files/attachment/14753
+- `FY26_budget_updates_2026-06.pdf`: https://brooklinema.portal.civicclerk.com/event/16397/files/attachment/16248
+- `FY26_superintendent_financial_update.pdf`: https://brooklinema.portal.civicclerk.com/event/14122/files/attachment/16252
+- `FY26_level_service_budget.pdf`: https://www.psbma.org/fs/resource-manager/view/e7f8d2c2-80ac-492e-9120-19c18190d89b
+- `FY26_level_service_cost_drivers.pdf`: https://www.psbma.org/fs/resource-manager/view/93545760-ec69-4987-b7c8-976d8ff60f70
+- `FY26_initial_budget_request.pdf`: https://www.psbma.org/fs/resource-manager/view/8fba38ef-ed79-4f7b-9adc-3c45bd2e93c9
+- `FY26_initial_budget_slides.pdf`: https://www.psbma.org/fs/resource-manager/view/f5beb09f-2819-4637-add2-4581f5c7e02e
+- `FY25_deficit_funding_plan.pdf`: https://www.psbma.org/fs/resource-manager/view/2a9f206e-3166-4e7c-abb6-9f3c3cae92f0
+- `FY25_budget_close_report.pdf`: https://www.psbma.org/fs/resource-manager/view/b1229118-9bac-4e94-911b-bee795005cf2
+- `FY26_Q1_budget_report.pdf`: https://www.psbma.org/fs/resource-manager/view/da5505a9-2e31-448f-b1ef-66fe31078fad
+- `FY26_budget_by_cost_center.pdf`: https://www.psbma.org/fs/resource-manager/view/6632d143-835a-4546-a154-68e2c14a2e51
+
+## School enrollment and sections history (added 2026-10-25)
+
+- `dese_enrollment/school_grade_enrollment.csv`: DESE enrollment by school and grade, Brookline schools,
+  1994-2026 (school year = the spring it ends; each year is the October 1 count, so the latest, 2026, is October 1, 2025, a year before the Superintendent's September 2026 report). Education-to-Career data hub, "Enrollment: Grade,
+  Race/Ethnicity, Gender, and Selected Populations",
+  https://educationtocareer.data.mass.gov/resource/t8td-gens.csv?dist_code=00460000&org_type=School
+- `psb_history/2017-01-09_9th_school_feasibility_kickoff.pdf`: PSB, 9th school feasibility phase kickoff,
+  January 9, 2017; p. 10, "Our Schools Have Already Grown", intended vs. current sections per grade by school
+  (Baker 3 vs. 4 1/2); p. 14, 2015-16 class sizes (average 21, 254 rooms) and the 2020-21 projection (average 24). Original link is dead since the move to psbma.org; archived copy:
+  https://web.archive.org/web/20240424113341/https://www.brookline.k12.ma.us/cms/lib/MA01907509/Centricity/Domain/722/Feasibility_Phase_%20Kickoff_Meeting_01.09.2017.pdf
+- `psb_history/2016-10-07_enrollment_report_and_boundary_update.pdf`: PSB enrollment projections and boundary
+  update, October 7, 2016 ("2 modular classrooms added at Baker"). Archived:
+  https://web.archive.org/web/2024/https://www.brookline.k12.ma.us/cms/lib/MA01907509/Centricity/Domain/722/2016_10_07_Enrollment_Report_and_Boundary_Update.pdf
+- `psb_history/2016_preliminary_enrollment_projection.pdf`: PSB Enrollment Working Group, 2016 Preliminary
+  Enrollment Projection (March 30, 2017): enrollment by school and grade, FY17 actual. Archived:
+  https://web.archive.org/web/2024/https://www.brookline.k12.ma.us/cms/lib/MA01907509/Centricity/Domain/4/2016%20Enrollment%20Report.pdf
+
+## Comprehensive plan (added 2026-10-25, Ben)
+
+- Draft actions, October 13, 2026: https://www.brooklinema.gov/DocumentCenter/View/63508/1013-Comp-Plan-Draft-Actions-
+  (Ben's link; the source of the goal of 1,600 to 2,400 new homes by 2035 cited in the listserv reply). Not saved
+  locally: brooklinema.gov returns a Cloudflare 403 to scripts, so the wording and page aren't checked here.
