@@ -87,8 +87,8 @@ pattern), students from new homes mean fewer positions cut, and their cost is th
 housing will crowd the schools. It is how quickly enrollment falls, and whether staffing follows
 it. [Indicators to watch](@topic-enrollment#indicators-to-watch) tracks both each fall.
 
-Two cautions. Births for 2025 and later are not yet counted (2024's 443 comes from the Town's annual
-report); another low year like 2023 would deepen the decline. And the number of children a building brings varies widely with its bedrooms
+Two cautions. Births for 2026 and later are not yet counted, and 2025's count, 423 in the Town's annual
+report, is a little below the {{fact:births_ahead}} a year the base case assumes; more years like it would deepen the decline. And the number of children a building brings varies widely with its bedrooms
 and tenure (0.03 to 0.56 in the ten recent buildings), so the per-home test still matters for any
 one project.
 

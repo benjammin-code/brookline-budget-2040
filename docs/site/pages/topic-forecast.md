@@ -346,7 +346,7 @@ evenly over FY2028–30; the Town documents reviewed do not state the plan.
   3.8% too high and schools 5.7% too low.
 - **Enrollment.** The two 2023 forecasts disagree by {{fact:cm_gap_fy2034}} students by
   2033–34. The base uses NESDEC because births to Brookline residents fell
-  from about 690 a year (2008–13) to about 490 (2020–22), 422 in 2023 and 443 in 2024
+  from about 690 a year (2008–13) to about 490 (2020–22), 422 in 2023, 443 in 2024 and 423 in 2025
   ([Enrollment: three forecasts compared](@topic-enrollment) sets out what that means), and UMass
   Donahue Institute projections have the 5–14 age group falling about 28%
   from 2020 to 2035; the School Department's forecaster has tracked the

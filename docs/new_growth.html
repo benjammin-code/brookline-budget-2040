@@ -645,7 +645,7 @@ growing school system, and Brookline's enrollment is falling.</p>
 <p>The schools were crowded a decade ago, and the buildings expanded since then were sized for a
 peak that has passed. Brookline's public schools peaked at 7,855 students in FY2019. This fall (2026) there are 6,889.
 Births to Brookline residents have fallen from about 690 a year in 2008–13 and about 590 in
-2015–19 to 422 in 2023 and 443 in 2024.
+2015–19 to 422 in 2023, 443 in 2024 and 423 in 2025.
 NESDEC's enrollment forecast, which the base case uses, updated for those births (NESDEC had
 estimated 518 and 507), has enrollment falling to about 5,400 by FY2040.</p>
 </div>
@@ -653,10 +653,10 @@ estimated 518 and 507), has enrollment falling to about 5,400 by FY2040.</p>
 <div class="chart-block">
       <div class="chart-head">
         <h3>Enrollment is falling below what the schools are staffed for</h3>
-        <p class="sub">Public school students, PK&ndash;12. Actual through FY2026, then NESDEC&rsquo;s projection updated for actual births (the base case) and, dashed, the School Department&rsquo;s forecast through FY2034. The shaded area is the empty seats if classes stay at the FY2027 level, as the base case assumes.</p>
+        <p class="sub">Public school students, PK&ndash;12. Actual through FY2026, then NESDEC&rsquo;s projection updated for actual births (the base case) and, dashed through FY2034, the School Department&rsquo;s forecast and NESDEC&rsquo;s forecast as published, before the births update (both scaled to this fall&rsquo;s count). The shaded area is the empty seats if classes stay at the FY2027 level, as the base case assumes.</p>
       </div>
       <div class="chart-svg-wrap" id="seats-wrap">
-        <svg class="chart" role="img" aria-label="Line chart of public school enrollment, FY2010 to FY2040. Enrollment peaked at 7,855 in FY2019 and is 6,889 in FY2027, the level the schools are staffed for. The base case projection falls to about 5,400 by FY2040, leaving a growing area of empty seats. The School Department&#x27;s forecast instead rises to about 7,400 by FY2034." id="seats-svg" viewBox="0 0 900 400" preserveAspectRatio="xMidYMid meet"></svg>
+        <svg class="chart" role="img" aria-label="Line chart of public school enrollment, FY2010 to FY2040. Enrollment peaked at 7,855 in FY2019 and is 6,889 in FY2027, the level the schools are staffed for. The base case projection falls to about 5,400 by FY2040, leaving a growing area of empty seats. The School Department&#x27;s forecast instead rises to about 7,400 by FY2034; NESDEC&#x27;s forecast as published falls to about 6,230." id="seats-svg" viewBox="0 0 900 400" preserveAspectRatio="xMidYMid meet"></svg>
         <div class="tooltip" id="seats-tooltip" aria-hidden="true"></div>
       </div>
       <div class="legend" id="seats-legend"></div>
@@ -2441,6 +2441,7 @@ what faster growth is worth</a> for the growth rate.</p>
   var seatsHist = [[2010,6472],[2011,6627],[2012,6875],[2013,7112],[2014,7288],[2015,7508],[2016,7668],[2017,7695],[2018,7801],[2019,7855],[2020,7777],[2021,6891],[2022,6928],[2023,7060],[2024,7039],[2025,7023],[2026,6949]];
   var seatsProj = [[2027,6889],[2028,6716],[2029,6554],[2030,6455],[2031,6313],[2032,6222],[2033,6104],[2034,5975],[2035,5854],[2036,5726],[2037,5630],[2038,5514],[2039,5480],[2040,5444]];
   var seatsCM = [[2027,6889],[2028,6858],[2029,6905],[2030,7021],[2031,7089],[2032,7216],[2033,7314],[2034,7414]];
+  var seatsNesdec = [[2027,6889],[2028,6697],[2029,6616],[2030,6574],[2031,6473],[2032,6410],[2033,6323],[2034,6231]];
   var seatsBase = [[2027,0],[2028,108],[2029,217],[2030,328],[2031,439],[2032,639],[2033,838],[2034,1038],[2035,1149],[2036,1260],[2037,1370],[2038,1480],[2039,1589],[2040,1698]];
   var seatsLevel = 6889;
   var seatsRoom = [[2027,0],[2028,708],[2029,1370],[2030,1778],[2031,2357],[2032,2732],[2033,3215],[2034,3744],[2035,4239],[2036,4763],[2037,5156],[2038,5632],[2039,5772],[2040,5919]];
@@ -2481,6 +2482,12 @@ what faster growth is worth</a> for the growth rate.</p>
     // the School Department's forecast, for comparison
     var cp = seatsCM.map(function (d) { return x(d[0]) + "," + y(d[1]); }).join(" L");
     svg.appendChild(svgEl("path", { d: "M" + cp, fill: "none", stroke: css("--line-levy-actual"), "stroke-width": 2.5, "stroke-dasharray": "7,5", "stroke-linecap": "round" }));
+    // NESDEC's forecast as published, before the base case replaced its estimated births with counted ones
+    var np = seatsNesdec.map(function (d) { return x(d[0]) + "," + y(d[1]); }).join(" L");
+    svg.appendChild(svgEl("path", { d: "M" + np, fill: "none", stroke: css("--line-ref"), "stroke-width": 2, "stroke-dasharray": "4,4", "stroke-linecap": "round" }));
+    var nl = seatsNesdec[seatsNesdec.length - 1];
+    svg.appendChild(svgEl("circle", { cx: x(nl[0]), cy: y(nl[1]), r: 3.5, fill: css("--line-ref") }));
+    lab(x(nl[0]) + 8, y(nl[1]) - 8, "NESDEC as published, " + nl[1].toLocaleString("en-US"));
     var cl = seatsCM[seatsCM.length - 1];
     svg.appendChild(svgEl("circle", { cx: x(cl[0]), cy: y(cl[1]), r: 4, fill: css("--line-levy-actual") }));
     var pk = seatsHist.filter(function (d) { return d[0] === 2019; })[0];
@@ -2508,6 +2515,8 @@ what faster growth is worth</a> for the growth rate.</p>
       var rr = seatsRoom.filter(function (q) { return q[0] === yr; })[0];
       var cm = seatsCM.filter(function (q) { return q[0] === yr; })[0];
       if (cm && yr > 2027) h += '<div class="tt-row"><span>School Department\'s forecast</span><span>' + cm[1].toLocaleString("en-US") + '</span></div>';
+      var ns = seatsNesdec.filter(function (q) { return q[0] === yr; })[0];
+      if (ns && yr > 2027) h += '<div class="tt-row"><span>NESDEC as published</span><span>' + ns[1].toLocaleString("en-US") + '</span></div>';
       if (rr && rr[1] > 0) h += '<div class="tt-row"><span>Empty seats</span><span>' + (seatsLevel - d[1]).toLocaleString("en-US") + '</span></div><div class="tt-row"><span>Homes beyond the trend that fill them</span><span>about ' + (Math.round(rr[1] / 100) * 100).toLocaleString("en-US") + '</span></div>';
       tooltip.innerHTML = h; tooltip.style.opacity = 1;
       var wrect = wrap.getBoundingClientRect();
@@ -2517,7 +2526,7 @@ what faster growth is worth</a> for the growth rate.</p>
     hit.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; cross.setAttribute("opacity", 0); });
     var legend = document.getElementById("seats-legend");
     legend.innerHTML = "";
-    [["Enrollment, actual then projected (NESDEC, the base case)", "--line-total"], ["School Department's forecast (Cropper-McKibben, 2023)", "--line-levy-actual"], ["FY2027 level, what the schools are staffed for", "--line-education"]].forEach(function (item) {
+    [["Enrollment, actual then projected (NESDEC, the base case)", "--line-total"], ["School Department's forecast (Cropper-McKibben, 2023)", "--line-levy-actual"], ["NESDEC's forecast as published (2023), before the births update", "--line-ref"], ["FY2027 level, what the schools are staffed for", "--line-education"]].forEach(function (item) {
       var el = document.createElement("div"); el.className = "legend-item";
       var sw = document.createElement("span"); sw.className = "legend-swatch"; sw.style.background = css(item[1]);
       el.appendChild(sw); var t = document.createElement("span"); t.textContent = item[0]; el.appendChild(t);
@@ -2525,11 +2534,12 @@ what faster growth is worth</a> for the growth rate.</p>
     });
     var tbl = document.getElementById("seats-table");
     if (tbl) {
-      var t = '<table><thead><tr><th>Year</th><th>Enrollment (base case)</th><th>School Department\'s forecast</th><th>Empty seats vs FY2027</th><th>Homes beyond trend that fill them</th></tr></thead><tbody>';
+      var t = '<table><thead><tr><th>Year</th><th>Enrollment (base case)</th><th>School Department\'s forecast</th><th>NESDEC as published</th><th>Empty seats vs FY2027</th><th>Homes beyond trend that fill them</th></tr></thead><tbody>';
       all.forEach(function (d) {
         var rr = seatsRoom.filter(function (q) { return q[0] === d[0]; })[0];
         var cm = seatsCM.filter(function (q) { return q[0] === d[0]; })[0];
-        t += '<tr><td>FY' + d[0] + (d[0] > 2026 ? " (projected)" : "") + '</td><td>' + d[1].toLocaleString("en-US") + '</td><td>' + (cm ? cm[1].toLocaleString("en-US") : "") + '</td><td>' + (rr ? (seatsLevel - d[1]).toLocaleString("en-US") : "") + '</td><td>' + (rr ? rr[1].toLocaleString("en-US") : "") + '</td></tr>';
+        var ns = seatsNesdec.filter(function (q) { return q[0] === d[0]; })[0];
+        t += '<tr><td>FY' + d[0] + (d[0] > 2026 ? " (projected)" : "") + '</td><td>' + d[1].toLocaleString("en-US") + '</td><td>' + (cm ? cm[1].toLocaleString("en-US") : "") + '</td><td>' + (ns ? ns[1].toLocaleString("en-US") : "") + '</td><td>' + (rr ? (seatsLevel - d[1]).toLocaleString("en-US") : "") + '</td><td>' + (rr ? rr[1].toLocaleString("en-US") : "") + '</td></tr>';
       });
       tbl.innerHTML = t + '</tbody></table>';
     }
@@ -2981,7 +2991,7 @@ what faster growth is worth</a> for the growth rate.</p>
       return '<div class="legend-item"><span class="legend-swatch" style="background:' + css(s[2]) + (s[3] ? ';opacity:.7' : '') + '"></span><span>' + s[1] + (s[3] ? " (dashed)" : "") + '</span></div>';
     }).join("");
     var last = function (key, s) { var D = E[key][s]; return D[D.length - 1]; };
-    svg.setAttribute("aria-label", "Two line charts. Births: actual births fell from about 690 a year in 2008 to 13 to 422 in 2023 and 443 in 2024; " +
+    svg.setAttribute("aria-label", "Two line charts. Births: actual births fell from about 690 a year in 2008 to 13 to 422 in 2023, 443 in 2024 and 423 in 2025; " +
       "NESDEC estimated about 500 a year from 2023, Cropper-McKibben about 588 to 628, and the base case holds " + Math.round(last("births", "base")[1]) +
       ". Students per birth, each forecast against its own births: " + last("perBirth", "actual")[1].toFixed(2) + " in FY" + last("perBirth", "actual")[0] +
       ", rising to " + last("perBirth", "nesdec")[1].toFixed(2) + " (NESDEC) and " + last("perBirth", "cm")[1].toFixed(2) + " (Cropper-McKibben) by FY2034 and " +

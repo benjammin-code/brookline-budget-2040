@@ -44,7 +44,7 @@ would follow about two years later.
 ## Births, the earliest reading for the schools
 
 A year's births set the kindergarten class about five years later, and that class's size through
-grade 12. Brookline residents had {{fact:ind_births}} babies in {{fact:ind_births_year}}, close to
+grade 12. Brookline residents had {{fact:ind_births}} babies in {{fact:ind_births_year}}, a little below
 the {{fact:births_ahead}} a year the base case assumes (the 2022 to 2024 average), and well below the
 {{fact:ind_births_nesdec}} NESDEC assumed and the {{fact:ind_births_cm}} in the School Department's
 forecast. If births stay near that level, enrollment keeps falling and the schools keep open

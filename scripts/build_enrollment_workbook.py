@@ -19,7 +19,7 @@ Sheets:
                  the base case's births-adjusted version
 
 Sources: births, output/brookline_resident_births.csv (DLS databank to 2014, MA DPH 2015-2023) and
-the 2024 Annual Town Report (443); grades FY2014-FY2024 and NESDEC's estimated births and forecast,
+the 2024 and 2025 Annual Town Reports (443, 423; 2025 shown, not used by the base case); grades FY2014-FY2024 and NESDEC's estimated births and forecast,
 data/NESDEC-Enrollment-Forecast.pdf (10/31/2023); FY2025-FY2026 grades, DESE enrollment by grade;
 totals FY2005-FY2013, output/school_enrollment_staffing_fy05_25.csv; base case and School
 Department forecast, scripts/expense_driver_forecast.py.
@@ -56,6 +56,10 @@ with open(ROOT / "output" / "brookline_resident_births.csv") as fh:
     for r in csv.DictReader(fh):
         births[int(r["year"])] = (int(r["resident_births"]), r["source"])
 births[2024] = (443, "Town Clerk, Brookline 2024 Annual Town Report, p.37")
+births[2025] = (423, "Town Clerk, Brookline 2025 Annual Town Report, p.30")
+# Counted, but the base case still assumes BIRTHS_AHEAD (the 2022-24 average) from 2025 on (Ben, 2026-10-25),
+# so the scenario inputs start from the base case's births rather than this count
+BIRTHS_SHOWN_ONLY = {2025}
 NESDEC_BIRTHS = {**edf.NESDEC_BIRTHS, 2018: 571, 2019: 581}
 
 # actual grades: NESDEC's historical table FY2014-FY2024 (PK, K-12), DESE FY2025-FY2026
@@ -199,7 +203,10 @@ for i, y in enumerate(range(1980, 2035)):
     r = 26 + i
     BIRTH_ROW[y] = r
     put(inp, r, 1, y, "0")
-    if y in births:
+    if y in BIRTHS_SHOWN_ONLY:
+        put(inp, r, 2, "=$B$3", "0")
+        put(inp, r, 3, f"Assumption: the input in B3 (counted: {births[y][0]}, {births[y][1]})")
+    elif y in births:
         put(inp, r, 2, births[y][0], "0", BLUE)
         put(inp, r, 3, births[y][1])
     else:
@@ -553,7 +560,7 @@ b_cm = {**b_act, **{y: 2940 / 5 for y in range(2020, 2025)}, **{y: 3080 / 5 for 
 b_base = {**b_act, **{y: edf.BIRTHS_AHEAD for y in range(2025, 2035)}}
 pool = lambda b, fy: sum(b[y] for y in range(fy - 18, fy - 5))
 chart = {
-    "births": {"actual": [[y, b_act[y]] for y in range(2005, 2025)],
+    "births": {"actual": [[y, b_act[y]] for y in range(2005, max(b_act) + 1)],
                "nesdec": [[y, b_nes[y]] for y in range(2022, 2029)],
                "cm": [[y, round(b_cm[y])] for y in range(2020, 2035)],
                "base": [[y, round(b_base[y], 1)] for y in range(2024, 2035)]},

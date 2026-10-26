@@ -92,6 +92,9 @@ console.log(csv); console.log(csv2);
   // as the model's enroll_mode "cm" does; it ends in FY2034
   const cm = years.filter(y => y <= 2034).map(y => [y, Math.round(D.enrollment.cm[y])]);
   console.log("var seatsCM = " + JSON.stringify(cm) + ";");
+  // NESDEC's forecast as published (October 2023), before the base case's births update, same scaling
+  const np = years.filter(y => y <= 2034).map(y => [y, Math.round(D.enrollment.nesdec_published[y])]);
+  console.log("var seatsNesdec = " + JSON.stringify(np) + ";");
   // base-case new homes from FY2028 (recent pace plus the approved Chestnut Hill plan)
   console.log("var seatsBase = " + JSON.stringify(years.map((y, i) => [y, Math.round(r0.units[i])])) + ";");
   console.log("var seatsLevel = " + Math.round(e0) + ";");

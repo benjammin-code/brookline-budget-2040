@@ -6,7 +6,7 @@ pasted in by hand from script output, so a model change left them stale. This re
 one from its source:
 
     growthPathsYears, growthPathsData, growthMixData, seatsHist, seatsProj, seatsCM,
-    seatsBase, seatsLevel, seatsRoom, seatsSPH, housingFillData   <- node new_growth_page_data.js
+    seatsNesdec, seatsBase, seatsLevel, seatsRoom, seatsSPH, housingFillData   <- node new_growth_page_data.js
     unitBeData                                          <- output/housing_unit_breakeven_curve.csv
     decisionsData, decisionsRoom                        <- output/expense_driver_forecast_sensitivity_fy40.csv
 

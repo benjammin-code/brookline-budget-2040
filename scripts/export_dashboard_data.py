@@ -155,6 +155,9 @@ def main():
     nesdec = edf.enrollment_path()
     sc = edf.ACTUAL_SEP_2026 / edf.CM_PK12[2027]
     cm = {y: (edf.ACTUAL_OCT_2025 if y == 2026 else edf.CM_PK12[min(y, 2034)] * sc) for y in YEARS}
+    # NESDEC as published (before the births update), scaled to the Sept 2026 count like the others; ends FY2034
+    sn = edf.ACTUAL_SEP_2026 / edf.NESDEC_PK12_PUBLISHED[2027]
+    nesdec_pub = {y: edf.NESDEC_PK12_PUBLISHED[y] * sn for y in YEARS if 2027 <= y <= 2034}
     staff26 = edf.SCHOOL_STAFF_FY26
     tsched = lambda f: {str(y): f(y) for y in range(2028, 2032)}
 
@@ -210,7 +213,8 @@ def main():
                     ps_share_police=edf.PS_SHARE_POLICE, police_budget_fy27=edf.POLICE_BUDGET_FY27,
                     police_peer_per_1000=edf.POLICE_PEER_PER_1000_HOMES),
         chca_ramp={str(y): ngs.chca_ramp_share(y) for y in YEARS},
-        enrollment=dict(nesdec={str(y): nesdec[y] for y in YEARS}, cm={str(y): cm[y] for y in YEARS}),
+        enrollment=dict(nesdec={str(y): nesdec[y] for y in YEARS}, cm={str(y): cm[y] for y in YEARS},
+                        nesdec_published={str(y): v for y, v in nesdec_pub.items()}),
     )
     OUT_DATA.write_text(json.dumps(out, separators=(",", ":")))
 

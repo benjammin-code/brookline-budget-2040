@@ -86,7 +86,7 @@ growing school system, and Brookline's enrollment is falling.
 The schools were crowded a decade ago, and the buildings expanded since then were sized for a
 peak that has passed. Brookline's public schools peaked at 7,855 students in FY2019. This fall (2026) there are 6,889.
 Births to Brookline residents have fallen from about 690 a year in 2008–13 and about 590 in
-2015–19 to 422 in 2023 and 443 in 2024.
+2015–19 to 422 in 2023, 443 in 2024 and 423 in 2025.
 NESDEC's enrollment forecast, which the base case uses, updated for those births (NESDEC had
 estimated 518 and 507), has enrollment falling to {{fact:enroll_fy2040_about}} by FY2040.
 

@@ -7,12 +7,12 @@ question: Why do the enrollment forecasts disagree, and which one does the base 
 answer: The base case uses the forecast by the district's own consultant, NESDEC, updated for the births that have since been counted. The School Department plans with a second forecast, by Cropper-McKibben, which expects enrollment to rise again; the difference is almost entirely how many young children each expects Brookline to have, not how classes move through the grades.
 summary:
 - All three start from about 6,900 students this fall. By FY2034 NESDEC has 6,127, the base case {{fact:enroll_fy2034}} and Cropper-McKibben 7,444.
-- NESDEC estimated about 500 births a year from 2023, before those births were counted; the counts came in at 422 in 2023 and 443 in 2024, and the base case updates NESDEC's forecast with them.
+- NESDEC estimated about 500 births a year from 2023, before those births were counted; the counts came in at 422 in 2023 and 443 in 2024, and the base case updates NESDEC's forecast with them. The 2025 count, 423, is a little below what the base case assumes.
 - Cropper-McKibben forecasts the whole population first and projects far more births and young families, so its kindergarten classes rise from about 500 to 607 a year.
 - On how classes grow or shrink as they move up a grade, the two published forecasts are close to each other and to Brookline's recent record.
 - Births have fallen about twice as fast in Brookline and its neighbors as in Massachusetts as a whole; Brookline differs from the family suburbs in how many families move in with young children, not in births.
 - Four numbers, updated each fall, show which forecast enrollment is following: births, kindergartners per birth, the October count, and the room that leaves for children from new homes.
-- For births not yet counted, the base case assumes {{fact:births_ahead}} a year, the 2022 to 2024 average: it continues the level Brookline has actually had rather than assuming a rebound or a further fall. Births are the main reason the forecasts differ; measured against their own births, all three assume similar rates of families moving in.
+- For births not yet counted, the base case assumes {{fact:births_ahead}} a year, the 2022 to 2024 average: it continues the level Brookline has actually had rather than assuming a rebound or a further fall. It keeps that average for 2025, which came in at 423, rather than resetting on one year. Births are the main reason the forecasts differ; measured against their own births, all three assume similar rates of families moving in.
 related: topic-schools, topic-families, base-case, new-homes, assumptions
 updated: 2026-10-14
 ---
@@ -31,7 +31,7 @@ version you can change.
 | When | October 2023 | 2023, revised April 2024 | October 2026 |
 | Used by | | The School Department's budget plans | The forecast on this site |
 | Method | Cohort survival: births become kindergarten, then each class moves up a grade by Brookline's historical ratios | A population model: forecasts every resident by age, area by area, then converts school-age children into enrollment | NESDEC's forecast, with the births it estimated replaced by the births that were counted |
-| Births assumed | About 500 a year from 2023 | About 616 a year for 2025 to 2030 | Actual through 2024 (482, 422, 443), then {{fact:births_ahead}} a year |
+| Births assumed | About 500 a year from 2023 | About 616 a year for 2025 to 2030 | Actual through 2024 (482, 422, 443), then {{fact:births_ahead}} a year (2025 has since been counted at 423) |
 | FY2027 (this fall) | 6,774 | 6,917 | 6,889, the actual count |
 | FY2030 | 6,464 | 7,050 | {{fact:enroll_fy2030}} |
 | FY2034 | 6,127 | 7,444 | {{fact:enroll_fy2034}} |
@@ -43,7 +43,7 @@ version you can change.
 
 Every forecast rests on two assumptions: how many children are born to Brookline residents, and how
 many families move in or out as those children grow up. The chart shows both. On the left, births:
-Brookline's actual count fell from about 690 a year in 2008–13 to 422 in 2023 and 443 in 2024;
+Brookline's actual count fell from about 690 a year in 2008–13 to 422 in 2023, 443 in 2024 and 423 in 2025;
 NESDEC's 2023 forecast estimated about 500 a year, Cropper-McKibben's population model about 590 to
 630, and the base case holds {{fact:births_ahead}}. On the right, students per birth: total enrollment
 divided by the births of the 13 years whose children are in K-12, a single measure of families
@@ -53,8 +53,8 @@ today to around the 0.90 of the 2016–19 peak; the base case reaches {{fact:bir
 {{chart:enroll-assume}}
 
 Because the births behind enrollment are smaller, even a return to the families-moving-in rate of
-the 2010s boom would leave enrollment lower than today. Counting 2024's 443 births and assuming
-births from 2025 on match the 2022–24 average, about {{fact:births_ahead}} a year, the pool of
+the 2010s boom would leave enrollment lower than today. Counting births through 2024 and assuming
+births from 2025 on match the 2022–24 average, about {{fact:births_ahead}} a year (2025 came in at 423), the pool of
 Brookline-born children falls about {{fact:birthpool_fall_pct}} by FY2040:
 
 | FY2040 enrollment if enrollment per birth… | Students | Per birth |
@@ -87,7 +87,7 @@ many families arrive with young children. In Lexington, the fall 2025 kindergart
 {{fact:kpb_lexington}} times the town's births five years earlier; in Brookline it was
 {{fact:kpb_brookline}}. [Why families settle elsewhere](@topic-families) looks at what goes with
 that difference. For the forecast, it means a rebound in Brookline's births would most likely be
-part of a regional one, and the counts so far, 422 in 2023 and 443 in 2024, show a level rather
+part of a regional one, and the counts so far, 422 in 2023, 443 in 2024 and 423 in 2025, show a level rather
 than a rise.
 
 ## How a kindergarten class is set

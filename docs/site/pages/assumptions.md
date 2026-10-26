@@ -147,7 +147,8 @@ one assumption moves and everything else stays at the base case; a minus sign me
   already born, and resident births fell from about 590 a year in 2015 to 2019 to 422 in 2023
   and 443 in 2024. NESDEC's 2023 forecast had estimated 518 and 507 for those two years, so the
   base case scales each of those classes, and later ones, down to the births that actually
-  happened, holding births from 2025 at the 2022 to 2024 average, {{fact:births_ahead}} a year.
+  happened, holding births from 2025 at the 2022 to 2024 average, {{fact:births_ahead}} a year. The 2025
+  count, 423, came in a little below that; the base case keeps the average.
 - **Alternative:** The School Department's own forecast ([[Cropper-McKibben]]) has enrollment
   rising again to about 7,400 by FY2034, mostly because it projects more births (about 600 a year).
   If births stay near the counted level, that enrollment would take about
