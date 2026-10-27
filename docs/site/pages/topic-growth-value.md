@@ -400,7 +400,7 @@ New homes come out ahead in FY2040, by a margin that shrinks each year: the fore
 new home, an apartment or condominium adding about {{fact:homes_value}} of value, pays more tax
 than its services cost when it opens, but its tax can grow only 2.5% a year under the levy limit
 while the cost of its students and services grows with pay. At the model's 0.244 students per home and about
-{{fact:student_cost_about}} per added student (FY2027 dollars: one added position per 8.3 students, plus supplies,
+{{fact:student_cost_about}} per added student (FY2027 dollars: one added position per 8.2 students, plus supplies,
 transport and health insurance), school costs are most of it. Renovations, commercial space and
 business equipment add tax with little or no added service demand. Renovation is modeled with no
 cost, which overstates it if renovations add bedrooms and students.

@@ -1085,7 +1085,7 @@
      FY2027 and FY2040, from scripts/housing_unit_breakeven.py (driver-model
      costs: $866 Town services and $16,837 per added student in FY2027). Below
      a line the home's property tax covers its costs; above it, it does not. */
-  var unitBeData = [[200000,0.0702,0.0538],[225000,0.0854,0.066],[250000,0.1006,0.0782],[275000,0.1158,0.0904],[300000,0.131,0.1026],[325000,0.1462,0.1149],[350000,0.1615,0.1271],[375000,0.1767,0.1393],[400000,0.1919,0.1515],[425000,0.2071,0.1638],[450000,0.2223,0.176],[475000,0.2375,0.1882],[500000,0.2527,0.2004],[525000,0.2679,0.2126],[550000,0.2831,0.2249],[575000,0.2983,0.2371],[600000,0.3135,0.2493],[625000,0.3287,0.2615],[650000,0.3439,0.2738],[675000,0.3591,0.286],[700000,0.3743,0.2982],[725000,0.3895,0.3104],[750000,0.4047,0.3226],[775000,0.4199,0.3349],[800000,0.4351,0.3471],[825000,0.4503,0.3593],[850000,0.4655,0.3715],[875000,0.4807,0.3838],[900000,0.496,0.396],[925000,0.5112,0.4082],[950000,0.5264,0.4204],[975000,0.5416,0.4326],[1000000,0.5568,0.4449],[1025000,0.572,0.4571],[1050000,0.5872,0.4693],[1075000,0.6024,0.4815],[1100000,0.6176,0.4938],[1125000,0.6328,0.506],[1150000,0.648,0.5182],[1175000,0.6632,0.5304],[1200000,0.6784,0.5427],[1225000,0.6936,0.5549],[1250000,0.7088,0.5671],[1275000,0.724,0.5793],[1300000,0.7392,0.5915],[1325000,0.7544,0.6038],[1350000,0.7696,0.616],[1375000,0.7848,0.6282],[1400000,0.8,0.6404],[1425000,0.8153,0.6527],[1450000,0.8305,0.6649],[1475000,0.8457,0.6771],[1500000,0.8609,0.6893],[1525000,0.8761,0.7015],[1550000,0.8913,0.7138],[1575000,0.9065,0.726],[1600000,0.9217,0.7382]];
+  var unitBeData = [[200000,0.0697,0.0533],[225000,0.0847,0.0654],[250000,0.0998,0.0776],[275000,0.1149,0.0897],[300000,0.13,0.1018],[325000,0.1451,0.1139],[350000,0.1601,0.1261],[375000,0.1752,0.1382],[400000,0.1903,0.1503],[425000,0.2054,0.1624],[450000,0.2205,0.1745],[475000,0.2355,0.1867],[500000,0.2506,0.1988],[525000,0.2657,0.2109],[550000,0.2808,0.223],[575000,0.2959,0.2352],[600000,0.311,0.2473],[625000,0.326,0.2594],[650000,0.3411,0.2715],[675000,0.3562,0.2837],[700000,0.3713,0.2958],[725000,0.3864,0.3079],[750000,0.4014,0.32],[775000,0.4165,0.3321],[800000,0.4316,0.3443],[825000,0.4467,0.3564],[850000,0.4618,0.3685],[875000,0.4768,0.3806],[900000,0.4919,0.3928],[925000,0.507,0.4049],[950000,0.5221,0.417],[975000,0.5372,0.4291],[1000000,0.5522,0.4412],[1025000,0.5673,0.4534],[1050000,0.5824,0.4655],[1075000,0.5975,0.4776],[1100000,0.6126,0.4897],[1125000,0.6277,0.5019],[1150000,0.6427,0.514],[1175000,0.6578,0.5261],[1200000,0.6729,0.5382],[1225000,0.688,0.5504],[1250000,0.7031,0.5625],[1275000,0.7181,0.5746],[1300000,0.7332,0.5867],[1325000,0.7483,0.5988],[1350000,0.7634,0.611],[1375000,0.7785,0.6231],[1400000,0.7935,0.6352],[1425000,0.8086,0.6473],[1450000,0.8237,0.6595],[1475000,0.8388,0.6716],[1500000,0.8539,0.6837],[1525000,0.8689,0.6958],[1550000,0.884,0.708],[1575000,0.8991,0.7201],[1600000,0.9142,0.7322]];
   var unitBeMarkers = [
     { v: 434283, label: "Apartment, 9+ units", row: 0 },
     { v: 672850, label: "Apartment, 4-8 units", row: 1 },
@@ -1240,7 +1240,7 @@
      The dashed line marks the base case's whole FY2040 room (decisionsRoom): a bar
      reaching past it on the left uses all of it. */
   var decisionsRoom = 12.0;
-  var decisionsData = [{"label":"Enrollment rebounds, staff follow","v":-47.9,"kind":"outside"},{"label":"Pay 1 point higher, all staff","v":-42.3,"kind":"decide"},{"label":"School pay at schools' forecast","v":-32.2,"kind":"decide"},{"label":"Health premiums 10% a year","v":-30.4,"kind":"outside"},{"label":"School staff held at FY2027 level","v":-27.8,"kind":"decide"},{"label":"Chestnut Hill inside trend","v":-5.8,"kind":"growth"},{"label":"Capital at the Town's table, about 6%","v":2.9,"kind":"decide"},{"label":"Faster growth, housing-led","v":5.9,"kind":"growth"},{"label":"School staff follow enrollment","v":9.5,"kind":"decide"},{"label":"Health premiums 6.5% a year","v":19.4,"kind":"outside"},{"label":"Pay half a point lower","v":19.4,"kind":"decide"},{"label":"School & safety pay at target","v":20.0,"kind":"decide"},{"label":"Faster growth, housing + commercial","v":23.4,"kind":"growth"},{"label":"Pension savings kept, not OPEB","v":34.6,"kind":"decide"},{"label":"Retiree health payoff money spent","v":43.0,"kind":"decide"},{"label":"Faster growth, commercial-led","v":46.1,"kind":"growth"}];
+  var decisionsData = [{"label":"Enrollment rebounds, staff follow","v":-47.9,"kind":"outside"},{"label":"Pay 1 point higher, all staff","v":-42.3,"kind":"decide"},{"label":"School pay at schools' forecast","v":-32.2,"kind":"decide"},{"label":"Health premiums 10% a year","v":-30.4,"kind":"outside"},{"label":"School staff held at FY2027 level","v":-27.8,"kind":"decide"},{"label":"Chestnut Hill inside trend","v":-5.8,"kind":"growth"},{"label":"Capital at the Town's table, about 6%","v":2.9,"kind":"decide"},{"label":"Faster growth, housing-led","v":5.6,"kind":"growth"},{"label":"School staff follow enrollment","v":9.5,"kind":"decide"},{"label":"Health premiums 6.5% a year","v":19.4,"kind":"outside"},{"label":"Pay half a point lower","v":19.4,"kind":"decide"},{"label":"School & safety pay at target","v":20.0,"kind":"decide"},{"label":"Faster growth, housing + commercial","v":23.3,"kind":"growth"},{"label":"Pension savings kept, not OPEB","v":34.6,"kind":"decide"},{"label":"Retiree health payoff money spent","v":43.0,"kind":"decide"},{"label":"Faster growth, commercial-led","v":46.1,"kind":"growth"}];
   var decisionsKinds = { decide: ["Brookline decides", "--pine"], growth: ["Growth (zoning, permitting)", "--line-no-override"], outside: ["Set mostly outside Brookline", "--line-ref"] };
   function drawDecisionsChart() {
     var svg = document.getElementById("decisions-svg");
@@ -1302,7 +1302,7 @@
      scripts/new_growth_page_data.js (dashboard engine, base case, today's mix /
      each mix at +0.7 point); rerun it and paste whenever the forecast changes. */
   var growthPathsYears = [2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040];
-  var growthPathsData = [{"k":-3,"rate":0.94,"room":[0,-1.5,1.3,4.4,2.4,3.6,4.7,5.9,4.9,3.9,1.9,0,-4.1,-8.8],"neg":2028},{"k":0,"rate":1.23,"room":[0,0.8,4.5,8.8,8,10.5,13,15.7,16.2,16.9,16.7,16.6,14.5,12],"neg":""},{"k":3,"rate":1.53,"room":[0,2.1,6.7,12,12.2,15.8,19.5,23.5,25.5,27.6,28.9,30.6,30.2,29.6],"neg":""},{"k":8,"rate":2.04,"room":[0,4.4,10.4,17.3,19.4,24.9,30.7,36.9,41.3,46,50.2,50,52.7,55.3],"neg":""}];
+  var growthPathsData = [{"k":-3,"rate":0.94,"room":[0,-1.5,1.3,4.4,2.4,3.6,4.7,5.9,4.9,3.9,1.9,0,-4.1,-8.8],"neg":2028},{"k":0,"rate":1.23,"room":[0,0.8,4.5,8.8,8,10.4,13,15.7,16.2,16.9,16.7,16.6,14.5,12],"neg":""},{"k":3,"rate":1.53,"room":[0,2.1,6.7,12,12.2,15.8,19.5,23.5,25.4,27.6,28.9,30.5,30.2,29.5],"neg":""},{"k":8,"rate":2.04,"room":[0,4.4,10.4,17.3,19.4,24.8,30.7,36.9,41.3,46,50.1,49.9,52.6,55.2],"neg":""}];
   var growthPathsStyle = {
     "-3": ["0.94%, 0.3 point slower", "--line-levy"],
     "0": ["1.23%, base case", "--line-total"],
@@ -1392,7 +1392,7 @@
     }
   }
 
-  var growthMixData = [{"mix":"mix","rev":67.7,"cost":24.3,"net":43.3,"homes":1036,"students":253},{"mix":"commercial","rev":67.2,"cost":21.2,"net":46.1,"homes":66,"students":16},{"mix":"even","rev":68.6,"cost":45.2,"net":23.4,"homes":2947,"students":720},{"mix":"housing","rev":70,"cost":64,"net":5.9,"homes":5825,"students":1422}];
+  var growthMixData = [{"mix":"mix","rev":67.7,"cost":24.4,"net":43.3,"homes":1036,"students":253},{"mix":"commercial","rev":67.2,"cost":21.2,"net":46.1,"homes":66,"students":16},{"mix":"even","rev":68.6,"cost":45.3,"net":23.3,"homes":2947,"students":720},{"mix":"housing","rev":70,"cost":64.4,"net":5.6,"homes":5825,"students":1422}];
   var growthMixLabels = { mix: "Today's mix", commercial: "New commercial space", even: "Half homes, half commercial", housing: "New homes only" };
   function drawGrowthMixChart() {
     var svg = document.getElementById("gmix-svg");
@@ -1477,13 +1477,13 @@
      (section 3): enrollment against the FY2027 level the schools are staffed for, and what
      more housing adds to FY2040 under two staffing assumptions. */
   var seatsHist = [[2010,6472],[2011,6627],[2012,6875],[2013,7112],[2014,7288],[2015,7508],[2016,7668],[2017,7695],[2018,7801],[2019,7855],[2020,7777],[2021,6891],[2022,6928],[2023,7060],[2024,7039],[2025,7023],[2026,6949]];
-  var seatsProj = [[2027,6889],[2028,6716],[2029,6554],[2030,6455],[2031,6313],[2032,6222],[2033,6104],[2034,5975],[2035,5854],[2036,5726],[2037,5630],[2038,5514],[2039,5480],[2040,5444]];
-  var seatsCM = [[2027,6889],[2028,6858],[2029,6905],[2030,7021],[2031,7089],[2032,7216],[2033,7314],[2034,7414]];
-  var seatsNesdec = [[2027,6889],[2028,6697],[2029,6616],[2030,6574],[2031,6473],[2032,6410],[2033,6323],[2034,6231]];
+  var seatsProj = [[2027,6833],[2028,6662],[2029,6501],[2030,6402],[2031,6262],[2032,6171],[2033,6054],[2034,5926],[2035,5806],[2036,5680],[2037,5584],[2038,5469],[2039,5435],[2040,5400]];
+  var seatsCM = [[2027,6833],[2028,6802],[2029,6849],[2030,6964],[2031,7032],[2032,7157],[2033,7255],[2034,7354]];
+  var seatsNesdec = [[2027,6833],[2028,6642],[2029,6563],[2030,6520],[2031,6420],[2032,6358],[2033,6271],[2034,6180]];
   var seatsBase = [[2027,0],[2028,108],[2029,217],[2030,328],[2031,439],[2032,639],[2033,838],[2034,1038],[2035,1149],[2036,1260],[2037,1370],[2038,1480],[2039,1589],[2040,1698]];
-  var seatsLevel = 6889;
-  var seatsRoom = [[2027,0],[2028,708],[2029,1370],[2030,1778],[2031,2357],[2032,2732],[2033,3215],[2034,3744],[2035,4239],[2036,4763],[2037,5156],[2038,5632],[2039,5772],[2040,5919]];
-  var housingFillData = [{"homes":2133,"staffed":-1.1,"fill":12.9,"enroll":5965},{"homes":5087,"staffed":4.5,"fill":23.2,"enroll":6686},{"homes":9781,"staffed":13.7,"fill":32.3,"enroll":7832}];
+  var seatsLevel = 6833;
+  var seatsRoom = [[2027,0],[2028,702],[2029,1359],[2030,1764],[2031,2338],[2032,2709],[2033,3188],[2034,3713],[2035,4204],[2036,4723],[2037,5113],[2038,5585],[2039,5724],[2040,5869]];
+  var housingFillData = [{"homes":2133,"staffed":-1.2,"fill":12.9,"enroll":5921},{"homes":5087,"staffed":4.2,"fill":22.9,"enroll":6642},{"homes":9781,"staffed":13.1,"fill":31.7,"enroll":7788}];
   function drawSeatsChart() {
     var svg = document.getElementById("seats-svg");
     while (svg.firstChild) svg.removeChild(svg.firstChild);
@@ -1585,7 +1585,7 @@
 
   /* ---------------- NET PER HOME, BOTH WAYS (added 2026-10-06) ----------------
      Tax at FY2025 values and the FY2026 rate; Town services $866 and students at 0.244 a
-     home, costing $16,837 (usual estimate) or $2,477 (filling empty seats), FY2027. */
+     home, costing $16,975 (usual estimate) or $2,497 (filling empty seats), FY2027. */
   var homeNetData = [
     { label: "Apartment, building of 9+ units", value: "$434,000", tax: 4447 },
     { label: "Typical new home, apartments and condominiums", value: "$585,000", tax: 5990 },

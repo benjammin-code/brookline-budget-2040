@@ -153,10 +153,10 @@ def main():
     dep25 = sum(hist_e.loc[2025, col] for _, col in cats)
 
     nesdec = edf.enrollment_path()
-    sc = edf.ACTUAL_SEP_2026 / edf.CM_PK12[2027]
+    sc = edf.ACTUAL_OCT_2026 / edf.CM_PK12[2027]
     cm = {y: (edf.ACTUAL_OCT_2025 if y == 2026 else edf.CM_PK12[min(y, 2034)] * sc) for y in YEARS}
     # NESDEC as published (before the births update), scaled to the Sept 2026 count like the others; ends FY2034
-    sn = edf.ACTUAL_SEP_2026 / edf.NESDEC_PK12_PUBLISHED[2027]
+    sn = edf.ACTUAL_OCT_2026 / edf.NESDEC_PK12_PUBLISHED[2027]
     nesdec_pub = {y: edf.NESDEC_PK12_PUBLISHED[y] * sn for y in YEARS if 2027 <= y <= 2034}
     staff26 = edf.SCHOOL_STAFF_FY26
     tsched = lambda f: {str(y): f(y) for y in range(2028, 2032)}

@@ -77,13 +77,13 @@ HIST = {
     2024: [256, 472, 520, 527, 544, 537, 511, 519, 471, 511, 570, 522, 551, 513],
     2025: [259, 473, 470, 538, 517, 558, 530, 508, 516, 473, 517, 578, 523, 548],
     2026: [237, 453, 491, 482, 542, 501, 547, 528, 503, 517, 499, 535, 584, 519],
-    # September 11, 2026 (Superintendent's report to the School Committee, 9/16/26, last page):
-    # K-8 by grade = average class size x sections, summed over the eight schools (the school
-    # totals reconcile to the reported 4,458 within one); BEEP (PK) 252 and grades 9-12 as reported
-    2027: [252, 411, 466, 484, 495, 547, 497, 544, 513, 500, 531, 508, 543, 584],
+    # October 1, 2026 (SIMS submission to DESE; PSB Enrollment Report, 10/28/2026, slide 4): BEEP 232,
+    # K-8 by grade summed over the eight schools (4,436), grades 9-12; the 11 ungraded high school
+    # students (SP) are in the 6,833 total but not in a grade
+    2027: [232, 410, 468, 480, 494, 545, 491, 542, 508, 498, 529, 502, 541, 582],
 }
-HIST_NOTE = {2027: "September 2026: K-8 derived from the Superintendent's class-size table (average x sections); "
-                   "9-12 and BEEP as reported. Approximate to within a student or two per grade."}
+HIST_NOTE = {2027: "October 1, 2026 (SIMS submission to DESE), as reported by the School Department; "
+                   "the 11 ungraded high school students are in the total but not in a grade."}
 # The School Department's forecast: Cropper-McKibben, Demographic Study 2023 (revised 04/03/2024),
 # Appendix D, district total by grade. Years to FY2024 are its history; FY2025 on are forecast.
 # Excludes its 19 special-program students, which its PK-12 totals include.
@@ -110,21 +110,21 @@ with open(ROOT / "output" / "school_enrollment_staffing_fy05_25.csv") as fh:
         if r["total_enrollment"]:
             totals[int(r["fiscal_year"])] = int(float(r["total_enrollment"]))
 totals[2026] = 6948   # DESE October 1, 2025 count
-totals[2027] = edf.ACTUAL_SEP_2026
-TOTAL_NOTE = {2026: "DESE, October 1, 2025", 2027: "School Department, September 2026 count"}
+totals[2027] = edf.ACTUAL_OCT_2026
+TOTAL_NOTE = {2026: "DESE, October 1, 2025", 2027: "School Department, October 1, 2026 count"}
 
 # base case: NESDEC adjusted for actual births (edf), scaled to the FY2027 actual
 # the model's own enrollment (output of expense_driver_forecast.py): NESDEC's path adjusted for
-# births and scaled to the Sept 2026 count, plus the children of the Chestnut Hill homes, which
+# births and scaled to the October 1, 2026 count, plus the children of the Chestnut Hill homes, which
 # the model adds on top (about 30 students); this is the figure the site shows
 with open(ROOT / "output" / "expense_driver_forecast_fy26_40.csv") as fh:
     base_total = {int(r["fiscal_year"]): float(r["enrollment"]) for r in csv.DictReader(fh)}
-scale = edf.ACTUAL_SEP_2026 / edf.NESDEC_PK12[2027]
+scale = edf.ACTUAL_OCT_2026 / edf.NESDEC_PK12[2027]
 base_k = {y: edf.NESDEC_GRADES[y][1] * scale for y in range(2028, 2035)}
 base_k.update({y: edf.NESDEC_K_LATE * scale for y in range(2035, 2041)})
 # the base case by grade, FY2024-FY2040: NESDEC's table adjusted for births, extended past FY2034
 # with NESDEC's average ratios exactly as expense_driver_forecast.enrollment_path does, then scaled
-# to the September 2026 count (before the Chestnut Hill children, which are not assigned to grades)
+# to the October 1, 2026 count (before the Chestnut Hill children, which are not assigned to grades)
 _ratios = [sum(edf.NESDEC_GRADES_PUBLISHED[y + 1][gi + 1] / edf.NESDEC_GRADES_PUBLISHED[y][gi]
                for y in range(2024, 2034)) / 10 for gi in range(1, 13)]
 base_grades = {y: [v * scale for v in edf.NESDEC_GRADES[y]] for y in range(2024, 2035)}
@@ -226,7 +226,7 @@ def births_of(year_cell):
 
 # ---------------------------------------------------------------- Your scenario (live cohort model)
 sc = wb.create_sheet("Your scenario")
-sc["A1"] = "Your scenario: a live cohort model from the September 2026 (FY2027) actual grades"
+sc["A1"] = "Your scenario: a live cohort model from the October 1, 2026 (FY2027) actual grades"
 sc["A1"].font = Font(name=F, bold=True, size=13)
 sc["A2"] = ("Each year: kindergarten = births six years earlier x the kindergarten ratio; every other grade = "
             "last year's grade below x that move's ratio; PK held level. Change the blue cells on Inputs. "
@@ -264,10 +264,10 @@ for k, (lab, src) in enumerate([("Base case", base_total), ("NESDEC", edf.NESDEC
         if y in src:
             put(sc, TOT + 3 + k, 2 + j, round(src[y]), "#,##0")
 put(sc, TOT + 7, 1, "Why this differs a little from the base case: the base case runs NESDEC's own grade table "
-                    "(adjusted for actual births), scales it to the September 2026 count and adds the children of "
-                    "the Chestnut Hill homes; this sheet starts from the September 2026 grades and applies the "
-                    "ratios directly. The September 2026 grades sum to 6,875 (the reported 6,889 also counts "
-                    "11 special-program students and rounding).")
+                    "(adjusted for actual births), scales it to the October 1, 2026 count and adds the children of "
+                    "the Chestnut Hill homes; this sheet starts from the October 1, 2026 grades and applies the "
+                    "ratios directly. The October 1, 2026 grades sum to 6,822 (the reported 6,833 also counts "
+                    "11 ungraded high school students).")
 sc.freeze_panes = "B6"
 
 # ---------------------------------------------------------------- By year
@@ -364,14 +364,14 @@ def grade_table(title, data, note):
 
 
 grade_table("Actual", HIST, "FY2014-FY2024 from NESDEC's historical table; FY2025-FY2026 from DESE; FY2027 from the "
-                            "Superintendent's September 2026 class-size table (approximate). Excludes ungraded and "
+                            "School Department's October 1, 2026 count. Excludes ungraded and "
                             "special-program students.")
 grade_table("NESDEC's forecast, as published (Oct 2023)", edf.NESDEC_GRADES_PUBLISHED,
             "Built on births NESDEC estimated (2022: 459 provisional; 2023 on: 518, 507, 492, 493, 494, 501).")
-grade_table("Base case: NESDEC adjusted for actual births, scaled to the September 2026 count", base_grades,
+grade_table("Base case: NESDEC adjusted for actual births, scaled to the October 1, 2026 count", base_grades,
             "Each class born 2022 or later scaled by actual / NESDEC births (2022: 482/459; 2023: 422/518; 2024: "
             f"443/507; 2025 on: the 2022-24 average, 449 a year); extended past FY2034 with NESDEC's average ratios; all x {scale:.3f} so "
-            "FY2027 matches 6,889. The model also adds about 30 children from the Chestnut Hill homes, not shown by grade.")
+            "FY2027 matches 6,833. The model also adds about 30 children from the Chestnut Hill homes, not shown by grade.")
 grade_table("The School Department's forecast (Cropper-McKibben, 2023)", CM_GRADES,
             "Appendix D, district total. FY2020-FY2024 are its history; FY2025 on are its forecast. Excludes its 19 "
             "special-program students.")
@@ -455,9 +455,9 @@ intro = [
     "about 0.95 from grade 5 to grade 6, when some families leave for private or other middle schools.",
     "So 415 becomes 415 x 1.029 = 427 in grade 1, then 427 x 1.023 = 437 in grade 2, and so on. The 'Change' columns "
     "show each year's ratio. The base case follows the same steps, from NESDEC's numbers scaled up 1.7% to match the "
-    "September 2026 count (2021 births were already counted, so this class needs no births adjustment).",
+    "October 1, 2026 count (2021 births were already counted, so this class needs no births adjustment).",
     "The School Department's forecast starts the same class at 507 and keeps it growing: its ratios assume more "
-    "families moving in at every age. The actual kindergarten in September 2026 was about 411.",
+    "families moving in at every age. The actual kindergarten on October 1, 2026 was 410.",
 ]
 for i, t in enumerate(intro):
     x = st.cell(3 + i, 1, t)
@@ -491,7 +491,7 @@ for k in range(13):
         for col, src in [(5, 4), (7, 6), (9, 8)]:
             put(st, r, col, f'=IF(AND(ISNUMBER({L(src)}{r}),ISNUMBER({L(src)}{r - 1})),{L(src)}{r}/{L(src)}{r - 1},"")', "0.000")
 put(st, hr + 15, 1, "Kindergarten row: NESDEC's 415 = 491 births x 0.845. Your scenario's kindergarten starts from "
-                    "the September 2026 count (about 411) and follows the ratios on Inputs. Past FY2034 only the "
+                    "the October 1, 2026 count (410) and follows the ratios on Inputs. Past FY2034 only the "
                     "base case and Your scenario continue; the base case extends NESDEC's table with its average ratios.")
 st.merge_cells(start_row=hr + 15, start_column=1, end_row=hr + 15, end_column=11)
 st.cell(hr + 15, 1).alignment = Alignment(wrap_text=True)

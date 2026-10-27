@@ -6,10 +6,10 @@ fiscal_year,line,driver_forecast,compare_to,compare_value
 2031,schools,164313449,Town LRFP,185135639
 2031,benefits,126021409,Town LRFP,127758685
 2030,operating_expenditure,459556357,trend_corrected,462002236
-2035,operating_expenditure,544537634,trend_corrected,559172344
-2040,operating_expenditure,654700873,trend_corrected,670208767
+2035,operating_expenditure,544544068,trend_corrected,559172344
+2040,operating_expenditure,654708804,trend_corrected,670208767
 2040,Town departments,158072344,trend_corrected,159954743
-2040,Schools,208816576,trend_corrected,239100425
-2040,Benefits,200111409,trend_corrected,190847121
+2040,Schools,208822841,trend_corrected,239100425
+2040,Benefits,200113075,trend_corrected,190847121
 2040,Within-levy debt,23063664,trend_corrected,23931236
 2040,Other non-dept,64636881,trend_corrected,56375242

@@ -1,0 +1,18 @@
+line,fy2025_dollars,per_student_fy2025,source
+In-district teaching,28520771,4061,"DESE FY2025, Schedule 4"
+"Other in-district instruction (therapists, aides, services)",4718638,672,DESE FY2025
+In-district transportation,2514711,358,DESE FY2025
+"Tuition, Massachusetts public schools and collaboratives",80082,11,DESE FY2025
+"Tuition, private and out-of-state schools",8517663,1213,DESE FY2025
+Out-of-district transportation,1568314,223,DESE FY2025
+"Total, before federal grants",46811420,6665,DESE FY2025
+Less federal grants and other revolving funds,-891241,-127,DESE FY2025; not paid by Brookline
+Less Circuit Breaker reimbursement for FY2025,-5237567,-746,DESE FY2026 Circuit Breaker listing
+Net special education spending,40682612,5793,paid from Brookline's school budget
+Plus benefits at 18.8% of teaching and other instruction,6235115,888,"health insurance and payroll-linked benefits per salary dollar, marginal_cost_per_student.csv"
+"Special education, all in",46917727,6681,FY2025 dollars
+
+tier,fy2027_dollars_per_student,,how
+"1. Fills an open seat, no new staff",670,,"$4,520,903 / 6,948 students (FY2026), +3%"
+2. Open seat plus special education at the district average,7758,,"tier 1 + $6,681 (FY2025) carried two years at 3% = $7,087"
+3. Opens a new classroom with full staff,16975,,marginal_cost_per_student.csv

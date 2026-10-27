@@ -12,7 +12,7 @@ summary:
 - Since 2016, about half of net new homes were in rental apartment buildings and about a fifth were age-restricted. Houses barely added to the count: most new houses replaced old ones.
 - The forecast adds {{fact:homes_pace}} homes a year, apartments and condominiums in their recent proportions, each adding about {{fact:homes_value}} of assessed value and 0.244 school children.
 related: topic-growth-links, new-homes, topic-growth, topic-growth-value, topic-enrollment
-updated: 2026-10-14
+updated: 2026-10-26
 ---
 
 ## Five ways of counting
@@ -142,7 +142,8 @@ proportions, about four to one. It does not forecast more age-restricted homes, 
 conversions, which mostly rebuild homes that were already there, sit with renovation. Each forecast
 home adds about {{fact:homes_value}} of assessed value, rising with home values after FY2026, and
 brings 0.244 school-age children, from the per-bedroom rates in RKG Associates' fiscal study for
-the Town applied to the bedrooms of recent new homes.
+the Town applied to the bedrooms of recent new homes. The Town's own count in ten buildings opened
+since 2015 is lower: about 0.21 a home, and about 0.13 in the five with the smallest homes.
 
 **What would change it.** A different mix changes both sides of the budget. A family-sized home
 pays several times the tax of an apartment and brings more children. A zoning change that lets

@@ -6,12 +6,12 @@ layer: topic
 question: How is Brookline's school system staffed, what does an added student cost, and how much room do the schools have?
 answer: Brookline staffs its schools somewhat more than its peers and has somewhat higher needs, and its teacher pay is the highest of its peers. An added student costs about {{fact:student_cost}} when staff are added, and far less when the student fills a seat the schools already have, which, with enrollment falling faster than staff, many will.
 summary:
-- The schools were rebuilt and expanded for the enrollment peak of FY2019; enrollment has since fallen, leaving about 945 open seats in this year's kindergarten-to-grade-8 classes.
+- The schools were rebuilt and expanded for the enrollment peak of FY2019; enrollment has since fallen, leaving about 1,100 open seats in this fall's kindergarten-to-grade-8 classes under the class-size guidelines, or about 440 with every class kept three students below them.
 - Since FY2021, families moving in have held enrollment near 7,000; from here, smaller birth years bring it down to {{fact:enroll_fy2040_about}} by FY2040 in the base case.
 - Brookline is somewhat more staffed than its peers and has somewhat higher needs; its teacher pay is the highest of its peers.
 - An added student costs about {{fact:student_cost}} when staff are added, and far less when the student fills a seat the schools already have.
 related: topic-enrollment, topic-families, new-homes, budget-to-2040, sources
-updated: 2026-10-14
+updated: 2026-10-27
 ---
 
 This page sets out how the schools reached their current size, how their staffing compares, and
@@ -50,8 +50,8 @@ refers to planning work since 2009 to respond, names Pierce, Driscoll, Baker and
 overcrowded, and plans to move classrooms out of leased space. Voters approved debt exclusions to
 rebuild or expand Devotion (now Ruffin Ridley, 2015), the High School (2018), Driscoll (2019) and
 Pierce (2023). Those buildings were sized for the peak. Enrollment fell to 6,891 in FY2021, during
-COVID, and has held near 7,000 since, which is why the FY2027 kindergarten-to-grade-8 classes have
-about 945 empty seats (the [new homes page](@new-homes) sets them out school by school).
+COVID, and has held near 7,000 since, which is why this fall's kindergarten-to-grade-8 classes have
+about 1,100 empty seats (the [new homes page](@new-homes) sets them out school by school).
 
 {{chart:enroll-seats}}
 
@@ -60,7 +60,7 @@ Brookline-born children fell 4%, yet enrollment stayed near 7,000. Had enrollmen
 stayed at its FY2021 level, FY2025 would have had about 6,620 students, roughly 400 fewer.
 Families moving into Brookline made up the difference.
 
-**From here, smaller birth years bring enrollment down.** In the base case it falls from 6,889
+**From here, smaller birth years bring enrollment down.** In the base case it falls from 6,833
 this fall to {{fact:enroll_fy2030}} in FY2030 and {{fact:enroll_fy2040_about}} by FY2040, even
 with families continuing to move in at about the recent rate. The School Department's own forecast
 instead expects a rebound, mainly because it assumes more births than have been counted.
@@ -103,10 +103,13 @@ and a rise to about 7,440. Both have been close so far.
 |---|---|---|---|
 | 2024–25 | 7,023 | 7,013 (−0.1%) | 6,980 (−0.6%) |
 | 2025–26 | 6,948 | 6,880 (−1.0%) | 6,929 (−0.3%) |
-| 2026–27 | 6,889 (Sept.) | 6,774 (−1.7%) | 6,917 (+0.4%) |
+| 2026–27 | 6,833 | 6,774 (−0.9%) | 6,917 (+1.2%) |
 | 2033–34 | | **6,127** | **7,444** |
 
-Cropper-McKibben has tracked the last two years slightly better. The base case still uses
+This fall NESDEC was closer on both. For kindergarten through grade 8 it projected 4,436 students,
+exactly the October 1 count, against Cropper-McKibben's 4,588. The School Department's own projection
+for next fall, made in October 2026, has kindergarten through grade 8 falling another 98, to 4,338;
+NESDEC has 4,337 and Cropper-McKibben 4,635. The base case uses
 NESDEC because the population data points the same way: births to Brookline residents fell from
 about 690 a year (2008–13) to about 490 (2020–22), and UMass Donahue Institute projections have
 Brookline's 5–14 age group falling about 28% from 2020 to 2035. With school staff falling half as
@@ -121,7 +124,7 @@ Against 17 peer K–12 districts, Brookline had 5.6 students per staff member in
 most staffed of 18 (peer median 5.9), and the same rank ten years earlier. Its needs rank 4th: 41%
 high-needs students (median 30%) and 11% English learners (median 4%). Peers added staff faster
 than enrollment too: over ten years Brookline's staff grew 10% while enrollment fell 6.5%; the
-peer median was +17% staff and −4% enrollment. Brookline serves most students with disabilities
+peer median was +17% staff and −4% enrollment. Brookline serves most special education students
 in-district, so its out-of-district tuition is low (5% of spending, 16th of 18). What stands out
 is pay: Brookline's average teacher salary ($132,000 in FY2025) is the highest of the 17 districts
 with data, against a peer median of about $112,000.
@@ -135,16 +138,16 @@ students-per-staff ratio moved from FY2011 to FY2025.
 
 The forecast treats two-thirds of the school budget as moving with enrollment and one-third as
 fixed (buildings, administration, leadership), the split RKG set with Town staff. It staffs the
-enrollment-linked share at the FY2027 ratio of 5.55 students per staff member (6,889 students,
-about 1,242 staff). An added student therefore brings 0.67 ÷ 5.55 = 0.121 positions, or one
-position per 8.3 students.
+enrollment-linked share at the FY2027 ratio of 5.50 students per staff member (6,833 students,
+about 1,242 staff). An added student therefore brings 0.67 ÷ 5.50 = 0.122 positions, or one
+position per 8.2 students.
 
 | Component | FY2027 dollars |
 |---|---|
-| Staff: 0.121 positions × $100,109 (FY2027 school salary budget per staff member) | $12,092 |
-| Non-personnel: 17% of the budget per pupil ($3,697) × 0.67 | $2,477 |
-| Health insurance: 0.121 positions × active-staff health cost per FTE | $1,839 |
-| Medicare and other payroll-linked benefits | $429 |
+| Staff: 0.122 positions × $100,109 (FY2027 school salary budget per staff member) | $12,192 |
+| Non-personnel: 17% of the budget per pupil ($3,727) × 0.67 | $2,497 |
+| Health insurance: 0.122 positions × active-staff health cost per FTE | $1,854 |
+| Medicare and other payroll-linked benefits | $433 |
 | **Cost of one added student** | **{{fact:student_cost}}** |
 
 That is 77% of the $21,745 average school budget per pupil in FY2027, and close to RKG's $15,572
@@ -157,13 +160,14 @@ costs a teacher. {{fact:student_cost}} is the long-run average.
 ## Filling an open seat
 
 The cost above assumes each added student brings added staff. That is the right assumption for a
-growing school system, but Brookline's is shrinking: enrollment is projected to fall from 6,889 in
+growing school system, but Brookline's is shrinking: enrollment is projected to fall from 6,833 in
 FY2027 to {{fact:enroll_fy2040_about}} by FY2040, while the base case lets school staff fall only half as
 fast, as they did from FY2019 to FY2025 (the School Department's own plan keeps staffing at the
-FY2027 level). The FY2027 kindergarten-to-grade-8 classes already have about 945 open seats under
-the School Committee's class-size guidelines, and more open as enrollment falls faster than staff.
+FY2027 level). This fall's kindergarten-to-grade-8 classes already have about 1,100 open seats under
+the School Committee's class-size guidelines, or about 440 if every class stays three students
+below them, and more open as enrollment falls faster than staff.
 A new home's children can fill seats the Town is already paying for, and the
-added cost per student is about $2,477 (supplies, transport and the other costs that move with
+added cost per student is about $2,500 (supplies, transport and the other costs that move with
 each student) rather than {{fact:student_cost}}. On that basis even a $434,000 rental apartment nets about $3,000 a
 year. With staff held at the FY2027 level, the seats that open as enrollment falls would take
 {{fact:seats_homes_fy2030}} homes beyond the recent pace by FY2030 and {{fact:seats_homes_fy2040}} by FY2040;
@@ -171,19 +175,22 @@ with staff falling half as fast, as in the base case, about half as many. The op
 the two uses compete. The [new homes page](@new-homes) sets this out school by school, and the
 Forecast Explorer's *Students from added homes* setting runs it through the forecast.
 
-**The $2,477 is probably high.** The base case builds it from an estimate that 17% of the school
+**The $2,500 is probably high.** The base case builds it from an estimate that 17% of the school
 budget is non-personnel spending: 17% of $149.8 million is about $25.5 million, the two-thirds of
-that which moves with enrollment is $17.1 million, and divided by 6,889 students that is $2,477.
+that which moves with enrollment is $17.1 million, and divided by 6,833 students that is about $2,500.
 The 17% is this project's own estimate, derived from Town-wide spending by object class. The
 Schools' own FY2026 year-end report shows less: $125.0 million of salaries and $17.8 million of
-non-salary spending, so non-salary is 12.5% of the budget. On that share the same calculation
-gives about **$1,800** a student. Most of the $17.8 million does not grow when one more child
+non-salary spending. That year's tuition line is low, though: to close a budget gap, the School
+Department moved $1.9 million of out-of-district tuition onto the state's special education
+reimbursement (Circuit Breaker) fund for FY2026 only (FY2027 proposed budget, p. 33). Putting it
+back gives $19.7 million, so non-salary is about 13.6% of the budget. On that share the same
+calculation gives about **$2,000** a student. Most of the $19.7 million does not grow when one more child
 joins a class that is already running:
 
 | FY2026 non-salary budget line | Amount |
 |---|---|
 | Transportation (largely special education) | $5.2M |
-| Out-of-district special education tuition | $3.0M |
+| Out-of-district special education tuition (with the $1.9M moved to Circuit Breaker) | $4.9M |
 | Professional and technical services | $2.9M |
 | General supplies | $1.7M |
 | Claims and settlements | $1.4M |
@@ -192,13 +199,91 @@ joins a class that is already running:
 | Textbooks and print materials | $0.6M |
 | Legal services | $0.4M |
 | Everything else | $0.3M |
-| **Total** | **$17.8M** |
+| **Total** | **$19.7M** |
 
 The lines that really scale with each seat (supplies, textbooks, online tools, computers, field
-trips and instructional equipment) come to about $4.6 million, roughly **$660 a student**.
+trips and instructional equipment) come to about $4.5 million, roughly **$650 a student** across
+FY2026's 6,948 students.
 Transportation and out-of-district tuition follow particular students, mostly those with special
-education needs, rather than seats. So the cost of a student filling an open seat is somewhere
-between about $660 and the base case's $2,477, and probably nearer the lower end. The base case
-keeps $2,477, which makes its open-seat results conservative; a lower figure would only widen the
+education needs, rather than seats. Even all $19.7 million comes to only about $2,840 a student. So
+the cost of a student filling an open seat is somewhere between about $650 and $2,840, and probably
+nearer the lower end. The base case keeps about $2,500, toward the top of that range, which makes its open-seat results conservative; a lower figure would only widen the
 gap between the two cases. (Source: Public Schools of Brookline, FY26 General Fund Financial
-Report, Line Item, 4th Quarter, 14 August 2026, budget column.)
+Report, Line Item, 4th Quarter, 14 August 2026, budget column, with the $1.9 million tuition shift
+from the FY2027 proposed budget added back.)
+
+## Three tiers for the cost of an added student
+
+**An added student costs the schools about $670 a year if they fill an open seat, about $7,760 if
+they also bring the district's average special education needs, and about {{fact:student_cost}} if
+they fill an empty classroom with full staff.** All three are in FY2027 dollars. The middle tier
+exists because special education staff and services grow with enrollment, and classrooms
+don't. The forecast does not use the middle tier yet; its open-seat case still charges
+$2,497 a student.
+
+| Tier | When it applies | Cost a year, FY2027 |
+|---|---|---|
+| 1. Fills an open seat, no new staff | A student joins a class that is already running | about $670 |
+| 2. Fills an open seat, with special education at the district average | The same, plus special education staff, services, tuition and transportation in proportion | about $7,760 |
+| 3. Fills an empty classroom with full staff | Today's classes are full, so a new section opens in an empty classroom | about {{fact:student_cost}} |
+
+**Tier 1** is the FY2026 budget lines that grow with each student (supplies, online tools,
+computers, textbooks): $4,520,903 across 6,948 students, $651, carried to FY2027 at 3%.
+
+**Tier 2** adds Brookline's special education spending per student, from DESE's FY2025 figures,
+the latest year published:
+
+| FY2025 special education spending | Amount | Per student |
+|---|---|---|
+| In-district teaching | $28,520,771 | $4,061 |
+| Other in-district instruction (therapists, aides, services) | $4,718,638 | $672 |
+| In-district transportation | $2,514,711 | $358 |
+| Tuition, Massachusetts public schools and collaboratives | $80,082 | $11 |
+| Tuition, private and out-of-state schools | $8,517,663 | $1,213 |
+| Out-of-district transportation | $1,568,314 | $223 |
+| **Total** | **$46,811,420** | **$6,665** |
+| Less federal grants and other revolving funds | −$891,241 | −$127 |
+| Less the state's Circuit Breaker reimbursement for FY2025 | −$5,237,567 | −$746 |
+| **Paid from Brookline's school budget** | **$40,682,612** | **$5,793** |
+| Plus benefits for the staff, at 18.8% of teaching and other instruction | $6,235,115 | $888 |
+| **Special education, all in** | **$46,917,727** | **$6,681** |
+
+Per-student figures divide by FY2025 enrollment, 7,023. Three adjustments take DESE's total to
+what Brookline pays:
+
+- **Federal grants** (mainly IDEA) are not paid by Brookline taxpayers, so they come out.
+- **Circuit Breaker** is the state's reimbursement of about 75% of each high-cost student's costs
+  above a threshold, paid the following year. DESE's spending figures include what districts spend
+  from the Circuit Breaker fund, so the reimbursement for FY2025's claims, paid in FY2026, comes
+  out too.
+- **Benefits.** DESE's special education figures cover instruction and tuition only; districts
+  report employee benefits separately. The forecast's cost of an added student carries health
+  insurance ($1,854) and other payroll-linked benefits ($433) on $12,192 of salary, 18.8%, and the
+  same rate is applied here. It is applied to all of "other instruction," part of which is
+  contracted services that carry no benefits, so it may be slightly high.
+
+The all-in $6,681 is carried to FY2027 at 3% a year, $7,088, and added to tier 1: about $7,760.
+
+**What it assumes.** New students need special education at the district's average rate and mix
+of needs: 18.6% of Brookline students had individualized education programs (IEPs) in 2024–25. If
+new homes bring more students with high-cost needs, the cost is higher; if fewer, lower. Out-of-district placements are
+few and expensive, so the actual cost from any one building can be well above or below the
+average.
+
+**If Circuit Breaker shrinks.** The state pays Circuit Breaker from each year's appropriation.
+Statewide payments grew from $205.7 million in FY2009 to $663.6 million in FY2026, but in FY2010
+and FY2011, during the recession, they fell to about $128 million, reimbursing roughly 40% of
+eligible costs instead of 75%. A cut like that would add about $370 to tier 2. Without Circuit
+Breaker at all, tier 2 would be about $8,550.
+
+**Tier 3** is the forecast's cost of an added student when every student brings new staff: 0.122
+positions at $100,109 each, $12,192, plus non-personnel costs ($2,497), health insurance and
+payroll-linked benefits. It already includes special education staff, at the forecast's staffing
+rate rather than the district average.
+
+Sources: DESE, [Direct Special Education Expenditures, FY08 to FY25](https://www.doe.mass.edu/research/radar/direct-expenditure-trends.xlsx)
+(from each district's End of Year Report, Schedule 4); DESE,
+[FY2026 Circuit Breaker reimbursement](https://www.doe.mass.edu/finance/circuitbreaker/payments/fy2026-reimbursement.xlsx)
+and [statewide payments by year](https://www.doe.mass.edu/finance/circuitbreaker/payments/default.html);
+Public Schools of Brookline, FY26 General Fund Financial Report, 14 August 2026. The calculation is
+[on GitHub](https://github.com/benjammin-code/brookline-budget-2040/blob/main/scripts/special_education_cost_per_student.py).

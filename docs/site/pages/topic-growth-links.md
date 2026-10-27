@@ -5,15 +5,15 @@ title: New homes and the budget: is there room?
 layer: topic
 guide: growth
 question: When Brookline adds homes, does the budget follow, does the Town have room for them, and what would show that it needs more?
-answer: Revenue follows construction closely, about two years later. Costs have not followed individual homes. By some measures, the services new homes use most seem to have room. The schools have about 945 open seats in kindergarten to grade 8 and enrollment is falling, and fire and police workload is below common marks of a busy department. If that holds, a single project's estimate overstates what its homes cost the Town. But these are measures taken from budgets and reports, not the judgment of the people who run those services, and services often strain in other ways before any measure says they are full. Where each one's limit lies is not known. A few readings, most of them published each year, would show which way things are moving.
+answer: Revenue follows construction closely, about two years later. Costs have not followed individual homes. By some measures, the services new homes use most seem to have room. The schools have about 1,100 open seats in kindergarten to grade 8 and enrollment is falling, and fire and police workload is below common marks of a busy department. If that holds, a single project's estimate overstates what its homes cost the Town. But these are measures taken from budgets and reports, not the judgment of the people who run those services, and services often strain in other ways before any measure says they are full. Where each one's limit lies is not known. A few readings, most of them published each year, would show which way things are moving.
 summary:
 - There are two ways to estimate what new homes cost. A project estimate charges each home an average share of today's spending; a town-wide view asks whether the Town has room for more residents and when it would have to add staff or buildings. Research on the method finds the first reliable only where services are about as full as demand, which, by some measures, Brookline's may not be.
 - Revenue follows construction about two years later. Each dollar of construction permitted in a calendar year has become {{fact:gl_ng_per_permit_min}} to {{fact:gl_ng_per_permit_max}} of taxable value in the fiscal year that starts 18 months later. Most of that is renovation, not new homes, and total residential new growth has held steady whether few or many homes were built.
 - Costs followed students and births, not homes. Police and fire positions went from {{fact:gl_ps_fy10}} to {{fact:gl_ps_fy20}} over the 2010s while homes grew {{fact:gl_homes_pct_10_20}}; enrollment rose and fell with births and with families moving into existing homes; across Massachusetts each added home came with about {{fact:gl_children_added}} more children, against {{fact:gl_children_existing}} in an average existing home.
-- By some measures, Brookline's services seem to have capacity. The schools have about 945 open seats in kindergarten to grade 8, with more as enrollment falls. Fire companies run about half as often as the usual mark of a busy company. Police calls are down. These measures come from budgets and reports. The people running these services have not been asked, and they may see it differently. Services often strain in other ways first, through overtime, leave, or a particular school or neighborhood, and where each one's limit lies is not known. Other Town departments have no measure of capacity at all.
+- By some measures, Brookline's services seem to have capacity. The schools have about 1,100 open seats in kindergarten to grade 8, about 440 if classes stay three students under the guidelines, with more as enrollment falls. Fire companies run about half as often as the usual mark of a busy company. Police calls are down. These measures come from budgets and reports. The people running these services have not been asked, and they may see it differently. Services often strain in other ways first, through overtime, leave, or a particular school or neighborhood, and where each one's limit lies is not known. Other Town departments have no measure of capacity at all.
 - Two sets of readings would show which way things are moving. Whether there is room for new homes: open seats by school and grade, kindergarten against births, and the pace of permits. Whether something must expand: a grade reaching its class-size guideline, fire response times, overtime and medical calls, police vacancies, and the town's total homes nearing {{fact:fire_company_homes}}.
 related: new-homes, topic-growth, topic-schools, topic-homes, topic-enrollment, next-few-years
-updated: 2026-10-14
+updated: 2026-10-27
 ---
 
 Most of what a new home costs the Town is a share of services that are already running: a seat
@@ -307,7 +307,7 @@ who know things no published figure shows, and the section ends with what it can
 
 | Service | What the published measures show | What would use up room | What adding capacity costs |
 |---|---|---|---|
-| Schools | About 945 open seats in kindergarten to grade 8 this year, 83% full, and about 550 at the high school; more each year as enrollment falls | A grade at a school reaching its class-size guideline; enrollment turning back up | A teacher for a class; a classroom or building, by debt exclusion |
+| Schools | About 1,100 open seats in kindergarten to grade 8 this fall, 80% full, or about 440 with every class three students under its guideline; about 535 at the high school; more each year as enrollment falls | A grade at a school reaching its class-size guideline; enrollment turning back up | A teacher for a class; a classroom or building, by debt exclusion |
 | Fire | Seven companies set by how far they must travel, each running about half as often as a busy company | Response times slipping; medical calls rising with an aging population | About {{fact:fire_company_cost_fy25}} a year for a company of 20, plus $1.5 million to $2 million for a truck |
 | Police | Calls down about a quarter since FY2013; the department below its own authorized strength | Calls or response times rising | About $124,000 a year an officer |
 | Other Town departments | Not measured | Not known | A position at a time |
@@ -316,11 +316,14 @@ who know things no published figure shows, and the section ends with what it can
 ### Schools: open seats now, and more coming
 
 The schools were rebuilt and expanded for the enrollment peak of FY2019. Since then enrollment has
-fallen, and the School Department's projections for this year put kindergarten through grade 8 at
-4,513 students in classes with about 945 open seats under the School Committee's own class-size
-guidelines. No grade at any school is over its guideline. The fullest schools are Ruffin Ridley
-(89%) and Pierce (86%); the emptiest, Lincoln and Runkle (78%). The high school, expanded in 2022,
-has about 550 seats more than its 2,147 students. In the base case enrollment falls further, to
+fallen. On October 1 kindergarten through grade 8 had 4,436 students in 236 classes, with about 1,100
+open seats under the School Committee's own class-size guidelines. No grade at any school is over
+its guideline. The guideline is a ceiling, though. In 2017 the School Department presented an
+average class of 24 as the outcome to avoid, and this fall's classes average 19. With every class
+kept three students below its guideline, about 440 seats are open. The fullest schools are Pierce
+(87%), which moves into its larger new building in fall 2028, and Ruffin Ridley (84%); the
+emptiest is Hayes (75%). The high school, expanded in 2022, has about 535 seats more than its
+2,165 students. In the base case enrollment falls further, to
 {{fact:enroll_fy2040_about}} by FY2040, because fewer children are being born to Brookline
 residents. At the forecast's 0.24 students a home, the seats opening by FY2030 would take
 {{fact:seats_homes_fy2030}} homes beyond the recent pace to fill if staff were held at the FY2027
@@ -505,7 +508,7 @@ how close any service is to a step is not something the published figures can se
 
 - **The comparison of the two estimates.** The 100-apartment example uses the recent value per
   apartment home, the FY2026 residential tax rate (1.024%), 0.244 students a home, the forecast's
-  {{fact:student_cost}} for an added student with staff and $2,477 for one filling an open seat, RKG
+  {{fact:student_cost}} for an added student with staff and $2,497 for one filling an open seat, RKG
   Associates' $1,109 a home for Town departments, before benefits, and the forecast's $660 a
   home plus benefits, less fire's share. The figures mix FY2025 to FY2027 dollars and are rounded; the
   [breakeven test](@topic-growth) works the same comparison carefully.

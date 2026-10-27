@@ -10,7 +10,7 @@ summary:
 - Each entry gives the base value, why it was chosen, and the change in FY2040 revenue minus spending if it moves.
 - "Worth if wrong" moves one assumption at a time; the Explorer lets you move several together.
 related: base-case, budget-to-2040, explorer, sources
-updated: 2026-10-14
+updated: 2026-10-26
 ---
 
 Each entry follows the same pattern. **Base case** is what the forecast assumes. **Why** is the
@@ -245,9 +245,11 @@ one assumption moves and everything else stays at the base case; a minus sign me
 - **Base case:** 0.244 school-age children per new home, each one staffed in full at the
   forecast's cost of an added student, {{fact:student_cost}} in FY2027.
 - **Why:** 0.244 is a standard per-bedroom schedule applied to the mix of homes Brookline builds;
-  ten Brookline buildings opened since 2015 range from 0.03 to 0.56.
+  the Town's count for ten Brookline buildings opened since 2015 runs from 0.03 to 0.56 and
+  averages about 0.21, or about 0.13 in the five with the smallest homes.
 - **Alternative:** With enrollment falling, children from new homes can fill seats the schools
-  already have, at about $2,477 each for supplies and services rather than new staff.
+  already have, at about $650 to $2,840 each for supplies and services rather than new staff (the
+  forecast uses $2,497).
   [New homes and Brookline's budget](@new-homes) works through that case.
 - **If it is wrong:** children from new homes filling empty seats until enrollment is back to the
   FY2027 level, at today's growth rate, {{fact:fy40_fill_seats}};

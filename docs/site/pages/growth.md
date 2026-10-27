@@ -8,10 +8,10 @@ answer: Construction adds revenue predictably, project by project, about two yea
 summary:
 - Most of Brookline's new growth is renovation and commercial property, which add tax with little added cost. Growing as fast as the fastest-growing fifth of Massachusetts towns would leave the budget {{fact:fy40_peer_commercial_abs}} a year better off by FY2040, after the costs the growth brings, if it came through commercial space, and {{fact:fy40_peer_housing_abs}} if it came through new homes alone.
 - A project estimate charges each new home an average share of teachers, police and firefighters. Brookline's costs have not moved that way: they follow births, pay and staffing decisions, and step up when a service runs out of room.
-- By the measures that are published, the schools have about 945 open seats in kindergarten to grade 8, and police and fire workload is below common marks of a busy department. Those measures have not been checked with the people who run those services.
+- By the measures that are published, the schools have about 1,100 open seats in kindergarten to grade 8 (about 440 if classes stay three students under the guidelines), and police and fire workload is below common marks of a busy department. Those measures have not been checked with the people who run those services.
 - So the useful questions about growth are town-wide: how much room each service has, and what would show it running out.
 related: new-homes, topic-growth-links, topic-growth, topic-growth-value, topic-homes
-updated: 2026-10-15
+updated: 2026-10-27
 ---
 
 ## What growth adds
@@ -54,9 +54,9 @@ company. That depends on everything being built across town, not on any one proj
 
 ## Is there room?
 
-By some measures, Brookline's services seem to have capacity. The schools have about 945 open
-seats in kindergarten to grade 8 under the School Committee's own class-size guidelines, and
-enrollment is expected to keep falling. Fire companies run about half as often as the usual mark
+By some measures, Brookline's services seem to have capacity. The schools have about 1,100 open
+seats in kindergarten to grade 8 under the School Committee's own class-size guidelines, about 440
+if every class is kept three students below them, and enrollment is expected to keep falling. Fire companies run about half as often as the usual mark
 of a busy company, and police calls are down.
 
 Those measures come from budgets and reports. The people who run these services have not been

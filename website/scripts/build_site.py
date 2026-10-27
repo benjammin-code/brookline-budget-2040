@@ -399,7 +399,7 @@ def wrap_forecast_page(path, src):
 <head>
 <meta charset="utf-8">
 {ARTIFACT_RESET}
-{head_meta(html.unescape(title), DESCRIPTIONS[path], path, "img/whitepaper-chart.png", "article")}
+{head_meta(html.unescape(title), DESCRIPTIONS[path], path, "img/share-card.png", "article")}
 {head}
 {print_css(text)}
 </head>
@@ -430,7 +430,7 @@ def post_pages(posts):
                 f'<p class="meta">Ben Chostner &middot; {when} &middot; {mins} min read</p></header>')
         out = page(p["title"], p["description"], "post/" + p["slug"],
                    head + f'<article class="prose">\n{rewrite_links(body, "post/" + p["slug"])}</article>',
-                   "writing", "post/" + first_img.group(1) if first_img else "img/whitepaper-chart.png", "article")
+                   "writing", "post/" + first_img.group(1) if first_img else "img/share-card.png", "article")
         (DIST / "post").mkdir(exist_ok=True)
         (DIST / "post" / (p["slug"] + ".html")).write_text(out)
         items.append(dict(kind="Essay", href="/post/" + p["slug"], title=p["title"], date=d,
@@ -544,7 +544,7 @@ def main():
                     '<header class="masthead"><p class="eyebrow">Writing</p><h1 class="title">Brookline Insights</h1>'
                     '<p class="standfirst">Essays and analyses on how Brookline got here, the state of things today, '
                     'and how we might chart a sustainable and thriving future.</p></header>' + post_list,
-                    "writing", "img/whitepaper-chart.png")
+                    "writing", "img/share-card.png")
     (DIST / "brookline-insights.html").write_text(insights)
 
     (DIST / "forecast").mkdir(exist_ok=True)

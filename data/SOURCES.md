@@ -996,3 +996,39 @@ from the command that fetched them on 2026-09-29; files without one still need t
 - Draft actions, October 13, 2026: https://www.brooklinema.gov/DocumentCenter/View/63508/1013-Comp-Plan-Draft-Actions-
   (Ben's link; the source of the goal of 1,600 to 2,400 new homes by 2035 cited in the listserv reply). Not saved
   locally: brooklinema.gov returns a Cloudflare 403 to scripts, so the wording and page aren't checked here.
+
+## Special education (added 2026-10-26)
+
+- `dese_sped/direct-expenditure-trends.xlsx`: DESE RADAR, Direct Special Education Expenditures, FY08 to FY25
+  (file dated May 12, 2026; page updated July 29, 2026): https://www.doe.mass.edu/research/radar/direct-expenditure-trends.xlsx
+  (linked from https://www.doe.mass.edu/research/radar/). Brookline FY2025: in-district teaching $28.52M, other
+  instructional $4.72M, in-district transportation $2.51M; out-of-district $10.17M (tuition to Mass. non-public
+  and out-of-state schools $8.52M, Mass. public schools and collaboratives $0.08M, out-of-district transportation
+  $1.57M); total operating $203.9M. All funds; PSB's FY2026 General Fund report shows only $3.0M of
+  out-of-district tuition.
+  FY2024's in-district total, $34.95M, matches the ERSC report's figure.
+- `dese_sped/circuit-breaker-fy2025-reimbursement.xlsx`: DESE, FY2025 Circuit Breaker reimbursement (FY2024 claims),
+  https://www.doe.mass.edu/finance/circuitbreaker/payments/fy2025-reimbursement.xlsx. Brookline $4,942,020 total
+  (including a $607,145 supplemental payment, July 2025).
+- `dese_sped/circuit-breaker-fy2026-reimbursement.xlsx`: DESE, FY2026 final Circuit Breaker reimbursement listing
+  (FY2025 claims; updated June 8, 2026), https://www.doe.mass.edu/finance/circuitbreaker/payments/fy2026-reimbursement.xlsx.
+  Brookline: 72 eligible students, $10,888,938 eligible cost, $5,237,567 reimbursement. Used by
+  `scripts/special_education_cost_per_student.py` (the middle tier of an added student's cost).
+- DESE End of Year Report instructions (FY2024 printing), Schedule 4: special education spending covers
+  instructional services (2000) and tuition (9000), including Circuit Breaker spending; benefits (5000) are reported
+  separately. https://www.doe.mass.edu/finance/accounting/eoy/ (read 2026-10-26; not saved).
+- Students with disabilities share, DESE school and district profiles, Selected Populations: 18.6% in 2024-25,
+  18.0% in 2025-26. https://profiles.doe.mass.edu/profiles/student.aspx?orgcode=00460000&orgtypecode=5&leftNavId=305&fycode=2025
+  (not saved locally; read from the page).
+
+## PSB enrollment report, October 2026 (added 2026-10-26)
+
+- `data/psb_enrollment/Oct 2026 PSB enrollment data.pdf` (Ben saved it; copy also at the project root):
+  Public Schools of Brookline, "PSB Enrollment Report," School Committee, October 28, 2026, 18 slides.
+  https://brooklinema.portal.civicclerk.com/event/16519/files/attachment/19828
+  October 1, 2026 SIMS counts by school and grade (K-8 4,436; BHS 2,165; BEEP 232; total 6,833 excluding
+  56 out-of-district and 15 under-3 students), class-size averages by school and grade, FY27 projection vs.
+  actual, Cropper/NESDEC comparison, and the district's FY28 projection (6,737 including out-of-district
+  and pre-K; K-8 4,338; BHS 2,102). The by-school totals on slide 4 for Driscoll, Hayes, Ridley and Runkle
+  do not equal their grade cells (they sum to 4,536); the grade cells sum to the printed 4,436, so use
+  the grade cells.

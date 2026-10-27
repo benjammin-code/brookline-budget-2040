@@ -478,7 +478,7 @@ put("enroll_fy2034", Math.round(enr(2034)).toLocaleString("en-US"));
   put("birthtab_base_students", about(bb.per_birth_base_fy2040 * bb.pool_fy2040, 10));
   put("birthtab_base_ratio", bb.per_birth_base_fy2040.toFixed(2));
   put("birthtab_level_ratio", bb.per_birth_level_fy2040.toFixed(2));
-  put("birthtab_peak_shortfall", about(6889 - bb.per_birth_peak * bb.pool_fy2040, 100));
+  put("birthtab_peak_shortfall", about(6833 - bb.per_birth_peak * bb.pool_fy2040, 100));
   put("cm_per_birth_fy2034", bb.per_birth_cm_fy2034.toFixed(2)); }
 
 // ---- a typical tax bill to FY2040 (tax_bill_paths.py)

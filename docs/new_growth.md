@@ -6,11 +6,11 @@
 
 ## Summary
 
-- **By the schools' own class-size guidelines, there are open seats, and more are coming.** There are 6,889 students this
+- **By the schools' own class-size guidelines, there are open seats, and more are coming.** There are 6,833 students this
   fall, down from 7,855 in 2019, and the number is expected to fall to {{fact:enroll_fy2040_about}} by 2040,
   mainly because fewer children are being born in town. This year's kindergarten through
-  grade 8 classes already have about 945 empty seats under the School Committee's own
-  class-size limits.
+  grade 8 classes already have about 1,100 empty seats under the School Committee's own
+  class-size limits, and about 440 with every class kept three students below them.
 - **The School Department plans to keep today's teachers and classes, even as enrollment
   falls.** So those empty seats will stay open unless something fills them.
 - **Police and fire staffing has not grown with housing.** Brookline's building permits
@@ -94,7 +94,8 @@ estimated 518 and 507), has enrollment falling to {{fact:enroll_fy2040_about}} b
 
 **Why the base case does not use the School Department's forecast.** The School
 Department plans with a 2023 forecast by Cropper-McKibben, the orange dashed line. It has been
-closer than NESDEC for the last two years, and it has enrollment rising from FY2029 to
+closer than NESDEC on total enrollment for the last two years, though NESDEC has been closer for
+kindergarten through grade 8, and it has enrollment rising from FY2029 to
 about 7,400 by FY2034. In the report's own words, the rise comes from new apartments, older
 owners selling homes to families, and young households continuing to move in; it assumes
 about 1,500 new homes from 2020 to 2034, fewer than Brookline's recent pace. The base case
@@ -110,40 +111,43 @@ family-sized; for each family-sized home it has about as many school-age childre
 The schools are not being staffed down to match. The School Department's current plan holds
 school staffing at the FY2027 level, and this school year's classes already have room. (The base
 case lets school staff fall half as fast as enrollment, as they did from FY2019 to FY2025, which
-still leaves seats opening each year.) The School Department's FY2027 projections, shared with
-the Advisory Committee this spring, put kindergarten through grade 8 at 4,513 students in
-233 classes. Against the School Committee's own class-size guidelines (22 in kindergarten
-through grade 2, 25 in grades 3–8, lower at Pierce and Driscoll), those classes have about
-945 empty seats, and no grade at any school is over its guideline:
+still leaves seats opening each year.) The School Department's October 1 count has 4,436
+students in kindergarten through grade 8 this fall, in 236 classes. Against the School
+Committee's own class-size guidelines (22 in kindergarten through grade 2, 25 in grades 3–8,
+lower at Pierce and Driscoll), those classes have about 1,100 empty seats, and no grade at any
+school is over its guideline. The guideline is a ceiling, and this fall's classes average 19.
+Kept three students below the guideline, the same classes have about 440 empty seats:
 
-| School | Students, FY2027 | Seats at guideline | Empty seats | Full |
-|---|---|---|---|---|
-| Baker | 670 | 820 | 151 | 82% |
-| Driscoll | 540 | 678 | 137 | 80% |
-| Hayes | 381 | 457 | 77 | 83% |
-| Lawrence | 616 | 742 | 126 | 83% |
-| Lincoln | 465 | 598 | 133 | 78% |
-| Pierce | 544 | 632 | 88 | 86% |
-| Ruffin Ridley | 850 | 955 | 105 | 89% |
-| Runkle | 448 | 576 | 128 | 78% |
-| **K–8 total** | **4,513** | **5,458** | **945** | **83%** |
-| | | | | |
-| **High school, 2025–26\*** | **2,147** | **about 2,700** | **about 550** | **80%** |
+| School | Students, fall 2026 | Seats at guideline | Empty seats | Full | Empty seats, three below guideline |
+|---|---|---|---|---|---|
+| Baker | 647 | 820 | 173 | 79% | 72 |
+| Driscoll | 521 | 678 | 157 | 77% | 70 |
+| Hayes | 363 | 482 | 119 | 75% | 60 |
+| Lawrence | 597 | 742 | 145 | 80% | 60 |
+| Lincoln | 475 | 598 | 123 | 79% | 52 |
+| Pierce\* | 550 | 632 | 82 | 87% | 10 |
+| Ruffin Ridley | 821 | 983 | 162 | 84% | 53 |
+| Runkle | 462 | 598 | 136 | 77% | 63 |
+| **K–8 total** | **4,436** | **5,533** | **1,097** | **80%** | **440** |
+| | | | | | |
+| **High school\*\*** | **2,165** | **about 2,700** | **about 535** | **80%** | |
 
-*\*The high school was expanded in 2022. Its seat figure is the enrollment its architects
+*\*Pierce moves into its new building in fall 2028, with room for four classes in each grade.*
+
+*\*\*The high school was expanded in 2022. Its seat figure is the enrollment its architects
 designed the expanded building for, not a count of classes at guideline.*
 
 Holding staff flat as enrollment falls also changes the ratio of students to staff. In
-FY2019 there were 5.97 students for every school staff member; in FY2027 there are 5.55;
+FY2019 there were 5.97 students for every school staff member; in FY2027 there are 5.50;
 with staff held at the FY2027 level and enrollment at NESDEC's projection, there would be
 4.38 by FY2040, fewer students per staff member than in any year since the series began
-in FY2008. (These ratios count all school staff. The one position for every 8.3 students
+in FY2008. (These ratios count all school staff. The one position for every 8.2 students
 above counts only the two-thirds of staff that the base case treats as moving with
-enrollment: 5.55 ÷ 0.67 ≈ 8.3.) Across all of Brookline's roughly 29,000 homes, public school students per home
+enrollment: 5.50 ÷ 0.67 ≈ 8.2.) Across all of Brookline's roughly 29,000 homes, public school students per home
 fall from about 0.24 today to about 0.18 by FY2040. The falling ratio is another measure
 of the same empty seats.
 
-The rest of this page leaves out the 945 seats already open and counts only the seats the
+The rest of this page leaves out the 1,100 seats already open and counts only the seats the
 decline adds: how many students could arrive before enrollment is back to the FY2027
 level. That number grows each year, from about {{fact:seats_students_fy2030}} students in FY2030 to about
 {{fact:seats_students_fy2040}} in FY2040.
@@ -192,7 +196,7 @@ pays for itself when its children fill empty seats.** Under the usual estimate, 
 the lowest-value rental apartments do too.
 
 If a new home's children join classes that are already running, the added cost is the
-supplies, transport and other costs that move with each student, about $2,477 a student
+supplies, transport and other costs that move with each student, about $2,500 a student
 in FY2027, not a share of a new teacher. That figure is likely conservative: the
 Schools' own budget puts it nearer $1,800, and the items that really grow with each seat,
 such as supplies, textbooks and computers, come to about $660. [Schools: staffing, costs
@@ -235,7 +239,7 @@ what the extra homes add to the FY2040 budget after their costs:
 
 {{chart:housing-fill}}
 
-About {{fact:fill_a_homes}} extra homes leave the FY2040 budget about $1.1 million a year worse off
+About {{fact:fill_a_homes}} extra homes leave the FY2040 budget about $1.2 million a year worse off
 under the usual estimate and {{fact:fill_a_seats}} better off if their children fill empty seats. At about
 {{fact:fill_b_homes}}, roughly what the empty seats can hold, the gap between the two is widest:
 {{fact:fill_b_staffed}} against {{fact:fill_b_seats}}. Beyond that, later students do need new

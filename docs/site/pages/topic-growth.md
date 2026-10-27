@@ -273,8 +273,8 @@ Three inputs, all of which are published:
   the forecast, FY2027) or **$26,683** (Brookline's full average
   cost per pupil including benefits, DESE FY2024). The marginal figure staffs
   the enrollment-linked two-thirds of the school budget at today's ratio:
-  about one added position per 8.3 students ($12,092), plus supplies and
-  transport ($2,477) and health insurance and payroll costs ($2,268). Which
+  about one added position per 8.2 students ($12,192), plus supplies and
+  transport ($2,497) and health insurance and payroll costs ($2,287). Which
   of the two is right is a real and unsettled question, and the caveats at the end of
   this page take it up properly.
 
@@ -367,7 +367,7 @@ right assumption for a growing school system, but Brookline's is shrinking: with
 falling faster than school staff, a new home's children can fill seats the Town is already paying
 for. [New homes and Brookline's budget](@new-homes) sets out that case school by school, and
 [Schools: staffing, costs and open seats](@topic-schools) explains why the cost of filling a seat
-is probably below the forecast's $2,477.
+is probably below the forecast's $2,497.
 
 **This is why housing is a weaker lever for the budget than commercial space,
 town-wide.** In the forecast, reaching a faster growth rate entirely through

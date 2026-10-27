@@ -14,7 +14,7 @@ summary:
 - Four numbers, updated each fall, show which forecast enrollment is following: births, kindergartners per birth, the October count, and the room that leaves for children from new homes.
 - For births not yet counted, the base case assumes {{fact:births_ahead}} a year, the 2022 to 2024 average: it continues the level Brookline has actually had rather than assuming a rebound or a further fall. It keeps that average for 2025, which came in at 423, rather than resetting on one year. Births are the main reason the forecasts differ; measured against their own births, all three assume similar rates of families moving in.
 related: topic-schools, topic-families, base-case, new-homes, assumptions
-updated: 2026-10-14
+updated: 2026-10-27
 ---
 
 Every enrollment forecast answers two questions: how many children start kindergarten each year,
@@ -32,7 +32,7 @@ version you can change.
 | Used by | | The School Department's budget plans | The forecast on this site |
 | Method | Cohort survival: births become kindergarten, then each class moves up a grade by Brookline's historical ratios | A population model: forecasts every resident by age, area by area, then converts school-age children into enrollment | NESDEC's forecast, with the births it estimated replaced by the births that were counted |
 | Births assumed | About 500 a year from 2023 | About 616 a year for 2025 to 2030 | Actual through 2024 (482, 422, 443), then {{fact:births_ahead}} a year (2025 has since been counted at 423) |
-| FY2027 (this fall) | 6,774 | 6,917 | 6,889, the actual count |
+| FY2027 (this fall) | 6,774 | 6,917 | 6,833, the October 1 count |
 | FY2030 | 6,464 | 7,050 | {{fact:enroll_fy2030}} |
 | FY2034 | 6,127 | 7,444 | {{fact:enroll_fy2034}} |
 | FY2040 | | | {{fact:enroll_fy2040}} |
@@ -62,7 +62,7 @@ Brookline-born children falls about {{fact:birthpool_fall_pct}} by FY2040:
 | stays where it is today | {{fact:birthtab_today_students}} | {{fact:birthtab_today_ratio}} |
 | returns to the peak of the 2010s boom | {{fact:birthtab_peak_students}} | 0.90 |
 | follows the base case (NESDEC, updated for actual births) | {{fact:birthtab_base_students}} | {{fact:birthtab_base_ratio}} |
-| keeps enrollment level with today | 6,889 | {{fact:birthtab_level_ratio}} |
+| keeps enrollment level with today | 6,833 | {{fact:birthtab_level_ratio}} |
 
 The base case's {{fact:birthtab_base_ratio}} is already a little above the 2010s peak. Keeping
 enrollment level would take more families moving in than during the 2010s boom, by a wide margin.
@@ -95,7 +95,7 @@ than a rise.
 Kindergarten is births five years earlier times a kindergarten-per-birth ratio: some children born
 here move away or go to private school, and some born elsewhere move in. Brookline's ratio has run
 from {{fact:ind_kpb_min}} to {{fact:ind_kpb_max}} since FY2014, leaving out the COVID year, averaging about 0.90 before COVID and 0.85 since. This fall it was
-about 0.84: about 411 kindergartners from 491 births in 2021.
+about 0.84: 410 kindergartners from 491 births in 2021.
 
 NESDEC uses about 0.85, close to the recent record. What has changed since its forecast is births:
 it estimated 518 for 2023 and 507 for 2024, before those births were counted, and the counts came in
@@ -143,7 +143,7 @@ had 491 babies:
 
 | School year | Grade | NESDEC | Cropper-McKibben | Actual |
 |---|---|---|---|---|
-| 2026–27 | K | 415 | 507 | about 411 |
+| 2026–27 | K | 415 | 507 | 410 |
 | 2027–28 | 1 | 427 | 505 | |
 | 2028–29 | 2 | 437 | 511 | |
 | 2029–30 | 3 | 437 | 513 | |
@@ -153,8 +153,8 @@ had 491 babies:
 | 2033–34 | 7 | 417 | 544 | |
 
 NESDEC sets the class at 491 × 0.845 = 415 and moves it up by its ratios; the base case follows the
-same path, about 1.7% higher to match this fall's total count. Cropper-McKibben starts the same
-children 92 higher and keeps the class growing. The actual kindergarten came in at about 411.
+same path, about 0.9% higher to match this fall's total count. Cropper-McKibben starts the same
+children 92 higher and keeps the class growing. The actual kindergarten came in at 410.
 
 ## How each has done so far
 
@@ -163,13 +163,17 @@ Both forecasts were made in 2023, so two school years can be checked:
 | | Actual | NESDEC | Cropper-McKibben |
 |---|---|---|---|
 | Total, FY2026 (2025–26) | 6,948 | 6,880 (−1.0%) | 6,929 (−0.3%) |
-| Total, FY2027 (2026–27) | 6,889 | 6,774 (−1.7%) | 6,917 (+0.4%) |
+| Total, FY2027 (2026–27) | 6,833 | 6,774 (−0.9%) | 6,917 (+1.2%) |
 | Kindergarten, FY2026 | 453 | 412 | 497 |
-| Kindergarten, FY2027 | about 411 | 415 | 507 |
+| Kindergarten, FY2027 | 410 | 415 | 507 |
+| Kindergarten to grade 8, FY2027 | 4,436 | 4,436 | 4,588 |
+| Kindergarten to grade 8, FY2028 (the School Department's October 2026 projection) | 4,338 | 4,337 | 4,635 |
 
-Cropper-McKibben has been closer on total enrollment, because classes already in school have grown a
-little faster than NESDEC assumed. NESDEC has been closer on kindergarten, the part that depends on
-births. The two forecasts only pull far apart from FY2029, as the smaller birth years reach
+Cropper-McKibben was closer on total enrollment last year, because classes already in school grew a
+little faster than NESDEC assumed. This fall NESDEC was closer on the total (59 low against 84 high)
+and exactly right on kindergarten through grade 8, and it has been closer on kindergarten, the part
+that depends on births. The School Department's own projection for next fall, made in October 2026,
+is within one student of NESDEC's for kindergarten through grade 8. The two forecasts only pull far apart from FY2029, as the smaller birth years reach
 kindergarten, so the next few kindergarten counts are the real test.
 
 ## Indicators to watch

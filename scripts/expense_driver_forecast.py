@@ -162,15 +162,16 @@ for _y, _row in NESDEC_GRADES.items():   # index 0 is PK; index n+1 is grade n (
     NESDEC_PK12[_y] = sum(_row)
 NESDEC_K_LATE = round(NESDEC_K_LATE * BIRTHS_AHEAD / NESDEC_BIRTHS[2028])
 ACTUAL_OCT_2025 = 6949  # PSB October 1, 2025 (brookline.news report; FY2026)
-# PSB district enrollment 9/11/2026 (Superintendent Report 9.16.26, last page):
-# BEEP 252 + K-8 4,458 + BHS 2,177 = 6,889 for SY2026-27 (FY2027). An early-
-# September count; the official October 1 count may differ slightly.
-ACTUAL_SEP_2026 = 6889
+# PSB October 1, 2026 count (SIMS submission to DESE; PSB Enrollment Report, 10/28/2026, slide 4):
+# BEEP 232 + K-8 4,436 + BHS 2,165 = 6,833 for SY2026-27 (FY2027), excluding 56 out-of-district
+# students and 15 early-childhood students under 3, as DESE counts it. Replaced the September 11
+# count (6,889: BEEP 252 + K-8 4,458 + BHS 2,177) on 2026-10-27.
+ACTUAL_OCT_2026 = 6833
 # Cropper-McKibben 2023 forecast, PK-12, school years 2026-27 to 2033-34
 # (FY2027-FY2034): the projection the School Department plans with
 # (FY27-29 PSB budget summary, Table 7; override slides p.14). It bottoms out in
 # 2027-28 and rises toward pre-pandemic levels. Its misses so far: -0.6%
-# (2024-25), -0.3% (2025-26), +0.4% (2026-27 September count).
+# (2024-25), -0.3% (2025-26), +1.2% (2026-27 October 1 count).
 CM_PK12 = {2027: 6917, 2028: 6886, 2029: 6933, 2030: 7050, 2031: 7118, 2032: 7245,
            2033: 7344, 2034: 7444}
 
@@ -385,10 +386,10 @@ def load():
 def enrollment_path():
     """NESDEC PK-12, scaled to the Oct 2025 actual, extended to FY2040."""
     # FY2026 and FY2027 are actual counts; later years follow NESDEC's path,
-    # scaled to the FY2027 count (6,889 vs NESDEC's 6,774, +1.7%).
-    scale = ACTUAL_SEP_2026 / NESDEC_PK12[2027]
+    # scaled to the FY2027 count (6,833 vs NESDEC's 6,774, +0.9%).
+    scale = ACTUAL_OCT_2026 / NESDEC_PK12[2027]
     e = {y: NESDEC_PK12[y] * scale for y in range(2026, 2035)}
-    e[2026], e[2027] = ACTUAL_OCT_2025, ACTUAL_SEP_2026
+    e[2026], e[2027] = ACTUAL_OCT_2025, ACTUAL_OCT_2026
     # extend: advance each grade one year using NESDEC's own grade-to-grade
     # ratios (grade g+1 next year / grade g this year), averaged over its
     # projected years. Control: the table's rows must sum to its PK-12 totals.
@@ -474,7 +475,7 @@ def run(a, data, growth_frame):
     town_fte = {y: (fte.loc[2027, "total"] if y >= 2027 else fte.loc[2026, "total"]) for y in YEARS}
     enroll = enrollment_path()
     if a["enroll_mode"] == "cm":
-        sc = ACTUAL_SEP_2026 / CM_PK12[2027]
+        sc = ACTUAL_OCT_2026 / CM_PK12[2027]
         enroll = {y: (ACTUAL_OCT_2025 if y == 2026 else CM_PK12[min(y, 2034)] * sc) for y in YEARS}
     e0 = enroll[Y0]
     if a["enroll_mode"] == "flat":
@@ -1081,7 +1082,7 @@ def births_basis(base):
             dict(item="pool_fy2040", value=pool(2040)), dict(item="per_birth_today", value=today),
             dict(item="per_birth_peak", value=round(peak, 2)),
             dict(item="per_birth_base_fy2040", value=float(base.loc[2040, "enrollment"]) / pool(2040)),
-            dict(item="per_birth_level_fy2040", value=ACTUAL_SEP_2026 / pool(2040)),
+            dict(item="per_birth_level_fy2040", value=ACTUAL_OCT_2026 / pool(2040)),
             dict(item="per_birth_cm_fy2034", value=CM_PK12[2034] / pool(2034))]
     return pd.DataFrame(rows)
 
