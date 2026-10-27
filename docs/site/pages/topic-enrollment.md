@@ -10,7 +10,7 @@ summary:
 - NESDEC estimated about 500 births a year from 2023, before those births were counted; the counts came in at 422 in 2023 and 443 in 2024, and the base case updates NESDEC's forecast with them. The 2025 count, 423, is a little below what the base case assumes.
 - Cropper-McKibben forecasts the whole population first and projects far more births and young families, so its kindergarten classes rise from about 500 to 607 a year.
 - On how classes grow or shrink as they move up a grade, the two published forecasts are close to each other and to Brookline's recent record.
-- Births have fallen about twice as fast in Brookline and its neighbors as in Massachusetts as a whole; Brookline differs from the family suburbs in how many families move in with young children, not in births.
+- Measured from their 2005–09 average, births have fallen about twice as fast in neighboring towns as in Massachusetts as a whole, and nearly three times as fast in Brookline; Brookline differs from the family suburbs mainly in how many families move in with young children.
 - Four numbers, updated each fall, show which forecast enrollment is following: births, kindergartners per birth, the October count, and the room that leaves for children from new homes.
 - For births not yet counted, the base case assumes {{fact:births_ahead}} a year, the 2022 to 2024 average: it continues the level Brookline has actually had rather than assuming a rebound or a further fall. It keeps that average for 2025, which came in at 423, rather than resetting on one year. Births are the main reason the forecasts differ; measured against their own births, all three assume similar rates of families moving in.
 related: topic-schools, topic-families, base-case, new-homes, assumptions

@@ -20,7 +20,7 @@
 - **That changes what a new home costs the Town.** The usual estimate says a typical new
   apartment roughly breaks even, because it assumes every new student needs new teachers.
   If new students fill seats that are already empty, the same home brings the Town about
-  $3,000 a year more than it costs.
+  $1,700 a year more than it costs.
 - **On paper, the seats could take a lot of homes.** On top of the {{fact:homes_pace}} a year
   Brookline already builds, the empty classroom seats could take the children from {{fact:seats_homes_fy2030}} more
   homes by 2030 and {{fact:seats_homes_fy2040}} more by 2040. In practice services usually
@@ -195,12 +195,11 @@ published measures can and cannot show, and what to ask.
 pays for itself when its children fill empty seats.** Under the usual estimate, all but
 the lowest-value rental apartments do too.
 
-If a new home's children join classes that are already running, the added cost is the
-supplies, transport and other costs that move with each student, about $2,500 a student
-in FY2027, not a share of a new teacher. That figure is likely conservative: the
-Schools' own budget puts it nearer $1,800, and the items that really grow with each seat,
-such as supplies, textbooks and computers, come to about $660. [Schools: staffing, costs
-and open seats](/forecast/topics/schools#filling-an-open-seat) has the breakdown. Here is what each type of home brings the Town
+If a new home's children join classes that are already running, the added cost is not a
+share of a new teacher. It is the supplies, textbooks and computers that grow with each seat,
+about $670 a student in FY2027, plus special education at the district average, about
+$7,760 in all. [Schools: staffing, costs
+and open seats](/forecast/topics/schools#three-tiers-for-the-cost-of-an-added-student) has the breakdown. Here is what each type of home brings the Town
 each year after its costs, both ways:
 
 {{chart:home-net}}
@@ -214,9 +213,9 @@ rate; costs in FY2027. "Average new-construction project" counts each recent pro
 whatever its size, so it leans toward small projects such as single-family homes and
 two-families.*
 
-Filling empty seats, even the lowest-value apartments would need about 1.4 school-age
-children per home before they stopped paying for themselves. Brookline's recent
-developments range from about 0.03 to 0.56.
+Filling empty seats, even the lowest-value apartments would need about 0.46 school-age
+children per home before they stopped paying for themselves, nearly twice the forecast's
+0.244. Brookline's recent developments range from about 0.03 to 0.56 and average about 0.21.
 
 ## How many homes, and what they add
 

@@ -123,6 +123,14 @@ function runModel(D, a, rv) {
       : E[y] / ratio;
     staff[y] = (staff0 * (1 - v) + v * sv) * Math.pow(1 + (a.school_staff_growth || 0), Math.max(y - Y0, 0));
   });
+  // students from growth left unstaffed by fill_capacity cost the middle tier (open seat plus special
+  // education, K.fill_seat_cost_fy27); the enrollment index already charges them non-personnel costs
+  var unstaffed = {};
+  Y.forEach(function (y) {
+    unstaffed[y] = a.fill_capacity && a.ratio_mode === "keep" ? Math.max(Math.min(extra[y], e0 - enroll[y]), 0)
+      : a.fill_capacity && a.ratio_mode === "half" ? Math.min(extra[y], 0.5 * Math.max(e0 - enroll[y], 0)) : 0;
+  });
+  var fillAdd = K.fill_seat_cost_fy27 - A.schools * (1 - K.school_personnel_share) * v / e0;
   var fteTot0 = townFte + staff0;
   var slip = a.pension_slip || 0, red = a.opeb_redirect, hold = a.opeb_hold !== false;
   // payroll of all staff, Town and schools, weighted by FY2027 pay (payroll-linked benefits after FY2031)
@@ -175,7 +183,8 @@ function runModel(D, a, rv) {
     depGrowth += company + police;
     var SPS = K.school_personnel_share;
     var sch = A.schools * (SPS * Wsch[y] * staff[y] / staff0
-                           + (1 - SPS) * Cnp[y] * ((1 - v) + v * E[y] / e0));
+                           + (1 - SPS) * Cnp[y] * ((1 - v) + v * E[y] / e0))
+      + unstaffed[y] * fillAdd * Wsch[y] / Wsch[Y0];
     var fteTot = townFte + staff[y];
     var subs = (1 - K.retiree_cost_share) * fteTot / fteTot0 + K.retiree_cost_share * Math.pow(1 + K.retiree_growth, y - Y0);
     var gh = A.group_health * subs * prem[y];

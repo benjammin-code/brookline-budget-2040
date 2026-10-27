@@ -111,7 +111,7 @@ exactly the October 1 count, against Cropper-McKibben's 4,588. The School Depart
 for next fall, made in October 2026, has kindergarten through grade 8 falling another 98, to 4,338;
 NESDEC has 4,337 and Cropper-McKibben 4,635. The base case uses
 NESDEC because the population data points the same way: births to Brookline residents fell from
-about 690 a year (2008–13) to about 490 (2020–22), and UMass Donahue Institute projections have
+about 690 a year (2008–13) to about 490 (2020–22) and 422, 443 and 423 in 2023, 2024 and 2025, and UMass Donahue Institute projections have
 Brookline's 5–14 age group falling about 28% from 2020 to 2035. With school staff falling half as
 fast as enrollment as it falls and rising with it as it rises, as in the base case, the choice
 between the two moves FY2040 by {{fact:fy40_enroll_cm_abs}}.
@@ -165,17 +165,20 @@ FY2027 to {{fact:enroll_fy2040_about}} by FY2040, while the base case lets schoo
 fast, as they did from FY2019 to FY2025 (the School Department's own plan keeps staffing at the
 FY2027 level). This fall's kindergarten-to-grade-8 classes already have about 1,100 open seats under
 the School Committee's class-size guidelines, or about 440 if every class stays three students
-below them, and more open as enrollment falls faster than staff.
+below them, and more open as enrollment falls faster than staff. Counting empty classrooms as well,
+the kindergarten-to-grade-8 buildings, including the larger new Pierce, have room for roughly
+1,000 to 1,700 more students ([school seats map](https://www.brooklinefuture.org/post/school-seats-map)).
 A new home's children can fill seats the Town is already paying for, and the
-added cost per student is about $2,500 (supplies, transport and the other costs that move with
-each student) rather than {{fact:student_cost}}. On that basis even a $434,000 rental apartment nets about $3,000 a
-year. With staff held at the FY2027 level, the seats that open as enrollment falls would take
+added cost per student is about $7,760 (supplies and the like, plus special education at the
+district average; see the tiers below) rather than {{fact:student_cost}}. On that basis even a
+$434,000 rental apartment nets about $1,700 a year. With staff held at the FY2027 level, the seats that open as enrollment falls would take
 {{fact:seats_homes_fy2030}} homes beyond the recent pace by FY2030 and {{fact:seats_homes_fy2040}} by FY2040;
 with staff falling half as fast, as in the base case, about half as many. The open seats could instead be cut to save money, so
 the two uses compete. The [new homes page](@new-homes) sets this out school by school, and the
 Forecast Explorer's *Students from added homes* setting runs it through the forecast.
 
-**The $2,500 is probably high.** The base case builds it from an estimate that 17% of the school
+**What a filled seat costs.** The forecast's cost of an added student includes $2,497 of
+non-personnel spending, built from an estimate that 17% of the school
 budget is non-personnel spending: 17% of $149.8 million is about $25.5 million, the two-thirds of
 that which moves with enrollment is $17.1 million, and divided by 6,833 students that is about $2,500.
 The 17% is this project's own estimate, derived from Town-wide spending by object class. The
@@ -205,12 +208,9 @@ The lines that really scale with each seat (supplies, textbooks, online tools, c
 trips and instructional equipment) come to about $4.5 million, roughly **$650 a student** across
 FY2026's 6,948 students.
 Transportation and out-of-district tuition follow particular students, mostly those with special
-education needs, rather than seats. Even all $19.7 million comes to only about $2,840 a student. So
-the cost of a student filling an open seat is somewhere between about $650 and $2,840, and probably
-nearer the lower end. The base case keeps about $2,500, toward the top of that range, which makes its open-seat results conservative; a lower figure would only widen the
-gap between the two cases. (Source: Public Schools of Brookline, FY26 General Fund Financial
-Report, Line Item, 4th Quarter, 14 August 2026, budget column, with the $1.9 million tuition shift
-from the FY2027 proposed budget added back.)
+education needs, rather than seats, so the tiers below count them with special education. (Source:
+Public Schools of Brookline, FY26 General Fund Financial Report, Line Item, 4th Quarter, 14 August
+2026, budget column, with the $1.9 million tuition shift from the FY2027 proposed budget added back.)
 
 ## Three tiers for the cost of an added student
 
@@ -218,8 +218,9 @@ from the FY2027 proposed budget added back.)
 they also bring the district's average special education needs, and about {{fact:student_cost}} if
 they fill an empty classroom with full staff.** All three are in FY2027 dollars. The middle tier
 exists because special education staff and services grow with enrollment, and classrooms
-don't. The forecast does not use the middle tier yet; its open-seat case still charges
-$2,497 a student.
+don't. When added students fill open seats (the Forecast Explorer's *Students from added homes*
+setting), the forecast charges the middle tier. The base case staffs every added student, so it
+charges the third.
 
 | Tier | When it applies | Cost a year, FY2027 |
 |---|---|---|
@@ -280,6 +281,15 @@ Breaker at all, tier 2 would be about $8,550.
 positions at $100,109 each, $12,192, plus non-personnel costs ($2,497), health insurance and
 payroll-linked benefits. It already includes special education staff, at the forecast's staffing
 rate rather than the district average.
+
+**An earlier estimate.** In 2014 the Town's Override Study Committee put the long-run cost of an
+added student at $15,748 in FY2014 dollars, about $23,000 today, a figure that also counted debt
+service and capital spending. The committee tied it to growth: its method "would not be
+appropriate in the absence of the type of ongoing and persistent growth" Brookline then had
+(p. 10), and with stable enrollment the Town would not save the full amount if enrollment fell
+(p. 11). By the same reasoning, while enrollment falls, an added student costs less than that
+full figure. ([The Economic Impact of Enrollment Growth on the Public Schools](https://brooklinema.gov/DocumentCenter/View/6346/The-Economic-Impact-of-Enrollment-Growth-on-the-Public-Schools--PDF?bidId=),
+Override Study Committee, 2014.)
 
 Sources: DESE, [Direct Special Education Expenditures, FY08 to FY25](https://www.doe.mass.edu/research/radar/direct-expenditure-trends.xlsx)
 (from each district's End of Year Report, Schedule 4); DESE,

@@ -275,6 +275,10 @@ SCHOOL_PERSONNEL_SHARE = 0.83   # derived, FY2024 basis (expense_drivers_tree.py
 # (ERSC Appendix C). The other third (buildings, administration, leadership)
 # grows with prices only.
 SCHOOL_VARIABLE_SHARE = 0.67
+# A student from growth who fills an open seat (fill_capacity) costs the middle tier: an open seat
+# plus special education at the district average, about $7,760 in FY2027
+# (special_education_cost_per_student.py; Ben, 2026-10-27). Was the non-personnel $2,497 alone.
+FILL_SEAT_COST_FY27 = 7758
 # Select Board capital policy: 6.6% of prior-year net revenue from revenue (4.5% debt, 2.1% cash);
 # FY2027 Financial Plan p.352 and p.459
 CIP_POLICY_SHARE = 0.066
@@ -521,6 +525,15 @@ def run(a, data, growth_frame):
     else:
         staff_var = {y: (staff0 + extra[y] / ratio0 if a["ratio_mode"] == "keep" else E[y] / ratio[y])
                      for y in YEARS}
+    # students from growth left unstaffed by fill_capacity; the enrollment index charges them the
+    # non-personnel cost per student, and the schools line adds the rest of FILL_SEAT_COST_FY27
+    if a.get("fill_capacity") and a["ratio_mode"] == "keep":
+        unstaffed = {y: max(min(extra[y], e0 - enroll[y]), 0.0) for y in YEARS}
+    elif a.get("fill_capacity") and a["ratio_mode"] == "half":
+        unstaffed = {y: min(extra[y], 0.5 * max(e0 - enroll[y], 0.0)) for y in YEARS}
+    else:
+        unstaffed = {y: 0.0 for y in YEARS}
+    fill_add = FILL_SEAT_COST_FY27 - A.SCHOOLS * (1 - SCHOOL_PERSONNEL_SHARE) * SCHOOL_VARIABLE_SHARE / e0
     staff = {y: (staff0 * (1 - SCHOOL_VARIABLE_SHARE) + SCHOOL_VARIABLE_SHARE * staff_var[y])
              * (1 + a.get("school_staff_growth", 0.0)) ** max(y - Y0, 0)
              for y in YEARS}
@@ -590,7 +603,8 @@ def run(a, data, growth_frame):
         # schools
         v = SCHOOL_VARIABLE_SHARE
         sch = A.SCHOOLS * (SCHOOL_PERSONNEL_SHARE * Wsch[y] * staff[y] / staff0
-                           + (1 - SCHOOL_PERSONNEL_SHARE) * Cnp[y] * ((1 - v) + v * E[y] / e0))
+                           + (1 - SCHOOL_PERSONNEL_SHARE) * Cnp[y] * ((1 - v) + v * E[y] / e0)) \
+            + unstaffed[y] * fill_add * Wsch[y] / Wsch[Y0]
         # group health
         fte_tot = town_fte[y] + staff[y]
         subs = ((1 - HEALTH_RETIREE_COST_SHARE) * fte_tot / fte_tot0

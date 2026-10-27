@@ -248,8 +248,7 @@ one assumption moves and everything else stays at the base case; a minus sign me
   the Town's count for ten Brookline buildings opened since 2015 runs from 0.03 to 0.56 and
   averages about 0.21, or about 0.13 in the five with the smallest homes.
 - **Alternative:** With enrollment falling, children from new homes can fill seats the schools
-  already have, at about $650 to $2,840 each for supplies and services rather than new staff (the
-  forecast uses $2,497).
+  already have, at about $7,760 each for supplies and special education rather than new staff.
   [New homes and Brookline's budget](@new-homes) works through that case.
 - **If it is wrong:** children from new homes filling empty seats until enrollment is back to the
   FY2027 level, at today's growth rate, {{fact:fy40_fill_seats}};

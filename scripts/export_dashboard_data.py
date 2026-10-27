@@ -191,6 +191,7 @@ def main():
                     town_fte=float(fte.loc[2027, "total"]), staff26=staff26,
                     school_personnel_share=edf.SCHOOL_PERSONNEL_SHARE,
                     school_variable_share=edf.SCHOOL_VARIABLE_SHARE, ratio_fy2019=edf.RATIO_FY2019,
+                    fill_seat_cost_fy27=edf.FILL_SEAT_COST_FY27,
                     students_per_home=edf.STUDENTS_PER_HOME, chca_units=edf.CHCA_UNITS,
                     chca_students_per_unit=edf.CHCA_STUDENTS_PER_UNIT, chca_employees=edf.CHCA_EMPLOYEES,
                     sqft_per_emp=edf.SQFT_PER_EMP, cost_per_emp_fy25=edf.RKG_COM_DEPT_PER_EMP_FY25,

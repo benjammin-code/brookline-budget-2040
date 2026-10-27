@@ -366,8 +366,8 @@ out.
 right assumption for a growing school system, but Brookline's is shrinking: with enrollment
 falling faster than school staff, a new home's children can fill seats the Town is already paying
 for. [New homes and Brookline's budget](@new-homes) sets out that case school by school, and
-[Schools: staffing, costs and open seats](@topic-schools) explains why the cost of filling a seat
-is probably below the forecast's $2,497.
+[Schools: staffing, costs and open seats](@topic-schools) explains why filling a seat costs
+about $7,760, special education included, rather than {{fact:student_cost}}.
 
 **This is why housing is a weaker lever for the budget than commercial space,
 town-wide.** In the forecast, reaching a faster growth rate entirely through

@@ -638,6 +638,9 @@ A_SECTIONS = [
          "RKG's incremental school budget, set with Town staff; the rest is buildings and administration.",
          "ERSC report, Appendix C"),
         ("K_Ratio2019", "Students per school staff member, FY2019", "=7855/1315.8", "0.000", "", "DESE"),
+        ("K_FillSeat", "Cost of a student filling an open seat, FY2027", 7758, USD,
+         "An open seat plus special education at the district average; used when students fill open seats.",
+         "special_education_cost_per_student.py (DESE FY2025)"),
         ("K_SPH", "School-age children per added home", P_SPH, "0.0000",
          "RKG's per-bedroom rates applied to the mix of homes being built. The forecast adds apartments and "
          "condominiums, not age-restricted homes. Across Massachusetts, added homes have brought fewer public school "
@@ -1163,6 +1166,7 @@ for k, l, f in [
     ("Wsch", "Pay index, schools", "0.0000"), ("Cidx", "Price index", "0.0000"),
     ("Cnp", "Price index, school non-personnel", "0.0000"), ("Prem", "Health premium index", "0.0000"),
     ("enroll", "Enrollment on the chosen path", NUM1), ("extra", "Students from growth above the trend", NUM1),
+    ("unst", "Students from growth filling open seats, unstaffed", NUM1),
     ("ratio", "Students per staff member", "0.000"), ("sv", "Staff implied by the staffing rule", NUM1),
     ("payMix", "Town pay index, weighted for Public Safety", "0.0000"), ("emp", "Added commercial employees", NUM1),
     ("payroll", "Payroll index, Town and school staff, weighted by FY2027 pay", "0.0000"),
@@ -1246,6 +1250,8 @@ F["sv"] = lambda y: (f'IF(AND(FillCap=1,RatioMode="keep"),Staff27+MAX({at("E", y
                      f'IF(RatioMode="half",Staff27+{at("extra", y)}/Ratio27+(0.5/K_V)*MIN({at("enroll", y)}-Enroll27,0)/Ratio27'
                      f'+MAX({at("enroll", y)}-Enroll27,0)/Ratio27,'
                      f'{at("E", y)}/{at("ratio", y)}))))')
+F["unst"] = lambda y: (f'IF(AND(FillCap=1,RatioMode="keep"),MAX(MIN({at("extra", y)},Enroll27-{at("enroll", y)}),0),'
+                       f'IF(AND(FillCap=1,RatioMode="half"),MIN({at("extra", y)},0.5*MAX(Enroll27-{at("enroll", y)},0)),0))')
 F["staff"] = lambda y: f"Staff27*(1-K_V)+K_V*{at('sv', y)}"
 F["S_E0"] = lambda y: at("enroll", Y0, True) if y == YEARS[0] else None
 F["S_Staff0"] = lambda y: "K_Staff26+A_FTEchg" if y == YEARS[0] else None
@@ -1291,7 +1297,8 @@ F["depGrowth"] = from_anchor(lambda y: (
     + (f"+K_Permit*MAX({at('G_re', y)}/{at('Gt_re', y)}-1,0)*{at('W', y)}" if y > Y0 else "")
     + f"+{at('company', y)}+{at('police', y)}"))
 F["sch"] = from_anchor(lambda y: (f"A_Sch*(K_SPS*{at('Wsch', y)}*{at('staff', y)}/Staff27"
-                                  f"+(1-K_SPS)*{at('Cnp', y)}*((1-K_V)+K_V*{at('E', y)}/Enroll27))"))
+                                  f"+(1-K_SPS)*{at('Cnp', y)}*((1-K_V)+K_V*{at('E', y)}/Enroll27))"
+                                  f"+{at('unst', y)}*(K_FillSeat-A_Sch*(1-K_SPS)*K_V/Enroll27)*{at('Wsch', y)}/{at('Wsch', Y0, True)}"))
 F["fteTot"] = from_anchor(lambda y: f"K_TownFTE+{at('staff', y)}")
 F["subs"] = from_anchor(lambda y: f"K_ActShare*{at('fteTot', y)}/AllStaff27+(1-K_ActShare)*(1+K_RetGrowth)^({yr(y)}-{Y0})")
 F["gh"] = from_anchor(lambda y: f"A_GH*{at('subs', y)}*{at('Prem', y)}")

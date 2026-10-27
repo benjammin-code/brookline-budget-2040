@@ -43,9 +43,9 @@ pay about $530,000 a year in property tax. Rounded, in today's dollars:
 
 | | Project estimate | Town-wide view, if open seats and today's staff absorb them |
 |---|---|---|
-| Students (about 24) | Each with the staff an added student brings, about {{fact:student_cost_about}}: about $400,000 | Each filling an open seat, about $2,500: about $60,000 |
+| Students (about 24) | Each with the staff an added student brings, about {{fact:student_cost_about}}: about $400,000 | Each filling an open seat, about $7,760 with special education: about $185,000 |
 | Town departments | An average home's share, $1,109 before benefits (the consultant RKG's figure for Brookline): about $110,000 | About $660 a home plus benefits, less fire's part, since no fire company is added: about $65,000 |
-| **Cost against $530,000 of tax** | **About $510,000: roughly even** | **About $125,000: well ahead** |
+| **Cost against $530,000 of tax** | **About $510,000: roughly even** | **About $250,000: well ahead** |
 
 **When each is right.** The standard handbook on the method,
 [Burchell and Listokin's *Fiscal Impact Guidebook*](https://archive.org/details/fiscalimpactguid024471mbp)
@@ -322,7 +322,9 @@ its guideline. The guideline is a ceiling, though. In 2017 the School Department
 average class of 24 as the outcome to avoid, and this fall's classes average 19. With every class
 kept three students below its guideline, about 440 seats are open. The fullest schools are Pierce
 (87%), which moves into its larger new building in fall 2028, and Ruffin Ridley (84%); the
-emptiest is Hayes (75%). The high school, expanded in 2022, has about 535 seats more than its
+emptiest is Hayes (75%). Counting empty classrooms as well as open seats in today's classes, the
+kindergarten-to-grade-8 buildings, including the new Pierce, have room for roughly 1,000 to 1,700
+more students ([school seats map](https://www.brooklinefuture.org/post/school-seats-map)). The high school, expanded in 2022, has about 535 seats more than its
 2,165 students. In the base case enrollment falls further, to
 {{fact:enroll_fy2040_about}} by FY2040, because fewer children are being born to Brookline
 residents. At the forecast's 0.24 students a home, the seats opening by FY2030 would take
@@ -508,7 +510,7 @@ how close any service is to a step is not something the published figures can se
 
 - **The comparison of the two estimates.** The 100-apartment example uses the recent value per
   apartment home, the FY2026 residential tax rate (1.024%), 0.244 students a home, the forecast's
-  {{fact:student_cost}} for an added student with staff and $2,497 for one filling an open seat, RKG
+  {{fact:student_cost}} for an added student with staff and $7,758 for one filling an open seat, RKG
   Associates' $1,109 a home for Town departments, before benefits, and the forecast's $660 a
   home plus benefits, less fire's share. The figures mix FY2025 to FY2027 dollars and are rounded; the
   [breakeven test](@topic-growth) works the same comparison carefully.
@@ -524,8 +526,7 @@ how close any service is to a step is not something the published figures can se
 - **Police.** Calls from the Financial Plans and the department's annual and mid-year reports,
   which count calls two different ways over the years; staffing from the FY2027 budget and the
   2026 mid-year report.
-- **Schools.** Open seats from the School Department's FY2027 projections shared with the
-  Advisory Committee, against the School Committee's class-size guidelines (22 in kindergarten to
+- **Schools.** Open seats from the School Department's October 1, 2026 class counts, against the School Committee's class-size guidelines (22 in kindergarten to
   grade 2, 25 in grades 3 to 8, lower at Pierce and Driscoll); the high school figure is the
   enrollment the expanded building was designed for.
 - **Home sales and kindergarten.** The School Department's demographic study (2023) expects sales
