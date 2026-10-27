@@ -75,8 +75,14 @@ year, plus Chestnut Hill, {{fact:base_homes_added_fy40}} homes by FY2040 would b
 0.17 (the middle of ten recent Brookline buildings) to 0.24 (the forecast's average). That is
 real, and it is smaller than the decline from births. Those students arrive in a system with
 fewer students than it had: the district served about 7,850 students in FY2019 and is projected
-to serve {{fact:enroll_fy2040_about}} in FY2040 under NESDEC (updated for actual births), which already includes homes built at the recent
-pace.
+to serve {{fact:enroll_fy2040_about}} in FY2040 under NESDEC (updated for actual births), which is taken to include homes built at the recent
+pace. That is an assumption, not a calculation: NESDEC's forecast has no housing input. It
+projects each grade from how classes grew or shrank as they moved up in recent years, which
+reflects the families who moved into the homes built in those years; the building permits it
+lists averaged about 107 homes a year from 2019 to 2022, close to the recent pace. If homes at
+that pace bring more children than they used to, or fewer, the forecast would not show it until
+the October counts do. Only homes built faster than the recent pace add students explicitly, at
+0.24 a home.
 
 **What that means for cost.** It depends on what the schools do as enrollment falls. If staffing
 stays where it is, as the School Department's own plan assumes, students from new homes fill

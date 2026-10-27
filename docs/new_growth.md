@@ -69,8 +69,9 @@ The forecast's average new home, a mix of apartments and condominiums that adds 
 
 This site's main forecast, the base case, also uses this method for new homes, with one
 difference: it applies it only to homes built faster than Brookline's recent pace of
-{{fact:homes_pace}} a year, because the children from homes at that pace are already in the enrollment
-forecast it uses. The {{fact:student_cost}} is what the base
+{{fact:homes_pace}} a year, because the children from homes at that pace are taken to be already in
+the enrollment forecast it uses (an assumption: that forecast has no housing input, but its
+ratios reflect the families who moved into recent years' new homes). The {{fact:student_cost}} is what the base
 case charges for each added student in FY2027: about $12,100 for added teachers, aides
 and other staff at today's ratio (about one position for every 8.3 students in the parts
 of the budget that move with enrollment), about $2,500 for supplies, transport and other
@@ -220,7 +221,8 @@ children per home before they stopped paying for themselves, nearly twice the fo
 ## How many homes, and what they add
 
 The base case already includes {{fact:base_homes_added_fy40}} new homes by FY2040: {{fact:homes_pace}}
-a year, plus the approved Chestnut Hill plan. The enrollment forecast already counts their children. On top
+a year, plus the approved Chestnut Hill plan. The enrollment forecast is taken to count their
+children already. On top
 of those, the empty classroom seats that open as enrollment falls could hold the children
 from one of:
 

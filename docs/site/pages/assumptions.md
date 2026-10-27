@@ -223,8 +223,9 @@ one assumption moves and everything else stays at the base case; a minus sign me
   growth.
 - **If it is wrong:** half as many, {{fact:fy40_homes_half}}; none, with renovation, commercial
   space and business equipment at their pace, {{fact:fy40_homes_none}}. That counts the tax and
-  the Town costs of those homes but leaves the enrollment forecast as it is, since it already
-  reflects the recent pace of building.
+  the Town costs of those homes but leaves the enrollment forecast as it is, since it is taken to
+  reflect the recent pace of building. That is an assumption: the enrollment forecast has no
+  housing input, and its grade-to-grade ratios carry whatever children recent building brought.
 - **Change it:** "New homes built".
 
 ### Town cost of serving a new home
