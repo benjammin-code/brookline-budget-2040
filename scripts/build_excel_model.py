@@ -2089,7 +2089,7 @@ def build_guide():
 
     h("Where this comes from")
     p("This project's full narrative and methodology live in README.md and docs/reference_document.md "
-      "(and its published web version, docs/part2_web.html) in the brookline-finances repo - this "
+      "(and its web version, docs/reference_document.html) in the brookline-finances repo - this "
       "workbook is the audit companion to that writing, not a replacement for it. Every input here traces "
       "to a cited primary source (the Town's FY27-31 Long-Range Financial Plan, DOR/DLS Schedule A data, "
       "the Town's own Tax Classification Hearing presentations, Ben's own override research) - see each "
