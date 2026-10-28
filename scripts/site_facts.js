@@ -685,8 +685,12 @@ const studentsPerHome = (() => {
 })();
 put("sph_dev_mean", (studentsPerHome.devs.reduce((t, d) => t + d.v, 0) / studentsPerHome.devs.length).toFixed(2));
 
+// ---- owners by age, Census to Census, and students by years in a large home (householder_age_turnover.py)
+const homesTurnover = JSON.parse(fs.readFileSync("../output/householder_age_turnover.json", "utf8"));
+
 const siteData = {
   studentsPerHome,
+  homesTurnover,
   growthLinks: GL,
   taxBills,
   room: Object.keys(byYear).map(y => [+y, +(+byYear[y].surplus_deficit / 1e6).toFixed(2)]),

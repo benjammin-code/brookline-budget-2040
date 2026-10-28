@@ -11,7 +11,7 @@ summary:
 - The forecast's 0.244 is a consultant's per-bedroom schedule applied to the homes Brookline built from FY2018 to FY2025. The survey's schedule gives 0.27 for the same homes, or about 0.245 at Brookline's own share of children in public schools.
 - For a single building, the unit mix decides it: from about 6 students per 100 homes in a building of studios and one-bedrooms to about 37 in three-bedroom townhouses.
 - Homes added at the recent pace are already inside the enrollment forecast, through the rate at which families move in. Students from new homes are added only for building beyond that pace.
-related: topic-homes, topic-enrollment, topic-families, new-homes, topic-growth, assumptions
+related: topic-homes, topic-enrollment, topic-families, topic-homes-changing-hands, new-homes, topic-growth, assumptions
 updated: 2026-10-28
 ---
 
@@ -184,7 +184,9 @@ also include families returning after COVID, which this check cannot separate.
   in* setting tests it: each class 0.35 point a year larger, the rate since COVID, brings
   {{fact:enroll_fy2040_families_recent_change}} students by FY2040, and 1 point a year larger
   brings {{fact:enroll_fy2040_families_more_change}}
-  ([Assumptions register](@assumptions#families-moving-in)).
+  ([Assumptions register](@assumptions#families-moving-in)). As Brookline's owners age, more
+  family-sized homes should change hands, which points toward the first of these
+  ([Family-sized homes changing hands](@topic-homes-changing-hands)).
 - **Brookline is not the three towns.** Brookline's single-family houses hold more children than
   the survey's three-town figure for houses (0.72 against 0.61 children 5 to 17), its condominiums
   fewer (0.18 against 0.27), and its families send a smaller share to public school. These pull in

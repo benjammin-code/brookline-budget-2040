@@ -231,7 +231,7 @@ def render(doc=None):
     # header cell gets hidden text so no data cell is left without a header.
     def _table_headers(m):
         t = m.group(0)
-        t = re.sub(r"<th(?![^>]*scope)([^>]*)>", r'<th scope="col"\1>', t)
+        t = re.sub(r"<th(?=[\s>])(?![^>]*scope)([^>]*)>", r'<th scope="col"\1>', t)
         t = re.sub(r'<th scope="col"([^>]*)>\s*</th>', r'<th scope="col"\1><span class="sr-only">Item</span></th>', t)
         head, sep, tail = t.partition("<tbody>")
         tail = re.sub(r"<tr>\s*<td([^>]*)>(.*?)</td>", r'<tr>\n<th scope="row"\1>\2</th>', tail, flags=re.S)

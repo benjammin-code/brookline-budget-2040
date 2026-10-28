@@ -1058,6 +1058,20 @@ Used by `scripts/block_children_per_home.py` (children 5-17 per home by kind of 
   and https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2010/MapServer/18/query
   with `where=STATE='25' AND COUNTY='021' AND TRACT LIKE '40%'`, `outSR=4326`, `f=geojson`.
 
+## Owners by age of householder, 2000, 2010 and 2020 (added 2026-10-28)
+
+Used by `scripts/householder_age_turnover.py` (how many homes older owners leave each decade).
+
+- `data/demographics/householder_age_tenure_2000_2020.csv`: Brookline town, owner and renter households by
+  age of householder, extracted by the same script from the statewide files (downloaded 2026-10-28, Ben
+  approved; deleted after extraction):
+  - Census 2000 Summary File 1, Massachusetts, table H16, geography file and segment 37:
+    https://www2.census.gov/census_2000/datasets/Summary_File_1/Massachusetts/mageo_uf1.zip and
+    https://www2.census.gov/census_2000/datasets/Summary_File_1/Massachusetts/ma00037_uf1.zip
+  - Census 2010 Summary File 1, table H17, segment 44 (the `ma2010.sf1.zip` above)
+  - Census 2020 DHC, table H13, segment 02 (the `ma2020.dhc.zip` above)
+  Occupied homes: 25,594 (2000), 25,092 (2010), 26,525 (2020).
+
 ## Census survey microdata, 2020-2024 (added 2026-10-28)
 
 Used by `scripts/pums_children_per_home.py`. Downloaded 2026-10-28 (Ben asked for it); only PUMA 00902 kept.
@@ -1077,3 +1091,4 @@ Used by `scripts/pums_children_per_home.py`. Downloaded 2026-10-28 (Ben asked fo
   B25041 (bedrooms, all housing units), Brookline's 44 block groups (GEO_ID 1500000US2502140...), with margins
   of error. Downloaded 2026-10-28 (37 MB national file, deleted after filtering):
   https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25041.dat
+

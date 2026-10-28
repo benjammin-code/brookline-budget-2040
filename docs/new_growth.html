@@ -691,7 +691,7 @@ lower at Pierce and Driscoll), those classes have about 1,100 empty seats, and n
 school is over its guideline. The guideline is a ceiling, and this fall's classes average 19.
 Kept three students below the guideline, the same classes have about 440 empty seats:</p>
 <div class="prose-table-wrap" tabindex="0" role="region" aria-label="Table"><table class="data-table">
-<th scope="col"ead>
+<thead>
 <tr>
 <th scope="col">School</th>
 <th scope="col">Students, fall 2026</th>
@@ -3222,6 +3222,173 @@ what faster growth is worth</a> for the growth rate.</p>
         }));
   }
 
+  // ---- OWNERS BY AGE, CENSUS TO CENSUS (householder_age_turnover.py): each age group ten years on,
+  //      and how many are no longer owners. Counts are net (see the page), not households followed.
+  var HT_AGES = [["45-54", "45 to 54", "--line-benefits"], ["55-64", "55 to 64", "--line-education"],
+                 ["65-74", "65 to 74", "--line-levy-actual"], ["75+", "75 and over", "--line-no-override"]];
+  function drawOwnerFlowChart() {
+    var svg = document.getElementById("ownerflow-svg"); if (!svg) return;
+    if (!svg || !SD || !SD.homesTurnover) return;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var T = SD.homesTurnover, YRS = ["2000", "2010", "2020", "2030", "2040"], NC = YRS.length, COLS = [0, 1, 2, 3, 4], PROJ = 3;
+    var cnt = function (i) {   // owners by age in column i; 75+ kept as its two parts. 2040 has no 45-54 (it needs 2030's 35-44)
+      var o = i < PROJ ? T.owners[YRS[i]] : T["projected_" + YRS[i]];
+      return { "45-54": o["45-54"] || 0, "55-64": o["55-64"], "65-74": o["65-74"], "75-84": o["75-84"], "85+": o["85+"], "75+": o["75-84"] + o["85+"] };
+    };
+    // flows from column i to i+1: [from, to, stayed]
+    var flows = function (i) {
+      var a = cnt(i), b = cnt(i + 1);
+      return [["45-54", "55-64", b["55-64"]], ["55-64", "65-74", b["65-74"]], ["65-74", "75+", b["75-84"]], ["75+", "75+", b["85+"]]]
+        .map(function (f) { return { from: f[0], to: f[1], src: a[f[0]], stay: Math.min(f[2], a[f[0]]), dest: f[2], left: Math.max(a[f[0]] - f[2], 0) }; });
+    };
+    var exits = COLS.map(function (i) { return i ? flows(i - 1).reduce(function (t, f) { return t + f.left; }, 0) : 0; });
+    var exits55 = COLS.map(function (i) { return i ? flows(i - 1).reduce(function (t, f) { return t + (f.from === "45-54" ? 0 : f.left); }, 0) : 0; });
+    var W = 900, H = 560, m = { top: 44, right: 108, bottom: 62, left: 96 }, nw = 16, gap = 10, xgap = 26;
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+    var tot = COLS.map(function (i) { var c = cnt(i); return c["45-54"] + c["55-64"] + c["65-74"] + c["75+"] + exits[i]; });
+    var k = (ih - 3 * gap - xgap) / Math.max.apply(null, tot);
+    var X = function (i) { return m.left + i * (iw - nw) / (NC - 1); };
+    var tooltip = document.getElementById("ownerflow-tooltip"), wrap = document.getElementById("ownerflow-wrap");
+    var tip = function (el, html) {
+      el.addEventListener("mousemove", function (e) { tipAt(tooltip, wrap, e, html); });
+      el.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; });
+    };
+    var n0 = function (v) { return Math.round(v).toLocaleString("en-US"); };
+    var label = function (a) { return HT_AGES.filter(function (g) { return g[0] === a; })[0][1].toLowerCase(); };
+    // node positions
+    var pos = COLS.map(function (i) {
+      var c = cnt(i), y = m.top, p = {};
+      HT_AGES.forEach(function (g) { p[g[0]] = { y0: y, h: c[g[0]] * k }; y += c[g[0]] * k + gap; });
+      p.exit = { y0: y - gap + xgap, h: exits[i] * k };
+      return p;
+    });
+    var ribbon = function (x0, y0, h0, x1, y1, h1) {
+      var mx = (x0 + x1) / 2;
+      return "M" + x0 + "," + y0 + " C" + mx + "," + y0 + " " + mx + "," + y1 + " " + x1 + "," + y1 +
+             " L" + x1 + "," + (y1 + h1) + " C" + mx + "," + (y1 + h1) + " " + mx + "," + (y0 + h0) + " " + x0 + "," + (y0 + h0) + " Z";
+    };
+    var labels = [], LT = 0.8;   // rate labels sit 80% of the way along each band, past where the gray bands cross
+    var bez = function (a, b, t) { return a + (b - a) * (3 * t * t - 2 * t * t * t); };   // the ribbon's curve, both control points at mid-x
+    var grays = [], colored = [];
+    COLS.slice(0, NC - 1).forEach(function (i) {
+      var x0 = X(i) + nw, x1 = X(i + 1), proj = i + 1 >= PROJ, exitOff = 0, inOff = {};
+      flows(i).forEach(function (f) {
+        if (!f.src) return;
+        var s = pos[i][f.from], d = pos[i + 1][f.to], color = css(HT_AGES.filter(function (g) { return g[0] === f.from; })[0][2]);
+        var dy = d.y0 + (inOff[f.to] || 0);
+        inOff[f.to] = (inOff[f.to] || 0) + f.dest * k;
+        var p = svgEl("path", { d: ribbon(x0, s.y0, f.stay * k, x1, dy, f.dest * k), fill: color, opacity: proj ? 0.28 : 0.45 });
+        colored.push(p);
+        var rate = f.dest / f.src, toLab = f.from === "75+" ? "85 and over" : f.to === "75+" ? "75 to 84" : label(f.to);
+        tip(p, '<div class="tt-title">Owners ' + label(f.from) + ' in ' + YRS[i] + '</div>' +
+               '<div class="tt-row"><span>Owners then</span><span>' + n0(f.src) + '</span></div>' +
+               '<div class="tt-row"><span>Owners ' + toLab + ' in ' + YRS[i + 1] + (proj ? " (projected)" : "") + '</span><span>' + n0(f.dest) + '</span></div>' +
+               '<div class="tt-row"><span>Still owning, net</span><span>' + Math.round(rate * 100) + '%</span></div>');
+        labels.push({ x: x0 + (x1 - x0) * LT, y: bez(s.y0 + f.stay * k / 2, dy + f.dest * k / 2, LT), t: Math.round(rate * 100) + "%", proj: proj });
+        if (f.left > 0) {
+          var e = pos[i + 1].exit, q = svgEl("path", { d: ribbon(x0, s.y0 + f.stay * k, f.left * k, x1, e.y0 + exitOff, f.left * k),
+                                                       fill: css("--ink-muted"), opacity: proj ? 0.12 : 0.2 });
+          exitOff += f.left * k;
+          grays.push(q);
+          tip(q, '<div class="tt-title">Owners ' + label(f.from) + ' in ' + YRS[i] + '</div>' +
+                 '<div class="tt-row"><span>No longer owning ten years later, net</span><span>' + n0(f.left) + '</span></div>' +
+                 '<div class="tt-row"><span>Share</span><span>' + Math.round((1 - rate) * 100) + '%</span></div>');
+        }
+      });
+    });
+    grays.forEach(function (q) { svg.appendChild(q); });     // gray under colored, so the bands stay readable
+    colored.forEach(function (p) { svg.appendChild(p); });
+    // nodes
+    COLS.forEach(function (i) {
+      var c = cnt(i), proj = i >= PROJ;
+      HT_AGES.forEach(function (g) {
+        if (!c[g[0]]) return;
+        var p = pos[i][g[0]], r = svgEl("rect", { x: X(i), y: p.y0, width: nw, height: Math.max(p.h, 1), rx: 2, fill: css(g[2]), opacity: proj ? 0.55 : 1 });
+        svg.appendChild(r);
+        tip(r, '<div class="tt-title">Owners ' + g[1].toLowerCase() + ', ' + YRS[i] + (proj ? " (projected)" : "") + '</div><div class="tt-row"><span>Households</span><span>' + n0(c[g[0]]) + '</span></div>' +
+               (g[0] === "75+" ? '<div class="tt-row"><span>75 to 84</span><span>' + n0(c["75-84"]) + '</span></div><div class="tt-row"><span>85 and over</span><span>' + n0(c["85+"]) + '</span></div>' : "") +
+               (g[0] === "45-54" && i ? '<div>Owners who were 35 to 44 ten years earlier, and owners who arrived, are not drawn.</div>' : ""));
+      });
+      if (i) {
+        var e = pos[i].exit, r = svgEl("rect", { x: X(i), y: e.y0, width: nw, height: e.h, rx: 2, fill: css("--ink-muted"), opacity: proj ? 0.45 : 0.8 });
+        svg.appendChild(r);
+        tip(r, '<div class="tt-title">No longer owning, ' + YRS[i - 1] + ' to ' + YRS[i] + (proj ? " (projected)" : "") + '</div><div class="tt-row"><span>Households, net</span><span>' + n0(exits[i]) +
+               '</span></div><div class="tt-row"><span>Of which 55 and over</span><span>' + n0(exits55[i]) + '</span></div>');
+        var t = svgEl("text", { x: X(i) + nw / 2, y: e.y0 + e.h + 16, "text-anchor": "middle", class: "tick-label", "font-size": "11.5" });
+        t.textContent = (proj ? "About " : "") + n0(Math.round(exits55[i] / (proj ? 10 : 1)) * (proj ? 10 : 1)) + " aged 55+"; svg.appendChild(t);
+        var t2 = svgEl("text", { x: X(i) + nw / 2, y: e.y0 + e.h + 30, "text-anchor": "middle", class: "tick-label", "font-size": "11" });
+        t2.textContent = (proj ? "projected, " : "") + "about " + n0(Math.round(exits55[i] / 100) * 10) + " a year"; svg.appendChild(t2);
+      }
+      var hd = svgEl("text", { x: X(i) + nw / 2, y: 18, "text-anchor": "middle", "font-size": "13", "font-weight": "600", fill: css(proj ? "--ink-muted" : "--ink") });
+      hd.textContent = YRS[i]; svg.appendChild(hd);
+      if (proj) { var pj = svgEl("text", { x: X(i) + nw / 2, y: 33, "text-anchor": "middle", class: "tick-label", "font-size": "11" }); pj.textContent = "projected"; svg.appendChild(pj); }
+    });
+    // rates on the ribbons, over everything
+    labels.forEach(function (l) {
+      var t = svgEl("text", { x: l.x, y: l.y + 4, "text-anchor": "middle", "font-size": "12", "font-weight": "600", fill: css(l.proj ? "--ink-muted" : "--ink"),
+                              stroke: css("--paper-card"), "stroke-width": 3.5, "paint-order": "stroke", "stroke-linejoin": "round", "pointer-events": "none" });
+      t.textContent = l.t; svg.appendChild(t);
+    });
+    // age labels, both sides
+    HT_AGES.forEach(function (g) {
+      [[0, X(0) - 8, "end"], [NC - 1, X(NC - 1) + nw + 8, "start"]].forEach(function (s) {
+        if (!cnt(s[0])[g[0]]) return;
+        var p = pos[s[0]][g[0]], t = svgEl("text", { x: s[1], y: p.y0 + p.h / 2 + 4, "text-anchor": s[2], "font-size": "12", fill: css("--ink") });
+        t.textContent = g[1]; svg.appendChild(t);
+      });
+    });
+    var lt = svgEl("text", { x: X(NC - 1) + nw + 8, y: pos[NC - 1].exit.y0 + pos[NC - 1].exit.h / 2 + 4, "font-size": "12", fill: css("--ink-muted") });
+    lt.textContent = "No longer owning"; svg.appendChild(lt);
+    var a = T.still_owning;
+    svg.setAttribute("aria-label", "Flow chart of Brookline owner households by age of householder in 2000, 2010, 2020 and projected for 2030. Share of each age group still owning ten years later, 2000 to 2010 and 2010 to 2020: " +
+      HT_AGES.map(function (g) { return g[1] + " " + Math.round(a["2000"][g[0]] * 100) + "% and " + Math.round(a["2010"][g[0]] * 100) + "%"; }).join(", ") +
+      ". Owners aged 55 and over no longer owning: " + n0(exits55[1]) + " in the 2000s, " + n0(exits55[2]) + " in the 2010s, about " + n0(exits55[3]) + " projected for the 2020s and " + n0(exits55[4]) + " for the 2030s.");
+    var rows = [];
+    HT_AGES.forEach(function (g) {
+      [0, 1, 2, 3].forEach(function (i) {
+        var f = flows(i).filter(function (q) { return q.from === g[0]; })[0];
+        if (!f.src) return;
+        var pj = i + 1 >= PROJ;
+        rows.push([g[1] + " in " + YRS[i] + (i >= PROJ ? " (projected)" : ""), n0(f.src), (pj ? "about " : "") + n0(f.dest) + (pj ? " (projected)" : ""), Math.round(f.dest / f.src * 100) + "%" + (pj ? " (average of the two)" : "")]);
+      });
+    });
+    fillTable("ownerflow-table", ["Owners", "Households", "Same group ten years later", "Still owning, net"], rows);
+  }
+
+  // ---- STUDENTS IN A FAMILY-SIZED HOME, BY HOW LONG THE HOUSEHOLD HAS LIVED THERE (one survey, one point in time)
+  function drawYearsInHomeChart() {
+    var svg = document.getElementById("yearsinhome-svg"); if (!svg) return;
+    if (!svg || !SD || !SD.homesTurnover) return;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var T = SD.homesTurnover, S = T.students_by_years_in_home, N = T.students_by_years_in_home_records;
+    var bars = [["Owners 55 and over", T.students_older_owners_leaving, T.older_owners_leaving_records, "--ink-muted"],
+                ["Moved in within the past 2 years", S["0-1"], N["0-1"], "--pine"], ["Moved in 2 to 4 years ago", S["2-4"], N["2-4"], "--pine"],
+                ["Moved in 5 to 9 years ago", S["5-9"], N["5-9"], "--pine"], ["Moved in 10 to 19 years ago", S["10-19"], N["10-19"], "--pine"]];
+    var rowH = 44, W = 900, m = { top: 10, bottom: 34, left: 290, right: 80 }, H = m.top + m.bottom + rowH * bars.length, hi = 1.2;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    var iw = W - m.left - m.right, x = function (v) { return m.left + v / hi * iw; };
+    var tooltip = document.getElementById("yearsinhome-tooltip"), wrap = document.getElementById("yearsinhome-wrap");
+    for (var g = 0; g <= hi + 1e-9; g += 0.2) {
+      svg.appendChild(svgEl("line", { x1: x(g), x2: x(g), y1: m.top, y2: H - m.bottom, class: "gridline" }));
+      var t = svgEl("text", { x: x(g), y: H - m.bottom + 18, class: "tick-label", "text-anchor": "middle", "font-size": "11" }); t.textContent = g.toFixed(1); svg.appendChild(t);
+    }
+    bars.forEach(function (b, i) {
+      var cy = m.top + i * rowH + rowH / 2;
+      var lab = svgEl("text", { x: m.left - 10, y: cy + 4, "text-anchor": "end", "font-size": "13", fill: css("--ink") }); lab.textContent = b[0]; svg.appendChild(lab);
+      svg.appendChild(svgEl("rect", { x: m.left, y: cy - 12, width: x(b[1]) - m.left, height: 24, rx: 3, fill: css(b[3]) }));
+      var vt = svgEl("text", { x: x(b[1]) + 8, y: cy + 4, class: "tick-label", "font-size": "12" }); vt.textContent = b[1].toFixed(2); svg.appendChild(vt);
+      var hit = svgEl("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, fill: "transparent" }); svg.appendChild(hit);
+      hit.addEventListener("mousemove", function (e) {
+        tipAt(tooltip, wrap, e, '<div class="tt-title">' + b[0] + '</div><div class="tt-row"><span>Public school students per home</span><span>' + b[1].toFixed(2) +
+          '</span></div><div class="tt-row"><span>Households surveyed</span><span>' + b[2] + '</span></div>');
+      });
+      hit.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; });
+    });
+    svg.setAttribute("aria-label", "Bar chart of public school students per home with three or more bedrooms: " + bars.map(function (b) { return b[0] + " " + b[1].toFixed(2); }).join(", ") + ".");
+    fillTable("yearsinhome-table", ["Households in homes with 3 or more bedrooms", "Public school students per home", "Households surveyed"],
+      bars.map(function (b) { return [b[0], b[1].toFixed(2), String(b[2])]; }));
+  }
+
   // ---- WHO SETS IT: the same $177 million grouped by who controls each cause
   var WHO_LABELS = { outside: "Outside Brookline", decide: "Brookline's own decisions", past: "Past obligations",
                      growth: "Growth in homes and commercial space", other: "Other" };
@@ -3784,6 +3951,8 @@ what faster growth is worth</a> for the growth rate.</p>
     drawBirthsTownsChart();
     drawKpbHousingChart();
     drawStudentsBedroomsChart();
+    drawOwnerFlowChart();
+    drawYearsInHomeChart();
     drawStaffEnrollChart();
     drawEmployeesChart();
     drawGlRevenueChart();

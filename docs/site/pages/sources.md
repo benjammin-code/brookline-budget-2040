@@ -151,6 +151,8 @@ are grouped by who publishes them.
   every Brookline block (children by age, homes, owned and rented), with block outlines from
   TIGERweb, from [www2.census.gov](https://www2.census.gov/), for
   [Students from new homes](@topic-new-home-students).
+- **Also:** owners and renters by age of householder, Brookline, from the 2000, 2010 and 2020
+  Censuses, for [Family-sized homes changing hands](@topic-homes-changing-hands).
 
 ### American Community Survey
 - **What:** The Census Bureau's five-year estimates for 2015–19 and 2020–24, every Massachusetts
@@ -159,7 +161,8 @@ are grouped by who publishes them.
 - **Used for:** [Why families settle elsewhere](@topic-families).
 - **Also:** the 2020–24 public-use microdata (individual household records) for the area covering
   Brookline, Dedham and Milton, and bedrooms by block group (table B25041), for
-  [Students from new homes](@topic-new-home-students).
+  [Students from new homes](@topic-new-home-students) and
+  [Family-sized homes changing hands](@topic-homes-changing-hands).
 
 ## This project
 
