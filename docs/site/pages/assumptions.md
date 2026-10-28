@@ -159,6 +159,29 @@ one assumption moves and everything else stays at the base case; a minus sign me
 - **More:** [Enrollment: three forecasts compared](@topic-enrollment).
 - **Change it:** "School enrollment forecast".
 
+### Families moving in
+- **Base case:** Families move in and out at the rates in NESDEC's forecast: each class grows
+  about 2% between kindergarten and grade 12, and about 0.85 kindergartners arrive for every
+  resident birth five years earlier.
+- **Why:** NESDEC's rates come from Brookline's own recent history, which they sit between:
+  before COVID classes shrank about 7% from kindergarten to grade 12, and since COVID they have
+  grown about 6%.
+- **Alternative:** Since COVID, classes have grown about 0.35 point a year faster than NESDEC
+  assumes. Brookline's Census blocks show children per home rising about a fifth from 2010 to
+  2020 within every kind of home, so more families with children can move into the homes Brookline
+  already has. These families add students and cost but no new tax revenue, since their homes are
+  already taxed.
+- **If it is wrong:** each class 0.35 point a year larger, the rate since COVID, enrollment
+  {{fact:enroll_fy2040_families_recent}} in FY2040 ({{fact:enroll_fy2040_families_recent_change}}),
+  {{fact:fy40_families_recent}}; 1 point a year larger, {{fact:enroll_fy2040_families_more}}
+  ({{fact:enroll_fy2040_families_more_change}}), {{fact:fy40_families_more}}; 0.5 point a year smaller,
+  {{fact:enroll_fy2040_families_fewer}} ({{fact:enroll_fy2040_families_fewer_change}}),
+  {{fact:fy40_families_fewer}}. The setting applies to children of every age from birth, so
+  kindergartners per birth move with it.
+- **More:** [Students from new homes](@topic-new-home-students) and
+  [Enrollment: three forecasts compared](@topic-enrollment).
+- **Change it:** "Families moving in".
+
 ### School costs other than staff
 - **Base case:** Grow with prices.
 - **If it is wrong:** two points a year faster than prices, {{fact:fy40_school_np_extra}}.
@@ -255,6 +278,7 @@ one assumption moves and everything else stays at the base case; a minus sign me
   FY2027 level, at today's growth rate, {{fact:fy40_fill_seats}};
   growth led by new homes at {{fact:peer_growth_rate}} with filled seats,
   {{fact:fy40_peer_housing_fill}}, against {{fact:fy40_peer_housing}} with new staff.
+- **More:** [Students from new homes](@topic-new-home-students).
 - **Change it:** "Students from added homes".
 
 ### Planning and permitting

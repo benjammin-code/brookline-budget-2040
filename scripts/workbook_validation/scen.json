@@ -148,5 +148,21 @@
  "38 premiums 4.5%, near 6%, retiree health paid off": {
   "premium_long": 0.045,
   "premium_near": 0.06
+ },
+ "40 families moving in +1 point": {
+  "migration": 0.01
+ },
+ "41 families moving in -0.5 point": {
+  "migration": -0.005
+ },
+ "42 families +1 point, staff held, seats filled": {
+  "migration": 0.01,
+  "staffing": "keep",
+  "fill": "fill",
+  "growth": 5
+ },
+ "43 families +1 point, Cropper-McKibben (no effect)": {
+  "migration": 0.01,
+  "enroll": "cm"
  }
 }

@@ -180,7 +180,11 @@ also include families returning after COVID, which this check cannot separate.
   and 2020, and none of the rise came from building different kinds of homes: houses, condominiums
   and apartments each held more children. A schedule measured in 2020 to 2024 could run high or low
   by the 2030s. This is the largest uncertainty, and it works through the enrollment forecast's
-  rate of families moving in more than through new homes.
+  rate of families moving in more than through new homes. The Forecast Explorer's *Families moving
+  in* setting tests it: each class 0.35 point a year larger, the rate since COVID, brings
+  {{fact:enroll_fy2040_families_recent_change}} students by FY2040, and 1 point a year larger
+  brings {{fact:enroll_fy2040_families_more_change}}
+  ([Assumptions register](@assumptions#families-moving-in)).
 - **Brookline is not the three towns.** Brookline's single-family houses hold more children than
   the survey's three-town figure for houses (0.72 against 0.61 children 5 to 17), its condominiums
   fewer (0.18 against 0.27), and its families send a smaller share to public school. These pull in

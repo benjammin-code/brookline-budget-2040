@@ -9,14 +9,14 @@ const B = D.base, R = D.revenue;
 const BASE = { pay: 0, opeb: "redirect", staffing: "half", premium_long: B.premium_long, growth: 0,
   school_drift: B.school_pay_drift, ps_premium: B.pay_ps_premium, lr: R.lr_cagr, cpi: B.cpi, sa: R.sa_cagr,
   mix: "mix", fill: "staff", enroll: "nesdec", premium_near: B.premium_near, np_extra: B.sch_np_extra,
-  capital: "full", cost_home: B.cost_per_home, chca: "approved", slip: "0", ov_amt: 0, ov_year: "2031", ps_staff: "budget", homes: "all" };
+  capital: "full", cost_home: B.cost_per_home, chca: "approved", slip: "0", ov_amt: 0, ov_year: "2031", ps_staff: "budget", homes: "all", migration: 0 };
 function settings(st) {
   const a = Object.assign({}, B), rv = {};
   a._step = 0; a._mix = "mix"; rv.ovYear = 2031;
   a.pay = B.pay + st.pay; a.opeb_redirect = st.opeb !== "keep"; a.opeb_hold = st.opeb === "redirect"; a.ratio_mode = st.staffing;
   a.premium_long = st.premium_long; a._step = st.growth; a.school_pay_drift = st.school_drift;
   a.pay_ps_premium = st.ps_premium; rv.lr = st.lr; a.cpi = st.cpi; rv.sa = st.sa; a._mix = st.mix;
-  a.fill_capacity = st.fill === "fill"; a.enroll_mode = st.enroll; a.premium_near = st.premium_near;
+  a.fill_capacity = st.fill === "fill"; a.enroll_mode = st.enroll; a.migration = st.migration; a.premium_near = st.premium_near;
   a.sch_np_extra = st.np_extra; a.capital_full = st.capital === "full"; a.cost_per_home = st.cost_home;
   a.chca = st.chca; a.pension_slip = +st.slip;
   a.ps_restore = st.ps_staff === "restore"; a.fire_step = st.ps_staff !== "none"; a.police_step = st.ps_staff === "police"; rv.ovAmt = st.ov_amt; rv.ovYear = +st.ov_year;

@@ -373,6 +373,13 @@ var D = /*__DATA__*/;
       help: "Which enrollment path the schools serve. It moves school staff (half as fast as enrollment in the base case) and non-personnel costs.",
       ix: "Unless school staff are held at the FY2027 level (above), this also changes staff, not just costs.",
       apply: function (a, rv, v) { a.enroll_mode = v; } },
+    { id: "migration", layer: 3, label: "Families moving in", kind: "range", min: -0.01, max: 0.02, step: 0.0025, base: 0,
+      help: "How much each class grows or shrinks each year from families moving in and out, beyond what NESDEC assumes (classes about 2% larger from kindergarten to grade 12). It applies to children of every age, from birth on, so kindergartners per birth move with it. Since COVID, classes have grown about 6% from kindergarten to grade 12, about 0.35 point a year more than NESDEC; before COVID they shrank about 7%. Families moving into existing homes add students but no new tax revenue.",
+      show: function (v) { return Math.abs(v) < 1e-9 ? "NESDEC's rate" : (v >= 0 ? "+" : "−") + Math.abs(v * 100).toFixed(2) + " pt a year"; },
+      sub: function (v) { var e = 0, b = 0; Object.keys(D.enrollment.by_exponent).forEach(function (n) { var x = D.enrollment.by_exponent[n]["2040"]; e += x * Math.pow(1 + v, +n); b += x; });
+        return "FY2040 enrollment " + Math.round(e).toLocaleString("en-US") + (Math.abs(v) < 1e-9 ? "" : " (" + (e >= b ? "+" : "−") + Math.abs(Math.round(e - b)).toLocaleString("en-US") + ")"); },
+      ix: "Changes the NESDEC path only; no effect when enrollment is set to Cropper-McKibben or flat.",
+      apply: function (a, rv, v) { a.migration = v; } },
     { id: "premium_near", layer: 3, label: "Health premium growth, FY2028 and FY2029", kind: "range", min: 0.06, max: 0.14, step: 0.01, base: B.premium_near,
       help: "The Town's own forecast for the next two years.",
       show: function (v) { return pct(v, 0) + "/yr"; },

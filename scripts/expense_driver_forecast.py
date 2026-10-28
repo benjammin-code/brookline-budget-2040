@@ -259,7 +259,7 @@ LEVY_GROWTH = 1.025
 # actual turnover savings ran about 1% of payroll more, about 3.3%.
 BASE = dict(
     pay=0.030, pay_ps_premium=0.005, school_pay_drift=0.007, cpi=0.025, ratio_mode="half",
-    enroll_mode="nesdec", premium_near=0.12, premium_long=0.08, cost_per_home=COST_PER_HOME_FY25,
+    enroll_mode="nesdec", migration=0.0, premium_near=0.12, premium_long=0.08, cost_per_home=COST_PER_HOME_FY25,
     growth="trend_continues", pension_slip=0, opeb_redirect=True, opeb_hold=True, sch_np_extra=0.0,
     chca="approved", fire_step=True, ps_restore=False, police_step=False, capital_full=True,
 )
@@ -387,29 +387,60 @@ def load():
     return tsch, be, bc, gr, fte, hist, sal
 
 
-def enrollment_path():
-    """NESDEC PK-12, scaled to the Oct 2025 actual, extended to FY2040."""
-    # FY2026 and FY2027 are actual counts; later years follow NESDEC's path,
-    # scaled to the FY2027 count (6,833 vs NESDEC's 6,774, +0.9%).
-    scale = ACTUAL_OCT_2026 / NESDEC_PK12[2027]
-    e = {y: NESDEC_PK12[y] * scale for y in range(2026, 2035)}
-    e[2026], e[2027] = ACTUAL_OCT_2025, ACTUAL_OCT_2026
-    # extend: advance each grade one year using NESDEC's own grade-to-grade
-    # ratios (grade g+1 next year / grade g this year), averaged over its
-    # projected years. Control: the table's rows must sum to its PK-12 totals.
-    for y, row in NESDEC_GRADES.items():
+MIGRATION_FROM = 2027   # families moving in, the lever: compounds from the FY2027 count on
+
+
+def nesdec_grades():
+    """NESDEC's grades (PK, K-12) FY2027-FY2040, births-adjusted and not yet scaled: its own table to
+    FY2034, then each grade advanced a year by NESDEC's grade-to-grade ratios, averaged over its
+    projected years, with kindergarten held at NESDEC's last value (births-adjusted)."""
+    for y, row in NESDEC_GRADES.items():   # control: the table's rows sum to its PK-12 totals
         assert sum(row) == NESDEC_PK12[y], (y, sum(row), NESDEC_PK12[y])
     ratios = []
     for gi in range(1, 13):   # K..11 -> 1..12
         rs = [NESDEC_GRADES_PUBLISHED[y + 1][gi + 1] / NESDEC_GRADES_PUBLISHED[y][gi] for y in range(2024, 2034)]
         ratios.append(sum(rs) / len(rs))
+    rows = {y: NESDEC_GRADES[y][:] for y in range(2027, 2035)}
     g = NESDEC_GRADES[2034][:]
     for y in range(2035, 2041):
         k12 = g[1:]
-        new = [NESDEC_K_LATE] + [k12[i] * ratios[i] for i in range(12)]
-        g = [g[0]] + new
-        e[y] = sum(g) * scale
-    return e
+        g = [g[0]] + [NESDEC_K_LATE] + [k12[i] * ratios[i] for i in range(12)]
+        rows[y] = g
+    return rows
+
+
+def migration_years(y, gi):
+    """Years of the families-moving-in lever a class in grade gi (K = 0) has had by FY y: every year
+    since FY2027, or since birth for children born later (kindergarten in FY y was born in y - 6),
+    so kindergartners per birth move with it."""
+    return max(y - max(MIGRATION_FROM, y - 6 - gi), 0)
+
+
+def enrollment_by_exponent():
+    """The base-case enrollment path split by how many years of the lever each child has had:
+    {n: {fiscal year: students}}. Enrollment at a migration rate m is the sum of students x (1 + m)^n.
+    FY2026 and FY2027 are actual counts (n = 0); later years are NESDEC's grades scaled to the FY2027
+    count (6,833 vs NESDEC's 6,774, +0.9%). PK is held level, so n = 0."""
+    scale = ACTUAL_OCT_2026 / NESDEC_PK12[2027]
+    out = {n: {} for n in range(14)}
+    for y in range(2026, 2041):
+        for n in out:
+            out[n][y] = 0.0
+    out[0][2026], out[0][2027] = ACTUAL_OCT_2025, ACTUAL_OCT_2026
+    for y, row in nesdec_grades().items():
+        if y <= MIGRATION_FROM:
+            continue
+        out[0][y] += row[0] * scale
+        for gi in range(13):
+            out[migration_years(y, gi)][y] += row[gi + 1] * scale
+    return out
+
+
+def enrollment_path(migration=0.0):
+    """NESDEC PK-12, scaled to the October 2026 count and extended to FY2040, with families moving in
+    changed by `migration` a year (net share of each class, beyond what NESDEC assumes)."""
+    parts = enrollment_by_exponent()
+    return {y: sum(parts[n][y] * (1 + migration) ** n for n in parts) for y in parts[0]}
 
 
 def index_path(rate, first_growth_year=2027, rates=None):
@@ -477,7 +508,7 @@ def run(a, data, growth_frame):
     psD = pers["Public Safety"] / sum(pers.values())
 
     town_fte = {y: (fte.loc[2027, "total"] if y >= 2027 else fte.loc[2026, "total"]) for y in YEARS}
-    enroll = enrollment_path()
+    enroll = enrollment_path(a.get("migration", 0.0))
     if a["enroll_mode"] == "cm":
         sc = ACTUAL_OCT_2026 / CM_PK12[2027]
         enroll = {y: (ACTUAL_OCT_2025 if y == 2026 else CM_PK12[min(y, 2034)] * sc) for y in YEARS}
@@ -946,6 +977,9 @@ def main():
         ("New growth at the peer rate, housing-led, students fill existing seats", dict(growth="peer_target_residential_led", fill_capacity=True)),
         ("Enrollment flat at FY2027 (base: NESDEC decline)", dict(enroll_mode="flat")),
         ("Enrollment per Cropper-McKibben, the schools' forecast (base: NESDEC)", dict(enroll_mode="cm")),
+        ("Families moving in: each class 0.35 point a year larger, the rate since COVID (base: NESDEC's rate)", dict(migration=0.0035)),
+        ("Families moving in: each class 1 point a year larger (base: NESDEC's rate)", dict(migration=0.01)),
+        ("Families moving in: each class 0.5 point a year smaller (base: NESDEC's rate)", dict(migration=-0.005)),
         ("Cropper-McKibben enrollment, staff follow it", dict(enroll_mode="cm", ratio_mode="hold")),
         ("School pay at PSB's forecast, about 5%/yr (base 3.7%)", dict(school_pay_drift=0.02)),
         ("School and Public Safety pay held to the 3.0% Town target (base 3.7% and 3.5%)", dict(school_pay_drift=0.0, pay_ps_premium=0.0)),

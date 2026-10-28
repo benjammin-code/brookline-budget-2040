@@ -90,9 +90,13 @@ function runModel(D, a, rv) {
 
 
   var townFte = K.town_fte;
-  var nes = D.enrollment.nesdec, enroll = {};
+  // NESDEC's path with families moving in changed by a.migration a year: each child's share of the
+  // path grows (1 + migration) for every year of the lever it has had (expense_driver_forecast.py)
+  var byN = D.enrollment.by_exponent, mig = a.migration || 0, enroll = {};
   Y.forEach(function (y) {
-    enroll[y] = a.enroll_mode === "cm" ? D.enrollment.cm[y] : nes[y];
+    var nes = 0;
+    Object.keys(byN).forEach(function (n) { nes += byN[n][y] * Math.pow(1 + mig, +n); });
+    enroll[y] = a.enroll_mode === "cm" ? D.enrollment.cm[y] : nes;
   });
   var e0 = enroll[Y0];
   if (a.enroll_mode === "flat") Y.forEach(function (y) { if (y > Y0) enroll[y] = e0; });

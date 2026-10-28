@@ -301,6 +301,9 @@ year_series("stab", "Override stabilization fund, drawn over three budgets", A27
             source="FY2027 budget as adopted")
 year_series("nes", "Enrollment, NESDEC projection", D["enrollment"]["nesdec"], NUM1,
             source="NESDEC 2023, scaled to Oct 2025")
+for n_ in range(14):   # the NESDEC path split by years of the families-moving-in lever (enrollment_by_exponent)
+    year_series(f"nesm{n_}", f"Enrollment, NESDEC path: students with {n_} year{'' if n_ == 1 else 's'} of families moving in",
+                D["enrollment"]["by_exponent"][str(n_)], NUM1, source="expense_driver_forecast.py")
 year_series("cm", "Enrollment, Cropper-McKibben (the schools' forecast)", D["enrollment"]["cm"], NUM1,
             source="Cropper-McKibben 2023")
 year_series("pen", "Town plan: pensions", D["town"]["pensions"], source=LRFP)
@@ -775,6 +778,10 @@ SET = [
      "FY2027 level, half of them with staff falling half as fast. Has no effect when staff follow enrollment fully."),
     ("enroll", "School enrollment forecast", "select", "nesdec", None, None, "Choose from the list",
      "Which enrollment path the schools serve."),
+    ("migration", "Families moving in, change in each class a year", "range", 0.0, (-0.01, 0.02), PTS, "-1 to +2 points",
+     "How much each class grows or shrinks each year from families moving in and out, beyond what NESDEC assumes, for "
+     "children of every age from birth on, so kindergartners per birth move with it. Since COVID classes have grown about "
+     "0.35 point a year faster than NESDEC assumes. Changes the NESDEC path only."),
     ("premium_near", "Health premium growth, FY2028 and FY2029", "range", B["premium_near"], (0.06, 0.14), PCT1, "6% to 14%",
      "The Town's own forecast for the next two years."),
     ("np_extra", "School non-personnel costs above inflation", "range", B["sch_np_extra"], (0, 0.03), PTS, "0 to 3 points",
@@ -865,6 +872,7 @@ DERIVED = [
     ("FillCap", "Students fill open seats (1 yes, 0 no)", f'IF({code_of("fill")}="fill",1,0)', "0"),
     ("HomesShare", "Share of expected new homes built", f'IF({code_of("homes")}="half",0.5,IF({code_of("homes")}="none",0,1))', "0%"),
     ("EnrollMode", "Enrollment path", code_of("enroll"), "@"),
+    ("Migration", "Families moving in, change in each class a year", "In_migration", PTS),
     ("CapFull", "Capital at the full policy (1 yes, 0 no)", f'IF({code_of("capital")}="full",1,0)', "0"),
     ("ChcaEstimate", "Chestnut Hill estimate", code_of("chca"), "@"),
     ("NgEarlyYears", "New growth in FY2027 and FY2028", code_of("ng2728"), "@"),
@@ -1238,7 +1246,8 @@ for k, rate in [("W", "PayTown"), ("Wps", "(PayTown+PSPrem)"), ("Wsch", "(PayTow
         return f
     F[k] = mk(k, rate)
 F["enroll"] = lambda y: (f'IF(EnrollMode="cm",{dat("cm", y)},IF(AND(EnrollMode="flat",{yr(y)}>{Y0}),'
-                         f'{dat("nes", Y0, True)},{dat("nes", y)}))')
+                         f'{dat("nes", Y0, True)},'
+                         + "+".join(f"{dat(f'nesm{n}', y)}*(1+Migration)^{n}" for n in range(14)) + "))")
 F["extra"] = lambda y: f"MAX({at('units', y)}-{at('unitsT', y)},0)*K_SPH+K_ChcaUnits*{at('ramp', y)}*K_ChcaSPU"
 F["E"] = lambda y: f"{at('enroll', y)}+{at('extra', y)}"
 F["ratio"] = lambda y: f'IF(RatioMode="partial",Ratio27+(RatioTarget-Ratio27)*MIN(MAX(({yr(y)}-{Y0})/5,0),1),Ratio27)'

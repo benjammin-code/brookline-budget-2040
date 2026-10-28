@@ -117,6 +117,9 @@ const SENS = [
   ["ps_restore", /^Police and fire restored to earlier staffing/],
   ["no_fire_company", /^No added fire company/],
   ["police_step", /^Police grow with homes at the peer ratio/],
+  ["families_recent", /^Families moving in: each class 0\.35 point/],
+  ["families_more", /^Families moving in: each class 1 point/],
+  ["families_fewer", /^Families moving in: each class 0\.5 point a year smaller/],
 ];
 const sens = csv("../output/expense_driver_forecast_sensitivity_fy40.csv");
 for (const [key, re] of SENS) {
@@ -127,6 +130,13 @@ for (const [key, re] of SENS) {
   put(`total_${key}`, signed(+row.cumulative_balance_change_fy26_40));
   put(`total_${key}_abs`, "$" + Math.round(Math.abs(+row.cumulative_balance_change_fy26_40) / 1e6) + " million");
 }
+// enrollment at each families-moving-in level, FY2040 (the Explorer's "Families moving in")
+{ const en = m => { const r = runModel(D, Object.assign({}, BASE, { migration: m }), {}); return r.enrollment[r.years.indexOf(2040)]; };
+  const e0 = en(0), fmt = v => Math.round(v / 10) * 10;
+  for (const [k, m] of [["recent", 0.0035], ["more", 0.01], ["fewer", -0.005]]) {
+    put(`enroll_fy2040_families_${k}`, fmt(en(m)).toLocaleString("en-US"));
+    put(`enroll_fy2040_families_${k}_change`, (en(m) >= e0 ? "+" : "−") + fmt(Math.abs(en(m) - e0)).toLocaleString("en-US"));
+  } }
 if (sens.length !== SENS.length) throw new Error(`sensitivity file has ${sens.length} rows, mapped ${SENS.length}`);
 
 // ---- when the room runs out (first year spending passes revenue), engine runs

@@ -215,6 +215,8 @@ def main():
                     police_peer_per_1000=edf.POLICE_PEER_PER_1000_HOMES),
         chca_ramp={str(y): ngs.chca_ramp_share(y) for y in YEARS},
         enrollment=dict(nesdec={str(y): nesdec[y] for y in YEARS}, cm={str(y): cm[y] for y in YEARS},
+                        # the NESDEC path split by years of the families-moving-in lever (enrollment_by_exponent)
+                        by_exponent={str(n): {str(y): v for y, v in col.items()} for n, col in edf.enrollment_by_exponent().items()},
                         nesdec_published={str(y): v for y, v in nesdec_pub.items()}),
     )
     OUT_DATA.write_text(json.dumps(out, separators=(",", ":")))
