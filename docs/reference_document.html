@@ -4955,7 +4955,7 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
         }
         if (items[0].y < 20) { var sh = 20 - items[0].y; items.forEach(function (it) { it.y += sh; }); moved = true; }
         var last = items[items.length - 1];
-        if (last.y > H - 8) { var sh2 = last.y - (H - 8); items.forEach(function (it) { it.y -= sh2; }); moved = true; }
+        if (last.y > H - 20) { var sh2 = last.y - (H - 20); items.forEach(function (it) { it.y -= sh2; }); moved = true; }
         if (!moved) break;
       }
       var out = [];
@@ -4964,7 +4964,7 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     }
 
     function drawColumn(nodes, colorOf, labelX, anchor, leaderFromX, leaderToX) {
-      var ys = placeLabels(nodes, 23);
+      var ys = placeLabels(nodes, 27);   // name and value lines together are about 25 units tall
       nodes.forEach(function (n, i) {
         svg.appendChild(svgEl("rect", { x: n.x, y: n.y0, width: n.w, height: n.h,
                                         fill: css(colorOf(n)), rx: 2 }));
@@ -5213,7 +5213,7 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     svg.setAttribute("viewBox", "0 0 " + W + " " + H);
     // right margin holds the FY2025 tick label, which is centred on the
     // plot's right edge and was clipping at 16px
-    var m = { top: 16, right: 30, bottom: 30, left: 46 };
+    var m = { top: 16, right: 30, bottom: 30, left: 54 };   // left holds "$300M" (11px, about 41 units) past the 10-unit tick gap
     var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
 
     var years = lineData.map(function (d) { return d.fy; });
@@ -5342,8 +5342,8 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     var endPoints = series.map(function (s) {
       return { s: s, trueY: y(lastD[s.key + "_idx"]), labelY: y(lastD[s.key + "_idx"]) };
     }).sort(function (a, b) { return a.trueY - b.trueY; });
-    var MIN_LABEL_GAP = 13;
-    for (var pass = 0; pass < 6; pass++) {
+    var MIN_LABEL_GAP = 15;   // a 12.5px label is about 15 units tall in Public Sans
+    for (var pass = 0; pass < 20; pass++) {
       var moved = false;
       for (var i = 1; i < endPoints.length; i++) {
         var d = endPoints[i].labelY - endPoints[i - 1].labelY;
@@ -6040,10 +6040,10 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     var W = 900, H = 400;
     var m = { top: 24, right: 150, bottom: 40, left: 60 };
     var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
-    var y0 = 2010, y1 = 2040, vMin = 5500, vMax = 8000;
+    var y0 = 2010, y1 = 2040, vMin = 5000, vMax = 8000;   // the projection reaches about 5,400 by FY2040
     function x(yr) { return m.left + (yr - y0) / (y1 - y0) * iw; }
     function y(v) { return m.top + ih - (v - vMin) / (vMax - vMin) * ih; }
-    for (var gv = 5500; gv <= vMax; gv += 500) {
+    for (var gv = vMin; gv <= vMax; gv += 500) {
       svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: y(gv), y2: y(gv), class: "gridline" }));
       var gl = svgEl("text", { x: m.left - 10, y: y(gv) + 4, class: "tick-label", "text-anchor": "end", "font-size": "11" });
       gl.textContent = gv.toLocaleString("en-US");
@@ -6148,7 +6148,7 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     var svg = document.getElementById("hnet-svg"); if (!svg) return;
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     var W = 900, rowH = 62;
-    var m = { top: 26, right: 70, bottom: 34, left: 250 };
+    var m = { top: 26, right: 70, bottom: 34, left: 300 };   // left fits "Typical new home, apartments and condominiums"
     var H = m.top + m.bottom + rowH * homeNetData.length;
     svg.setAttribute("viewBox", "0 0 " + W + " " + H);
     var iw = W - m.left - m.right, vMin = -2000, vMax = 12000;
@@ -6408,7 +6408,7 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     var svg = document.getElementById("outlook-svg"); if (!svg) return;
     if (!svg || !SD) return;
     while (svg.firstChild) svg.removeChild(svg.firstChild);
-    var W = 900, H = 380, m = { top: 24, right: 150, bottom: 40, left: 56 };
+    var W = 900, H = 380, m = { top: 24, right: 176, bottom: 40, left: 56 };   // right fits "Without the override −$26.0M"
     var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
     var A = SD.room, B = SD.roomOverride, y0 = A[0][0], y1 = A[A.length - 1][0];
     var all = A.concat(B).map(function (d) { return d[1]; });
@@ -6817,7 +6817,9 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     var exits55 = COLS.map(function (i) { return i ? flows(i - 1).reduce(function (t, f) { return t + (f.from === "45-54" ? 0 : f.left); }, 0) : 0; });
     var W = 900, H = 560, m = { top: 44, right: 108, bottom: 62, left: 96 }, nw = 16, gap = 10, xgap = 26;
     var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
-    var tot = COLS.map(function (i) { var c = cnt(i); return c["45-54"] + c["55-64"] + c["65-74"] + c["75+"] + exits[i]; });
+    // a column with no 45-54 (2040) keeps an empty slot the size of the previous column's, so each age group stays at about the same height across the chart
+    var slot = COLS.map(function (i) { return i && !cnt(i)["45-54"] ? cnt(i - 1)["45-54"] : 0; });
+    var tot = COLS.map(function (i) { var c = cnt(i); return slot[i] + c["45-54"] + c["55-64"] + c["65-74"] + c["75+"] + exits[i]; });
     var k = (ih - 3 * gap - xgap) / Math.max.apply(null, tot);
     var X = function (i) { return m.left + i * (iw - nw) / (NC - 1); };
     var tooltip = document.getElementById("ownerflow-tooltip"), wrap = document.getElementById("ownerflow-wrap");
@@ -6829,8 +6831,8 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     var label = function (a) { return HT_AGES.filter(function (g) { return g[0] === a; })[0][1].toLowerCase(); };
     // node positions
     var pos = COLS.map(function (i) {
-      var c = cnt(i), y = m.top, p = {};
-      HT_AGES.forEach(function (g) { p[g[0]] = { y0: y, h: c[g[0]] * k }; y += c[g[0]] * k + gap; });
+      var c = cnt(i), y = m.top + (slot[i] ? slot[i] * k + gap : 0), p = {};
+      HT_AGES.forEach(function (g) { p[g[0]] = { y0: y, h: c[g[0]] * k }; y += c[g[0]] * k + (c[g[0]] ? gap : 0); });
       p.exit = { y0: y - gap + xgap, h: exits[i] * k };
       return p;
     });
@@ -7407,7 +7409,7 @@ for permanently enlarging the levy, only the first does.&#160;<a class="footnote
     if (!svg) return;
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     var TB = SD.taxBills, Y = TB.years;
-    var W = 900, H = 380, m = { top: 20, right: 210, bottom: 40, left: 70 }, iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+    var W = 900, H = 380, m = { top: 20, right: 218, bottom: 40, left: 70 }, iw = W - m.left - m.right, ih = H - m.top - m.bottom;   // right fits "Baker School debt exclusion $31,415"
     var all = []; BILL_PATHS.forEach(function (p) { TB.paths[p[0]].forEach(function (v) { all.push(v * b0); }); });
     var steps = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000];
     var span = Math.max.apply(null, all) * 1.02 - b0 * 0.95, step = steps.find(function (s) { return span / s <= 8; }) || 200000;

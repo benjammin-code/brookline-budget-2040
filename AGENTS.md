@@ -26,7 +26,7 @@ The drawing code is `docs/_build/charts.js`, with captions in `docs/_build/chart
 node scripts/chart_qa.mjs docs/article.html
 ```
 
-It reports labels that run off the chart or overlap, which a successful build doesn't catch.
+It opens the page in headless Chrome (set `CHROME` if it isn't installed in the usual place) and reports labels that run off the chart or overlap, which a successful build doesn't catch. Run it on any built page with charts, including the topic pages in `docs/site/build/`.
 
 ## Writing for the site
 
