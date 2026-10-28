@@ -1020,6 +1020,10 @@ from the command that fetched them on 2026-09-29; files without one still need t
 - Students with disabilities share, DESE school and district profiles, Selected Populations: 18.6% in 2024-25,
   18.0% in 2025-26. https://profiles.doe.mass.edu/profiles/student.aspx?orgcode=00460000&orgtypecode=5&leftNavId=305&fycode=2025
   (not saved locally; read from the page).
+- Students with disabilities share by year, Brookline and the state, 1994-2026 (school year = the spring it ends):
+  Education-to-Career data hub, the same dataset as school_grade_enrollment.csv, queried 2026-10-27 with
+  `$select=sy,org_name,total_cnt,swd_cnt,swd_pct` and `$where=(dist_code='00460000' AND org_type='District') OR org_name='State'`,
+  https://educationtocareer.data.mass.gov/resource/t8td-gens.csv (not saved locally).
 
 ## PSB enrollment report, October 2026 (added 2026-10-26)
 
@@ -1032,3 +1036,44 @@ from the command that fetched them on 2026-09-29; files without one still need t
   and pre-K; K-8 4,338; BHS 2,102). The by-school totals on slide 4 for Driscoll, Hayes, Ridley and Runkle
   do not equal their grade cells (they sum to 4,536); the grade cells sum to the printed 4,436, so use
   the grade cells.
+
+## Census blocks, 2010 and 2020 (added 2026-10-28)
+
+Used by `scripts/block_children_per_home.py` (children 5-17 per home by kind of home).
+
+- `data/demographics/blocks/brookline_blocks_{2010,2020}.csv`: Brookline's blocks (680 in 2010, 553 in 2020)
+  pulled by `scripts/census_block_extract.py` from the statewide summary files, downloaded 2026-10-28 and
+  deleted after extraction (Ben approved the downloads):
+  - Census 2010 Summary File 1, Massachusetts, `ma2010.sf1.zip` (196 MB):
+    https://www2.census.gov/census_2010/04-Summary_File_1/Massachusetts/ma2010.sf1.zip
+    (P12 sex by age in segment 04; H3 occupancy and H4 tenure in segment 44)
+  - Census 2020 Demographic and Housing Characteristics File, Massachusetts, `ma2020.dhc.zip` (201 MB):
+    https://www2.census.gov/programs-surveys/decennial/2020/data/demographic-and-housing-characteristics-file/Massachusetts/ma2020.dhc.zip
+    (P12 in segment 06; H1, H3 and H10 tenure in segment 01)
+  Block totals match the town: 58,732 and 63,191 people; 26,448 and 27,961 housing units.
+  The Census API (api.census.gov) now requires a key, which is why the full files were used.
+- `data/demographics/blocks/brookline_blocks_{2010,2020}.geojson`: block outlines from the Census TIGERweb
+  service, queried 2026-10-28 (Norfolk County tracts beginning 40, then trimmed to Brookline's blocks):
+  https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/10/query
+  and https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2010/MapServer/18/query
+  with `where=STATE='25' AND COUNTY='021' AND TRACT LIKE '40%'`, `outSR=4326`, `f=geojson`.
+
+## Census survey microdata, 2020-2024 (added 2026-10-28)
+
+Used by `scripts/pums_children_per_home.py`. Downloaded 2026-10-28 (Ben asked for it); only PUMA 00902 kept.
+
+- `data/demographics/pums/pums_2020_24_puma00902_{households,persons}.csv`: American Community Survey 2020-2024
+  5-year public-use microdata, Massachusetts housing and person files, filtered to PUMA 00902 (Brookline,
+  Dedham and Milton; all five years are coded to 2020 PUMAs), selected columns only.
+  https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/csv_hma.zip (20 MB) and
+  https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/csv_pma.zip (50 MB).
+  `ACS2020_2024_PUMS_README.pdf` is from csv_hma.zip.
+- PUMA membership: 2020 tract-to-PUMA file,
+  https://www2.census.gov/geo/docs/maps-data/data/rel2020/2020_Census_Tract_to_2020_PUMA.txt
+  (Brookline tracts 4001-4012 with Dedham 4021-4025 and Milton 4161-4164). The 2010 file,
+  https://www2.census.gov/geo/docs/maps-data/data/rel/2010_Census_Tract_to_2010_PUMA.txt, put Brookline with
+  Newton in PUMA 03400; not used.
+- `data/demographics/acs5yr/brookline_bg_b25041_2024.txt`: ACS 2020-2024 5-year table-based summary file, table
+  B25041 (bedrooms, all housing units), Brookline's 44 block groups (GEO_ID 1500000US2502140...), with margins
+  of error. Downloaded 2026-10-28 (37 MB national file, deleted after filtering):
+  https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25041.dat

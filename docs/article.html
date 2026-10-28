@@ -3016,6 +3016,77 @@ something here is wrong, I would rather know.</em></p>
       }));
   }
 
+  // ---- STUDENTS PER HOME by bedrooms, for each kind of home (pums_children_per_home.py), with the
+  //      Town's count in new developments (ERSC Final Report) placed at their average bedrooms
+  var SPH_KINDS = [["house", "Houses", "--pine", 0.12], ["condo", "Condominiums (owned)", "--line-benefits", 0],
+                   ["apartment", "Apartments (rented)", "--line-levy-actual", -0.12]];
+  var SPH_BEDS = { 1: "0 or 1", 2: "2", 3: "3", 4: "4 or more" };
+  function drawStudentsBedroomsChart() {
+    var svg = document.getElementById("sphbeds-svg"); if (!svg) return;
+    if (!svg || !SD || !SD.studentsPerHome) return;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var S = SD.studentsPerHome, W = 900, H = 420, m = { top: 20, right: 150, bottom: 52, left: 60 };
+    var iw = W - m.left - m.right, ih = H - m.top - m.bottom, xl = 0.6, xh = 4.4, yl = 0, yh = 0.8;
+    var x = function (b) { return m.left + (b - xl) / (xh - xl) * iw; }, y = function (v) { return m.top + (yh - v) / (yh - yl) * ih; };
+    var tooltip = document.getElementById("sphbeds-tooltip"), wrap = document.getElementById("sphbeds-wrap");
+    for (var g = 0; g <= yh + 1e-9; g += 0.2) {
+      svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: y(g), y2: y(g), class: "gridline" }));
+      var t = svgEl("text", { x: m.left - 8, y: y(g) + 4, class: "tick-label", "text-anchor": "end", "font-size": "11" }); t.textContent = g.toFixed(1); svg.appendChild(t);
+    }
+    [1, 2, 3, 4].forEach(function (b) {
+      var tl = svgEl("text", { x: x(b), y: m.top + ih + 20, class: "tick-label", "text-anchor": "middle", "font-size": "11" }); tl.textContent = SPH_BEDS[b]; svg.appendChild(tl);
+    });
+    var xt = svgEl("text", { x: m.left + iw / 2, y: H - 8, class: "tick-label", "text-anchor": "middle", "font-size": "12" });
+    xt.textContent = "Bedrooms per home (new developments: their average)"; svg.appendChild(xt);
+    var yt = svgEl("text", { x: 14, y: m.top + ih / 2, class: "tick-label", "text-anchor": "middle", "font-size": "12", transform: "rotate(-90 14 " + (m.top + ih / 2) + ")" });
+    yt.textContent = "Public school students per home"; svg.appendChild(yt);
+    var tip = function (el, html) {
+      el.addEventListener("mousemove", function (e) { tipAt(tooltip, wrap, e, html); });
+      el.addEventListener("mouseleave", function () { tooltip.style.opacity = 0; });
+    };
+    // the forecast's figure
+    svg.appendChild(svgEl("line", { x1: m.left, x2: m.left + iw, y1: y(0.244), y2: y(0.244), stroke: css("--ink-muted"), "stroke-dasharray": "3,3" }));
+    var fl = svgEl("text", { x: m.left + iw + 6, y: y(0.244) + 4, class: "tick-label", "font-size": "11.5" }); fl.textContent = "Forecast: 0.244"; svg.appendChild(fl);
+    // every home together: the schedule
+    svg.appendChild(svgEl("path", { d: "M" + S.all.map(function (r) { return x(r.beds) + "," + y(r.v); }).join(" L"), fill: "none",
+                                    stroke: css("--line-total"), "stroke-width": 2.5, "stroke-linejoin": "round" }));
+    var la = S.all[S.all.length - 1], al = svgEl("text", { x: x(la.beds) + 12, y: y(la.v) + 4, "font-size": "12", "font-weight": "600", fill: css("--ink") });
+    al.textContent = "All homes"; svg.appendChild(al);
+    // the Town's count in developments built since 2015
+    S.devs.forEach(function (d) {
+      var c = svgEl("circle", { cx: x(d.beds), cy: y(d.v), r: 6, fill: "none", stroke: css("--line-ref"), "stroke-width": 2 });
+      svg.appendChild(c);
+      tip(c, "<strong>Development " + d.dev + "</strong>" + (d.note ? " (" + d.note.replace(/ \(chart label\)/, "") + ")" : "") +
+             "<br>" + d.beds.toFixed(2) + " bedrooms on average<br>" + d.v.toFixed(2) + " enrolled students per home, fall 2025");
+    });
+    // each kind of home, with its 90% range
+    SPH_KINDS.forEach(function (k) {
+      S.rows.filter(function (r) { return r.kind === k[0]; }).forEach(function (r) {
+        var cx = x(r.beds + k[3]);
+        svg.appendChild(svgEl("line", { x1: cx, x2: cx, y1: y(r.lo), y2: y(r.hi), stroke: css(k[2]), "stroke-width": 2, opacity: 0.5 }));
+        var c = svgEl("circle", { cx: cx, cy: y(r.v), r: 5.5, fill: css(k[2]), stroke: css("--paper"), "stroke-width": 1.5 });
+        svg.appendChild(c);
+        tip(c, "<strong>" + k[1] + ", " + SPH_BEDS[r.beds] + " bedrooms</strong><br>" + r.v.toFixed(2) + " students per home (" +
+               r.lo.toFixed(2) + " to " + r.hi.toFixed(2) + ")<br>" + r.n + " households surveyed");
+      });
+    });
+    var leg = document.getElementById("sphbeds-legend");
+    if (leg) leg.innerHTML = '<div class="legend-item"><span class="legend-swatch" style="background:' + css("--line-total") + '"></span><span>All homes</span></div>' +
+      SPH_KINDS.map(function (k) { return '<div class="legend-item"><span class="legend-swatch" style="background:' + css(k[2]) + '"></span><span>' + k[1] + '</span></div>'; }).join("") +
+      '<div class="legend-item"><span class="legend-swatch" style="background:transparent;border:2px solid ' + css("--line-ref") + ';border-radius:50%;width:10px;height:10px"></span><span>Brookline developments since 2015 (hollow)</span></div>';
+    svg.setAttribute("aria-label", "Chart of public school students per home by bedrooms. All homes: " +
+      S.all.map(function (r) { return SPH_BEDS[r.beds] + " bedrooms " + r.v.toFixed(2); }).join(", ") +
+      ". Houses, condominiums and apartments with the same bedrooms fall close together. Ten Brookline developments built since 2015, averaging 1.2 to 3 bedrooms, hold 0.03 to 0.56 students per home.");
+    fillTable("sphbeds-table", ["Kind of home", "0 or 1 bedroom", "2 bedrooms", "3 bedrooms", "4 or more"],
+      [["All homes", S.all]].concat(SPH_KINDS.map(function (k) { return [k[1], S.rows.filter(function (r) { return r.kind === k[0]; })]; }))
+        .map(function (p) {
+          return [p[0]].concat([1, 2, 3, 4].map(function (b) {
+            var r = p[1].filter(function (q) { return q.beds === b; })[0];
+            return r ? r.v.toFixed(2) + " (" + r.lo.toFixed(2) + "–" + r.hi.toFixed(2) + ")" : "too few";
+          }));
+        }));
+  }
+
   // ---- WHO SETS IT: the same $177 million grouped by who controls each cause
   var WHO_LABELS = { outside: "Outside Brookline", decide: "Brookline's own decisions", past: "Past obligations",
                      growth: "Growth in homes and commercial space", other: "Other" };
@@ -3577,6 +3648,7 @@ something here is wrong, I would rather know.</em></p>
     drawBirthsWatchChart();
     drawBirthsTownsChart();
     drawKpbHousingChart();
+    drawStudentsBedroomsChart();
     drawStaffEnrollChart();
     drawEmployeesChart();
     drawGlRevenueChart();

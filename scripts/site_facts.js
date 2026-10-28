@@ -660,7 +660,23 @@ const GL = JSON.parse(fs.readFileSync("../output/growth_links.json", "utf8"));
       text: "Kindergartners per birth in the same year, a loose link (correlation " + S.sales_fit["0"].r.toFixed(2) + " over " + S.sales_fit["0"].n + " years)." },
   ]; }
 
+// ---- students per home by bedrooms (pums_children_per_home.py) and the Town's count in new developments
+//      (output/ersc_new_development_students.csv, read off the ERSC Final Report chart; '#' lines are notes)
+const studentsPerHome = (() => {
+  const P = csv("../output/pums_children_per_home.csv"), BEDS = { "0-1 br": 1, "2 br": 2, "3 br": 3, "4+ br": 4 };
+  const pick = re => P.map(r => { const m = r.kind.match(re); return m && { kind: m[1], beds: BEDS[m[2]], v: +r.public_k12_per_home,
+    lo: +r.public_k12_low, hi: +r.public_k12_high, n: +r.records }; }).filter(Boolean);
+  const rows = pick(/^(house|condo|apartment), (.*)$/).filter(r => r.n >= 50);   // too few households below 50
+  const all = pick(/^(all occupied), (.*)$/);
+  const devs = fs.readFileSync("../output/ersc_new_development_students.csv", "utf8").trim().split("\n")
+    .filter(l => !l.startsWith("#")).slice(1).map(l => l.split(","))
+    .map(c => ({ dev: +c[0], beds: +c[1], v: +c[2], note: c[3] || "" }));
+  return { rows, all, devs };
+})();
+put("sph_dev_mean", (studentsPerHome.devs.reduce((t, d) => t + d.v, 0) / studentsPerHome.devs.length).toFixed(2));
+
 const siteData = {
+  studentsPerHome,
   growthLinks: GL,
   taxBills,
   room: Object.keys(byYear).map(y => [+y, +(+byYear[y].surplus_deficit / 1e6).toFixed(2)]),

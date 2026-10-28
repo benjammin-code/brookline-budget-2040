@@ -147,12 +147,19 @@ are grouped by who publishes them.
 - **What:** The Census Bureau's 2010 and 2020 redistricting counts of housing units and
   population for every Massachusetts city and town.
 - **Used for:** the cross-town estimate of what an added home costs.
+- **Also:** the 2010 Summary File 1 and the 2020 Demographic and Housing Characteristics File for
+  every Brookline block (children by age, homes, owned and rented), with block outlines from
+  TIGERweb, from [www2.census.gov](https://www2.census.gov/), for
+  [Students from new homes](@topic-new-home-students).
 
 ### American Community Survey
 - **What:** The Census Bureau's five-year estimates for 2015–19 and 2020–24, every Massachusetts
   town: ages, households with children, housing type, bedrooms and tenure.
 - **Where:** [data.census.gov](https://data.census.gov/).
 - **Used for:** [Why families settle elsewhere](@topic-families).
+- **Also:** the 2020–24 public-use microdata (individual household records) for the area covering
+  Brookline, Dedham and Milton, and bedrooms by block group (table B25041), for
+  [Students from new homes](@topic-new-home-students).
 
 ## This project
 

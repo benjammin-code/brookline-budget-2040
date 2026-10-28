@@ -1,0 +1,14 @@
+development,avg_bedrooms_per_home,enrolled_k12_students_per_home_fall_2025,note
+1,1.17,0.03,
+2,1.35,0.13,
+3,1.36,0.25,
+4,1.38,0.18,
+5,1.53,0.06,
+6,1.74,0.16,
+7,1.84,0.40,
+8,2.14,0.07,
+9,3.00,0.56,townhouse rentals (chart label)
+10,3.00,0.25,townhouse condos in North Brookline (chart label)
+# Read off the chart "Ratio of Enrolled Students - New Development", ERSC Final Report (data/ERSC Final Report FINAL 031326.pdf), p. 568,
+# Town/Schools dataset: established 8+ unit developments built since 2015, excluding age-restricted and Housing Authority properties.
+# Values are read from pixel positions (about +/-0.01); mean 0.21 and range 0.03-0.56 match the figures quoted elsewhere. Read 2026-10-28.

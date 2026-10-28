@@ -17,6 +17,18 @@ The rebuild reads only a small part of the original documents. The rest of its i
 | `dese_enrollment/`, `dese_peers/` | Enrollment by district and grade, from the Massachusetts Department of Elementary and Secondary Education |
 | `FY2026 Property Assessments….xlsx` | The Town Assessor's FY2026 property assessments (see below) |
 
+### Students per home (outside the rebuild)
+
+The page "Students from new homes" comes from four scripts that `rebuild_all.py` doesn't run. Their results are in `output/` (`block_children_*`, `pums_children_per_home.csv`, `bg_apartment_bedrooms.csv`, `ersc_new_development_students.csv`), and their Census inputs are here:
+
+| File | What it is |
+|---|---|
+| `demographics/blocks/` | Every Brookline census block in 2010 and 2020: children by age, homes, owned and rented (from the statewide Summary File 1 and Demographic and Housing Characteristics File, by `scripts/census_block_extract.py`), with block outlines from TIGERweb |
+| `demographics/pums/` | American Community Survey public-use microdata, 2020 to 2024, for the area covering Brookline, Dedham and Milton: one row per household and per person |
+| `demographics/acs5yr/brookline_bg_b25041_2024.txt` | Homes by bedrooms for Brookline's 44 block groups, ACS 2020 to 2024 |
+
+`pums_children_per_home.py` runs from these files alone. `block_children_per_home.py` and `bg_apartment_bedrooms.py` also read the FY2010 and FY2020 assessment files and a parcel map, which aren't included; `data/SOURCES.md` says where each comes from.
+
 ## Changed before publishing
 
 - **Property owners' names are blanked.** The FY2026 assessments list owners by name and mailing address. Those columns are kept but left empty, so the scripts run unchanged; none of them reads those columns.
