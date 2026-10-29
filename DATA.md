@@ -29,7 +29,7 @@ The page "Students from new homes" comes from four scripts that `rebuild_all.py`
 
 `pums_children_per_home.py` runs from these files alone. `block_children_per_home.py` and `bg_apartment_bedrooms.py` also read the FY2010 and FY2020 assessment files and a parcel map, which aren't included; `data/SOURCES.md` says where each comes from.
 
-The page "Family-sized homes changing hands" comes from `scripts/householder_age_turnover.py`, which `rebuild_all.py` also doesn't run. It reads `demographics/householder_age_tenure_2000_2020.csv` (Brookline's owner and renter households by age of householder, from the 2000, 2010 and 2020 Censuses) and the microdata in `demographics/pums/`, and writes `output/householder_age_turnover.csv` and `.json`. Run it from `scripts/`; it prints each step of the page's calculation.
+The page "Aging homeowners and family-sized homes" comes from `scripts/householder_age_turnover.py`, which `rebuild_all.py` also doesn't run. It reads `demographics/householder_age_tenure_2000_2020.csv` (Brookline's owner and renter households by age of householder, from the 2000, 2010 and 2020 Censuses) and the microdata in `demographics/pums/`, and writes `output/householder_age_turnover.csv` and `.json`. Run it from `scripts/`; it prints each step of the page's calculation.
 
 ## Changed before publishing
 

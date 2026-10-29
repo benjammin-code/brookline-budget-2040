@@ -360,10 +360,11 @@ tr.sub-row td:first-child { color: var(--ink-muted); padding-left: 22px; }
   font-weight: 600;
   margin: 0 0 2px;
 }
-.chart-head .sub {
+.chart-head .sub, .chart-block > .sub {
   font-size: 13px;
   color: var(--ink-muted);
 }
+.chart-block > .sub { margin: 12px 0 0; }   /* a caption placed under the chart instead of the title */
 .chart-svg-wrap { position: relative; margin-top: 14px; }
 svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
 .axis-label, .tick-label {

@@ -178,7 +178,7 @@ one assumption moves and everything else stays at the base case; a minus sign me
   {{fact:enroll_fy2040_families_fewer}} ({{fact:enroll_fy2040_families_fewer_change}}),
   {{fact:fy40_families_fewer}}. The setting applies to children of every age from birth, so
   kindergartners per birth move with it.
-- **More:** [Family-sized homes changing hands](@topic-homes-changing-hands),
+- **More:** [Aging homeowners and family-sized homes](@topic-homes-changing-hands),
   [Students from new homes](@topic-new-home-students) and
   [Enrollment: three forecasts compared](@topic-enrollment).
 - **Change it:** "Families moving in".

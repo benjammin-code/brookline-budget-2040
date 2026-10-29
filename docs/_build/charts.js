@@ -2338,10 +2338,11 @@
         svg.appendChild(r);
         tip(r, '<div class="tt-title">No longer owning, ' + YRS[i - 1] + ' to ' + YRS[i] + (proj ? " (projected)" : "") + '</div><div class="tt-row"><span>Households, net</span><span>' + n0(exits[i]) +
                '</span></div><div class="tt-row"><span>Of which 55 and over</span><span>' + n0(exits55[i]) + '</span></div>');
-        var t = svgEl("text", { x: X(i) + nw / 2, y: e.y0 + e.h + 16, "text-anchor": "middle", class: "tick-label", "font-size": "11.5" });
-        t.textContent = (proj ? "About " : "") + n0(Math.round(exits55[i] / (proj ? 10 : 1)) * (proj ? 10 : 1)) + " aged 55+"; svg.appendChild(t);
-        var t2 = svgEl("text", { x: X(i) + nw / 2, y: e.y0 + e.h + 30, "text-anchor": "middle", class: "tick-label", "font-size": "11" });
-        t2.textContent = (proj ? "projected, " : "") + "about " + n0(Math.round(exits55[i] / 100) * 10) + " a year"; svg.appendChild(t2);
+        // the per-year figure leads, in bold: its rise across the columns is the chart's point
+        var t = svgEl("text", { x: X(i) + nw / 2, y: e.y0 + e.h + 19, "text-anchor": "middle", "font-size": "14", "font-weight": "700", fill: css("--ink") });
+        t.textContent = "About " + n0(Math.round(exits55[i] / 100) * 10) + " a year"; svg.appendChild(t);
+        var t2 = svgEl("text", { x: X(i) + nw / 2, y: e.y0 + e.h + 34, "text-anchor": "middle", class: "tick-label", "font-size": "11" });
+        t2.textContent = n0(Math.round(exits55[i] / (proj ? 10 : 1)) * (proj ? 10 : 1)) + " aged 55+" + (proj ? ", projected" : ""); svg.appendChild(t2);
       }
       var hd = svgEl("text", { x: X(i) + nw / 2, y: 18, "text-anchor": "middle", "font-size": "13", "font-weight": "600", fill: css(proj ? "--ink-muted" : "--ink") });
       hd.textContent = YRS[i]; svg.appendChild(hd);

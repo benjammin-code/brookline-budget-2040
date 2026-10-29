@@ -186,7 +186,7 @@ also include families returning after COVID, which this check cannot separate.
   brings {{fact:enroll_fy2040_families_more_change}}
   ([Assumptions register](@assumptions#families-moving-in)). As Brookline's owners age, more
   family-sized homes should change hands, which points toward the first of these
-  ([Family-sized homes changing hands](@topic-homes-changing-hands)).
+  ([Aging homeowners and family-sized homes](@topic-homes-changing-hands)).
 - **Brookline is not the three towns.** Brookline's single-family houses hold more children than
   the survey's three-town figure for houses (0.72 against 0.61 children 5 to 17), its condominiums
   fewer (0.18 against 0.27), and its families send a smaller share to public school. These pull in

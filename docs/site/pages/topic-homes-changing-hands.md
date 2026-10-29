@@ -1,7 +1,7 @@
 ---
 slug: topic-homes-changing-hands
 path: forecast/topics/homes-changing-hands
-title: Family-sized homes changing hands
+title: Aging homeowners and family-sized homes
 layer: topic
 question: As Brookline's homeowners age, will more family-sized homes pass to families with children?
 answer: Probably, and more in the 2030s than now. The number of owners aged 65 and over grew by three-quarters from 2000 to 2020, and the share of each age group that stops owning within ten years has barely changed. More homes should change hands each year, adding perhaps 170 students by FY2040 beyond what the enrollment forecast already holds, most of them in the 2030s (about 15 more each year).
