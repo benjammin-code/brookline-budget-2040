@@ -13,7 +13,7 @@ summary:
 - By some measures, Brookline's services seem to have capacity. The schools have about 1,100 open seats in kindergarten to grade 8, about 440 if classes stay three students under the guidelines, with more as enrollment falls. Fire companies run about half as often as the usual mark of a busy company. Police calls are down. These measures come from budgets and reports. The people running these services have not been asked, and they may see it differently. Services often strain in other ways first, through overtime, leave, or a particular school or neighborhood, and where each one's limit lies is not known. Other Town departments have no measure of capacity at all.
 - Two sets of readings would show which way things are moving. Whether there is room for new homes: open seats by school and grade, kindergarten against births, and the pace of permits. Whether something must expand: a grade reaching its class-size guideline, fire response times, overtime and medical calls, police vacancies, and the town's total homes nearing {{fact:fire_company_homes}}.
 related: new-homes, topic-growth, topic-schools, topic-homes, topic-enrollment, next-few-years
-updated: 2026-10-27
+updated: 2026-10-31
 ---
 
 Most of what a new home costs the Town is a share of services that are already running: a seat
@@ -172,7 +172,7 @@ rose {{fact:gl_au_raw}} from January {{fact:gl_au_from}} to January {{fact:gl_au
 that is records rather than building: hotel rooms recorded as homes, a condominium parking lot,
 and, in one year, the first unit counts for several tax-exempt housing complexes that had stood
 for decades. Assisted living, which brings no school children, is counted separately. Without
-those, the rolls show {{fact:gl_au_net}} more homes over those eight years,
+those, the rolls show {{fact:gl_au_net}} more homes over those {{fact:gl_au_years}} years,
 {{fact:gl_au_per_year}} a year, arriving unevenly, from {{fact:gl_au_min}} in one year to
 {{fact:gl_au_max}} in another. Brookline's building permits, each read and counted for this
 project, agree with the rolls: about as many homes reach the roll as were permitted, a year or so
@@ -559,10 +559,12 @@ how close any service is to a step is not something the published figures can se
   Newer permits: one building permit of $250,000 or more on the parcel. Older permits (no cost
   recorded): renovations, additions and new buildings by the permit's description, with no other
   building permit on the parcel from two years before to four years after.
-- **Homes on the assessment rolls.** Units per parcel, FY2017 to FY2025 rolls. Removed: hotels,
-  a condominium parking lot, a private school, and any change of 15 or more units on a parcel
-  whose value did not move with it. Rolls before FY2017 have no unit field, and the FY2026 roll
-  counts units differently, so the series stops at FY2025.
+- **Homes on the assessment rolls.** Units per parcel, FY2017 to FY2026 rolls. Removed: hotels,
+  a condominium parking lot, private schools, a hospital, tax-exempt residences such as a
+  charity's guest house, one year's recount of lots with more than one house, and any change of
+  15 or more units on a parcel whose value did not move with it. Assisted living is counted
+  separately. Rolls before FY2017 have no unit field. The FY2026 roll comes from a new records
+  system; its unit count matches the FY2025 roll property by property.
 - **Staffing and homes.** Budgeted positions from the Town's Financial Plans; homes from the 2010
   and 2020 Censuses, carried between them at the recent pace, so the homes line is smooth by
   construction.

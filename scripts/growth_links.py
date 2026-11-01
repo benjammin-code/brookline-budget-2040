@@ -17,7 +17,8 @@ fiscal estimate assumes, using what actually happened:
      department positions (expense_drivers_fte_panel_fy04_27.csv) and school staff (DESE),
      FY2010-FY2025. Homes are real counts only at the 2010 and 2020 Censuses; no annual count
      of all homes exists before FY2017, so the line between is drawn as an estimate. From the
-     FY2017 roll on, the assessors record units per parcel; assessor_units() cleans them.
+     FY2017 roll on, the assessors record units per parcel; assessor_units() cleans them
+     (rules in assessor_units_by_type.py).
   3. Brookline enrollment. Kindergartners (DESE, district, by school year) against resident
      births five years earlier, and new housing units authorized (Census Bureau Building
      Permits Survey, annual place files with imputation, calendar years).
@@ -210,33 +211,25 @@ def parcel_timing_legacy():
 
 
 def assessor_units():
-    """Housing units on each assessment roll FY2017-FY2025 (RES-UNITS summed per parcel; each
-    roll is as of the January 1 before its fiscal year). Cleaned of changes that are records,
-    not homes: hotels (rooms recorded as units), a condominium parking lot, a private school's
-    dormitory, and any change of 15 or more units on a parcel whose value moved less than
-    ordinary market growth would explain (first-time unit counts for exempt complexes in
-    FY2021, later record fixes). Assisted living and nursing homes are counted separately
-    (assisted_living_change), not as homes: they bring no school children, and one of them
-    (615 Heath St) records swings with no construction permit. Rolls before FY2017 carry no
-    unit field, and the FY2026 roll counts units on a different definition, so the series stops
-    at FY2025."""
-    h = pd.read_csv(ROOT / "land-value-map" / "output" / "parcel_history_fy17_25.csv")
-    u = h.pivot_table(index="block_lot", columns="fy", values="res_units", aggfunc="sum").fillna(0)
-    v = h.pivot_table(index="block_lot", columns="fy", values="tot_value", aggfunc="sum")
-    d = h.sort_values("fy").groupby("block_lot").description.last().astype(str).str.strip()
-    idx = (v / v.shift(axis=1)).median()
-    dd = d.reindex(u.index)
-    keep = ~dd.isin(["HOTEL", "CONDO PRK-LOT", "PSCHOOL"])
-    care = dd.isin(["ASSTD LIVING", "NURSING HOME"])
+    """Housing units on each assessment roll FY2018-FY2026 (each roll is as of the January 1 before
+    its fiscal year), cleaned of changes that are records, not homes, by
+    assessor_units_by_type.changes(): hotels, a condominium parking lot, private-school dormitories,
+    hospitals and exempt institutional residences, the FY2021 recount of multi-house lots, and any
+    change of 15 or more units on a parcel whose value moved no more than ordinary market growth
+    would explain (first-time unit counts for exempt complexes in FY2021, later record fixes).
+    Assisted living and nursing homes are counted separately (assisted_living_change), not as
+    homes: they bring no school children. Rolls before FY2017 carry no unit field. The FY2026 roll
+    comes from a new records system; its Num_units field matches FY2025's RES-UNITS record by
+    record."""
+    import assessor_units_by_type as aut
+    d = aut.changes()
     rows = []
-    for fy in range(2018, 2026):
-        du = u[fy] - u[fy - 1]
-        g = (v[fy] / v[fy - 1]) / idx[fy]
-        record_only = (du.abs() >= 15) & g.reindex(du.index).between(0.9, 1.12)
-        net = du[keep & ~care & ~record_only].sum()
-        rows.append(dict(roll_fiscal_year=fy, valued_january_1=fy - 1, raw_net_change=int(du.sum()),
-                         net_new_homes=int(net), assisted_living_change=int(du[care].sum()),
-                         removed_as_records=int(du[~care].sum() - net)))
+    for fy, g in d.groupby("roll_fy"):
+        kept = int(g.loc[g.treatment == "kept", "units_change"].sum())
+        care = int(g.loc[g.treatment == "assisted living / nursing", "units_change"].sum())
+        raw = int(g.units_change.sum())
+        rows.append(dict(roll_fiscal_year=int(fy), valued_january_1=int(fy) - 1, raw_net_change=raw,
+                         net_new_homes=kept, assisted_living_change=care, removed_as_records=raw - kept - care))
     return pd.DataFrame(rows)
 
 
@@ -470,7 +463,10 @@ def main():
     kids.round(4).to_csv(OUT / "growth_links_children_by_town.csv")
     sal.to_csv(OUT / "growth_links_sales.csv", index=False)
     pt["basis"] = "One building permit of $250k+ on the parcel 2017-2025; values net of median unpermitted parcel growth; lift = FY2026 value (Jan 1, 2025) above the pre-permit value"
-    au["basis"] = "Assessor RES-UNITS summed per parcel; hotels, a condo parking lot, a private school and 15+ unit changes without a matching value change removed"
+    au["basis"] = "Assessor RES-UNITS (FY2026: Num_units) per parcel; hotels, a condo parking lot, private schools, hospitals, exempt institutional residences, the FY2021 multi-house recount and 15+ unit changes without a matching value change removed (scripts/assessor_units_by_type.py)"
+    # Permits issued through two years before the last roll's January 1 have mostly reached it.
+    pby = pd.read_csv(OUT / "permit_homes_by_year.csv").set_index("year")
+    p_from, p_to = int(au.valued_january_1.min()) - 2, int(au.valued_january_1.max()) - 2
     pt.to_csv(OUT / "growth_links_parcel_timing.csv", index=False)
     pl["basis"] = "Legacy permits 2008 to mid-2017, picked by wording; no other building permit on the parcel 2 years before to 4 after; lift = value four January 1 assessments on, net of median unpermitted growth"
     pl.to_csv(OUT / "growth_links_parcel_timing_legacy.csv", index=False)
@@ -481,7 +477,9 @@ def main():
         revenue_fit=rev_fit, parcel_timing=pt_fit,
         assessor_units=dict(first_jan1=int(au.valued_january_1.min()) - 1, last_jan1=int(au.valued_january_1.max()),
                             net=int(au.net_new_homes.sum()), per_year=round(float(au.net_new_homes.mean())),
-                            raw=int(au.raw_net_change.sum()), min=int(au.net_new_homes.min()), max=int(au.net_new_homes.max())),
+                            raw=int(au.raw_net_change.sum()), min=int(au.net_new_homes.min()), max=int(au.net_new_homes.max()),
+                            years=len(au), net_with_assisted=int(au.net_new_homes.sum() + au.assisted_living_change.sum()),
+                            permits_from=p_from, permits_to=p_to, permits_net=int(pby.loc[p_from:p_to, "net"].sum())),
         children=kid_fit, sales_fit=sal_fit,
         kpb_min=round(float(pre.kindergartners_per_birth.min()), 2), kpb_max=round(float(pre.kindergartners_per_birth.max()), 2),
         movers_typical=int(pre.net_movers_grades_1_12.abs().median()),

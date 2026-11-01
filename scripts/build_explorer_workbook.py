@@ -535,11 +535,12 @@ A_SECTIONS = [
          "RKG built the model on the FY2025 budget. Each third's property tax enters at its entry year's value "
          "(value growth times tax-rate drift, by class), then grows with the levy; rooms tax and excise grow at the "
          "base rate of the other local receipts.", "ERSC report, Appendix E"),
-        ("K_ChcaUnits", "Homes", 266, NUM0, "", "Town Meeting approval, May 2026"),
+        ("K_ChcaUnits", "Homes", 384, NUM0, "", "Special permit filing, 2026 (Town 40B page, October 2026)"),
         ("K_ChcaSPU", "School-age children per home", 0.126, "0.000",
          "High-rise, mostly studios and one-bedrooms.", "Fiscal impact estimate for a comparable high-rise"),
-        ("K_ChcaEmp", "Employees", "=(79000+105000)/200+200*500/2300", NUM1,
-         "184,000 square feet of office and retail at one employee per 200, plus a 200-room hotel.", "City Realty scenario 1"),
+        ("K_ChcaEmp", "Employees", "=(93741+41284)/200+187*500/2300", NUM1,
+         "135,025 square feet of medical office and retail at one employee per 200, plus a 187-room hotel.",
+         "Special permit filing, 2026 (Town 40B page, October 2026)"),
     ]),
     ("Town services", [
         ("K_pD", "Town departments: share of spending that is pay", f"=History!$E${PERS_TOTAL}/History!$C${PERS_TOTAL}",
@@ -690,10 +691,12 @@ for j, lab in enumerate(["Estimate", "Residential share of the property tax", "P
     c = asm.cell(ar, 1 + j, lab)
     c.font, c.fill = BOLD, HEAD_FILL
 ar += 1
-CHCA_ROWS = [("approved", "=ROUND(266*1841088/265,0)+2696433", "=762120+ROUND(266*99375/265,0)",
-              "RKG's residential tax per home for 266 homes, plus City Realty scenario 1's commercial tax (the one with the "
-              "approved 200 rooms); rooms tax for 200 rooms plus RKG's excise per home.",
-              "=ROUND(266*1841088/265,0)/(ROUND(266*1841088/265,0)+2696433)"),
+CHCA_ROWS = [("approved", "=ROUND(384*1841088/265,0)+ROUND(93741*6.84+41284*4.16+187*8275,0)",
+              "=ROUND(187*3810.6,0)+ROUND(384*99375/265,0)",
+              "RKG's residential tax per home for 384 homes, plus commercial tax at rates fitted to the five published "
+              "scenarios ($6.84 a sq ft of medical office, $4.16 of retail, $8,275 a hotel room) for 93,741 sq ft, "
+              "41,284 sq ft and 187 rooms; rooms tax for 187 rooms plus RKG's excise per home.",
+              "=ROUND(384*1841088/265,0)/(ROUND(384*1841088/265,0)+ROUND(93741*6.84+41284*4.16+187*8275,0))"),
              ("cr_avg", 5_408_241, 917_905, "Average of City Realty's three scenarios.", "=3030198/5408241"),
              ("rkg", 3_158_174, 480_435, "RKG's scenario.", "=1841088/3158174"),
              ("in_trend", 0, 0, "Counted inside the recent trend, so nothing added.", 0)]
@@ -796,7 +799,7 @@ SET = [
      "town reaches about 31,200 homes. Police growing with homes keeps 4.42 officers per 1,000 homes; restoring earlier "
      "staffing adds 16 positions from FY2028."),
     ("chca", "Chestnut Hill redevelopment", "select", "approved", None, None, "Choose from the list",
-     "266 homes and a 200-room hotel, arriving FY2032 to FY2034. The estimates differ only in revenue."),
+     "384 homes, a 187-room hotel, retail and medical office, arriving FY2032 to FY2034. The estimates differ only in revenue."),
     ("slip", "Pension full funding slips", "select", 0, None, None, "Choose from the list",
      "If investment returns fall short, full pension contributions continue for longer."),
     ("ng2728", "New growth in FY2027 and FY2028", "select", "trend", None, None, "Choose from the list",

@@ -1,5 +1,5 @@
 solve,lift_pct_points,total_new_growth_pct,extra_homes_by_fy2040,fy2040_per_tenth,lowest_year,lowest_balance_ex_override,ex_override_fy2028,ex_override_fy2029,ex_override_fy2031,ex_override_fy2035,ex_override_fy2040
-new growth via renovation,0.3717,1.6067,32,7185082,2029,-16914013,-13107178,-16914013,-12901276,-1699291,0
-new growth via proportional,0.5231,1.7581,666,5401636,2029,-16407990,-12855606,-16407990,-11795833,879914,1
-new growth via housing,2.0717,3.3067,16301,703980,2029,-16326101,-12057357,-16326101,-11905109,-769361,0
-spending growth cut,-0.3222,,,,,,,,,,
+new growth via renovation,0.3646,1.5996,31,7192655,2029,-16977455,-13147844,-16977455,-13022738,-1550612,0
+new growth via proportional,0.5151,1.7501,658,5409767,2029,-16474326,-12895741,-16474326,-11916341,1021218,-1
+new growth via housing,2.0411,3.2761,16046,706485,2029,-16435779,-12153727,-16435779,-12075675,-635735,0
+spending growth cut,-0.3159,,,,,,,,,,

@@ -1,38 +1,38 @@
 dial,fy2040_spending,spending_change,fy2040_balance,balance_change,cumulative_balance_change_fy26_40,balance_change_fy2035
-"Capital held at the Town's capital table, about 6% (base: the 6.6% policy from FY2028)",651818468,-2890336,14854990,2890336,28124162,2397908
-"Pay growth +1 point for every group (base: Town 3.0%, schools 3.7%, Public Safety 3.5%)",697024200,42315396,-30350742,-42315396,-254945430,-21465990
-"Pay growth -0.5 point for every group (Town 2.5%, schools 3.2%, Public Safety 3.0%)",635295217,-19413587,31378241,19413587,120079616,10210156
-"School staff follow enrollment down, ratio held (base: half as fast as enrollment)",645249871,-9458933,21423587,9458933,63100407,5452715
-School staff follow enrollment and ratio moves a third back to FY2019,641516824,-13191980,25156634,13191980,98730690,8670037
-"School staff held at the FY2027 level as enrollment falls (base: half as fast, the FY2019-25 pattern)",682512528,27803724,-15839070,-27803724,-185503537,-16029828
-Students from new homes fill existing seats until enrollment is back to FY2027 (base: staffed at the FY2027 ratio),654131311,-577493,12542147,577493,3919348,453706
-"New growth at the peer rate, housing-led, students fill existing seats",706651009,51942205,30009676,18045022,119048402,9517570
-Enrollment flat at FY2027 (base: NESDEC decline),687561578,32852774,-20888120,-32852774,-222014016,-19255141
-"Enrollment per Cropper-McKibben, the schools' forecast (base: NESDEC)",702571396,47862592,-35897938,-47862592,-336925693,-31427642
-"Families moving in: each class 0.35 point a year larger, the rate since COVID (base: NESDEC's rate)",659118039,4409235,7555419,-4409235,-30786608,-2761359
-Families moving in: each class 1 point a year larger (base: NESDEC's rate),667744871,13036067,-1071413,-13036067,-90137885,-8067883
-Families moving in: each class 0.5 point a year smaller (base: NESDEC's rate),648682704,-6026100,17990754,6026100,42610729,3831579
-"Cropper-McKibben enrollment, staff follow it",702571396,47862592,-35897938,-47862592,-336811327,-31427642
-"School pay at PSB's forecast, about 5%/yr (base 3.7%)",686880654,32171850,-20207196,-32171850,-194869123,-16414004
-School and Public Safety pay held to the 3.0% Town target (base 3.7% and 3.5%),634693339,-20015465,31980119,20015465,125073199,10652483
-Health premiums 6.5%/yr from FY2030 (base 8%),635309960,-19398845,31363498,19398845,93347999,7407489
-Health premiums 10%/yr from FY2030 (base 8%),685134195,30425391,-18460737,-30425391,-139889664,-10710426
-"Health premiums 4.5%/yr from FY2030, the actuary's long-run trend (base 8%)",613354995,-41353809,53318463,41353809,204135499,16505465
-"School non-personnel costs at inflation +2 points (base: inflation, 2.5%)",663325519,8616715,3347939,-8616715,-54610639,-4665258
-Inflation 3.5%/yr (base 2.5%),663292557,8583752,3380901,-8583752,-54476578,-4654890
-"Town cost per new home $1,109, RKG, with police and fire growing with every home (base $660 and a fire company step)",656590773,1881969,10082685,-1881969,-12045808,-1098522
-Town cost per new home $230 (base $660),653571966,-1136838,13101492,1136838,7276492,663582
-"New growth at the peer rate, housing-led (base: recent trend)",719085309,64376505,17575376,5610722,37525232,2508651
-"New growth at the peer rate, commercial-led (base: trend)",675883379,21174575,58024907,46060253,280284774,23553885
-"New growth at the peer rate, even mix (base: trend)",700046002,45337198,35238483,23273829,144506345,10880116
-Half the expected new homes built; renovation and commercial growth at trend,653036113,-1672691,5056747,-6907907,-45900013,-3812261
-No new homes built; renovation and commercial growth at trend,651384103,-3324701,-1756472,-13721126,-91362227,-7592350
-Pension full funding slips 2 years (base: FY2030),654708804,0,11964654,0,0,0
-CHCA at City Realty average revenue (base: approved program),654903846,195042,13596897,1632243,11613170,1364895
-CHCA at RKG's revenue estimate,654400075,-308730,9840005,-2124648,-15306341,-1801790
-CHCA already inside trend growth (not additive),652142667,-2566137,6209101,-5755553,-41454492,-4870213
-Pension savings not moved to OPEB in FY2031,620146551,-34562253,46526907,34562253,356872530,35812253
-Money freed by the retiree health payoff counted as room (base: held for a decision),611714571,-42994233,54958887,42994233,205104178,0
-"Police and fire restored to earlier staffing, police 136 and fire 168 (base: FY2027 budget, 128 and 160)",657194466,2485661,9478992,-2485661,-26779601,-2092860
-"No added fire company (base: a company at about 31,200 homes)",655122360,413555,11551098,-413555,-2647020,-241396
-"Police grow with homes at the peer ratio, 4.42 officers per 1,000 homes (base: held at 128)",654981962,273158,11691496,-273158,453319,203281
+"Capital held at the Town's capital table, about 6% (base: the 6.6% policy from FY2028)",652328850,-2955270,15393760,2955270,28529985,2451583
+"Pay growth +1 point for every group (base: Town 3.0%, schools 3.7%, Public Safety 3.5%)",697644979,42360859,-29922369,-42360859,-255181413,-21488888
+"Pay growth -0.5 point for every group (Town 2.5%, schools 3.2%, Public Safety 3.0%)",635849725,-19434396,31872885,19434396,120189804,10221021
+"School staff follow enrollment down, ratio held (base: half as fast as enrollment)",645825281,-9458839,21897329,9458839,63099748,5452637
+School staff follow enrollment and ratio moves a third back to FY2019,642081794,-13202326,25640816,13202326,98801804,8678324
+"School staff held at the FY2027 level as enrollment falls (base: half as fast, the FY2019-25 pattern)",683087579,27803459,-15364969,-27803459,-185501665,-16029607
+Students from new homes fill existing seats until enrollment is back to FY2027 (base: staffed at the FY2027 ratio),654450446,-833674,13272164,833674,5658006,654975
+"New growth at the peer rate, housing-led, students fill existing seats",707282991,51998871,30503280,18064790,119147661,9529348
+Enrollment flat at FY2027 (base: NESDEC decline),688136629,32852509,-20414019,-32852509,-222012144,-19254920
+"Enrollment per Cropper-McKibben, the schools' forecast (base: NESDEC)",703146328,47862208,-35423718,-47862208,-336922982,-31427321
+"Families moving in: each class 0.35 point a year larger, the rate since COVID (base: NESDEC's rate)",659693315,4409195,8029295,-4409195,-30786325,-2761326
+Families moving in: each class 1 point a year larger (base: NESDEC's rate),668320073,13035953,-597463,-13035953,-90137074,-8067788
+Families moving in: each class 0.5 point a year smaller (base: NESDEC's rate),649258077,-6026043,18464533,6026043,42610326,3831531
+"Cropper-McKibben enrollment, staff follow it",703146328,47862208,-35423718,-47862208,-336808615,-31427321
+"School pay at PSB's forecast, about 5%/yr (base 3.7%)",687508528,32224408,-19785918,-32224408,-195139461,-16440025
+School and Public Safety pay held to the 3.0% Town target (base 3.7% and 3.5%),635243483,-20040638,32479127,20040638,125206107,10665551
+Health premiums 6.5%/yr from FY2030 (base 8%),635873781,-19410339,31848829,19410339,93399858,7411905
+Health premiums 10%/yr from FY2030 (base 8%),685727539,30443419,-18004929,-30443419,-139967848,-10716811
+"Health premiums 4.5%/yr from FY2030, the actuary's long-run trend (base 8%)",613905807,-41378313,53816803,41378313,204248503,16515304
+"School non-personnel costs at inflation +2 points (base: inflation, 2.5%)",663915451,8631331,3807159,-8631331,-54687667,-4672821
+Inflation 3.5%/yr (base 2.5%),663874757,8590637,3847853,-8590637,-54513378,-4658543
+"Town cost per new home $1,109, RKG, with police and fire growing with every home (base $660 and a fire company step)",657297982,2013862,10424628,-2013862,-12992570,-1211338
+Town cost per new home $230 (base $660),654067610,-1216510,13655000,1216510,7848401,731731
+"New growth at the peer rate, housing-led (base: recent trend)",719717098,64432977,18069173,5630684,37625805,2520580
+"New growth at the peer rate, commercial-led (base: trend)",676483067,21198946,58544770,46106281,280466805,23572436
+"New growth at the peer rate, even mix (base: trend)",700649541,45365421,35757513,23319023,144714289,10902006
+Half the expected new homes built; renovation and commercial growth at trend,653609300,-1674820,5523084,-6915406,-45934741,-3815412
+No new homes built; renovation and commercial growth at trend,651956195,-3327925,-1298598,-13737088,-91433494,-7598644
+Pension full funding slips 2 years (base: FY2030),655284120,0,12438490,0,0,0
+CHCA at City Realty average revenue (base: approved program),655373394,89273,13127349,688860,4923055,579297
+CHCA at RKG's revenue estimate,654869622,-414498,9370458,-3068032,-21996455,-2587388
+CHCA already inside trend growth (not additive),652142667,-3141453,6209101,-6229389,-44879164,-5273007
+Pension savings not moved to OPEB in FY2031,620721867,-34562253,47000743,34562253,356872530,35812253
+Money freed by the retiree health payoff counted as room (base: held for a decision),612289887,-42994233,55432723,42994233,205104178,0
+"Police and fire restored to earlier staffing, police 136 and fire 168 (base: FY2027 budget, 128 and 160)",657769782,2485661,9952828,-2485661,-26779601,-2092860
+"No added fire company (base: a company at about 31,200 homes)",655726659,442538,11995951,-442538,-2855068,-266187
+"Police grow with homes at the peer ratio, 4.42 officers per 1,000 homes (base: held at 128)",655532872,248751,12189738,-248751,67151,49752

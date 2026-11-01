@@ -71,7 +71,7 @@ some types, service cost:
                             RKG $219 x department share)
   commercial renovation  -> revenue only
   personal property      -> revenue only
-  CHCA                   -> 266 homes + ~963 employees, ramped FY2032-34
+  CHCA                   -> 384 homes + ~716 employees, ramped FY2032-34
 
 NESDEC's projection already contains students from trend-level housing (its
 grade ratios come from years when Brookline added ~150 homes a year), so the
@@ -192,20 +192,28 @@ from cost_assumptions import (TOWN_COST_PER_HOME_FY25 as COST_PER_HOME_FY25,
 #   City Realty 1/2/3: 668 / 424 / 388 homes, 184k / 213k / 51k sqft office+retail,
 #                      200 / 225 / 152 hotel rooms
 #   RKG:               265 homes, 74k sqft office+retail, 100 rooms
-# The approved plan (Town Meeting May 2026) is 266 homes and a 200-room hotel with
-# over half the floor area commercial. The "approved" estimate prices that program
-# from the scenarios' own rates: RKG's residential tax per home (265 homes ->
-# $1,841,088), City Realty 1's commercial and personal property tax (the only
-# scenario with the approved 200 rooms; its 184k sqft of office and retail is
-# consistent with the >50% commercial requirement), rooms tax for 200 rooms and
-# RKG's motor-vehicle excise per home. Commercial square footage is the unknown.
-CHCA_UNITS = 266
+# The program is the special permit filed in 2026 for the proposal the Spring 2026 rezoning
+# anticipated (Town 40B page, read 2026-10-29): 384 homes, a 187-room hotel, 41,284 sq ft of
+# retail and 93,741 sq ft of medical office. (Until 2026-10-29: 266 homes and a 200-room
+# hotel, from the Boston Business Journal, with City Realty 1's 184k sq ft assumed.) The
+# "approved" estimate prices it from the scenarios' own rates: RKG's residential tax per home
+# (265 homes -> $1,841,088) and motor-vehicle excise per home; rooms tax at the scenarios'
+# $3,810.60 a room (identical in all five); and commercial and personal property tax at
+# $6.84 a sq ft of medical office, $4.16 of retail and $8,275 a hotel room, a least-squares
+# fit to the five scenarios' commercial tax (each within 3%).
+CHCA_UNITS = 384
+CHCA_HOTEL_ROOMS = 187
+CHCA_MED_OFFICE_SF = 93_741
+CHCA_RETAIL_SF = 41_284
+CHCA_COM_TAX = round(CHCA_MED_OFFICE_SF * 6.84 + CHCA_RETAIL_SF * 4.16 + CHCA_HOTEL_ROOMS * 8_275)
+CHCA_RES_TAX = round(CHCA_UNITS * 1_841_088 / 265)
 CHCA_STUDENTS_PER_UNIT = 0.126    # high-rise, studio/1BR-heavy (a recent rental project)
-CHCA_EMPLOYEES = (79_000 + 105_000) / 200 + 200 * 500 / 2_300   # City Realty 1 program
+CHCA_EMPLOYEES = (CHCA_MED_OFFICE_SF + CHCA_RETAIL_SF) / 200 + CHCA_HOTEL_ROOMS * 500 / 2_300
 CHCA_REVENUE = {   # (property tax at stabilization, local receipts at stabilization, residential share
                    # of the property tax), FY2025 dollars; the revenue model indexes them to entry
-    "approved": (round(266 * 1_841_088 / 265) + 2_696_433, 762_120 + round(266 * 99_375 / 265),
-                 round(266 * 1_841_088 / 265) / (round(266 * 1_841_088 / 265) + 2_696_433)),
+    "approved": (CHCA_RES_TAX + CHCA_COM_TAX,
+                 round(CHCA_HOTEL_ROOMS * 3_810.6) + round(CHCA_UNITS * 99_375 / 265),
+                 CHCA_RES_TAX / (CHCA_RES_TAX + CHCA_COM_TAX)),
     "cr_avg": (5_408_241, 917_905, 3_030_198 / 5_408_241),
     "rkg": (3_158_174, 480_435, 1_841_088 / 3_158_174),
     "in_trend": (0, 0, 0.0),

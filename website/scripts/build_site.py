@@ -490,6 +490,31 @@ def maps():
         f.write_text(t)
 
 
+BUILDING_MAP = ROOT / "building-scale-map" / "town.html"
+
+
+def building_map():
+    """The 3D town map of proposals at /maps/buildings. Written as an Artifact, so it gets the skeleton; the site bar
+    sits above it and the map's own grid takes the rest of the window. Shared by link only (Ben, 2026-10-31): nothing
+    on the site links to it, it is not in the sitemap or site search, and it asks search engines not to index it."""
+    if not BUILDING_MAP.exists():   # not in the public GitHub copy
+        print("building map: building-scale-map/town.html not found, skipped")
+        return
+    page = BUILDING_MAP.read_text().replace('<meta charset="utf-8">\n', "", 1)
+    title = re.search(r"<title>.*?</title>\n?", page).group(0)
+    page = page.replace(title, "", 1)
+    fit = ("<style>html,body{height:100%}body{display:flex;flex-direction:column;height:100dvh}"
+           "body>.app{flex:1 1 auto;min-height:0;height:auto}</style>")
+    (DIST / "maps" / "buildings.html").write_text(
+        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
+        '<meta name="robots" content="noindex, nofollow">\n'
+        '<meta name="description" content="Every proposed and approved building in Brookline, drawn at its real size '
+        'from the filed plans, on a 3D map of the town.">\n'
+        f'{title.strip()}\n<link rel="canonical" href="{SITE}/maps/buildings">\n{ARTIFACT_RESET}\n{fit}\n</head>\n<body>\n'
+        + nav("maps") + "\n" + page + "\n</body>\n</html>\n")
+
+
 def seats_map():
     """The school seats map as its own page, for the post's iframe; written as an Artifact, so it gets the skeleton."""
     if not SEATS_MAP.exists():   # not in the public GitHub copy
@@ -558,6 +583,7 @@ def main():
     shutil.copy2(ROOT / "Brookline_Enrollment_Explained.xlsx", DIST / "forecast" / "Brookline_Enrollment_Explained.xlsx")
 
     maps()
+    building_map()
     seats_map()
 
     # search index over the pages marked data-pagefind-body
@@ -589,7 +615,8 @@ def main():
             {"source": "/forecast/Brookline_Fiscal_Model.xlsx", "destination": "/forecast/Brookline_Forecast_Model.xlsx", "permanent": True},
         ],
         "rewrites": [{"source": "/maps", "destination": "/maps/index.html"}],
-        "headers": [{"source": "/maps/data/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]}],
+        "headers": [{"source": "/maps/data/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]},
+                    {"source": "/maps/buildings(.*)", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}]}],
     }, indent=2))
 
     # Vercel Web Analytics (enabled 2026-10-15): page views only, no cookies. Added to every built

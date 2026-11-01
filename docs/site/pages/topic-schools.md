@@ -248,6 +248,7 @@ the latest year published:
 | Tuition, Massachusetts public schools and collaboratives | $80,082 | $11 |
 | Tuition, private and out-of-state schools | $8,517,663 | $1,213 |
 | Out-of-district transportation | $1,568,314 | $223 |
+| Spending from federal grants and other revolving funds | $891,241 | $127 |
 | **Total** | **$46,811,420** | **$6,665** |
 | Less federal grants and other revolving funds | −$891,241 | −$127 |
 | Less the state's Circuit Breaker reimbursement for FY2025 | −$5,237,567 | −$746 |
@@ -258,7 +259,7 @@ the latest year published:
 Per-student figures divide by FY2025 enrollment, 7,023. Three adjustments take DESE's total to
 what Brookline pays:
 
-- **Federal grants** (mainly IDEA) are not paid by Brookline taxpayers, so they come out.
+- **Federal grants** (mainly IDEA) are not paid by Brookline taxpayers. DESE reports that spending as its own line, so it is added into the total and then subtracted.
 - **Circuit Breaker** is the state's reimbursement of about 75% of each high-cost student's costs
   above a threshold, paid the following year. DESE's spending figures include what districts spend
   from the Circuit Breaker fund, so the reimbursement for FY2025's claims, paid in FY2026, comes

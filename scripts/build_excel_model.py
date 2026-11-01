@@ -1761,7 +1761,7 @@ def build_driver_forecast():
         ("Town cost of a new home", f"${_B['cost_per_home']:,.0f} (FY2025 $)",
          "Cross-town comparison (cross_town_marginal_cost.py), grown with pay, plus benefits"),
         ("New growth", "Recent trend", "Each category at its trailing five-year rate, % of the prior levy"),
-        ("Chestnut Hill (CHCA)", "Approved program", "266 homes and a 200-room hotel; revenue and costs ramp FY2032-34"),
+        ("Chestnut Hill (CHCA)", "Special permit program", "384 homes and a 187-room hotel; revenue and costs ramp FY2032-34"),
         ("Pensions", "Town schedule", "Full funding FY2030; then normal cost grows with payroll"),
         ("OPEB", "Town schedule", "Includes moving pension savings to OPEB in FY2031"),
     ):

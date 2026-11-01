@@ -569,19 +569,19 @@ transactional confirmation of a rate change previously sourced only to a
 dated alert on `brooklinema.gov/172/Building-Department`, while the Town's
 own fee-schedule page still showed the old $20 rate.
 
-## Housing pipeline (Planning Department, October 2026)
+## Housing pipeline (Town web pages, October 2026)
 
 `data/Brookline Housing Active Development Pipeline 2026-10-15.xlsx` — every
 project adding homes that the Town's web pages show as under construction,
 permitted, in review or awaiting a zoning vote, compiled 10/15/2026 from the
 Town's Chapter 40B, Site Plan Review, Major Impact Project and Zoning Board
-pages and the Building Department's permit portal, with corrections from the
-Planning Department the same day. Gross and net new homes, stage, permit path
+pages and the Building Department's permit portal. Gross and net new homes, stage, permit path
 and housing type per project; a sheet of small Zoning Board cases; and projects
 completed 2023–2026. Completion dates in the file are rough estimates except
 where the Town or a developer published one, and existing homes removed are
-blank (counted as 0) where the Town doesn't state them. Not republished, since
-it lists projects by name; used in totals only, for the 2,400 homes article
+blank (counted as 0) where the Town doesn't state them. The workbook itself is
+not republished. Its project names and statuses come from the Town's public pages, so since
+2026-10-31 (Ben) the homes page names projects, citing those pages; used in totals for the 2,400 homes article
 (`articles/2400-homes/pipeline.py`), together with the Housing Plan 2024's
 Table 1.1 (Chapter 40B approvals 2014–2023) for how earlier approvals turned out.
 
@@ -996,6 +996,37 @@ from the command that fetched them on 2026-09-29; files without one still need t
 - Draft actions, October 13, 2026: https://www.brooklinema.gov/DocumentCenter/View/63508/1013-Comp-Plan-Draft-Actions-
   (Ben's link; the source of the goal of 1,600 to 2,400 new homes by 2035 cited in the listserv reply). Not saved
   locally: brooklinema.gov returns a Cloudflare 403 to scripts, so the wording and page aren't checked here.
+- Working draft of the 2040 Comprehensive Plan with cover memo, 10/27/2026 (draft pages dated Oct 26), 80 PDF pages:
+  `Brookline%20Comp%20Plan_Full%20Draft%20w%20Cover%20Memo_10.27_compressed.pdf`, saved by Ben 2026-10-28 from
+  https://www.brooklinema.gov/DocumentCenter/View/63659 (Ben's link, 2026-10-29; the memo points to
+  https://www.brooklinema.gov/3750). The memo says the draft is not
+  endorsed and asks that it not be cited or circulated as Town policy; the fiscal chapter and the population
+  forecast methodology appendix are unfinished. Read 2026-10-29. Figures used:
+  - Goal 18 (PDF pp. 25 and 52): housing stock grows "between 6% and 9%—approximately 1,600 to 2,400 new units
+    completed and occupied" "over the next 10 years". No end year is given; "by 2035" is not in the goal.
+    1,600 and 2,400 are 6% and 9% of about 26,700 homes, not of the plan's own 28,535 (2022 ACS, p. 50),
+    of which they are 5.6% and 8.4%.
+  - PDF p. 30 (printed pp. 54-55), the two "Examples of Enhance, Expand, & Transform" 3D drawings (Putterham
+    Circle and Commonwealth Ave): read onto the building-scale map as illustrations by
+    `building-scale-map/trace_comp_plan_examples.py` (2026-10-31). The p. 31 drawing shows "a representative site"
+    and is not placed. The draft's Future Land Use map (p. 33) is not used; the map keeps the Sept. 2026 image.
+  - Current trend (PDF p. 21): "About 1,600 new units are projected by 2035, or 160 a year, including roughly
+    860 already in the development pipeline"; the map callout on the same page says "1,164 units are already in
+    the pipeline" (recently constructed, permitted or being permitted, developments over 10 units). The list
+    behind either figure is not in the draft. 2010-2020 growth of 1,500 to 1,600 units matches the Census
+    (26,448 to 27,961).
+  - RKG population projection to 2035 (p. 16): +3,000 residents and +510 jobs over 10 years.
+  - School capacity (p. 29): "With 9 percent total growth over the next 10 years, about 500+ spaces remain
+    systemwide", citing the school demographer consultant (the ERSC figure).
+- Chapter 40B Comprehensive Permit status page, https://www.brooklinema.gov/1311/Chapter-40B-Comprehensive-Permit
+  ("Last Content Update: Last week"), read in Chrome 2026-10-29 (scripts get a 403) and compared with the pipeline
+  workbook of 10/15/2026. New since the workbook: 1280 & 1330 Boylston has begun a special permit for 384 homes,
+  a 187-room hotel, 41,284 sq ft of retail and 93,741 sq ft of medical office (workbook: 266 homes, per the Boston
+  Business Journal); 209 Harvard's permit extended to 11/23/2028 (workbook: lapses 11/23/2026). Conflicts left
+  open: Heath & Sheafe "appealed by abutter" (workbook: appeal dropped); 21 Crowninshield "Certificate of
+  Occupancy issued Summer 2022" after a 2021 change to condominiums, while the FY2026 roll gives Year Built 2018
+  and the cohort in articles/2400-homes/pipeline.py counts it finished in 2019. The page still lists the Housing Authority's senior building
+  as under construction (opened 6/8/2026).
 
 ## Special education (added 2026-10-26)
 
@@ -1092,3 +1123,97 @@ Used by `scripts/pums_children_per_home.py`. Downloaded 2026-10-28 (Ben asked fo
   of error. Downloaded 2026-10-28 (37 MB national file, deleted after filtering):
   https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25041.dat
 
+
+## Building-scale map, Coolidge Corner (added 2026-10-29)
+
+Town GIS layers, downloaded 2026-10-29 to `data/gis/town_layers_2026-10-29/` with paginated
+`query?where=1=1&outFields=*&outSR=2249&f=geojson` calls (EPSG:2249, US feet). Service URLs were read from the
+Town portal web map 672614211a2346f3b8bd136811c8baae behind the Zoning Viewer
+(https://gis.brooklinema.gov/portal/apps/experiencebuilder/experience/?id=d72637dc68b749918e27da77f3dd9749):
+- `buildings.geojson` (13,689): AddressBuildingParcel FeatureServer layer 1 (building footprints; ELEV_GL and
+  TOP_GL are roof edge and roof top in feet above ground; last edited February 2023). The same layer is public at
+  https://services1.arcgis.com/Oknk0tvfHOElpgGU/arcgis/rest/services/BuildingFootprint/FeatureServer/0
+- `zoning_base.geojson` (202), `zoning_overlay.geojson` (12), `parcels.geojson` (8,510),
+  `historic_local.geojson` (9): the Town Planning FeatureServer layers 9, 10, 11 and 5. The HEIGHT field on the
+  zoning layers is empty, so limits come from the by-law below.
+
+Zoning By-law, eCode360 (code dated 2025-11-18), read in the browser 2026-10-29 (the site returns 403 to scripts):
+Article V, Table 5.01 and § 5.06.4 (https://ecode360.com/36311797, https://ecode360.com/36313521); Article XI,
+Harvard Street Form-Based Zones, downloaded as `data/zoning_bylaw/article_xi_harvard_street.pdf` from
+https://ecode360.com/attachment/334180/BR2945-Z%20Article%20XI%20Harvard%20Street%20Form-Based%20Zones%20Standards.pdf
+
+OpenStreetMap buildings for the area (`data/gis/osm_coolidge_2026-10-29/osm_buildings.json`, Overpass API,
+https://overpass-api.de/api/interpreter), downloaded to fill buildings finished after February 2023. Not used:
+OSM shows the same older footprints on those lots.
+
+108 Centre St is 7 stories per Hebrew SeniorLife,
+https://www.hebrewseniorlife.org/news/108-centre-street-affordable-senior-housing-building-achieves-phius-certification
+
+### Building-scale map additions (2026-10-29, later)
+- USGS 3DEP lidar, project MA_CentralEastern_1_2021, public Entwine copy: https://s3-us-west-2.amazonaws.com/usgs-lidar-public/MA_CentralEastern_1_2021/ept.json. 507 tiles covering the Coolidge Corner box saved to `data/gis/usgs_lidar_2021/laz/` (120 MB, gitignored as refetchable); project located via https://raw.githubusercontent.com/hobuinc/usgs-lidar/master/boundaries/resources.geojson. Per-building heights in `data/gis/usgs_lidar_2021/building_heights.csv` (from `building-scale-map/lidar_heights.py`).
+- OpenStreetMap parks and surface parking via Overpass (https://overpass-api.de/api/interpreter), saved as `data/gis/osm_coolidge_2026-10-29/osm_parks_parking.json`.
+
+### Building-scale map: filed proposals (2026-10-29)
+All from https://www.brooklinema.gov (fetched through Chrome; the site returns 403 to scripts), saved in `data/proposals_40b/` with text extractions. Full notes per project in `building-scale-map/proposals.md`.
+- 1299 Beacon St: project page https://www.brooklinema.gov/1328/1299-beacon-street; ZBA decision 2019 https://www.brooklinema.gov/DocumentCenter/View/20685; final architectural plans https://www.brooklinema.gov/DocumentCenter/View/20169
+- 1223 Beacon St (Hampton Court): project page https://www.brooklinema.gov/1474/HAMPTON-COURT; architectural plans July 2018 https://www.brooklinema.gov/DocumentCenter/View/17527; Preservation Commission letter https://www.brooklinema.gov/DocumentCenter/View/14549; Planning Board letter https://www.brooklinema.gov/DocumentCenter/View/14550; extension letter https://www.brooklinema.gov/DocumentCenter/View/43244
+- Waldo-Durgin: staff report to DAT Jan. 2022 https://www.brooklinema.gov/DocumentCenter/View/28448; overlay design guidelines 2019 https://www.brooklinema.gov/DocumentCenter/View/28346; pre-application program https://www.brooklinema.gov/DocumentCenter/View/21922; Zoning By-law § 5.06.4.k read on eCode360 (Article V page https://ecode360.com/36311806)
+- 209 Harvard St: project page https://www.brooklinema.gov/1423/209-harvard-street-; ZBA decision Nov. 2021 https://www.brooklinema.gov/DocumentCenter/View/42679
+- 429 Harvard St: project page https://www.brooklinema.gov/3799/429-HARVARD-STREET; preliminary waivers Sept. 2025 https://www.brooklinema.gov/DocumentCenter/View/59598; updated drawings Jan. 2026 https://www.brooklinema.gov/DocumentCenter/View/60722 → `data/proposals_40b/bf40b_429harvard_drawings_2026-01-15.pdf` (ZBA presentation plans, traced 2026-10-30)
+- 445 Harvard St: decision with exhibits https://www.brooklinema.gov/DocumentCenter/View/20869
+- Chapter 40B status page: https://www.brooklinema.gov/1311/Chapter-40B-Comprehensive-Permit
+
+### Building-scale map: town-wide (2026-10-29)
+- Town boundary: MassGIS Massachusetts Municipalities, layer 1 (polygons), TOWN = BROOKLINE: https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Municipalities/FeatureServer/1 → `data/gis/brookline_wide_2026-10-29/brookline_boundary.geojson`
+- MassGIS Building Structures (2-D) roof outlines, Brookline box plus 600 ft (27,515 features, layer edited May 2026): https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Building_Structures/FeatureServer/0 → `structures.geojson`. Used past the town line, and in Brookline for outlines captured 2022 or later that the Town layer lacks.
+- MassGIS Property Tax Parcels outside Brookline in the box (31,429): https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0 → `parcels_ma.geojson`
+- USGS lidar, same project as the Coolidge tiles, extended to every tile touching the buffered town (8,326 tiles) → `data/gis/usgs_lidar_2021/laz/`; per-building results `building_heights_town.csv` (`building-scale-map/lidar_town.py`).
+- OpenStreetMap parks and parking for the whole box, Overpass https://overpass-api.de/api/interpreter → `data/gis/osm_town_2026-10-29/osm_parks_parking.json`; buildings tagged with `building:levels` or `height` → `osm_buildings_levels.json` (1,435), used only for story counts of buildings finished since 2021.
+- Zoning By-law Table 5.01 heights for every district, read on eCode360 (Article V, https://ecode360.com/36311806) in Chrome, 2026-10-29; GMR-2.0's 115 ft from § 5.06.4.d on the same page.
+
+## Building-scale map: overlays and pipeline filings (2026-10-30)
+
+- Overlay height rules: Zoning By-law § 5.06.4 (e, i, l, n, o, p) on eCode360, https://ecode360.com/36311806 (read in Chrome).
+- Chestnut Hill Commercial Overlay (adopted May 2026, not yet on eCode360): Special Town Meeting Article 1 vote,
+  https://www.brooklinema.gov/DocumentCenter/View/63145/STM-Article-1-Vote, saved as
+  `data/zoning_2026/chc_stm_article1_vote_2026-05.pdf` (+ `.txt`). Parcel list by subdistrict and Table 5.06.4.q.5 heights.
+- Pipeline filings, saved in `data/proposals_pipeline/` (Town Document Center, `https://www.brooklinema.gov/DocumentCenter/View/<id>`,
+  fetched through Chrome): 217 Kent decision 34316; 83 Longwood final draft decision 28535; Heath/Sheafe waivers 54623;
+  45 Bartlett waivers 31224 and building summary 26077; 40 Kent/40 Webster ZBA decision 63416; 845 Boylston 40B appeal (with decision) 40312; 264 Washington PB decision 53750; 31 Harvard decision
+  63086; BHA Walnut-High zoning analysis 53078; 92 Sewall/153 St. Paul impact statement 34935; 500 Harvard HAC decision 37979;
+  1280-1330 Boylston RKG feasibility 62399 and City Realty proposal v2 53233; 603-619 Boylston PB report 42947;
+  Clark Road overlay article 60074. Scanned ones OCR'd with `tools/ocr_pdf.swift`.
+- Centre Street Lots Exploratory Study, final report (Town of Brookline, 2025-26),
+  https://www.brooklinema.gov/DocumentCenter/View/60741/Final-Centre-Street-Lots-Exploratory-Study-Report (link from Ben),
+  saved as `data/centre_st_lots/centre_st_lots_final_report.pdf` (+ `report.txt`). "The Side Lot" (pp. 27-30) traced by
+  `building-scale-map/trace_centre_side_lot.py`.
+- Traced plans (2026-10-30), fetched through Chrome from the Town Document Center unless noted:
+  - BHA Walnut-High Site Plan Review drawings, Oct. 2, 2024, doc 53070 (43.7 MB), saved as
+    `data/proposals_pipeline/pl_bha_walnut_high_spr_drawings_2024-10-02.pdf`; sheet G0.30 traced. Related, not saved:
+    project narrative 53071, perspectives 53077, planting plan 53073.
+  - City Realty, 1280-1330 Boylston St: Memorandum of Agreement exhibits, May 12, 2026, doc 62599 (program table and
+    Exhibit A ground-floor plan, Finegold Alexander, Feb. 2026), and Chestnut Hill Commercial Area Study massing test
+    fits, June 2024, doc 62156; saved in `data/proposals_pipeline/chop_2026/`.
+  - brookline.news, "Town Meeting approves zoning for major Chestnut Hill redevelopment project" (link from Ben),
+    https://brookline.news/town-meeting-approves-zoning-for-major-chestnut-hill-redevelopment-project/ : its site plan
+    (https://brookline.news/wp-content/uploads/2026/05/MapWatercolor.png, traced), rendering
+    (https://brookline.news/wp-content/uploads/2026/03/Aerial-View-scaled.jpg), zoning map and the Town
+    Administrator's statement, downloaded with curl to `data/proposals_pipeline/chop_2026/`. The article gives 14, 12
+    and 7 stories, 266 homes and a 200-room hotel.
+
+- OpenStreetMap named street centerlines for the map box (bbox 42.2932,-71.1843,42.3544,-71.1001; motorway through living_street and service, with a name), Overpass https://overpass-api.de/api/interpreter, OSM base 2026-10-30T18:08Z → `data/gis/osm_town_2026-10-29/osm_streets.json` (3,740 ways). Used to place the town map's street labels.
+
+- Draft Comprehensive Plan "proposed upzone" map: `2026 Brookline Comprehensive Plan proposed upzone map.png` (project root), supplied by Ben; downloaded from the Comprehensive Plan Steering Committee page https://www.brooklinema.gov/3750/Comprehensive-Plan-Steering-Committee, file https://www.brooklinema.gov/ImageRepository/Document?documentId=63433 (per Ben, no newer version as of 2026-10-30). Used by `building-scale-map/comp_plan_areas.py`.
+- Plan sets downloaded 2026-10-30 for tracing (via Chrome, from https://www.brooklinema.gov/DocumentCenter/View/<id>), in `data/proposals_pipeline/`:
+  - Heath & Sheafe comprehensive permit application plans, Apr. 24, 2025: /56785 → `pl_heathsheafe_plans_2025-04-24.pdf`
+  - 217 Kent St design package, June 30, 2022: /33118 → `pl_217kent_design_package_2022-06-30.pdf`
+  - Waldo-Durgin preliminary Planning Board materials, Nov. 29, 2021: /27313 → `pl_waldo_pb_materials_2021-11-29.pdf` (DAT deck /28451 not downloaded)
+  - 83 Longwood Ave plans, Dec. 14, 2021: /28039 → `pl_83longwood_plans_2021-12-14.pdf`
+  - 92 Sewall Ave / 153 St. Paul St plans, July 12, 2022: /34937 → `pl_92sewall_153stpaul_plans_2022-07-12.pdf`
+  - 845 Boylston St revised proposed floor plans, Nov. 4, 2021 (5-story version): /26384 → `pl_845boylston_floor_plans_2021-11-04.pdf`
+  - 500 Harvard St architectural plans extracted from the HAC decision: /38070 → `pl_500harvard_hac_arch_plans.pdf`
+
+- Plan sets and Town Meeting documents downloaded 2026-10-30 (later), via Chrome from https://www.brooklinema.gov/DocumentCenter/View/<id>:
+  - 209 Harvard St approved ZBA plans, Aug. 13, 2021: /25239 → `data/proposals_40b/bf40b_209harvard_plans_2021-08-13.pdf`
+  - 445 Harvard St design update, Sept. 17, 2019: /20189 → `data/proposals_40b/bf40b_445harvard_design_update_2019-09-17.pdf` (the approved Nov. 5, 2019 plan set was not found online)
+  - Eleven80, 1180 Boylston St (project page https://www.brooklinema.gov/1294/1180-Boylston-St-40B): final drawings Sept. 2019 /20136 → `bf40b_1180boylston_final_drawings_2019-09.pdf`; modified decision Nov. 22, 2019 /20781 → `bf40b_1180boylston_modified_decision_2019-11-22.pdf` (scanned); 2017 plans /11136 and height sections /11146 (superseded); 2020 minor modification /22630, all in `data/proposals_40b/`

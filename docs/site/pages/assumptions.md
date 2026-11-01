@@ -290,8 +290,9 @@ one assumption moves and everything else stays at the base case; a minus sign me
   it should too.
 
 ### Chestnut Hill redevelopment
-- **Base case:** The plan Town Meeting approved in May 2026, 266 homes and a 200-room hotel with
-  over half the floor area commercial, counted on top of trend growth. Its property tax enters
+- **Base case:** The special permit filed in 2026 for the plan the spring 2026 rezoning anticipated:
+  384 homes, a 187-room hotel, about 41,000 square feet of retail and 94,000 of medical office,
+  counted on top of trend growth. Its property tax enters
   the levy a third at a time from FY2032 to FY2034, at each year's value, and then grows with the
   levy; its hotel rooms tax and car excise grow 1.8% a year, like other local receipts.
 - **If it is wrong:** counted inside trend growth instead, {{fact:fy40_chca_in_trend}}; at the

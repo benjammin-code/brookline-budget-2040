@@ -161,7 +161,7 @@ pace, about {{fact:homes_pace}} a year, and adds no students for them beyond wha
 forecast already holds.
 
 **Faster building adds students on top.** Homes built beyond that pace add 0.244 students each, and
-the 266 homes approved at Chestnut Hill, mostly studios and one-bedrooms, add 0.126 each.
+the 384 homes proposed at Chestnut Hill, mostly studios and one-bedrooms, add 0.126 each.
 
 **A check on the recent pace.** NESDEC's ratios grow a class about 2% from kindergarten to grade 12.
 That sits between the years before COVID, when classes shrank about 7%, and the years since, when

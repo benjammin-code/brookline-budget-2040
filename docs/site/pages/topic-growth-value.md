@@ -479,8 +479,8 @@ quantified in a later pass.
 
 The Chestnut Hill project is added on top of trend growth on both sides: its property tax, rooms
 tax and excise ramp in over FY2032–34, after construction in FY2029–31 as the Planning
-Department's June 2026 pipeline shows, and so do the costs of its 266 homes, their students and
-about 960 employees. The four published fiscal-impact scenarios describe different buildings,
+Department's June 2026 pipeline shows, and so do the costs of its 384 homes, their students and
+about 720 employees. The four published fiscal-impact scenarios describe different buildings,
 which is why their revenue ranges from $3.2 million to $6.7 million (FY2025 dollars):
 
 | Scenario | Homes | Office + retail | Hotel rooms | Property tax | Rooms + excise |
@@ -489,12 +489,13 @@ which is why their revenue ranges from $3.2 million to $6.7 million (FY2025 doll
 | City Realty 2 | 424 | 213,000 sf | 225 | $5.75M | $1.02M |
 | City Realty 3 | 388 | 51,000 sf | 152 | $3.78M | $0.72M |
 | RKG | 265 | 74,000 sf | 100 | $3.16M | $0.48M |
-| Approved plan (base case) | 266 | 184,000 sf (assumed) | 200 | $4.54M | $0.86M |
+| Special permit filing (base case) | 384 | 135,000 sf | 187 | $5.03M | $0.86M |
 
-The approved plan is priced from the scenarios' own rates: RKG's residential tax per home, and
-City Realty 1's commercial space, the only scenario with the approved 200-room hotel. Its 184,000
-square feet of office and retail is consistent with the zoning requirement that more than half the
-floor area be commercial, but the actual commercial square footage isn't published. The
+The special permit filing (384 homes, a 187-room hotel, 41,284 square feet of retail and 93,741 of
+medical office, per the Town's October 2026 project page) is priced from the scenarios' own rates:
+RKG's residential tax per home, the scenarios' rooms tax per room, and commercial tax per square
+foot of medical office, per square foot of retail and per hotel room, fitted across the five
+scenarios RKG modeled, these four and the Economic Development Advisory Board's (each within 3%). The
 forecast brings each third of the property tax onto the levy in its entry year (FY2032 to FY2034)
 at that year's value, indexed from FY2025 by value growth and tax-rate drift, and then grows it
 2.5% a year with the levy; the rooms tax and car excise grow from FY2025 at the 1.8% a year of

@@ -4,13 +4,48 @@ path: forecast/changes
 title: What has changed
 layer: how
 question: What has changed in the forecast, and when?
-updated: 2026-10-27
+updated: 2026-10-31
 ---
 
 The forecast is updated as new data arrives and as its methods are checked. Each change that
 moves a published figure will be listed here, newest first, with what moved and why.
 
 The first version was published in October 2026. Changes are listed from 27 October 2026 on.
+
+## 31 October 2026: Chestnut Hill, from the approved plan to the special permit filing
+
+**What changed.** The forecast now counts the Chestnut Hill Office Park project as filed for its
+special permit: 384 homes, a 187-room hotel, 41,284 square feet of retail and 93,741 of medical
+office, per the Town's October 2026 project page. Before, it counted the plan Town Meeting approved
+in May 2026: 266 homes and a 200-room hotel. The timing is unchanged, with revenue and costs ramping
+in over FY2032 to FY2034. Its property tax is priced from the published scenarios' own rates, about
+$5.0 million a year (FY2025 dollars) instead of $4.5 million, and the added homes bring more
+students and service costs. [Chestnut Hill: how it's
+counted](@topic-growth-value#chestnut-hill-how-its-counted) sets out the calculation.
+
+**What moved.** The base case's room in FY2040 is {{fact:room_fy2040}}, up from $12.0 million.
+One point a year of extra pay growth for all staff costs {{fact:fy40_pay_up1_abs}} a year by
+FY2040, up from $42.3 million. The override that would close that gap is about
+{{fact:bill_override_amount}}, down from $22.6 million, adding {{fact:bill_override_sf_extra_fy2040}}
+to the median single-family bill by FY2040 instead of $1,912. Enrollment runs about 15 students
+higher from FY2032 on ({{fact:enroll_fy2034}} in FY2034, up from 5,926).
+
+## 31 October 2026: the assessors' count of homes, one more year
+
+**What changed.** The count of homes on the Town's assessment rolls now runs through the January
+1, 2025 roll, one year further, and its cleaning is stricter. It no longer counts one year's
+recount of lots with more than one house (each such lot went from one home to two with nothing
+built), or units at tax-exempt residences and a hospital. The January 2025 roll adds 273 homes,
+most of them in six buildings the assessors first recorded that year,
+several of them still under construction at the time.
+
+**What moved.** The rolls now show {{fact:gl_au_net}} more homes from January
+{{fact:gl_au_from}} to January {{fact:gl_au_to}}, {{fact:gl_au_per_year}} a year; before, they
+showed about 110 a year to January 2024. The forecast did not change: it counts new homes from
+building permits ({{fact:homes_pace}} a year since 2016), and the rolls are a check on those
+permits. They still agree: permits issued from {{fact:gl_au_permits_from}} to
+{{fact:gl_au_permits_to}} net {{fact:gl_au_permits_net}} homes, and the rolls gained
+{{fact:gl_au_net_assisted}}, counting assisted living in both.
 
 ## 27 October 2026: the cost of a student filling an open seat
 

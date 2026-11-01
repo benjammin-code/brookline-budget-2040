@@ -619,7 +619,11 @@ const GL = JSON.parse(fs.readFileSync("../output/growth_links.json", "utf8"));
     const era = Object.values(L.months_by_era); put("gl_pt_legacy_months_range", Math.min(...era) + " to " + Math.max(...era));
     put("gl_au_raw", nf(A.raw)); put("gl_au_net", nf(A.net)); put("gl_au_per_year", "about " + Math.round(A.per_year / 10) * 10);
     put("gl_au_from", String(A.first_jan1)); put("gl_au_to", String(A.last_jan1));
-    put("gl_au_min", nf(A.min)); put("gl_au_max", nf(A.max)); }
+    put("gl_au_min", nf(A.min)); put("gl_au_max", nf(A.max));
+    const words = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"];
+    put("gl_au_years", words[A.years] || String(A.years)); put("gl_au_net_assisted", nf(A.net_with_assisted));
+    put("gl_au_permits_from", String(A.permits_from)); put("gl_au_permits_to", String(A.permits_to));
+    put("gl_au_permits_net", nf(A.permits_net)); }
   put("gl_ng_per_permit", cents(r1.ratio_median)); put("gl_ng_per_permit_min", cents(r1.ratio_min)); put("gl_ng_per_permit_max", cents(r1.ratio_max));
   put("gl_children_added", C.children_per_added_home.toFixed(2)); put("gl_children_existing", C.children_per_existing_home.toFixed(2));
   put("gl_children_added_low", C.children_per_added_home_ci[0].toFixed(2)); put("gl_children_added_high", C.children_per_added_home_ci[1].toFixed(2));

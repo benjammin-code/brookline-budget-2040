@@ -185,18 +185,21 @@ a long-run average of that, and the 67% split is a judgment, not a measured resp
 
 **Additive to trend growth**, on revenue (levy grows at the trend rate, CHCA's
 property-tax increments added on top and then compounding in the levy; rooms tax and
-excise added to local receipts and run through the free-cash cycle) and on cost (266
-homes at $660, 0.126 students per home, ~963 employees).
+excise added to local receipts and run through the free-cash cycle) and on cost (384
+homes at $660, 0.126 students per home, ~716 employees).
 
 **Revenue level: the approved program.** The five published scenarios are different
 building programs (City Realty 1/2/3: 668/424/388 homes, 184k/213k/51k sqft office and
 retail, 200/225/152 rooms; RKG: 265 homes, 74k sqft, 100 rooms), which is why revenue
-ranges $3.2M-6.7M. The approved plan (266 homes, 200 rooms, >50% commercial floor area)
-is priced as RKG's residential tax per home x 266 ($1,848,036) + City Realty 1's
-commercial and personal property tax ($2,696,433; the only scenario with 200 rooms, and
-its 184k sqft is consistent with the >50% commercial rule) = **$4,544,469**, plus rooms
-tax for 200 rooms ($762,120) and RKG's excise per home x 266 ($99,750) =
-**$861,870** in local receipts. Commercial square footage is the unknown.
+ranges $3.2M-6.7M. The program is the special permit filed in 2026 (Town 40B page, read
+2026-10-29): 384 homes, a 187-room hotel, 41,284 sq ft of retail and 93,741 sq ft of medical
+office. It is priced as RKG's residential tax per home x 384 ($2,667,841) + commercial and
+personal property tax at rates fitted to the five scenarios by least squares ($6.84 a sq ft of
+medical office, $4.16 of retail, $8,275 a room; each scenario within 3%) = $2,360,355, for
+**$5,028,196**, plus rooms tax at the scenarios' $3,810.60 a room x 187 ($712,582) and RKG's
+excise per home x 384 ($144,000) = **$856,582** in local receipts. Until 2026-10-29 the
+program was 266 homes and a 200-room hotel (Boston Business Journal), priced at $4,544,469
+and $861,870.
 
 The committed Phase 2 file keeps City Realty's average; the driver forecast reruns the
 growth-scenario model into a scratch file for each CHCA setting
