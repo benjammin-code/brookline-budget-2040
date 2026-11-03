@@ -299,8 +299,10 @@ student net of Chapter 70 state aid, $20,713, reduced for open seats. Tier 3 is 
 RKG's figure, and most of the gap is benefits. Its salaries and other costs, $14,689, are only
 about $440 above RKG's $14,246: two more years of budget growth is mostly offset by counting 67% of
 the school budget as enrollment-linked rather than 73%. Its benefits are $2,287 against RKG's
-$1,326, because RKG counts 35% of the schools' benefit costs as growing with enrollment, while tier
-3 charges each added staff member the average health insurance cost per employee.
+$1,326, because RKG counts 35% of the schools' benefit costs as growing with enrollment, including
+retiree health insurance, while tier 3 charges each added staff member the average health insurance
+cost per employee and leaves retirees out. Applying RKG's own 73% to the schools' benefits for
+current employees, without retirees, gives about $2,450 a student, close to tier 3's.
 ([ERSC final report](https://www.brooklinema.gov/DocumentCenter/View/61986), March 13, 2026,
 Appendices B and E; [RKG peer review memo](https://www.brooklinema.gov/DocumentCenter/View/63510/2026-10-07_26-Pleasant-Street-FIA-Peer-Review-Memo),
 October 7, 2026, pp. 5–6; [Fougere fiscal impact report](https://www.brooklinema.gov/DocumentCenter/View/63247/FISCAL-IMPACT-REPORT---Submitted-by-Nordblom-Team),
