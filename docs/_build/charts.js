@@ -2175,8 +2175,8 @@
 
   // ---- STUDENTS PER HOME by bedrooms, for each kind of home (pums_children_per_home.py), with the
   //      Town's count in new developments (ERSC Final Report) placed at their average bedrooms
-  var SPH_KINDS = [["house", "Houses", "--pine", 0.12], ["condo", "Condominiums (owned)", "--line-benefits", 0],
-                   ["apartment", "Apartments (rented)", "--line-levy-actual", -0.12]];
+  var SPH_KINDS = [["house", "Houses", "--pine", 0.3], ["condo", "Condominiums (owned)", "--line-benefits", 0.15],
+                   ["apartment", "Apartments (rented)", "--line-levy-actual", -0.15]];
   var SPH_BEDS = { 1: "0 or 1", 2: "2", 3: "3", 4: "4 or more" };
   function drawStudentsBedroomsChart() {
     var svg = document.getElementById("sphbeds-svg");
@@ -2207,7 +2207,17 @@
     // every home together: the schedule
     svg.appendChild(svgEl("path", { d: "M" + S.all.map(function (r) { return x(r.beds) + "," + y(r.v); }).join(" L"), fill: "none",
                                     stroke: css("--line-total"), "stroke-width": 2.5, "stroke-linejoin": "round" }));
-    var la = S.all[S.all.length - 1], al = svgEl("text", { x: x(la.beds) + 12, y: y(la.v) + 4, "font-size": "12", "font-weight": "600", fill: css("--ink") });
+    // every home together, with its 90% range: the narrowest, since it pools all three kinds
+    S.all.forEach(function (r) {
+      var cx = x(r.beds);
+      svg.appendChild(svgEl("line", { x1: cx, x2: cx, y1: y(r.lo), y2: y(r.hi), stroke: css("--line-total"), "stroke-width": 2 }));
+      [r.lo, r.hi].forEach(function (v) { svg.appendChild(svgEl("line", { x1: cx - 5, x2: cx + 5, y1: y(v), y2: y(v), stroke: css("--line-total"), "stroke-width": 2 })); });
+      var c = svgEl("circle", { cx: cx, cy: y(r.v), r: 6, fill: css("--line-total"), stroke: css("--paper"), "stroke-width": 1.5 });
+      svg.appendChild(c);
+      tip(c, "<strong>All homes, " + SPH_BEDS[r.beds] + " bedrooms</strong><br>" + r.v.toFixed(2) + " students per home (" +
+             r.lo.toFixed(2) + " to " + r.hi.toFixed(2) + ")<br>" + r.n + " households surveyed");
+    });
+    var la = S.all[S.all.length - 1], al = svgEl("text", { x: x(la.beds), y: y(la.hi) - 10, "text-anchor": "middle", "font-size": "12", "font-weight": "600", fill: css("--ink") });
     al.textContent = "All homes"; svg.appendChild(al);
     // the Town's count in developments built since 2015
     S.devs.forEach(function (d) {

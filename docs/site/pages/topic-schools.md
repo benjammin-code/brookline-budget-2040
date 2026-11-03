@@ -143,7 +143,7 @@ students-per-staff ratio moved from FY2011 to FY2025.
 ## How the cost of an added student is calculated
 
 The forecast treats two-thirds of the school budget as moving with enrollment and one-third as
-fixed (buildings, administration, leadership), the split RKG set with Town staff. It staffs the
+fixed (buildings, administration, leadership), the overall split in RKG's 2025 analysis. It staffs the
 enrollment-linked share at the FY2027 ratio of 5.50 students per staff member (6,833 students,
 about 1,242 staff). An added student therefore brings 0.67 ÷ 5.50 = 0.122 positions, or one
 position per 8.2 students.
@@ -157,7 +157,7 @@ position per 8.2 students.
 | **Cost of one added student** | **{{fact:student_cost}}** |
 
 That is 77% of the $21,745 average school budget per pupil in FY2027, and close to RKG's $15,572
-(FY2025), which uses the same two-thirds split. It rises with pay and premiums: about $22,500 in
+(FY2025), which also comes to two-thirds once RKG's benefits are counted. It rises with pay and premiums: about $22,500 in
 FY2034 and $28,900 in FY2040 in nominal dollars. Teacher pensions are paid by the state and aren't
 included. In practice the cost is lumpy: with K–8 classes averaging 17 to 21 against guidelines
 of 22 to 25, a child joining a grade with room costs little, while one that forces a new section
@@ -175,8 +175,8 @@ below them, and more open as enrollment falls faster than staff. Counting empty 
 the kindergarten-to-grade-8 buildings, including the larger new Pierce, have room for roughly
 1,000 to 1,700 more students ([school seats map](https://www.brooklinefuture.org/post/school-seats-map)).
 A new home's children can fill seats the Town is already paying for, and the
-added cost per student is about $7,760 (supplies and the like, plus special education at the
-district average; see the tiers below) rather than {{fact:student_cost}}. On that basis even a
+added cost per student is about $7,760 (supplies and the like, plus special education costs at the
+district average across all students; see the tiers below) rather than {{fact:student_cost}}. On that basis even a
 $434,000 rental apartment nets about $1,700 a year. With staff held at the FY2027 level, the seats that open as enrollment falls would take
 {{fact:seats_homes_fy2030}} homes beyond the recent pace by FY2030 and {{fact:seats_homes_fy2040}} by FY2040;
 with staff falling half as fast, as in the base case, about half as many. The open seats could instead be cut to save money, so
@@ -231,7 +231,7 @@ charges the third.
 | Tier | When it applies | Cost a year, FY2027 |
 |---|---|---|
 | 1. Fills an open seat, no new staff | A student joins a class that is already running | about $670 |
-| 2. Fills an open seat, with special education at the district average | The same, plus special education staff, services, tuition and transportation in proportion | about $7,760 |
+| 2. Fills an open seat, with special education costs at the district average across all students | The same, plus special education staff, services, tuition and transportation in proportion | about $7,760 |
 | 3. Fills an empty classroom with full staff | Today's classes are full, so a new section opens in an empty classroom | about {{fact:student_cost}} |
 
 **Tier 1** is the FY2026 budget lines that grow with each student (supplies, online tools,
@@ -288,6 +288,23 @@ Breaker at all, tier 2 would be about $8,550.
 positions at $100,109 each, $12,192, plus non-personnel costs ($2,497), health insurance and
 payroll-linked benefits. It already includes special education staff, at the forecast's staffing
 rate rather than the district average.
+
+**How the consultants' figures compare.** The two fiscal analyses of 26 Pleasant Street in 2026
+charge about $15,500 an added student. RKG Associates' $15,572 comes from Brookline's FY2025
+budget: RKG and the Deputy Town Administrator went through the school budget line by line and
+marked 73% of it, $100.3 million, as growing with enrollment. RKG then added $9.3 million for the
+schools' share of health insurance, Medicare and other benefits, and divided the $109.6 million by
+7,039 students. Fougere Planning and Development's $15,535 is 75% of Brookline's 2022 cost per
+student net of Chapter 70 state aid, $20,713, reduced for open seats. Tier 3 is about $1,400 above
+RKG's figure, and most of the gap is benefits. Its salaries and other costs, $14,689, are only
+about $440 above RKG's $14,246: two more years of budget growth is mostly offset by counting 67% of
+the school budget as enrollment-linked rather than 73%. Its benefits are $2,287 against RKG's
+$1,326, because RKG counts 35% of the schools' benefit costs as growing with enrollment, while tier
+3 charges each added staff member the average health insurance cost per employee.
+([ERSC final report](https://www.brooklinema.gov/DocumentCenter/View/61986), March 13, 2026,
+Appendices B and E; [RKG peer review memo](https://www.brooklinema.gov/DocumentCenter/View/63510/2026-10-07_26-Pleasant-Street-FIA-Peer-Review-Memo),
+October 7, 2026, pp. 5–6; [Fougere fiscal impact report](https://www.brooklinema.gov/DocumentCenter/View/63247/FISCAL-IMPACT-REPORT---Submitted-by-Nordblom-Team),
+August 10, 2026.)
 
 **An earlier estimate.** In 2014 the Town's Override Study Committee put the long-run cost of an
 added student at $15,748 in FY2014 dollars, about $23,000 today, a figure that also counted debt

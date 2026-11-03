@@ -158,7 +158,16 @@ runs above it. The School Department's
 5% sits above the whole range and would need raises of about 3.5% or more in
 the next contract. The next contract, and the count of teachers on each
 step, which the School Department has and this document does not, will
-decide where in the range it lands.
+decide where in the range it lands. That contract is still being negotiated.
+The School Committee's offer as of October 2026 raises teachers' and
+administrators' salary schedules 1.5% each September and 0.5% at mid-year
+(2.25% and 0.25% at the top step) and paraprofessionals' hourly rates by $2 a
+year. Weighted by the FY2026 payroll, that is a raise of about 2.5% a year in
+FY2028 and FY2029. With the same steps and turnover savings, cost per
+position would grow about 3.5% a year, a little below the base case's 3.7%.
+The union's proposals cost more; one of its negotiators put its latest
+teacher proposal at 14.7% over three years, without saying what that figure
+includes.
 
 One revenue detail matters enough to name. The Town budgets local receipts
 (excise, meals tax, fees, permits) below what it expects to collect; actual
